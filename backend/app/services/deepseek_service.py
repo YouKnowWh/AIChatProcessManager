@@ -16,7 +16,7 @@ class AIResult:
     reasoning: str = ""
     tool_calls: list[dict] = field(default_factory=list)
     tool_results: list[dict] = field(default_factory=list)
-    model_name: str = "deepseek-chat"
+    model_name: str = "deepseek-v4-flash"
     provider: str = "deepseek"
     prompt_tokens: int = 0
     completion_tokens: int = 0
@@ -29,7 +29,7 @@ class DeepSeekService:
     """DeepSeek API 调用服务（OpenAI 兼容接口）"""
 
     BASE_URL = "https://api.deepseek.com/v1"
-    MODEL = "deepseek-chat"  # flash 模型
+    MODEL = "deepseek-chat"  # deepseek-chat → deepseek-v4-flash
 
     @classmethod
     def generate(
@@ -88,13 +88,16 @@ class DeepSeekService:
             completion_tokens = usage.get("completion_tokens", 0)
             total_tokens = usage.get("total_tokens", 0)
 
+            # 使用 API 返回的实际模型名（deepseek-chat → deepseek-v4-flash）
+            actual_model = data.get("model", cls.MODEL)
+
             # deepseek-chat (flash) 没有 reasoning_content，只有 deepseek-reasoner 有
             reasoning_content = msg.get("reasoning_content", "")
 
             return AIResult(
                 content=content,
                 reasoning=reasoning_content,
-                model_name=cls.MODEL,
+                model_name=actual_model,
                 provider="deepseek",
                 prompt_tokens=prompt_tokens,
                 completion_tokens=completion_tokens,

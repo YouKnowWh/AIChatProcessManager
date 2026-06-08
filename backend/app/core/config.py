@@ -25,7 +25,7 @@ class Settings(BaseSettings):
     # DeepSeek API
     DEEPSEEK_API_KEY: str = ""
 
-    model_config = {"env_file": ".env", "env_file_encoding": "utf-8"}
+    model_config = {"env_file": ".env", "env_file_encoding": "utf-8", "extra": "allow"}
 
 
 settings = Settings()
