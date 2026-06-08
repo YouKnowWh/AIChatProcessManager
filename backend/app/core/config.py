@@ -12,7 +12,7 @@ class Settings(BaseSettings):
     PORT: int = 8000
 
     # 数据库
-    DATABASE_URL: str = "mysql+pymysql://aichat_user:aichat_password@localhost:3306/aichat_db"
+    DATABASE_URL: str = "mysql+pymysql://aichat_user:aichat_password@localhost:3306/aichat_db?charset=utf8mb4"
 
     # JWT
     JWT_SECRET_KEY: str = "change-me-in-production"

@@ -32,7 +32,7 @@ def remove_favorite(
     return APIResponse.ok(message="已取消收藏")
 
 
-@router.get("", summary="查看我的收藏列表")
+@router.get("/favorites", summary="查看我的收藏列表")
 def list_favorites(
     page: int = Query(1, ge=1),
     page_size: int = Query(20, ge=1, le=100),

@@ -37,6 +37,6 @@ class Message(Base):
     contents: Mapped[list["MessageContent"]] = relationship("MessageContent", back_populates="message")
     reasoning: Mapped["MessageReasoning | None"] = relationship("MessageReasoning", back_populates="message")
     tool_calls: Mapped[list["ToolCall"]] = relationship("ToolCall", back_populates="message")
-    metadata: Mapped["MessageMetadata | None"] = relationship("MessageMetadata", back_populates="message")
+    model_metadata: Mapped["MessageMetadata | None"] = relationship("MessageMetadata", back_populates="message")
     feedbacks: Mapped[list["Feedback"]] = relationship("Feedback", back_populates="message")
     favorites: Mapped[list["MessageFavorite"]] = relationship("MessageFavorite", back_populates="message")

@@ -1,5 +1,5 @@
 import request from './request'
-import type { LoginRequest, RegisterRequest, TokenResponse } from '@/types/auth'
+import type { LoginRequest, RegisterRequest, TokenResponse } from '@/types'
 
 export const authApi = {
   register(data: RegisterRequest): Promise<TokenResponse> {

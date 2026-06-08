@@ -24,6 +24,14 @@
             <el-icon><Star /></el-icon>
             <span>收藏</span>
           </el-menu-item>
+          <el-menu-item v-if="auth.isManager()" index="/characters/manage">
+            <el-icon><Setting /></el-icon>
+            <span>角色管理</span>
+          </el-menu-item>
+          <el-menu-item v-if="auth.isAdmin()" index="/admin">
+            <el-icon><Monitor /></el-icon>
+            <span>系统管理</span>
+          </el-menu-item>
         </el-menu>
       </div>
 
@@ -36,6 +44,7 @@
           <span class="user-info">
             <el-avatar :size="34" :src="auth.user.avatar" :icon="UserFilled" />
             <span class="username">{{ auth.user.nickname || auth.user.username }}</span>
+            <el-tag size="small" :type="roleTagType(auth.user.role)" effect="light">{{ roleLabel(auth.user.role) }}</el-tag>
             <el-icon><ArrowDown /></el-icon>
           </span>
           <template #dropdown>
@@ -76,6 +85,7 @@
 </template>
 
 <script setup lang="ts">
+import { onMounted } from 'vue'
 import { useRoute } from 'vue-router'
 import { useAuthStore } from '@/stores/auth'
 import {
@@ -86,9 +96,21 @@ import {
 const route = useRoute()
 const auth = useAuthStore()
 
+onMounted(() => {
+  auth.refreshCurrentUser().catch(() => {
+    auth.logout()
+  })
+})
+
 function roleLabel(role: string): string {
   const map: Record<string, string> = { admin: '管理员', character_manager: '角色维护者', user: '普通用户' }
   return map[role] || role
+}
+
+function roleTagType(role: string): 'danger' | 'warning' | 'info' {
+  if (role === 'admin') return 'danger'
+  if (role === 'character_manager') return 'warning'
+  return 'info'
 }
 </script>
 

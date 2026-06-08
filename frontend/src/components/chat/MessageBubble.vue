@@ -33,7 +33,7 @@
           {{ isFavorited ? '已收藏' : '收藏' }}
         </el-button>
         <el-button text size="small" @click="$emit('feedback')">
-          <el-icon><ThumbUp /></el-icon>反馈
+          <el-icon><Top /></el-icon>反馈
         </el-button>
         <el-button text size="small" type="primary" @click="$emit('detail')">
           <el-icon><InfoFilled /></el-icon>详情
@@ -46,7 +46,7 @@
 <script setup lang="ts">
 import { computed } from 'vue'
 import { ElMessage } from 'element-plus'
-import { Service, UserFilled, StarFilled, Star, ThumbUp, InfoFilled } from '@element-plus/icons-vue'
+import { Service, UserFilled, StarFilled, Star, Top, InfoFilled } from '@element-plus/icons-vue'
 import type { Message, ContentBlock } from '@/types'
 
 const props = defineProps<{

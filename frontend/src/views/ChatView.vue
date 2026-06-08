@@ -102,6 +102,11 @@ async function loadMessages() {
   try {
     const res = await messagesApi.list(activeConvId.value)
     messages.value = res.data.items
+    favIds.value = new Set(
+      messages.value
+        .filter((msg) => msg.is_favorited)
+        .map((msg) => msg.id)
+    )
     await nextTick()
     scrollToBottom()
   } finally {
@@ -133,10 +138,10 @@ async function handleSend(content: string) {
 async function handleFavorite(msg: Message) {
   const res = await favoritesApi.toggle(msg.id)
   if (res.data.favorited) {
-    favIds.value.add(msg.id)
+    favIds.value = new Set([...favIds.value, msg.id])
     ElMessage.success('已收藏')
   } else {
-    favIds.value.delete(msg.id)
+    favIds.value = new Set([...favIds.value].filter((id) => id !== msg.id))
     ElMessage.success('已取消收藏')
   }
 }

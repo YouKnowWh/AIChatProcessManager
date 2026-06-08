@@ -10,6 +10,8 @@ CREATE DATABASE IF NOT EXISTS aichat_db
 
 USE aichat_db;
 
+SET NAMES utf8mb4 COLLATE utf8mb4_unicode_ci;
+
 -- ============================================================
 -- 1. users — 用户表
 -- ============================================================

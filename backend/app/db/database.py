@@ -10,6 +10,7 @@ engine = create_engine(
     pool_size=10,
     max_overflow=20,
     pool_pre_ping=True,
+    connect_args={"charset": "utf8mb4", "use_unicode": True},
     echo=settings.DEBUG,
 )
 

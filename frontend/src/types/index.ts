@@ -100,6 +100,7 @@ export interface Message {
   status: 'normal' | 'hidden' | 'deleted'
   sequence_number: number
   created_at: string
+  is_favorited?: boolean
   contents: ContentBlock[]
 }
 

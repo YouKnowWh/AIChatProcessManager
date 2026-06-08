@@ -28,9 +28,9 @@ const routes: RouteRecordRaw[] = [
       { path: 'favorites', name: 'Favorites', component: () => import('@/views/FavoriteView.vue') },
       { path: 'profile', name: 'Profile', component: () => import('@/views/ProfileView.vue') },
       // 角色维护者
-      { path: 'characters/manage', name: 'CharacterManage', component: () => import('@/views/CharacterManageView.vue') },
-      { path: 'characters/:id/edit', name: 'CharacterEdit', component: () => import('@/views/CharacterEditView.vue'), props: true },
-      { path: 'characters/:id/stats', name: 'CharacterStats', component: () => import('@/views/CharacterStatsView.vue'), props: true },
+      { path: 'characters/manage', name: 'CharacterManage', component: () => import('@/views/CharacterManageView.vue'), meta: { role: 'character_manager' } },
+      { path: 'characters/:id/edit', name: 'CharacterEdit', component: () => import('@/views/CharacterEditView.vue'), props: true, meta: { role: 'character_manager' } },
+      { path: 'characters/:id/stats', name: 'CharacterStats', component: () => import('@/views/CharacterStatsView.vue'), props: true, meta: { role: 'character_manager' } },
     ],
   },
   // 管理端（AdminLayout）
@@ -70,12 +70,19 @@ router.beforeEach((to, _from, next) => {
   // 需要登录
   if (!token) return next('/login')
 
-  // 角色控制
-  if (to.meta.role === 'admin' && user?.role !== 'admin') {
+  // 角色控制：admin 继承角色维护者权限
+  const requiredRole = to.meta.role as string | undefined
+  if (requiredRole && !hasRole(user?.role, requiredRole)) {
     return next('/')
   }
 
   next()
 })
+
+function hasRole(userRole: string | undefined, requiredRole: string): boolean {
+  if (!userRole) return false
+  if (userRole === 'admin') return true
+  return userRole === requiredRole
+}
 
 export default router

@@ -20,7 +20,8 @@ export const useAuthStore = defineStore('auth', () => {
     user.value = userInfo
     localStorage.setItem('token', access_token)
     localStorage.setItem('user', JSON.stringify(userInfo))
-    ElMessage.success('登录成功')
+    ElMessage.closeAll()
+    ElMessage.success({ message: '登录成功', duration: 1000, showClose: false })
     router.push('/')
   }
 
@@ -31,8 +32,16 @@ export const useAuthStore = defineStore('auth', () => {
     user.value = userInfo
     localStorage.setItem('token', access_token)
     localStorage.setItem('user', JSON.stringify(userInfo))
-    ElMessage.success('注册成功')
+    ElMessage.closeAll()
+    ElMessage.success({ message: '注册成功', duration: 1000, showClose: false })
     router.push('/')
+  }
+
+  async function refreshCurrentUser() {
+    if (!token.value) return
+    const res = await authApi.me()
+    user.value = res.data
+    localStorage.setItem('user', JSON.stringify(res.data))
   }
 
   function logout() {
@@ -43,5 +52,5 @@ export const useAuthStore = defineStore('auth', () => {
     router.push('/login')
   }
 
-  return { user, token, isLoggedIn, isAdmin, isManager, login, register, logout }
+  return { user, token, isLoggedIn, isAdmin, isManager, login, register, refreshCurrentUser, logout }
 })

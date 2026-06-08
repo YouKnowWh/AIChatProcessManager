@@ -28,4 +28,4 @@ class MessageMetadata(Base):
     created_at: Mapped[datetime] = mapped_column(DateTime, nullable=False, server_default=func.now())
 
     # 关系
-    message: Mapped["Message"] = relationship("Message", back_populates="metadata")
+    message: Mapped["Message"] = relationship("Message", back_populates="model_metadata")

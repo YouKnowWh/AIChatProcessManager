@@ -22,8 +22,8 @@ cd AIChatProcessManager
 # 2. 配置环境变量（已提供默认值，直接可用）
 cp .env.example .env
 
-# 3. 一键启动（MySQL + 自动建表 + 填充测试数据）
-docker compose up -d
+# 3. 前台启动（MySQL + 自动建表 + 填充测试数据）
+docker compose up
 
 # 4. 访问
 # API 文档: http://localhost:8000/docs

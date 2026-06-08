@@ -27,7 +27,7 @@ def create_feedback(
     )
 
 
-@router.get("", summary="查看我的反馈")
+@router.get("/feedbacks", summary="查看我的反馈")
 def list_my_feedbacks(
     page: int = Query(1, ge=1),
     page_size: int = Query(20, ge=1, le=100),

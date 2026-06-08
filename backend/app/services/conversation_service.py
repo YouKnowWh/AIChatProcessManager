@@ -26,7 +26,11 @@ class ConversationService:
         if character_id:
             query = query.filter(Conversation.character_id == character_id)
 
-        items = query.order_by(Conversation.last_message_at.desc().nullslast(), Conversation.id.desc()).all()
+        items = query.order_by(
+            Conversation.last_message_at.is_(None),
+            Conversation.last_message_at.desc(),
+            Conversation.id.desc(),
+        ).all()
 
         # 附带消息数量
         results = []

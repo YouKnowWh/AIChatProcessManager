@@ -84,7 +84,7 @@ class MetadataBlock(BaseModel):
     temperature: float | None
     top_p: float | None
 
-    model_config = {"from_attributes": True}
+    model_config = {"from_attributes": True, "protected_namespaces": ()}
 
 
 class MessageSearchRequest(BaseModel):

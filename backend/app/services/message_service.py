@@ -8,6 +8,7 @@ from sqlalchemy.orm import Session, joinedload
 from app.models.conversation import Conversation
 from app.models.message import Message
 from app.models.message_content import MessageContent
+from app.models.favorite import MessageFavorite
 from app.models.message_metadata import MessageMetadata
 from app.models.message_reasoning import MessageReasoning
 from app.models.tool_call import ToolCall
@@ -39,6 +40,18 @@ class MessageService:
             .limit(page_size)
             .all()
         )
+        message_ids = [msg.id for msg in messages]
+        favorite_ids = set()
+        if message_ids:
+            favorite_ids = {
+                row[0]
+                for row in db.query(MessageFavorite.message_id)
+                .filter(
+                    MessageFavorite.user_id == user.id,
+                    MessageFavorite.message_id.in_(message_ids),
+                )
+                .all()
+            }
 
         items = []
         for msg in messages:
@@ -51,6 +64,7 @@ class MessageService:
                 "status": msg.status,
                 "sequence_number": msg.sequence_number,
                 "created_at": msg.created_at.isoformat(),
+                "is_favorited": msg.id in favorite_ids,
                 "contents": [
                     {
                         "id": c.id,
@@ -342,18 +356,18 @@ class MessageService:
             result["tool_calls"].append(tc_block)
 
         # 元数据
-        if msg.metadata:
+        if msg.model_metadata:
             result["metadata"] = {
-                "id": msg.metadata.id,
-                "model_name": msg.metadata.model_name,
-                "provider": msg.metadata.provider,
-                "prompt_tokens": msg.metadata.prompt_tokens,
-                "completion_tokens": msg.metadata.completion_tokens,
-                "total_tokens": msg.metadata.total_tokens,
-                "duration_ms": msg.metadata.duration_ms,
-                "finish_reason": msg.metadata.finish_reason,
-                "temperature": float(msg.metadata.temperature) if msg.metadata.temperature else None,
-                "top_p": float(msg.metadata.top_p) if msg.metadata.top_p else None,
+                "id": msg.model_metadata.id,
+                "model_name": msg.model_metadata.model_name,
+                "provider": msg.model_metadata.provider,
+                "prompt_tokens": msg.model_metadata.prompt_tokens,
+                "completion_tokens": msg.model_metadata.completion_tokens,
+                "total_tokens": msg.model_metadata.total_tokens,
+                "duration_ms": msg.model_metadata.duration_ms,
+                "finish_reason": msg.model_metadata.finish_reason,
+                "temperature": float(msg.model_metadata.temperature) if msg.model_metadata.temperature else None,
+                "top_p": float(msg.model_metadata.top_p) if msg.model_metadata.top_p else None,
             }
 
         return result

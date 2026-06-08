@@ -32,12 +32,12 @@ from app.api.routes import auth, users, characters, conversations, messages  # n
 from app.api.routes import favorites, feedbacks, admin, logs, stats  # noqa: E402
 
 app.include_router(auth.router, prefix="/api/auth", tags=["认证"])
-app.include_router(users.router, tags=["用户"])
+app.include_router(users.router, prefix="/api", tags=["用户"])
 app.include_router(characters.router, prefix="/api/characters", tags=["AI 角色"])
 app.include_router(conversations.router, prefix="/api/conversations", tags=["会话"])
-app.include_router(messages.router, tags=["消息"])
-app.include_router(favorites.router, prefix="/api/favorites", tags=["收藏"])
-app.include_router(feedbacks.router, prefix="/api/feedbacks", tags=["反馈"])
+app.include_router(messages.router, prefix="/api", tags=["消息"])
+app.include_router(favorites.router, prefix="/api", tags=["收藏"])
+app.include_router(feedbacks.router, prefix="/api", tags=["反馈"])
 app.include_router(admin.router, prefix="/api/admin", tags=["管理员"])
 app.include_router(logs.router, prefix="/api/admin/logs", tags=["系统日志"])
 app.include_router(stats.router, prefix="/api/stats", tags=["统计"])
