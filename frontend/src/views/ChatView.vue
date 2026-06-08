@@ -122,18 +122,39 @@ async function loadMessages() {
 // 发送消息
 async function handleSend(content: string) {
   if (!activeConvId.value || !content.trim()) return
+
+  // 1. 乐观更新 — 用户消息立即显示
+  const tempId = -Date.now()
+  const optimisticMsg: Message = {
+    id: tempId,
+    conversation_id: activeConvId.value,
+    parent_message_id: null,
+    sender_type: 'user',
+    role: 'user',
+    status: 'normal',
+    sequence_number: messages.value.length + 1,
+    created_at: new Date().toISOString(),
+    contents: [{ id: tempId, content_type: 'text', content, sort_order: 0 }],
+  }
+  messages.value.push(optimisticMsg)
+  await nextTick()
+  scrollToBottom()
+
+  // 2. 发送到后端，等待 AI 回复
   sending.value = true
   try {
     const res = await messagesApi.send(activeConvId.value, content)
-    // 将用户消息和 AI 回复加入列表
-    messages.value.push(res.data.user_message)
+    // 替换临时用户消息为真实数据，追加 AI 回复
+    const idx = messages.value.findIndex(m => m.id === tempId)
+    if (idx >= 0) messages.value.splice(idx, 1, res.data.user_message)
     messages.value.push(res.data.ai_message)
     await nextTick()
     scrollToBottom()
-    // 刷新会话列表（更新 last_message_at）
     await loadConversations()
   } catch {
     ElMessage.error('发送失败')
+    // 移除失败的临时消息
+    messages.value = messages.value.filter(m => m.id !== tempId)
   } finally {
     sending.value = false
   }
