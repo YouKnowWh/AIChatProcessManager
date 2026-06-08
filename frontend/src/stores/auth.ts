@@ -11,7 +11,6 @@ export const useAuthStore = defineStore('auth', () => {
 
   const isLoggedIn = () => !!token.value
   const isAdmin = () => user.value?.role === 'admin'
-  const isManager = () => user.value?.role === 'character_manager' || user.value?.role === 'admin'
 
   async function login(data: LoginRequest) {
     const res = await authApi.login(data)
@@ -52,5 +51,4 @@ export const useAuthStore = defineStore('auth', () => {
     router.push('/login')
   }
 
-  return { user, token, isLoggedIn, isAdmin, isManager, login, register, refreshCurrentUser, logout }
 })

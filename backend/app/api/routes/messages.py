@@ -1,6 +1,6 @@
 """消息路由 — 发送、列表、详情、搜索、删除、过程数据查询"""
 
-from fastapi import APIRouter, Depends, Query
+from fastapi import APIRouter, Depends, HTTPException, Query, status
 from sqlalchemy.orm import Session
 
 from app.core.deps import get_current_admin, get_current_user
@@ -36,6 +36,8 @@ def send_message(
     db: Session = Depends(get_db),
     current_user: User = Depends(get_current_user),
 ):
+    if current_user.role == "admin":
+        raise HTTPException(status_code=status.HTTP_403_FORBIDDEN, detail="管理员不允许发送消息")
     result = MessageService.send_message(db, conversation_id, current_user, req.content)
     return APIResponse.created(data=result, message="消息发送成功")
 

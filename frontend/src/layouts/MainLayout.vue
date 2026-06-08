@@ -20,11 +20,11 @@
             <el-icon><Star /></el-icon>
             <span>收藏</span>
           </el-menu-item>
-          <el-menu-item v-if="auth.isManager()" index="/conversations">
+          <el-menu-item index="/conversations">
             <el-icon><ChatLineSquare /></el-icon>
             <span>会话管理</span>
           </el-menu-item>
-          <el-menu-item v-if="auth.isManager()" index="/characters/manage">
+          <el-menu-item index="/characters/manage">
             <el-icon><Setting /></el-icon>
             <span>角色管理</span>
           </el-menu-item>
@@ -62,7 +62,7 @@
               <el-dropdown-item @click="$router.push('/profile')">
                 <el-icon><User /></el-icon>个人信息
               </el-dropdown-item>
-              <el-dropdown-item v-if="auth.isManager()" @click="$router.push('/characters/manage')">
+              <el-dropdown-item @click="$router.push('/characters/manage')">
                 <el-icon><Setting /></el-icon>角色管理
               </el-dropdown-item>
               <el-dropdown-item v-if="auth.isAdmin()" @click="$router.push('/admin')">
@@ -109,7 +109,6 @@ function roleLabel(role: string): string {
 
 function roleTagType(role: string): 'danger' | 'warning' | 'info' {
   if (role === 'admin') return 'danger'
-  if (role === 'character_manager') return 'warning'
   return 'info'
 }
 </script>

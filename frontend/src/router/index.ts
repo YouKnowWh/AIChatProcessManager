@@ -22,15 +22,15 @@ const routes: RouteRecordRaw[] = [
     children: [
       { path: '', name: 'Dashboard', component: () => import('@/views/DashboardView.vue') },
       { path: 'characters', name: 'Characters', component: () => import('@/views/CharacterListView.vue') },
-      { path: 'conversations', name: 'Conversations', component: () => import('@/views/ConversationListView.vue'), meta: { role: 'character_manager' } },
+      { path: 'conversations', name: 'Conversations', component: () => import('@/views/ConversationListView.vue') },
       { path: 'chat/:id', name: 'Chat', component: () => import('@/views/ChatView.vue'), props: true },
       { path: 'search', name: 'MessageSearch', component: () => import('@/views/MessageSearchView.vue') },
       { path: 'favorites', name: 'Favorites', component: () => import('@/views/FavoriteView.vue') },
       { path: 'profile', name: 'Profile', component: () => import('@/views/ProfileView.vue') },
-      // 角色维护者
-      { path: 'characters/manage', name: 'CharacterManage', component: () => import('@/views/CharacterManageView.vue'), meta: { role: 'character_manager' } },
-      { path: 'characters/:id/edit', name: 'CharacterEdit', component: () => import('@/views/CharacterEditView.vue'), props: true, meta: { role: 'character_manager' } },
-      { path: 'characters/:id/stats', name: 'CharacterStats', component: () => import('@/views/CharacterStatsView.vue'), props: true, meta: { role: 'character_manager' } },
+      // 角色管理（所有用户可用）
+      { path: 'characters/manage', name: 'CharacterManage', component: () => import('@/views/CharacterManageView.vue') },
+      { path: 'characters/:id/edit', name: 'CharacterEdit', component: () => import('@/views/CharacterEditView.vue'), props: true },
+      { path: 'characters/:id/stats', name: 'CharacterStats', component: () => import('@/views/CharacterStatsView.vue'), props: true },
     ],
   },
   // 管理端（AdminLayout）

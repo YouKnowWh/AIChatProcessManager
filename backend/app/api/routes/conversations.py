@@ -1,6 +1,6 @@
 """会话路由"""
 
-from fastapi import APIRouter, Depends, Query
+from fastapi import APIRouter, Depends, HTTPException, Query, status
 from sqlalchemy.orm import Session
 
 from app.core.deps import get_current_user
@@ -32,6 +32,8 @@ def create_conversation(
     db: Session = Depends(get_db),
     current_user: User = Depends(get_current_user),
 ):
+    if current_user.role == "admin":
+        raise HTTPException(status_code=status.HTTP_403_FORBIDDEN, detail="管理员不允许创建会话")
     conversation = ConversationService.create(db, current_user, req)
     return APIResponse.created(
         data=ConversationResponse.model_validate(conversation).model_dump(),

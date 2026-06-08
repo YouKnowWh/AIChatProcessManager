@@ -3,7 +3,7 @@
 from fastapi import APIRouter, Depends, Query
 from sqlalchemy.orm import Session
 
-from app.core.deps import get_current_admin, get_current_manager, get_current_user
+from app.core.deps import get_current_admin, get_current_user
 from app.db.database import get_db
 from app.models.user import User
 from app.schemas.ai_character import CharacterBrief, CharacterCreate, CharacterResponse, CharacterUpdate
@@ -43,7 +43,7 @@ def get_character(
 def create_character(
     req: CharacterCreate,
     db: Session = Depends(get_db),
-    current_user: User = Depends(get_current_manager),
+    current_user: User = Depends(get_current_user),
 ):
     character = CharacterService.create(db, current_user, req)
     return APIResponse.created(data=CharacterResponse.model_validate(character).model_dump(), message="角色创建成功")
@@ -54,7 +54,7 @@ def update_character(
     character_id: int,
     req: CharacterUpdate,
     db: Session = Depends(get_db),
-    current_user: User = Depends(get_current_manager),
+    current_user: User = Depends(get_current_user),
 ):
     character = CharacterService.get_by_id(db, character_id)
 
@@ -76,7 +76,7 @@ def update_character(
 def delete_character(
     character_id: int,
     db: Session = Depends(get_db),
-    current_user: User = Depends(get_current_manager),
+    current_user: User = Depends(get_current_user),
 ):
     character = CharacterService.get_by_id(db, character_id)
 
@@ -105,7 +105,7 @@ def disable_character(
 def get_character_stats(
     character_id: int,
     db: Session = Depends(get_db),
-    current_user: User = Depends(get_current_manager),
+    current_user: User = Depends(get_current_user),
 ):
     character = CharacterService.get_by_id(db, character_id)
     if current_user.role != "admin" and character.creator_id != current_user.id:
@@ -142,7 +142,7 @@ def get_character_feedbacks(
     page: int = Query(1, ge=1),
     page_size: int = Query(20, ge=1, le=100),
     db: Session = Depends(get_db),
-    current_user: User = Depends(get_current_manager),
+    current_user: User = Depends(get_current_user),
 ):
     character = CharacterService.get_by_id(db, character_id)
     if current_user.role != "admin" and character.creator_id != current_user.id:
