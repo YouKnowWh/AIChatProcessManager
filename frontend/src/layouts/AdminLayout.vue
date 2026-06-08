@@ -42,11 +42,6 @@
           <el-icon><DataAnalysis /></el-icon>
           <span>系统统计</span>
         </el-menu-item>
-        <el-divider style="border-color: #4a5a6a; margin: 8px 0;" />
-        <el-menu-item index="/">
-          <el-icon><Back /></el-icon>
-          <span>返回前台</span>
-        </el-menu-item>
       </el-menu>
     </el-aside>
 
@@ -77,7 +72,7 @@ import { useRoute } from 'vue-router'
 import { useAuthStore } from '@/stores/auth'
 import {
   Monitor, HomeFilled, User, Service, ChatDotRound, StarFilled,
-  Document, DataAnalysis, Back, Expand, Fold,
+  Document, DataAnalysis, Expand, Fold,
 } from '@element-plus/icons-vue'
 
 const route = useRoute()
