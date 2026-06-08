@@ -32,6 +32,7 @@ services:
       JWT_ALGORITHM: ${JWT_ALGORITHM:-HS256}
       JWT_EXPIRE_MINUTES: ${JWT_EXPIRE_MINUTES:-1440}
       DEBUG: ${APP_DEBUG:-true}
+      DEEPSEEK_API_KEY: ${DEEPSEEK_API_KEY:-}
     ports:
       - "8000:8000"
     depends_on:

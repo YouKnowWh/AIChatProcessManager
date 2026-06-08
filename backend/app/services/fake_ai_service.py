@@ -17,6 +17,7 @@ class FakeAIResult:
     provider: str = "anthropic"
     prompt_tokens: int = 0
     completion_tokens: int = 0
+    total_tokens: int = 0
     duration_ms: int = 0
     finish_reason: str = "stop"
 
