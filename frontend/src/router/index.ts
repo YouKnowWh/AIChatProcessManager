@@ -62,13 +62,18 @@ router.beforeEach((to, _from, next) => {
   const user = userStr ? JSON.parse(userStr) : null
 
   if (to.meta.guest) {
-    // 已登录用户访问登录/注册页 → 跳转首页
-    if (token) return next('/')
+    // 已登录用户访问登录/注册页 → 管理员跳转后台，普通用户跳首页
+    if (token) return next(user?.role === 'admin' ? '/admin' : '/')
     return next()
   }
 
   // 需要登录
   if (!token) return next('/login')
+
+  // 管理员强制进入系统管理界面
+  if (user?.role === 'admin' && !to.path.startsWith('/admin')) {
+    return next('/admin')
+  }
 
   // 角色控制：admin 继承角色维护者权限
   const requiredRole = to.meta.role as string | undefined

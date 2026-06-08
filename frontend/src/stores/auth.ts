@@ -21,7 +21,7 @@ export const useAuthStore = defineStore('auth', () => {
     localStorage.setItem('user', JSON.stringify(userInfo))
     ElMessage.closeAll()
     ElMessage.success({ message: '登录成功', duration: 1000, showClose: false })
-    router.push('/')
+    router.push(userInfo.role === 'admin' ? '/admin' : '/')
   }
 
   async function register(data: RegisterRequest) {
@@ -51,4 +51,5 @@ export const useAuthStore = defineStore('auth', () => {
     router.push('/login')
   }
 
+  return { user, token, isLoggedIn, isAdmin, login, register, refreshCurrentUser, logout }
 })
