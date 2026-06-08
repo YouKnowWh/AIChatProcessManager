@@ -18,7 +18,8 @@
             <div class="conv-title">{{ conv.title || '未命名会话' }}</div>
             <div class="conv-meta">
               <span class="conv-char">{{ conv.character_name }}</span>
-              <span class="conv-count">{{ conv.message_count }} 条消息</span>
+              <span v-if="conv.message_count === 0 && !conv.last_message_at" class="conv-new">新会话</span>
+              <span v-else class="conv-count">{{ conv.message_count }} 条消息</span>
             </div>
           </div>
         </div>
@@ -56,4 +57,5 @@ defineEmits<{
 .conv-text { flex: 1; min-width: 0; }
 .conv-title { font-size: 14px; color: #303133; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
 .conv-meta { display: flex; gap: 12px; margin-top: 4px; font-size: 12px; color: #909399; }
+.conv-new { color: #409eff; font-weight: 500; }
 </style>

@@ -2,13 +2,13 @@
   "schema": "openai.presentation.layout/v4",
   "unit": "px",
   "slide": {
-    "aid": "sl/xfj93h",
-    "id": "xfj93h",
+    "aid": "sl/mo4yif",
+    "id": "mo4yif",
     "slide": 8,
-    "layoutId": "82d14659-639b-4d6e-8e72-7828b77cafd0",
+    "layoutId": "e96e0f20-46d6-48c0-823f-cc39ba8b8cf4",
     "layoutName": "Title Slide",
     "layoutType": "title",
-    "masterLayoutId": "afa3dcc7-d52e-4537-a876-059472ff297e",
+    "masterLayoutId": "c4940938-650c-4056-bb9c-aed6e5694eca",
     "masterLayoutName": "Master",
     "frame": {
       "left": 0,
@@ -44,15 +44,15 @@
   "inheritedLayers": [
     {
       "scope": "layout",
-      "id": "82d14659-639b-4d6e-8e72-7828b77cafd0",
+      "id": "e96e0f20-46d6-48c0-823f-cc39ba8b8cf4",
       "name": "Title Slide",
       "type": "title",
-      "parentLayoutId": "afa3dcc7-d52e-4537-a876-059472ff297e",
+      "parentLayoutId": "c4940938-650c-4056-bb9c-aed6e5694eca",
       "elements": []
     },
     {
       "scope": "master",
-      "id": "afa3dcc7-d52e-4537-a876-059472ff297e",
+      "id": "c4940938-650c-4056-bb9c-aed6e5694eca",
       "name": "Master",
       "type": "master",
       "elements": []
@@ -63,7 +63,7 @@
       "order": 1,
       "kind": "shape",
       "scope": "slide",
-      "aid": "sh/m58z25kb",
+      "aid": "sh/uxc3ylc7",
       "id": "1",
       "bbox": [
         0,
@@ -71,77 +71,69 @@
         1280,
         720
       ],
-      "composeSource": {
-        "run": 1,
-        "path": "0.11"
-      },
       "geometry": "rect",
-      "fillColor": "#F8FAFC"
+      "fillColor": "#F6F8FB",
+      "lineColor": "rgba(0, 0, 0, 0)",
+      "lineWidth": 0
     },
     {
       "order": 2,
       "kind": "shape",
       "scope": "slide",
-      "aid": "sh/twra5gbq",
+      "aid": "sh/1kre1w7m",
       "id": "2",
       "bbox": [
         0,
         0,
         1280,
-        74
+        78
       ],
-      "composeSource": {
-        "run": 1,
-        "path": "0.10"
-      },
       "geometry": "rect",
-      "fillColor": "#FFFFFF"
+      "fillColor": "#FFFFFF",
+      "lineColor": "rgba(0, 0, 0, 0)",
+      "lineWidth": 0
     },
     {
       "order": 3,
       "kind": "shape",
       "scope": "slide",
-      "aid": "sh/4byhgn29",
+      "aid": "sh/c3ylc7u5",
       "id": "3",
       "bbox": [
         0,
-        0,
+        77,
         1280,
         1
       ],
-      "composeSource": {
-        "run": 1,
-        "path": "0.9"
-      },
       "geometry": "rect",
-      "fillColor": "#E2E8F0"
+      "fillColor": "#E5EAF2",
+      "lineColor": "rgba(0, 0, 0, 0)",
+      "lineWidth": 0
     },
     {
       "order": 4,
       "kind": "shape",
       "scope": "slide",
-      "aid": "sh/b2hwfyxo",
+      "aid": "sh/j6tovaho",
       "id": "4",
       "bbox": [
-        0,
-        0,
-        360,
-        720
+        56,
+        25,
+        380,
+        24
       ],
-      "composeSource": {
-        "run": 1,
-        "path": "0.16"
-      },
       "geometry": "rect",
       "text": "AIChatProcessManager",
       "textPreview": "AIChatProcessManager",
       "resolvedFontSize": 16,
       "resolvedTextStyle": {
+        "anchor": 1,
         "fontSize": 16,
         "typeface": "PingFang SC",
         "color": "#2563EB",
         "bold": true,
         "alignment": "left",
+        "verticalAlignment": "top",
         "insets": {
           "top": 0,
           "right": 0,
@@ -166,7 +158,8 @@
             "fontSize": 16,
             "typeface": "PingFang SC",
             "color": "#2563EB",
-            "bold": true
+            "bold": true,
+            "alignment": "left"
           },
           "runs": [
             {
@@ -180,34 +173,35 @@
           ],
           "marginLeft": 0
         }
-      ]
+      ],
+      "fillColor": "rgba(0, 0, 0, 0)",
+      "lineColor": "rgba(0, 0, 0, 0)",
+      "lineWidth": 0
     },
     {
       "order": 5,
       "kind": "shape",
       "scope": "slide",
-      "aid": "sh/mhk3q5o7",
+      "aid": "sh/ulwval87",
       "id": "5",
       "bbox": [
-        0,
-        0,
+        56,
+        104,
         900,
-        720
+        52
       ],
-      "composeSource": {
-        "run": 1,
-        "path": "0.15"
-      },
       "geometry": "rect",
-      "text": "核心功能模块",
-      "textPreview": "核心功能模块",
+      "text": "功能模块划分",
+      "textPreview": "功能模块划分",
       "resolvedFontSize": 34,
       "resolvedTextStyle": {
+        "anchor": 1,
         "fontSize": 34,
         "typeface": "PingFang SC",
         "color": "#111827",
         "bold": true,
         "alignment": "left",
+        "verticalAlignment": "top",
         "insets": {
           "top": 0,
           "right": 0,
@@ -220,24 +214,25 @@
         "lines": [
           {
             "index": 1,
-            "text": "核心功能模块"
+            "text": "功能模块划分"
           }
         ]
       },
       "paragraphs": [
         {
           "index": 1,
-          "text": "核心功能模块",
+          "text": "功能模块划分",
           "resolvedTextStyle": {
             "fontSize": 34,
             "typeface": "PingFang SC",
             "color": "#111827",
-            "bold": true
+            "bold": true,
+            "alignment": "left"
           },
           "runs": [
             {
               "index": 1,
-              "text": "核心功能模块",
+              "text": "功能模块划分",
               "fontSize": 34,
               "typeface": "PingFang SC",
               "color": "#111827",
@@ -246,25 +241,24 @@
           ],
           "marginLeft": 0
         }
-      ]
+      ],
+      "fillColor": "rgba(0, 0, 0, 0)",
+      "lineColor": "rgba(0, 0, 0, 0)",
+      "lineWidth": 0
     },
     {
       "order": 6,
       "kind": "shape",
       "scope": "slide",
-      "aid": "sh/t83itgfm",
+      "aid": "sh/1cfa9w3m",
       "id": "6",
       "bbox": [
-        0,
-        0,
-        340,
-        132
+        80,
+        185,
+        330,
+        145
       ],
-      "composeSource": {
-        "run": 1,
-        "path": "0.14"
-      },
-      "geometry": "roundRect",
+      "geometry": "rect",
       "fillColor": "#FFFFFF",
       "lineColor": "#E2E8F0",
       "lineWidth": 1
@@ -273,47 +267,43 @@
       "order": 7,
       "kind": "shape",
       "scope": "slide",
-      "aid": "sh/4nap4r65",
+      "aid": "sh/crmhk3q5",
       "id": "7",
       "bbox": [
-        0,
-        0,
-        5,
-        132
+        80,
+        185,
+        6,
+        145
       ],
-      "composeSource": {
-        "run": 1,
-        "path": "0.13"
-      },
-      "geometry": "roundRect",
-      "fillColor": "#0EA5E9"
+      "geometry": "rect",
+      "fillColor": "#2563EB",
+      "lineColor": "rgba(0, 0, 0, 0)",
+      "lineWidth": 0
     },
     {
       "order": 8,
       "kind": "shape",
       "scope": "slide",
-      "aid": "sh/bat47y1k",
+      "aid": "sh/j2t83itg",
       "id": "8",
       "bbox": [
-        0,
-        0,
-        296,
-        720
+        104,
+        207,
+        282,
+        28
       ],
-      "composeSource": {
-        "run": 1,
-        "path": "0.7"
-      },
       "geometry": "rect",
-      "text": "用户端",
-      "textPreview": "用户端",
-      "resolvedFontSize": 20,
+      "text": "前台会话",
+      "textPreview": "前台会话",
+      "resolvedFontSize": 21,
       "resolvedTextStyle": {
-        "fontSize": 20,
+        "anchor": 1,
+        "fontSize": 21,
         "typeface": "PingFang SC",
         "color": "#111827",
         "bold": true,
         "alignment": "left",
+        "verticalAlignment": "top",
         "insets": {
           "top": 0,
           "right": 0,
@@ -326,25 +316,26 @@
         "lines": [
           {
             "index": 1,
-            "text": "用户端"
+            "text": "前台会话"
           }
         ]
       },
       "paragraphs": [
         {
           "index": 1,
-          "text": "用户端",
+          "text": "前台会话",
           "resolvedTextStyle": {
-            "fontSize": 20,
+            "fontSize": 21,
             "typeface": "PingFang SC",
             "color": "#111827",
-            "bold": true
+            "bold": true,
+            "alignment": "left"
           },
           "runs": [
             {
               "index": 1,
-              "text": "用户端",
-              "fontSize": 20,
+              "text": "前台会话",
+              "fontSize": 21,
               "typeface": "PingFang SC",
               "color": "#111827",
               "bold": true
@@ -352,33 +343,34 @@
           ],
           "marginLeft": 0
         }
-      ]
+      ],
+      "fillColor": "rgba(0, 0, 0, 0)",
+      "lineColor": "rgba(0, 0, 0, 0)",
+      "lineWidth": 0
     },
     {
       "order": 9,
       "kind": "shape",
       "scope": "slide",
-      "aid": "sh/mp0bi9s3",
+      "aid": "sh/qh0fepkz",
       "id": "9",
       "bbox": [
-        0,
-        0,
-        296,
-        720
+        104,
+        247,
+        282,
+        67
       ],
-      "composeSource": {
-        "run": 1,
-        "path": "0.8"
-      },
       "geometry": "rect",
-      "text": "登录注册、AI 角色选择、会话列表、聊天页、消息收藏、反馈提交、个人资料。",
-      "textPreview": "登录注册、AI 角色选择、会话列表、聊天页、消息收藏、反馈提交、个人资料。",
+      "text": "登录注册、角色选择、会话列表、聊天详情、消息过程展示、收藏。",
+      "textPreview": "登录注册、角色选择、会话列表、聊天详情、消息过程展示、收藏。",
       "resolvedFontSize": 15,
       "resolvedTextStyle": {
+        "anchor": 1,
         "fontSize": 15,
         "typeface": "PingFang SC",
         "color": "#64748B",
         "alignment": "left",
+        "verticalAlignment": "top",
         "insets": {
           "top": 0,
           "right": 0,
@@ -387,35 +379,32 @@
         }
       },
       "textLayout": {
-        "lineCount": 3,
+        "lineCount": 2,
         "lines": [
           {
             "index": 1,
-            "text": "登录注册、AI"
+            "text": "登录注册、角色选择、会话列表、聊天详"
           },
           {
             "index": 2,
-            "text": "角色选择、会话列表、聊天页、消息收藏、"
-          },
-          {
-            "index": 3,
-            "text": "反馈提交、个人资料。"
+            "text": "情、消息过程展示、收藏。"
           }
         ]
       },
       "paragraphs": [
         {
           "index": 1,
-          "text": "登录注册、AI 角色选择、会话列表、聊天页、消息收藏、反馈提交、个人资料。",
+          "text": "登录注册、角色选择、会话列表、聊天详情、消息过程展示、收藏。",
           "resolvedTextStyle": {
             "fontSize": 15,
             "typeface": "PingFang SC",
-            "color": "#64748B"
+            "color": "#64748B",
+            "alignment": "left"
           },
           "runs": [
             {
               "index": 1,
-              "text": "登录注册、AI 角色选择、会话列表、聊天页、消息收藏、反馈提交、个人资料。",
+              "text": "登录注册、角色选择、会话列表、聊天详情、消息过程展示、收藏。",
               "fontSize": 15,
               "typeface": "PingFang SC",
               "color": "#64748B"
@@ -423,25 +412,24 @@
           ],
           "marginLeft": 0
         }
-      ]
+      ],
+      "fillColor": "rgba(0, 0, 0, 0)",
+      "lineColor": "rgba(0, 0, 0, 0)",
+      "lineWidth": 0
     },
     {
       "order": 10,
       "kind": "shape",
       "scope": "slide",
-      "aid": "sh/4byhgn29",
+      "aid": "sh/s36hcrmh",
       "id": "10",
       "bbox": [
-        0,
-        0,
-        340,
-        132
+        475,
+        185,
+        330,
+        145
       ],
-      "composeSource": {
-        "run": 1,
-        "path": "0.9"
-      },
-      "geometry": "roundRect",
+      "geometry": "rect",
       "fillColor": "#FFFFFF",
       "lineColor": "#E2E8F0",
       "lineWidth": 1
@@ -450,47 +438,43 @@
       "order": 11,
       "kind": "shape",
       "scope": "slide",
-      "aid": "sh/twra5gbq",
+      "aid": "sh/hoza1gvy",
       "id": "11",
       "bbox": [
-        0,
-        0,
-        5,
-        132
+        475,
+        185,
+        6,
+        145
       ],
-      "composeSource": {
-        "run": 1,
-        "path": "0.10"
-      },
-      "geometry": "roundRect",
-      "fillColor": "#F59E0B"
+      "geometry": "rect",
+      "fillColor": "#F59E0B",
+      "lineColor": "rgba(0, 0, 0, 0)",
+      "lineWidth": 0
     },
     {
       "order": 12,
       "kind": "shape",
       "scope": "slide",
-      "aid": "sh/m58z25kb",
+      "aid": "sh/a1gvy90j",
       "id": "12",
       "bbox": [
-        0,
-        0,
-        296,
-        720
+        499,
+        207,
+        282,
+        28
       ],
-      "composeSource": {
-        "run": 1,
-        "path": "0.11"
-      },
       "geometry": "rect",
-      "text": "角色维护端",
-      "textPreview": "角色维护端",
-      "resolvedFontSize": 20,
+      "text": "角色维护",
+      "textPreview": "角色维护",
+      "resolvedFontSize": 21,
       "resolvedTextStyle": {
-        "fontSize": 20,
+        "anchor": 1,
+        "fontSize": 21,
         "typeface": "PingFang SC",
         "color": "#111827",
         "bold": true,
         "alignment": "left",
+        "verticalAlignment": "top",
         "insets": {
           "top": 0,
           "right": 0,
@@ -503,25 +487,26 @@
         "lines": [
           {
             "index": 1,
-            "text": "角色维护端"
+            "text": "角色维护"
           }
         ]
       },
       "paragraphs": [
         {
           "index": 1,
-          "text": "角色维护端",
+          "text": "角色维护",
           "resolvedTextStyle": {
-            "fontSize": 20,
+            "fontSize": 21,
             "typeface": "PingFang SC",
             "color": "#111827",
-            "bold": true
+            "bold": true,
+            "alignment": "left"
           },
           "runs": [
             {
               "index": 1,
-              "text": "角色维护端",
-              "fontSize": 20,
+              "text": "角色维护",
+              "fontSize": 21,
               "typeface": "PingFang SC",
               "color": "#111827",
               "bold": true
@@ -529,33 +514,34 @@
           ],
           "marginLeft": 0
         }
-      ]
+      ],
+      "fillColor": "rgba(0, 0, 0, 0)",
+      "lineColor": "rgba(0, 0, 0, 0)",
+      "lineWidth": 0
     },
     {
       "order": 13,
       "kind": "shape",
       "scope": "slide",
-      "aid": "sh/bq1oryts",
+      "aid": "sh/zidonyd0",
       "id": "13",
       "bbox": [
-        0,
-        0,
-        296,
-        720
+        499,
+        247,
+        282,
+        67
       ],
-      "composeSource": {
-        "run": 1,
-        "path": "0.12"
-      },
       "geometry": "rect",
-      "text": "创建/编辑 AI 角色，查看角色使用统计与角色反馈。管理员继承该权限。",
-      "textPreview": "创建/编辑 AI 角色，查看角色使用统计与角色反馈。管理员继承该权限。",
+      "text": "AI 角色列表、状态管理、资料维护；由角色维护者和管理员进入。",
+      "textPreview": "AI 角色列表、状态管理、资料维护；由角色维护者和管理员进入。",
       "resolvedFontSize": 15,
       "resolvedTextStyle": {
+        "anchor": 1,
         "fontSize": 15,
         "typeface": "PingFang SC",
         "color": "#64748B",
         "alignment": "left",
+        "verticalAlignment": "top",
         "insets": {
           "top": 0,
           "right": 0,
@@ -568,31 +554,32 @@
         "lines": [
           {
             "index": 1,
-            "text": "创建/编辑 AI"
+            "text": "AI"
           },
           {
             "index": 2,
-            "text": "角色，查看角色使用统计与角色反馈。管理"
+            "text": "角色列表、状态管理、资料维护；由角色"
           },
           {
             "index": 3,
-            "text": "员继承该权限。"
+            "text": "维护者和管理员进入。"
           }
         ]
       },
       "paragraphs": [
         {
           "index": 1,
-          "text": "创建/编辑 AI 角色，查看角色使用统计与角色反馈。管理员继承该权限。",
+          "text": "AI 角色列表、状态管理、资料维护；由角色维护者和管理员进入。",
           "resolvedTextStyle": {
             "fontSize": 15,
             "typeface": "PingFang SC",
-            "color": "#64748B"
+            "color": "#64748B",
+            "alignment": "left"
           },
           "runs": [
             {
               "index": 1,
-              "text": "创建/编辑 AI 角色，查看角色使用统计与角色反馈。管理员继承该权限。",
+              "text": "AI 角色列表、状态管理、资料维护；由角色维护者和管理员进入。",
               "fontSize": 15,
               "typeface": "PingFang SC",
               "color": "#64748B"
@@ -600,25 +587,24 @@
           ],
           "marginLeft": 0
         }
-      ]
+      ],
+      "fillColor": "rgba(0, 0, 0, 0)",
+      "lineColor": "rgba(0, 0, 0, 0)",
+      "lineWidth": 0
     },
     {
       "order": 14,
       "kind": "shape",
       "scope": "slide",
-      "aid": "sh/4nap4r65",
+      "aid": "sh/svu9knih",
       "id": "14",
       "bbox": [
-        0,
-        0,
-        340,
-        132
+        870,
+        185,
+        330,
+        145
       ],
-      "composeSource": {
-        "run": 1,
-        "path": "0.13"
-      },
-      "geometry": "roundRect",
+      "geometry": "rect",
       "fillColor": "#FFFFFF",
       "lineColor": "#E2E8F0",
       "lineWidth": 1
@@ -627,47 +613,43 @@
       "order": 15,
       "kind": "shape",
       "scope": "slide",
-      "aid": "sh/t83itgfm",
+      "aid": "sh/hgn29gr2",
       "id": "15",
       "bbox": [
-        0,
-        0,
-        5,
-        132
+        870,
+        185,
+        6,
+        145
       ],
-      "composeSource": {
-        "run": 1,
-        "path": "0.14"
-      },
-      "geometry": "roundRect",
-      "fillColor": "#DC2626"
+      "geometry": "rect",
+      "fillColor": "#7C3AED",
+      "lineColor": "rgba(0, 0, 0, 0)",
+      "lineWidth": 0
     },
     {
       "order": 16,
       "kind": "shape",
       "scope": "slide",
-      "aid": "sh/mhk3q5o7",
+      "aid": "sh/ap4r65wj",
       "id": "16",
       "bbox": [
-        0,
-        0,
-        296,
-        720
+        894,
+        207,
+        282,
+        28
       ],
-      "composeSource": {
-        "run": 1,
-        "path": "0.15"
-      },
       "geometry": "rect",
-      "text": "管理后台",
-      "textPreview": "管理后台",
-      "resolvedFontSize": 20,
+      "text": "后台治理",
+      "textPreview": "后台治理",
+      "resolvedFontSize": 21,
       "resolvedTextStyle": {
-        "fontSize": 20,
+        "anchor": 1,
+        "fontSize": 21,
         "typeface": "PingFang SC",
         "color": "#111827",
         "bold": true,
         "alignment": "left",
+        "verticalAlignment": "top",
         "insets": {
           "top": 0,
           "right": 0,
@@ -680,25 +662,26 @@
         "lines": [
           {
             "index": 1,
-            "text": "管理后台"
+            "text": "后台治理"
           }
         ]
       },
       "paragraphs": [
         {
           "index": 1,
-          "text": "管理后台",
+          "text": "后台治理",
           "resolvedTextStyle": {
-            "fontSize": 20,
+            "fontSize": 21,
             "typeface": "PingFang SC",
             "color": "#111827",
-            "bold": true
+            "bold": true,
+            "alignment": "left"
           },
           "runs": [
             {
               "index": 1,
-              "text": "管理后台",
-              "fontSize": 20,
+              "text": "后台治理",
+              "fontSize": 21,
               "typeface": "PingFang SC",
               "color": "#111827",
               "bold": true
@@ -706,33 +689,34 @@
           ],
           "marginLeft": 0
         }
-      ]
+      ],
+      "fillColor": "rgba(0, 0, 0, 0)",
+      "lineColor": "rgba(0, 0, 0, 0)",
+      "lineWidth": 0
     },
     {
       "order": 17,
       "kind": "shape",
       "scope": "slide",
-      "aid": "sh/b2hwfyxo",
+      "aid": "sh/za1gvy90",
       "id": "17",
       "bbox": [
-        0,
-        0,
-        296,
-        720
+        894,
+        247,
+        282,
+        67
       ],
-      "composeSource": {
-        "run": 1,
-        "path": "0.16"
-      },
       "geometry": "rect",
-      "text": "用户管理、角色管理、消息审核、反馈管理、系统日志、全局统计。",
-      "textPreview": "用户管理、角色管理、消息审核、反馈管理、系统日志、全局统计。",
+      "text": "用户、消息、反馈、系统日志、统计；仅管理员进入。",
+      "textPreview": "用户、消息、反馈、系统日志、统计；仅管理员进入。",
       "resolvedFontSize": 15,
       "resolvedTextStyle": {
+        "anchor": 1,
         "fontSize": 15,
         "typeface": "PingFang SC",
         "color": "#64748B",
         "alignment": "left",
+        "verticalAlignment": "top",
         "insets": {
           "top": 0,
           "right": 0,
@@ -745,27 +729,28 @@
         "lines": [
           {
             "index": 1,
-            "text": "用户管理、角色管理、消息审核、反馈管理"
+            "text": "用户、消息、反馈、系统日志、统计；仅"
           },
           {
             "index": 2,
-            "text": "、系统日志、全局统计。"
+            "text": "管理员进入。"
           }
         ]
       },
       "paragraphs": [
         {
           "index": 1,
-          "text": "用户管理、角色管理、消息审核、反馈管理、系统日志、全局统计。",
+          "text": "用户、消息、反馈、系统日志、统计；仅管理员进入。",
           "resolvedTextStyle": {
             "fontSize": 15,
             "typeface": "PingFang SC",
-            "color": "#64748B"
+            "color": "#64748B",
+            "alignment": "left"
           },
           "runs": [
             {
               "index": 1,
-              "text": "用户管理、角色管理、消息审核、反馈管理、系统日志、全局统计。",
+              "text": "用户、消息、反馈、系统日志、统计；仅管理员进入。",
               "fontSize": 15,
               "typeface": "PingFang SC",
               "color": "#64748B"
@@ -773,25 +758,24 @@
           ],
           "marginLeft": 0
         }
-      ]
+      ],
+      "fillColor": "rgba(0, 0, 0, 0)",
+      "lineColor": "rgba(0, 0, 0, 0)",
+      "lineWidth": 0
     },
     {
       "order": 18,
       "kind": "shape",
       "scope": "slide",
-      "aid": "sh/4vmtwra5",
+      "aid": "sh/sji5snel",
       "id": "18",
       "bbox": [
-        0,
-        0,
-        410,
-        122
+        80,
+        395,
+        330,
+        145
       ],
-      "composeSource": {
-        "run": 1,
-        "path": "0.17"
-      },
-      "geometry": "roundRect",
+      "geometry": "rect",
       "fillColor": "#FFFFFF",
       "lineColor": "#E2E8F0",
       "lineWidth": 1
@@ -800,47 +784,43 @@
       "order": 19,
       "kind": "shape",
       "scope": "slide",
-      "aid": "sh/tgfmlkjm",
+      "aid": "sh/h4byhgn2",
       "id": "19",
       "bbox": [
-        0,
-        0,
-        5,
-        122
+        80,
+        395,
+        6,
+        145
       ],
-      "composeSource": {
-        "run": 1,
-        "path": "0.18"
-      },
-      "geometry": "roundRect",
-      "fillColor": "#7C3AED"
+      "geometry": "rect",
+      "fillColor": "#16A34A",
+      "lineColor": "rgba(0, 0, 0, 0)",
+      "lineWidth": 0
     },
     {
       "order": 20,
       "kind": "shape",
       "scope": "slide",
-      "aid": "sh/xc3ylc7u",
+      "aid": "sh/psfil0rq",
       "id": "20",
       "bbox": [
-        0,
-        0,
-        366,
-        720
+        104,
+        417,
+        282,
+        28
       ],
-      "composeSource": {
-        "run": 1,
-        "path": "0.19"
-      },
       "geometry": "rect",
-      "text": "过程数据展示",
-      "textPreview": "过程数据展示",
-      "resolvedFontSize": 20,
+      "text": "交互反馈",
+      "textPreview": "交互反馈",
+      "resolvedFontSize": 21,
       "resolvedTextStyle": {
-        "fontSize": 20,
+        "anchor": 1,
+        "fontSize": 21,
         "typeface": "PingFang SC",
         "color": "#111827",
         "bold": true,
         "alignment": "left",
+        "verticalAlignment": "top",
         "insets": {
           "top": 0,
           "right": 0,
@@ -853,25 +833,26 @@
         "lines": [
           {
             "index": 1,
-            "text": "过程数据展示"
+            "text": "交互反馈"
           }
         ]
       },
       "paragraphs": [
         {
           "index": 1,
-          "text": "过程数据展示",
+          "text": "交互反馈",
           "resolvedTextStyle": {
-            "fontSize": 20,
+            "fontSize": 21,
             "typeface": "PingFang SC",
             "color": "#111827",
-            "bold": true
+            "bold": true,
+            "alignment": "left"
           },
           "runs": [
             {
               "index": 1,
-              "text": "过程数据展示",
-              "fontSize": 20,
+              "text": "交互反馈",
+              "fontSize": 21,
               "typeface": "PingFang SC",
               "color": "#111827",
               "bold": true
@@ -879,33 +860,34 @@
           ],
           "marginLeft": 0
         }
-      ]
+      ],
+      "fillColor": "rgba(0, 0, 0, 0)",
+      "lineColor": "rgba(0, 0, 0, 0)",
+      "lineWidth": 0
     },
     {
       "order": 21,
       "kind": "shape",
       "scope": "slide",
-      "aid": "sh/4r65wjud",
+      "aid": "sh/w7mp0bi9",
       "id": "21",
       "bbox": [
-        0,
-        0,
-        366,
-        720
+        104,
+        457,
+        282,
+        67
       ],
-      "composeSource": {
-        "run": 1,
-        "path": "0.20"
-      },
       "geometry": "rect",
-      "text": "消息详情弹窗展示正文块、推理过程、工具调用链、调用结果与模型元数据。",
-      "textPreview": "消息详情弹窗展示正文块、推理过程、工具调用链、调用结果与模型元数据。",
+      "text": "收藏消息、提交反馈、查看反馈状态，形成用户侧质量信号。",
+      "textPreview": "收藏消息、提交反馈、查看反馈状态，形成用户侧质量信号。",
       "resolvedFontSize": 15,
       "resolvedTextStyle": {
+        "anchor": 1,
         "fontSize": 15,
         "typeface": "PingFang SC",
         "color": "#64748B",
         "alignment": "left",
+        "verticalAlignment": "top",
         "insets": {
           "top": 0,
           "right": 0,
@@ -918,27 +900,28 @@
         "lines": [
           {
             "index": 1,
-            "text": "消息详情弹窗展示正文块、推理过程、工具调用链、"
+            "text": "收藏消息、提交反馈、查看反馈状态，形"
           },
           {
             "index": 2,
-            "text": "调用结果与模型元数据。"
+            "text": "成用户侧质量信号。"
           }
         ]
       },
       "paragraphs": [
         {
           "index": 1,
-          "text": "消息详情弹窗展示正文块、推理过程、工具调用链、调用结果与模型元数据。",
+          "text": "收藏消息、提交反馈、查看反馈状态，形成用户侧质量信号。",
           "resolvedTextStyle": {
             "fontSize": 15,
             "typeface": "PingFang SC",
-            "color": "#64748B"
+            "color": "#64748B",
+            "alignment": "left"
           },
           "runs": [
             {
               "index": 1,
-              "text": "消息详情弹窗展示正文块、推理过程、工具调用链、调用结果与模型元数据。",
+              "text": "收藏消息、提交反馈、查看反馈状态，形成用户侧质量信号。",
               "fontSize": 15,
               "typeface": "PingFang SC",
               "color": "#64748B"
@@ -946,25 +929,24 @@
           ],
           "marginLeft": 0
         }
-      ]
+      ],
+      "fillColor": "rgba(0, 0, 0, 0)",
+      "lineColor": "rgba(0, 0, 0, 0)",
+      "lineWidth": 0
     },
     {
       "order": 22,
       "kind": "shape",
       "scope": "slide",
-      "aid": "sh/f6dcbulw",
+      "aid": "sh/7mp0bi9s",
       "id": "22",
       "bbox": [
-        0,
-        0,
-        410,
-        122
+        475,
+        395,
+        330,
+        145
       ],
-      "composeSource": {
-        "run": 1,
-        "path": "0.21"
-      },
-      "geometry": "roundRect",
+      "geometry": "rect",
       "fillColor": "#FFFFFF",
       "lineColor": "#E2E8F0",
       "lineWidth": 1
@@ -973,47 +955,43 @@
       "order": 23,
       "kind": "shape",
       "scope": "slide",
-      "aid": "sh/mlkjm1cf",
+      "aid": "sh/e1w7mp0b",
       "id": "23",
       "bbox": [
-        0,
-        0,
-        5,
-        122
+        475,
+        395,
+        6,
+        145
       ],
-      "composeSource": {
-        "run": 1,
-        "path": "0.22"
-      },
-      "geometry": "roundRect",
-      "fillColor": "#16A34A"
+      "geometry": "rect",
+      "fillColor": "#06B6D4",
+      "lineColor": "rgba(0, 0, 0, 0)",
+      "lineWidth": 0
     },
     {
       "order": 24,
       "kind": "shape",
       "scope": "slide",
-      "aid": "sh/xkf6dcbu",
+      "aid": "sh/pg3ex0nu",
       "id": "24",
       "bbox": [
-        0,
-        0,
-        366,
-        720
+        499,
+        417,
+        282,
+        28
       ],
-      "composeSource": {
-        "run": 1,
-        "path": "0.23"
-      },
       "geometry": "rect",
-      "text": "业务闭环",
-      "textPreview": "业务闭环",
-      "resolvedFontSize": 20,
+      "text": "审计日志",
+      "textPreview": "审计日志",
+      "resolvedFontSize": 21,
       "resolvedTextStyle": {
-        "fontSize": 20,
+        "anchor": 1,
+        "fontSize": 21,
         "typeface": "PingFang SC",
         "color": "#111827",
         "bold": true,
         "alignment": "left",
+        "verticalAlignment": "top",
         "insets": {
           "top": 0,
           "right": 0,
@@ -1026,25 +1004,26 @@
         "lines": [
           {
             "index": 1,
-            "text": "业务闭环"
+            "text": "审计日志"
           }
         ]
       },
       "paragraphs": [
         {
           "index": 1,
-          "text": "业务闭环",
+          "text": "审计日志",
           "resolvedTextStyle": {
-            "fontSize": 20,
+            "fontSize": 21,
             "typeface": "PingFang SC",
             "color": "#111827",
-            "bold": true
+            "bold": true,
+            "alignment": "left"
           },
           "runs": [
             {
               "index": 1,
-              "text": "业务闭环",
-              "fontSize": 20,
+              "text": "审计日志",
+              "fontSize": 21,
               "typeface": "PingFang SC",
               "color": "#111827",
               "bold": true
@@ -1052,33 +1031,34 @@
           ],
           "marginLeft": 0
         }
-      ]
+      ],
+      "fillColor": "rgba(0, 0, 0, 0)",
+      "lineColor": "rgba(0, 0, 0, 0)",
+      "lineWidth": 0
     },
     {
       "order": 25,
       "kind": "shape",
       "scope": "slide",
-      "aid": "sh/4zidonyd",
+      "aid": "sh/wval87ed",
       "id": "25",
       "bbox": [
-        0,
-        0,
-        366,
-        720
+        499,
+        457,
+        282,
+        67
       ],
-      "composeSource": {
-        "run": 1,
-        "path": "0.24"
-      },
       "geometry": "rect",
-      "text": "收藏用于沉淀高价值回复，反馈用于评价角色质量，后台统计用于观察整体使用情况。",
-      "textPreview": "收藏用于沉淀高价值回复，反馈用于评价角色质量，后台统计用于观察整体使用情况。",
+      "text": "系统操作留痕，支持后续课程展示中的安全与治理说明。",
+      "textPreview": "系统操作留痕，支持后续课程展示中的安全与治理说明。",
       "resolvedFontSize": 15,
       "resolvedTextStyle": {
+        "anchor": 1,
         "fontSize": 15,
         "typeface": "PingFang SC",
         "color": "#64748B",
         "alignment": "left",
+        "verticalAlignment": "top",
         "insets": {
           "top": 0,
           "right": 0,
@@ -1091,27 +1071,28 @@
         "lines": [
           {
             "index": 1,
-            "text": "收藏用于沉淀高价值回复，反馈用于评价角色质量，"
+            "text": "系统操作留痕，支持后续课程展示中的安"
           },
           {
             "index": 2,
-            "text": "后台统计用于观察整体使用情况。"
+            "text": "全与治理说明。"
           }
         ]
       },
       "paragraphs": [
         {
           "index": 1,
-          "text": "收藏用于沉淀高价值回复，反馈用于评价角色质量，后台统计用于观察整体使用情况。",
+          "text": "系统操作留痕，支持后续课程展示中的安全与治理说明。",
           "resolvedTextStyle": {
             "fontSize": 15,
             "typeface": "PingFang SC",
-            "color": "#64748B"
+            "color": "#64748B",
+            "alignment": "left"
           },
           "runs": [
             {
               "index": 1,
-              "text": "收藏用于沉淀高价值回复，反馈用于评价角色质量，后台统计用于观察整体使用情况。",
+              "text": "系统操作留痕，支持后续课程展示中的安全与治理说明。",
               "fontSize": 15,
               "typeface": "PingFang SC",
               "color": "#64748B"
@@ -1119,33 +1100,209 @@
           ],
           "marginLeft": 0
         }
-      ]
+      ],
+      "fillColor": "rgba(0, 0, 0, 0)",
+      "lineColor": "rgba(0, 0, 0, 0)",
+      "lineWidth": 0
     },
     {
       "order": 26,
       "kind": "shape",
       "scope": "slide",
-      "aid": "sh/fepkzupw",
+      "aid": "sh/7adsji5s",
       "id": "26",
       "bbox": [
-        0,
-        0,
-        620,
-        720
+        870,
+        395,
+        330,
+        145
       ],
-      "composeSource": {
-        "run": 1,
-        "path": "0.25"
+      "geometry": "rect",
+      "fillColor": "#FFFFFF",
+      "lineColor": "#E2E8F0",
+      "lineWidth": 1
+    },
+    {
+      "order": 27,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/epkzupwb",
+      "id": "27",
+      "bbox": [
+        870,
+        395,
+        6,
+        145
+      ],
+      "geometry": "rect",
+      "fillColor": "#DC2626",
+      "lineColor": "rgba(0, 0, 0, 0)",
+      "lineWidth": 0
+    },
+    {
+      "order": 28,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/lc7u54zi",
+      "id": "28",
+      "bbox": [
+        894,
+        417,
+        282,
+        28
+      ],
+      "geometry": "rect",
+      "text": "可扩展接口",
+      "textPreview": "可扩展接口",
+      "resolvedFontSize": 21,
+      "resolvedTextStyle": {
+        "anchor": 1,
+        "fontSize": 21,
+        "typeface": "PingFang SC",
+        "color": "#111827",
+        "bold": true,
+        "alignment": "left",
+        "verticalAlignment": "top",
+        "insets": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
       },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "可扩展接口"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "可扩展接口",
+          "resolvedTextStyle": {
+            "fontSize": 21,
+            "typeface": "PingFang SC",
+            "color": "#111827",
+            "bold": true,
+            "alignment": "left"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "可扩展接口",
+              "fontSize": 21,
+              "typeface": "PingFang SC",
+              "color": "#111827",
+              "bold": true
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "fillColor": "rgba(0, 0, 0, 0)",
+      "lineColor": "rgba(0, 0, 0, 0)",
+      "lineWidth": 0
+    },
+    {
+      "order": 29,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/wra5gbq1",
+      "id": "29",
+      "bbox": [
+        894,
+        457,
+        282,
+        67
+      ],
+      "geometry": "rect",
+      "text": "真实 LLM、流式响应、统计图表、权限细化都可在当前结构上继续扩展。",
+      "textPreview": "真实 LLM、流式响应、统计图表、权限细化都可在当前结构上继续扩展。",
+      "resolvedFontSize": 15,
+      "resolvedTextStyle": {
+        "anchor": 1,
+        "fontSize": 15,
+        "typeface": "PingFang SC",
+        "color": "#64748B",
+        "alignment": "left",
+        "verticalAlignment": "top",
+        "insets": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      },
+      "textLayout": {
+        "lineCount": 3,
+        "lines": [
+          {
+            "index": 1,
+            "text": "真实"
+          },
+          {
+            "index": 2,
+            "text": "LLM、流式响应、统计图表、权限细化都"
+          },
+          {
+            "index": 3,
+            "text": "可在当前结构上继续扩展。"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "真实 LLM、流式响应、统计图表、权限细化都可在当前结构上继续扩展。",
+          "resolvedTextStyle": {
+            "fontSize": 15,
+            "typeface": "PingFang SC",
+            "color": "#64748B",
+            "alignment": "left"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "真实 LLM、流式响应、统计图表、权限细化都可在当前结构上继续扩展。",
+              "fontSize": 15,
+              "typeface": "PingFang SC",
+              "color": "#64748B"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "fillColor": "rgba(0, 0, 0, 0)",
+      "lineColor": "rgba(0, 0, 0, 0)",
+      "lineWidth": 0
+    },
+    {
+      "order": 30,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/al87ed8b",
+      "id": "30",
+      "bbox": [
+        56,
+        684,
+        640,
+        20
+      ],
       "geometry": "rect",
       "text": "课程设计答辩 | AI 会话过程管理系统",
       "textPreview": "课程设计答辩 | AI 会话过程管理系统",
       "resolvedFontSize": 12,
       "resolvedTextStyle": {
+        "anchor": 1,
         "fontSize": 12,
         "typeface": "PingFang SC",
         "color": "#94A3B8",
         "alignment": "left",
+        "verticalAlignment": "top",
         "insets": {
           "top": 0,
           "right": 0,
@@ -1169,7 +1326,8 @@
           "resolvedTextStyle": {
             "fontSize": 12,
             "typeface": "PingFang SC",
-            "color": "#94A3B8"
+            "color": "#94A3B8",
+            "alignment": "left"
           },
           "runs": [
             {
@@ -1182,33 +1340,34 @@
           ],
           "marginLeft": 0
         }
-      ]
+      ],
+      "fillColor": "rgba(0, 0, 0, 0)",
+      "lineColor": "rgba(0, 0, 0, 0)",
+      "lineWidth": 0
     },
     {
-      "order": 27,
+      "order": 31,
       "kind": "shape",
       "scope": "slide",
-      "aid": "sh/mtwra5gb",
-      "id": "27",
+      "aid": "sh/z61032ls",
+      "id": "31",
       "bbox": [
-        0,
-        0,
-        36,
-        720
+        1186,
+        684,
+        40,
+        20
       ],
-      "composeSource": {
-        "run": 1,
-        "path": "0.26"
-      },
       "geometry": "rect",
       "text": "08",
       "textPreview": "08",
       "resolvedFontSize": 12,
       "resolvedTextStyle": {
+        "anchor": 1,
         "fontSize": 12,
         "typeface": "PingFang SC",
         "color": "#94A3B8",
         "alignment": "right",
+        "verticalAlignment": "top",
         "insets": {
           "top": 0,
           "right": 0,
@@ -1241,1146 +1400,16 @@
               "text": "08",
               "fontSize": 12,
               "typeface": "PingFang SC",
-              "color": "#94A3B8",
-              "alignment": "right"
+              "color": "#94A3B8"
             }
           ],
           "marginLeft": 0
         }
-      ]
+      ],
+      "fillColor": "rgba(0, 0, 0, 0)",
+      "lineColor": "rgba(0, 0, 0, 0)",
+      "lineWidth": 0
     }
   ],
-  "composeRuns": [
-    {
-      "index": 1,
-      "frame": {
-        "left": 0,
-        "top": 0,
-        "width": 1280,
-        "height": 720
-      },
-      "root": {
-        "path": "0",
-        "kind": "layers",
-        "requestedSize": {
-          "width": {
-            "mode": "fixed",
-            "value": 1280
-          },
-          "height": {
-            "mode": "fixed",
-            "value": 720
-          }
-        },
-        "intrinsicSize": {
-          "width": 1280,
-          "height": 6588
-        },
-        "frame": {
-          "left": 0,
-          "top": 0,
-          "width": 1280,
-          "height": 720
-        },
-        "children": [
-          {
-            "path": "0.0",
-            "kind": "shape",
-            "requestedSize": {
-              "width": {
-                "mode": "fixed",
-                "value": 1280
-              },
-              "height": {
-                "mode": "fixed",
-                "value": 720
-              }
-            },
-            "intrinsicSize": {
-              "width": 1280,
-              "height": 720
-            },
-            "frame": {
-              "left": 0,
-              "top": 0,
-              "width": 1280,
-              "height": 720
-            },
-            "children": [],
-            "geometry": "rect",
-            "element": {
-              "aid": "sh/m58z25kb",
-              "id": "1",
-              "kind": "shape"
-            }
-          },
-          {
-            "path": "0.1",
-            "kind": "shape",
-            "requestedSize": {
-              "width": {
-                "mode": "fixed",
-                "value": 1280
-              },
-              "height": {
-                "mode": "fixed",
-                "value": 74
-              }
-            },
-            "intrinsicSize": {
-              "width": 1280,
-              "height": 74
-            },
-            "frame": {
-              "left": 0,
-              "top": 0,
-              "width": 1280,
-              "height": 74
-            },
-            "children": [],
-            "geometry": "rect",
-            "element": {
-              "aid": "sh/twra5gbq",
-              "id": "2",
-              "kind": "shape"
-            }
-          },
-          {
-            "path": "0.2",
-            "kind": "shape",
-            "requestedSize": {
-              "width": {
-                "mode": "fixed",
-                "value": 1280
-              },
-              "height": {
-                "mode": "fixed",
-                "value": 1
-              }
-            },
-            "intrinsicSize": {
-              "width": 1280,
-              "height": 1
-            },
-            "frame": {
-              "left": 0,
-              "top": 0,
-              "width": 1280,
-              "height": 1
-            },
-            "children": [],
-            "geometry": "rect",
-            "element": {
-              "aid": "sh/4byhgn29",
-              "id": "3",
-              "kind": "shape"
-            }
-          },
-          {
-            "path": "0.3",
-            "kind": "text",
-            "requestedSize": {
-              "width": {
-                "mode": "fixed",
-                "value": 360
-              },
-              "height": {
-                "mode": "hug"
-              }
-            },
-            "intrinsicSize": {
-              "width": 360,
-              "height": 19.2
-            },
-            "frame": {
-              "left": 0,
-              "top": 0,
-              "width": 360,
-              "height": 720
-            },
-            "children": [],
-            "text": "AIChatProcessManager",
-            "transform": "none",
-            "element": {
-              "aid": "sh/b2hwfyxo",
-              "id": "4",
-              "kind": "shape"
-            }
-          },
-          {
-            "path": "0.4",
-            "kind": "text",
-            "requestedSize": {
-              "width": {
-                "mode": "fixed",
-                "value": 900
-              },
-              "height": {
-                "mode": "hug"
-              }
-            },
-            "intrinsicSize": {
-              "width": 900,
-              "height": 40.8
-            },
-            "frame": {
-              "left": 0,
-              "top": 0,
-              "width": 900,
-              "height": 720
-            },
-            "children": [],
-            "text": "核心功能模块",
-            "transform": "none",
-            "element": {
-              "aid": "sh/mhk3q5o7",
-              "id": "5",
-              "kind": "shape"
-            }
-          },
-          {
-            "path": "0.5",
-            "kind": "shape",
-            "requestedSize": {
-              "width": {
-                "mode": "fixed",
-                "value": 340
-              },
-              "height": {
-                "mode": "fixed",
-                "value": 132
-              }
-            },
-            "intrinsicSize": {
-              "width": 340,
-              "height": 132
-            },
-            "frame": {
-              "left": 0,
-              "top": 0,
-              "width": 340,
-              "height": 132
-            },
-            "children": [],
-            "geometry": "rect",
-            "element": {
-              "aid": "sh/t83itgfm",
-              "id": "6",
-              "kind": "shape"
-            }
-          },
-          {
-            "path": "0.6",
-            "kind": "shape",
-            "requestedSize": {
-              "width": {
-                "mode": "fixed",
-                "value": 5
-              },
-              "height": {
-                "mode": "fixed",
-                "value": 132
-              }
-            },
-            "intrinsicSize": {
-              "width": 5,
-              "height": 132
-            },
-            "frame": {
-              "left": 0,
-              "top": 0,
-              "width": 5,
-              "height": 132
-            },
-            "children": [],
-            "geometry": "rect",
-            "element": {
-              "aid": "sh/4nap4r65",
-              "id": "7",
-              "kind": "shape"
-            }
-          },
-          {
-            "path": "0.7",
-            "kind": "text",
-            "requestedSize": {
-              "width": {
-                "mode": "fixed",
-                "value": 296
-              },
-              "height": {
-                "mode": "hug"
-              }
-            },
-            "intrinsicSize": {
-              "width": 296,
-              "height": 24
-            },
-            "frame": {
-              "left": 0,
-              "top": 0,
-              "width": 296,
-              "height": 720
-            },
-            "children": [],
-            "text": "用户端",
-            "transform": "none",
-            "element": {
-              "aid": "sh/bat47y1k",
-              "id": "8",
-              "kind": "shape"
-            }
-          },
-          {
-            "path": "0.8",
-            "kind": "text",
-            "requestedSize": {
-              "width": {
-                "mode": "fixed",
-                "value": 296
-              },
-              "height": {
-                "mode": "hug"
-              }
-            },
-            "intrinsicSize": {
-              "width": 296,
-              "height": 6588
-            },
-            "frame": {
-              "left": 0,
-              "top": 0,
-              "width": 296,
-              "height": 720
-            },
-            "children": [],
-            "text": "登录注册、AI 角色选择、会话列表、聊天页、消息收藏、反馈提交、个人资料。",
-            "transform": "none",
-            "element": {
-              "aid": "sh/mp0bi9s3",
-              "id": "9",
-              "kind": "shape"
-            }
-          },
-          {
-            "path": "0.9",
-            "kind": "shape",
-            "requestedSize": {
-              "width": {
-                "mode": "fixed",
-                "value": 340
-              },
-              "height": {
-                "mode": "fixed",
-                "value": 132
-              }
-            },
-            "intrinsicSize": {
-              "width": 340,
-              "height": 132
-            },
-            "frame": {
-              "left": 0,
-              "top": 0,
-              "width": 340,
-              "height": 132
-            },
-            "children": [],
-            "geometry": "rect",
-            "element": {
-              "aid": "sh/4byhgn29",
-              "id": "10",
-              "kind": "shape"
-            }
-          },
-          {
-            "path": "0.10",
-            "kind": "shape",
-            "requestedSize": {
-              "width": {
-                "mode": "fixed",
-                "value": 5
-              },
-              "height": {
-                "mode": "fixed",
-                "value": 132
-              }
-            },
-            "intrinsicSize": {
-              "width": 5,
-              "height": 132
-            },
-            "frame": {
-              "left": 0,
-              "top": 0,
-              "width": 5,
-              "height": 132
-            },
-            "children": [],
-            "geometry": "rect",
-            "element": {
-              "aid": "sh/twra5gbq",
-              "id": "11",
-              "kind": "shape"
-            }
-          },
-          {
-            "path": "0.11",
-            "kind": "text",
-            "requestedSize": {
-              "width": {
-                "mode": "fixed",
-                "value": 296
-              },
-              "height": {
-                "mode": "hug"
-              }
-            },
-            "intrinsicSize": {
-              "width": 296,
-              "height": 24
-            },
-            "frame": {
-              "left": 0,
-              "top": 0,
-              "width": 296,
-              "height": 720
-            },
-            "children": [],
-            "text": "角色维护端",
-            "transform": "none",
-            "element": {
-              "aid": "sh/m58z25kb",
-              "id": "12",
-              "kind": "shape"
-            }
-          },
-          {
-            "path": "0.12",
-            "kind": "text",
-            "requestedSize": {
-              "width": {
-                "mode": "fixed",
-                "value": 296
-              },
-              "height": {
-                "mode": "hug"
-              }
-            },
-            "intrinsicSize": {
-              "width": 296,
-              "height": 6588
-            },
-            "frame": {
-              "left": 0,
-              "top": 0,
-              "width": 296,
-              "height": 720
-            },
-            "children": [],
-            "text": "创建/编辑 AI 角色，查看角色使用统计与角色反馈。管理员继承该权限。",
-            "transform": "none",
-            "element": {
-              "aid": "sh/bq1oryts",
-              "id": "13",
-              "kind": "shape"
-            }
-          },
-          {
-            "path": "0.13",
-            "kind": "shape",
-            "requestedSize": {
-              "width": {
-                "mode": "fixed",
-                "value": 340
-              },
-              "height": {
-                "mode": "fixed",
-                "value": 132
-              }
-            },
-            "intrinsicSize": {
-              "width": 340,
-              "height": 132
-            },
-            "frame": {
-              "left": 0,
-              "top": 0,
-              "width": 340,
-              "height": 132
-            },
-            "children": [],
-            "geometry": "rect",
-            "element": {
-              "aid": "sh/4nap4r65",
-              "id": "14",
-              "kind": "shape"
-            }
-          },
-          {
-            "path": "0.14",
-            "kind": "shape",
-            "requestedSize": {
-              "width": {
-                "mode": "fixed",
-                "value": 5
-              },
-              "height": {
-                "mode": "fixed",
-                "value": 132
-              }
-            },
-            "intrinsicSize": {
-              "width": 5,
-              "height": 132
-            },
-            "frame": {
-              "left": 0,
-              "top": 0,
-              "width": 5,
-              "height": 132
-            },
-            "children": [],
-            "geometry": "rect",
-            "element": {
-              "aid": "sh/t83itgfm",
-              "id": "15",
-              "kind": "shape"
-            }
-          },
-          {
-            "path": "0.15",
-            "kind": "text",
-            "requestedSize": {
-              "width": {
-                "mode": "fixed",
-                "value": 296
-              },
-              "height": {
-                "mode": "hug"
-              }
-            },
-            "intrinsicSize": {
-              "width": 296,
-              "height": 24
-            },
-            "frame": {
-              "left": 0,
-              "top": 0,
-              "width": 296,
-              "height": 720
-            },
-            "children": [],
-            "text": "管理后台",
-            "transform": "none",
-            "element": {
-              "aid": "sh/mhk3q5o7",
-              "id": "16",
-              "kind": "shape"
-            }
-          },
-          {
-            "path": "0.16",
-            "kind": "text",
-            "requestedSize": {
-              "width": {
-                "mode": "fixed",
-                "value": 296
-              },
-              "height": {
-                "mode": "hug"
-              }
-            },
-            "intrinsicSize": {
-              "width": 296,
-              "height": 4392
-            },
-            "frame": {
-              "left": 0,
-              "top": 0,
-              "width": 296,
-              "height": 720
-            },
-            "children": [],
-            "text": "用户管理、角色管理、消息审核、反馈管理、系统日志、全局统计。",
-            "transform": "none",
-            "element": {
-              "aid": "sh/b2hwfyxo",
-              "id": "17",
-              "kind": "shape"
-            }
-          },
-          {
-            "path": "0.17",
-            "kind": "shape",
-            "requestedSize": {
-              "width": {
-                "mode": "fixed",
-                "value": 410
-              },
-              "height": {
-                "mode": "fixed",
-                "value": 122
-              }
-            },
-            "intrinsicSize": {
-              "width": 410,
-              "height": 122
-            },
-            "frame": {
-              "left": 0,
-              "top": 0,
-              "width": 410,
-              "height": 122
-            },
-            "children": [],
-            "geometry": "rect",
-            "element": {
-              "aid": "sh/4vmtwra5",
-              "id": "18",
-              "kind": "shape"
-            }
-          },
-          {
-            "path": "0.18",
-            "kind": "shape",
-            "requestedSize": {
-              "width": {
-                "mode": "fixed",
-                "value": 5
-              },
-              "height": {
-                "mode": "fixed",
-                "value": 122
-              }
-            },
-            "intrinsicSize": {
-              "width": 5,
-              "height": 122
-            },
-            "frame": {
-              "left": 0,
-              "top": 0,
-              "width": 5,
-              "height": 122
-            },
-            "children": [],
-            "geometry": "rect",
-            "element": {
-              "aid": "sh/tgfmlkjm",
-              "id": "19",
-              "kind": "shape"
-            }
-          },
-          {
-            "path": "0.19",
-            "kind": "text",
-            "requestedSize": {
-              "width": {
-                "mode": "fixed",
-                "value": 366
-              },
-              "height": {
-                "mode": "hug"
-              }
-            },
-            "intrinsicSize": {
-              "width": 366,
-              "height": 24
-            },
-            "frame": {
-              "left": 0,
-              "top": 0,
-              "width": 366,
-              "height": 720
-            },
-            "children": [],
-            "text": "过程数据展示",
-            "transform": "none",
-            "element": {
-              "aid": "sh/xc3ylc7u",
-              "id": "20",
-              "kind": "shape"
-            }
-          },
-          {
-            "path": "0.20",
-            "kind": "text",
-            "requestedSize": {
-              "width": {
-                "mode": "fixed",
-                "value": 366
-              },
-              "height": {
-                "mode": "hug"
-              }
-            },
-            "intrinsicSize": {
-              "width": 366,
-              "height": 4392
-            },
-            "frame": {
-              "left": 0,
-              "top": 0,
-              "width": 366,
-              "height": 720
-            },
-            "children": [],
-            "text": "消息详情弹窗展示正文块、推理过程、工具调用链、调用结果与模型元数据。",
-            "transform": "none",
-            "element": {
-              "aid": "sh/4r65wjud",
-              "id": "21",
-              "kind": "shape"
-            }
-          },
-          {
-            "path": "0.21",
-            "kind": "shape",
-            "requestedSize": {
-              "width": {
-                "mode": "fixed",
-                "value": 410
-              },
-              "height": {
-                "mode": "fixed",
-                "value": 122
-              }
-            },
-            "intrinsicSize": {
-              "width": 410,
-              "height": 122
-            },
-            "frame": {
-              "left": 0,
-              "top": 0,
-              "width": 410,
-              "height": 122
-            },
-            "children": [],
-            "geometry": "rect",
-            "element": {
-              "aid": "sh/f6dcbulw",
-              "id": "22",
-              "kind": "shape"
-            }
-          },
-          {
-            "path": "0.22",
-            "kind": "shape",
-            "requestedSize": {
-              "width": {
-                "mode": "fixed",
-                "value": 5
-              },
-              "height": {
-                "mode": "fixed",
-                "value": 122
-              }
-            },
-            "intrinsicSize": {
-              "width": 5,
-              "height": 122
-            },
-            "frame": {
-              "left": 0,
-              "top": 0,
-              "width": 5,
-              "height": 122
-            },
-            "children": [],
-            "geometry": "rect",
-            "element": {
-              "aid": "sh/mlkjm1cf",
-              "id": "23",
-              "kind": "shape"
-            }
-          },
-          {
-            "path": "0.23",
-            "kind": "text",
-            "requestedSize": {
-              "width": {
-                "mode": "fixed",
-                "value": 366
-              },
-              "height": {
-                "mode": "hug"
-              }
-            },
-            "intrinsicSize": {
-              "width": 366,
-              "height": 24
-            },
-            "frame": {
-              "left": 0,
-              "top": 0,
-              "width": 366,
-              "height": 720
-            },
-            "children": [],
-            "text": "业务闭环",
-            "transform": "none",
-            "element": {
-              "aid": "sh/xkf6dcbu",
-              "id": "24",
-              "kind": "shape"
-            }
-          },
-          {
-            "path": "0.24",
-            "kind": "text",
-            "requestedSize": {
-              "width": {
-                "mode": "fixed",
-                "value": 366
-              },
-              "height": {
-                "mode": "hug"
-              }
-            },
-            "intrinsicSize": {
-              "width": 366,
-              "height": 4392
-            },
-            "frame": {
-              "left": 0,
-              "top": 0,
-              "width": 366,
-              "height": 720
-            },
-            "children": [],
-            "text": "收藏用于沉淀高价值回复，反馈用于评价角色质量，后台统计用于观察整体使用情况。",
-            "transform": "none",
-            "element": {
-              "aid": "sh/4zidonyd",
-              "id": "25",
-              "kind": "shape"
-            }
-          },
-          {
-            "path": "0.25",
-            "kind": "text",
-            "requestedSize": {
-              "width": {
-                "mode": "fixed",
-                "value": 620
-              },
-              "height": {
-                "mode": "hug"
-              }
-            },
-            "intrinsicSize": {
-              "width": 620,
-              "height": 14.4
-            },
-            "frame": {
-              "left": 0,
-              "top": 0,
-              "width": 620,
-              "height": 720
-            },
-            "children": [],
-            "text": "课程设计答辩 | AI 会话过程管理系统",
-            "transform": "none",
-            "element": {
-              "aid": "sh/fepkzupw",
-              "id": "26",
-              "kind": "shape"
-            }
-          },
-          {
-            "path": "0.26",
-            "kind": "text",
-            "requestedSize": {
-              "width": {
-                "mode": "fixed",
-                "value": 36
-              },
-              "height": {
-                "mode": "hug"
-              }
-            },
-            "intrinsicSize": {
-              "width": 36,
-              "height": 14.4
-            },
-            "frame": {
-              "left": 0,
-              "top": 0,
-              "width": 36,
-              "height": 720
-            },
-            "children": [],
-            "text": "08",
-            "transform": "none",
-            "element": {
-              "aid": "sh/mtwra5gb",
-              "id": "27",
-              "kind": "shape"
-            }
-          }
-        ],
-        "padding": {
-          "top": 0,
-          "right": 0,
-          "bottom": 0,
-          "left": 0
-        },
-        "alignItems": "stretch",
-        "justifyItems": "stretch",
-        "contentFrame": {
-          "left": 0,
-          "top": 0,
-          "width": 1280,
-          "height": 720
-        },
-        "items": [
-          {
-            "path": "0.0",
-            "frame": {
-              "left": 0,
-              "top": 0,
-              "width": 1280,
-              "height": 720
-            }
-          },
-          {
-            "path": "0.1",
-            "frame": {
-              "left": 0,
-              "top": 0,
-              "width": 1280,
-              "height": 74
-            }
-          },
-          {
-            "path": "0.2",
-            "frame": {
-              "left": 0,
-              "top": 0,
-              "width": 1280,
-              "height": 1
-            }
-          },
-          {
-            "path": "0.3",
-            "frame": {
-              "left": 0,
-              "top": 0,
-              "width": 360,
-              "height": 720
-            }
-          },
-          {
-            "path": "0.4",
-            "frame": {
-              "left": 0,
-              "top": 0,
-              "width": 900,
-              "height": 720
-            }
-          },
-          {
-            "path": "0.5",
-            "frame": {
-              "left": 0,
-              "top": 0,
-              "width": 340,
-              "height": 132
-            }
-          },
-          {
-            "path": "0.6",
-            "frame": {
-              "left": 0,
-              "top": 0,
-              "width": 5,
-              "height": 132
-            }
-          },
-          {
-            "path": "0.7",
-            "frame": {
-              "left": 0,
-              "top": 0,
-              "width": 296,
-              "height": 720
-            }
-          },
-          {
-            "path": "0.8",
-            "frame": {
-              "left": 0,
-              "top": 0,
-              "width": 296,
-              "height": 720
-            }
-          },
-          {
-            "path": "0.9",
-            "frame": {
-              "left": 0,
-              "top": 0,
-              "width": 340,
-              "height": 132
-            }
-          },
-          {
-            "path": "0.10",
-            "frame": {
-              "left": 0,
-              "top": 0,
-              "width": 5,
-              "height": 132
-            }
-          },
-          {
-            "path": "0.11",
-            "frame": {
-              "left": 0,
-              "top": 0,
-              "width": 296,
-              "height": 720
-            }
-          },
-          {
-            "path": "0.12",
-            "frame": {
-              "left": 0,
-              "top": 0,
-              "width": 296,
-              "height": 720
-            }
-          },
-          {
-            "path": "0.13",
-            "frame": {
-              "left": 0,
-              "top": 0,
-              "width": 340,
-              "height": 132
-            }
-          },
-          {
-            "path": "0.14",
-            "frame": {
-              "left": 0,
-              "top": 0,
-              "width": 5,
-              "height": 132
-            }
-          },
-          {
-            "path": "0.15",
-            "frame": {
-              "left": 0,
-              "top": 0,
-              "width": 296,
-              "height": 720
-            }
-          },
-          {
-            "path": "0.16",
-            "frame": {
-              "left": 0,
-              "top": 0,
-              "width": 296,
-              "height": 720
-            }
-          },
-          {
-            "path": "0.17",
-            "frame": {
-              "left": 0,
-              "top": 0,
-              "width": 410,
-              "height": 122
-            }
-          },
-          {
-            "path": "0.18",
-            "frame": {
-              "left": 0,
-              "top": 0,
-              "width": 5,
-              "height": 122
-            }
-          },
-          {
-            "path": "0.19",
-            "frame": {
-              "left": 0,
-              "top": 0,
-              "width": 366,
-              "height": 720
-            }
-          },
-          {
-            "path": "0.20",
-            "frame": {
-              "left": 0,
-              "top": 0,
-              "width": 366,
-              "height": 720
-            }
-          },
-          {
-            "path": "0.21",
-            "frame": {
-              "left": 0,
-              "top": 0,
-              "width": 410,
-              "height": 122
-            }
-          },
-          {
-            "path": "0.22",
-            "frame": {
-              "left": 0,
-              "top": 0,
-              "width": 5,
-              "height": 122
-            }
-          },
-          {
-            "path": "0.23",
-            "frame": {
-              "left": 0,
-              "top": 0,
-              "width": 366,
-              "height": 720
-            }
-          },
-          {
-            "path": "0.24",
-            "frame": {
-              "left": 0,
-              "top": 0,
-              "width": 366,
-              "height": 720
-            }
-          },
-          {
-            "path": "0.25",
-            "frame": {
-              "left": 0,
-              "top": 0,
-              "width": 620,
-              "height": 720
-            }
-          },
-          {
-            "path": "0.26",
-            "frame": {
-              "left": 0,
-              "top": 0,
-              "width": 36,
-              "height": 720
-            }
-          }
-        ]
-      }
-    }
-  ]
+  "composeRuns": []
 }

@@ -2,13 +2,13 @@
   "schema": "openai.presentation.layout/v4",
   "unit": "px",
   "slide": {
-    "aid": "sl/pfhzky",
-    "id": "pfhzky",
+    "aid": "sl/bo9qfz",
+    "id": "bo9qfz",
     "slide": 4,
-    "layoutId": "82d14659-639b-4d6e-8e72-7828b77cafd0",
+    "layoutId": "e96e0f20-46d6-48c0-823f-cc39ba8b8cf4",
     "layoutName": "Title Slide",
     "layoutType": "title",
-    "masterLayoutId": "afa3dcc7-d52e-4537-a876-059472ff297e",
+    "masterLayoutId": "c4940938-650c-4056-bb9c-aed6e5694eca",
     "masterLayoutName": "Master",
     "frame": {
       "left": 0,
@@ -44,15 +44,15 @@
   "inheritedLayers": [
     {
       "scope": "layout",
-      "id": "82d14659-639b-4d6e-8e72-7828b77cafd0",
+      "id": "e96e0f20-46d6-48c0-823f-cc39ba8b8cf4",
       "name": "Title Slide",
       "type": "title",
-      "parentLayoutId": "afa3dcc7-d52e-4537-a876-059472ff297e",
+      "parentLayoutId": "c4940938-650c-4056-bb9c-aed6e5694eca",
       "elements": []
     },
     {
       "scope": "master",
-      "id": "afa3dcc7-d52e-4537-a876-059472ff297e",
+      "id": "c4940938-650c-4056-bb9c-aed6e5694eca",
       "name": "Master",
       "type": "master",
       "elements": []
@@ -63,7 +63,7 @@
       "order": 1,
       "kind": "shape",
       "scope": "slide",
-      "aid": "sh/qpg3ex0n",
+      "aid": "sh/tsvu9kni",
       "id": "1",
       "bbox": [
         0,
@@ -71,77 +71,69 @@
         1280,
         720
       ],
-      "composeSource": {
-        "run": 1,
-        "path": "0.0"
-      },
       "geometry": "rect",
-      "fillColor": "#F8FAFC"
+      "fillColor": "#F6F8FB",
+      "lineColor": "rgba(0, 0, 0, 0)",
+      "lineWidth": 0
     },
     {
       "order": 2,
       "kind": "shape",
       "scope": "slide",
-      "aid": "sh/xczed8v6",
+      "aid": "sh/m1cfa9w3",
       "id": "2",
       "bbox": [
         0,
         0,
         1280,
-        74
+        78
       ],
-      "composeSource": {
-        "run": 1,
-        "path": "0.1"
-      },
       "geometry": "rect",
-      "fillColor": "#FFFFFF"
+      "fillColor": "#FFFFFF",
+      "lineColor": "rgba(0, 0, 0, 0)",
+      "lineWidth": 0
     },
     {
       "order": 3,
       "kind": "shape",
       "scope": "slide",
-      "aid": "sh/8v6psfil",
+      "aid": "sh/bm58z25k",
       "id": "3",
       "bbox": [
         0,
-        0,
+        77,
         1280,
         1
       ],
-      "composeSource": {
-        "run": 1,
-        "path": "0.2"
-      },
       "geometry": "rect",
-      "fillColor": "#E2E8F0"
+      "fillColor": "#E5EAF2",
+      "lineColor": "rgba(0, 0, 0, 0)",
+      "lineWidth": 0
     },
     {
       "order": 4,
       "kind": "shape",
       "scope": "slide",
-      "aid": "sh/fyxobm58",
+      "aid": "sh/4vmtwra5",
       "id": "4",
       "bbox": [
-        0,
-        0,
-        360,
-        720
+        56,
+        25,
+        380,
+        24
       ],
-      "composeSource": {
-        "run": 1,
-        "path": "0.3"
-      },
       "geometry": "rect",
       "text": "AIChatProcessManager",
       "textPreview": "AIChatProcessManager",
       "resolvedFontSize": 16,
       "resolvedTextStyle": {
+        "anchor": 1,
         "fontSize": 16,
         "typeface": "PingFang SC",
         "color": "#2563EB",
         "bold": true,
         "alignment": "left",
+        "verticalAlignment": "top",
         "insets": {
           "top": 0,
           "right": 0,
@@ -166,7 +158,8 @@
             "fontSize": 16,
             "typeface": "PingFang SC",
             "color": "#2563EB",
-            "bold": true
+            "bold": true,
+            "alignment": "left"
           },
           "runs": [
             {
@@ -180,34 +173,35 @@
           ],
           "marginLeft": 0
         }
-      ]
+      ],
+      "fillColor": "rgba(0, 0, 0, 0)",
+      "lineColor": "rgba(0, 0, 0, 0)",
+      "lineWidth": 0
     },
     {
       "order": 5,
       "kind": "shape",
       "scope": "slide",
-      "aid": "sh/qd4vmtwr",
+      "aid": "sh/tgfmlkjm",
       "id": "5",
       "bbox": [
-        0,
-        0,
+        56,
+        104,
         900,
-        720
+        52
       ],
-      "composeSource": {
-        "run": 1,
-        "path": "0.4"
-      },
       "geometry": "rect",
-      "text": "核心业务流程：从会话创建到过程沉淀",
-      "textPreview": "核心业务流程：从会话创建到过程沉淀",
+      "text": "核心业务流程",
+      "textPreview": "核心业务流程",
       "resolvedFontSize": 34,
       "resolvedTextStyle": {
+        "anchor": 1,
         "fontSize": 34,
         "typeface": "PingFang SC",
         "color": "#111827",
         "bold": true,
         "alignment": "left",
+        "verticalAlignment": "top",
         "insets": {
           "top": 0,
           "right": 0,
@@ -220,24 +214,25 @@
         "lines": [
           {
             "index": 1,
-            "text": "核心业务流程：从会话创建到过程沉淀"
+            "text": "核心业务流程"
           }
         ]
       },
       "paragraphs": [
         {
           "index": 1,
-          "text": "核心业务流程：从会话创建到过程沉淀",
+          "text": "核心业务流程",
           "resolvedTextStyle": {
             "fontSize": 34,
             "typeface": "PingFang SC",
             "color": "#111827",
-            "bold": true
+            "bold": true,
+            "alignment": "left"
           },
           "runs": [
             {
               "index": 1,
-              "text": "核心业务流程：从会话创建到过程沉淀",
+              "text": "核心业务流程",
               "fontSize": 34,
               "typeface": "PingFang SC",
               "color": "#111827",
@@ -246,74 +241,69 @@
           ],
           "marginLeft": 0
         }
-      ]
+      ],
+      "fillColor": "rgba(0, 0, 0, 0)",
+      "lineColor": "rgba(0, 0, 0, 0)",
+      "lineWidth": 0
     },
     {
       "order": 6,
       "kind": "shape",
       "scope": "slide",
-      "aid": "sh/x4nap4r6",
+      "aid": "sh/mp0bi9s3",
       "id": "6",
       "bbox": [
-        0,
-        0,
-        160,
-        120
+        60,
+        250,
+        175,
+        130
       ],
-      "composeSource": {
-        "run": 1,
-        "path": "0.5"
-      },
-      "geometry": "roundRect",
+      "geometry": "rect",
       "fillColor": "#FFFFFF",
       "lineColor": "#2563EB",
-      "lineWidth": 1.5
+      "lineWidth": 1.4
     },
     {
       "order": 7,
       "kind": "shape",
       "scope": "slide",
-      "aid": "sh/8jqh0fep",
+      "aid": "sh/bat47y1k",
       "id": "7",
       "bbox": [
-        0,
-        0,
-        160,
+        60,
+        250,
+        175,
         7
       ],
-      "composeSource": {
-        "run": 1,
-        "path": "0.6"
-      },
-      "geometry": "roundRect",
-      "fillColor": "#2563EB"
+      "geometry": "rect",
+      "fillColor": "#2563EB",
+      "lineColor": "rgba(0, 0, 0, 0)",
+      "lineWidth": 0
     },
     {
       "order": 8,
       "kind": "shape",
       "scope": "slide",
-      "aid": "sh/fmlkjm1c",
+      "aid": "sh/4nap4r65",
       "id": "8",
       "bbox": [
-        0,
-        0,
-        128,
-        720
+        74,
+        272,
+        147,
+        28
       ],
-      "composeSource": {
-        "run": 1,
-        "path": "0.7"
-      },
       "geometry": "rect",
       "text": "登录鉴权",
       "textPreview": "登录鉴权",
       "resolvedFontSize": 19,
       "resolvedTextStyle": {
+        "anchor": 1,
         "fontSize": 19,
         "typeface": "PingFang SC",
         "color": "#111827",
         "bold": true,
         "alignment": "center",
+        "verticalAlignment": "top",
         "insets": {
           "top": 0,
           "right": 0,
@@ -348,39 +338,39 @@
               "fontSize": 19,
               "typeface": "PingFang SC",
               "color": "#111827",
-              "bold": true,
-              "alignment": "center"
+              "bold": true
             }
           ],
           "marginLeft": 0
         }
-      ]
+      ],
+      "fillColor": "rgba(0, 0, 0, 0)",
+      "lineColor": "rgba(0, 0, 0, 0)",
+      "lineWidth": 0
     },
     {
       "order": 9,
       "kind": "shape",
       "scope": "slide",
-      "aid": "sh/q1orytsv",
+      "aid": "sh/t83itgfm",
       "id": "9",
       "bbox": [
-        0,
-        0,
-        132,
-        720
+        78,
+        308,
+        139,
+        64
       ],
-      "composeSource": {
-        "run": 1,
-        "path": "0.8"
-      },
       "geometry": "rect",
-      "text": "JWT + bcrypt",
-      "textPreview": "JWT + bcrypt",
+      "text": "JWT 识别用户与角色",
+      "textPreview": "JWT 识别用户与角色",
       "resolvedFontSize": 13,
       "resolvedTextStyle": {
+        "anchor": 1,
         "fontSize": 13,
         "typeface": "PingFang SC",
         "color": "#64748B",
         "alignment": "center",
+        "verticalAlignment": "top",
         "insets": {
           "top": 0,
           "right": 0,
@@ -393,14 +383,14 @@
         "lines": [
           {
             "index": 1,
-            "text": "JWT + bcrypt"
+            "text": "JWT 识别用户与角色"
           }
         ]
       },
       "paragraphs": [
         {
           "index": 1,
-          "text": "JWT + bcrypt",
+          "text": "JWT 识别用户与角色",
           "resolvedTextStyle": {
             "fontSize": 13,
             "typeface": "PingFang SC",
@@ -410,121 +400,111 @@
           "runs": [
             {
               "index": 1,
-              "text": "JWT + bcrypt",
+              "text": "JWT 识别用户与角色",
               "fontSize": 13,
               "typeface": "PingFang SC",
-              "color": "#64748B",
-              "alignment": "center"
+              "color": "#64748B"
             }
           ],
           "marginLeft": 0
         }
-      ]
+      ],
+      "fillColor": "rgba(0, 0, 0, 0)",
+      "lineColor": "rgba(0, 0, 0, 0)",
+      "lineWidth": 0
     },
     {
       "order": 10,
       "kind": "shape",
       "scope": "slide",
-      "aid": "sh/4nap4r65",
+      "aid": "sh/9gr2p8nq",
       "id": "10",
       "bbox": [
-        0,
-        0,
-        70,
+        252,
+        313,
+        55,
         3
       ],
-      "composeSource": {
-        "run": 1,
-        "path": "0.9"
-      },
       "geometry": "rect",
-      "fillColor": "#94A3B8"
+      "fillColor": "#94A3B8",
+      "lineColor": "rgba(0, 0, 0, 0)",
+      "lineWidth": 0
     },
     {
       "order": 11,
       "kind": "shape",
       "scope": "slide",
-      "aid": "sh/t83itgfm",
+      "aid": "sh/gvy90je9",
       "id": "11",
       "bbox": [
-        0,
-        0,
+        303,
+        306,
         16,
         16
       ],
-      "composeSource": {
-        "run": 1,
-        "path": "0.10"
-      },
       "geometry": "triangle",
-      "fillColor": "#94A3B8"
+      "fillColor": "#94A3B8",
+      "lineColor": "#94A3B8",
+      "lineWidth": 0
     },
     {
       "order": 12,
       "kind": "shape",
       "scope": "slide",
-      "aid": "sh/mhk3q5o7",
+      "aid": "sh/ra5gbq1o",
       "id": "12",
       "bbox": [
-        0,
-        0,
-        190,
-        120
+        325,
+        250,
+        205,
+        130
       ],
-      "composeSource": {
-        "run": 1,
-        "path": "0.11"
-      },
-      "geometry": "roundRect",
+      "geometry": "rect",
       "fillColor": "#FFFFFF",
-      "lineColor": "#7C3AED",
-      "lineWidth": 1.5
+      "lineColor": "#06B6D4",
+      "lineWidth": 1.4
     },
     {
       "order": 13,
       "kind": "shape",
       "scope": "slide",
-      "aid": "sh/b2hwfyxo",
+      "aid": "sh/2p8nqxs7",
       "id": "13",
       "bbox": [
-        0,
-        0,
-        190,
+        325,
+        250,
+        205,
         7
       ],
-      "composeSource": {
-        "run": 1,
-        "path": "0.12"
-      },
-      "geometry": "roundRect",
-      "fillColor": "#7C3AED"
+      "geometry": "rect",
+      "fillColor": "#06B6D4",
+      "lineColor": "rgba(0, 0, 0, 0)",
+      "lineWidth": 0
     },
     {
       "order": 14,
       "kind": "shape",
       "scope": "slide",
-      "aid": "sh/4byhgn29",
+      "aid": "sh/94fu18jq",
       "id": "14",
       "bbox": [
-        0,
-        0,
-        158,
-        720
+        339,
+        272,
+        177,
+        28
       ],
-      "composeSource": {
-        "run": 1,
-        "path": "0.13"
-      },
       "geometry": "rect",
-      "text": "选择角色",
-      "textPreview": "选择角色",
+      "text": "选择 AI 角色",
+      "textPreview": "选择 AI 角色",
       "resolvedFontSize": 19,
       "resolvedTextStyle": {
+        "anchor": 1,
         "fontSize": 19,
         "typeface": "PingFang SC",
         "color": "#111827",
         "bold": true,
         "alignment": "center",
+        "verticalAlignment": "top",
         "insets": {
           "top": 0,
           "right": 0,
@@ -537,14 +517,14 @@
         "lines": [
           {
             "index": 1,
-            "text": "选择角色"
+            "text": "选择 AI 角色"
           }
         ]
       },
       "paragraphs": [
         {
           "index": 1,
-          "text": "选择角色",
+          "text": "选择 AI 角色",
           "resolvedTextStyle": {
             "fontSize": 19,
             "typeface": "PingFang SC",
@@ -555,43 +535,43 @@
           "runs": [
             {
               "index": 1,
-              "text": "选择角色",
+              "text": "选择 AI 角色",
               "fontSize": 19,
               "typeface": "PingFang SC",
               "color": "#111827",
-              "bold": true,
-              "alignment": "center"
+              "bold": true
             }
           ],
           "marginLeft": 0
         }
-      ]
+      ],
+      "fillColor": "rgba(0, 0, 0, 0)",
+      "lineColor": "rgba(0, 0, 0, 0)",
+      "lineWidth": 0
     },
     {
       "order": 15,
       "kind": "shape",
       "scope": "slide",
-      "aid": "sh/twra5gbq",
+      "aid": "sh/kjm1cfa9",
       "id": "15",
       "bbox": [
-        0,
-        0,
-        162,
-        720
+        343,
+        308,
+        169,
+        64
       ],
-      "composeSource": {
-        "run": 1,
-        "path": "0.14"
-      },
       "geometry": "rect",
       "text": "通用助手 / 代码专家 / 文档写手",
       "textPreview": "通用助手 / 代码专家 / 文档写手",
       "resolvedFontSize": 13,
       "resolvedTextStyle": {
+        "anchor": 1,
         "fontSize": 13,
         "typeface": "PingFang SC",
         "color": "#64748B",
         "alignment": "center",
+        "verticalAlignment": "top",
         "insets": {
           "top": 0,
           "right": 0,
@@ -628,118 +608,108 @@
               "text": "通用助手 / 代码专家 / 文档写手",
               "fontSize": 13,
               "typeface": "PingFang SC",
-              "color": "#64748B",
-              "alignment": "center"
+              "color": "#64748B"
             }
           ],
           "marginLeft": 0
         }
-      ]
+      ],
+      "fillColor": "rgba(0, 0, 0, 0)",
+      "lineColor": "rgba(0, 0, 0, 0)",
+      "lineWidth": 0
     },
     {
       "order": 16,
       "kind": "shape",
       "scope": "slide",
-      "aid": "sh/m58z25kb",
+      "aid": "sh/r2p8nqxs",
       "id": "16",
       "bbox": [
-        0,
-        0,
-        70,
+        550,
+        313,
+        55,
         3
       ],
-      "composeSource": {
-        "run": 1,
-        "path": "0.15"
-      },
       "geometry": "rect",
-      "fillColor": "#94A3B8"
+      "fillColor": "#94A3B8",
+      "lineColor": "rgba(0, 0, 0, 0)",
+      "lineWidth": 0
     },
     {
       "order": 17,
       "kind": "shape",
       "scope": "slide",
-      "aid": "sh/bq1oryts",
+      "aid": "sh/2hwfyxob",
       "id": "17",
       "bbox": [
-        0,
-        0,
+        601,
+        306,
         16,
         16
       ],
-      "composeSource": {
-        "run": 1,
-        "path": "0.16"
-      },
       "geometry": "triangle",
-      "fillColor": "#94A3B8"
+      "fillColor": "#94A3B8",
+      "lineColor": "#94A3B8",
+      "lineWidth": 0
     },
     {
       "order": 18,
       "kind": "shape",
       "scope": "slide",
-      "aid": "sh/47y1kre1",
+      "aid": "sh/9w3m94fu",
       "id": "18",
       "bbox": [
-        0,
-        0,
-        190,
-        120
+        625,
+        250,
+        180,
+        130
       ],
-      "composeSource": {
-        "run": 1,
-        "path": "0.17"
-      },
-      "geometry": "roundRect",
+      "geometry": "rect",
       "fillColor": "#FFFFFF",
-      "lineColor": "#0EA5E9",
-      "lineWidth": 1.5
+      "lineColor": "#16A34A",
+      "lineWidth": 1.4
     },
     {
       "order": 19,
       "kind": "shape",
       "scope": "slide",
-      "aid": "sh/tsvu9kni",
+      "aid": "sh/kb6xkf6d",
       "id": "19",
       "bbox": [
-        0,
-        0,
-        190,
+        625,
+        250,
+        180,
         7
       ],
-      "composeSource": {
-        "run": 1,
-        "path": "0.18"
-      },
-      "geometry": "roundRect",
-      "fillColor": "#0EA5E9"
+      "geometry": "rect",
+      "fillColor": "#16A34A",
+      "lineColor": "rgba(0, 0, 0, 0)",
+      "lineWidth": 0
     },
     {
       "order": 20,
       "kind": "shape",
       "scope": "slide",
-      "aid": "sh/xkf6dcbu",
+      "aid": "sh/0z61032l",
       "id": "20",
       "bbox": [
-        0,
-        0,
-        158,
-        720
+        639,
+        272,
+        152,
+        28
       ],
-      "composeSource": {
-        "run": 1,
-        "path": "0.19"
-      },
       "geometry": "rect",
       "text": "创建会话",
       "textPreview": "创建会话",
       "resolvedFontSize": 19,
       "resolvedTextStyle": {
+        "anchor": 1,
         "fontSize": 19,
         "typeface": "PingFang SC",
         "color": "#111827",
         "bold": true,
         "alignment": "center",
+        "verticalAlignment": "top",
         "insets": {
           "top": 0,
           "right": 0,
@@ -774,39 +744,39 @@
               "fontSize": 19,
               "typeface": "PingFang SC",
               "color": "#111827",
-              "bold": true,
-              "alignment": "center"
+              "bold": true
             }
           ],
           "marginLeft": 0
         }
-      ]
+      ],
+      "fillColor": "rgba(0, 0, 0, 0)",
+      "lineColor": "rgba(0, 0, 0, 0)",
+      "lineWidth": 0
     },
     {
       "order": 21,
       "kind": "shape",
       "scope": "slide",
-      "aid": "sh/4zidonyd",
+      "aid": "sh/pkzupwb2",
       "id": "21",
       "bbox": [
-        0,
-        0,
-        162,
-        720
+        643,
+        308,
+        144,
+        64
       ],
-      "composeSource": {
-        "run": 1,
-        "path": "0.20"
-      },
       "geometry": "rect",
-      "text": "绑定 user_id 与 character_id",
-      "textPreview": "绑定 user_id 与 character_id",
+      "text": "会话归属当前用户",
+      "textPreview": "会话归属当前用户",
       "resolvedFontSize": 13,
       "resolvedTextStyle": {
+        "anchor": 1,
         "fontSize": 13,
         "typeface": "PingFang SC",
         "color": "#64748B",
         "alignment": "center",
+        "verticalAlignment": "top",
         "insets": {
           "top": 0,
           "right": 0,
@@ -815,22 +785,18 @@
         }
       },
       "textLayout": {
-        "lineCount": 2,
+        "lineCount": 1,
         "lines": [
           {
             "index": 1,
-            "text": "绑定 user_id 与"
-          },
-          {
-            "index": 2,
-            "text": "character_id"
+            "text": "会话归属当前用户"
           }
         ]
       },
       "paragraphs": [
         {
           "index": 1,
-          "text": "绑定 user_id 与 character_id",
+          "text": "会话归属当前用户",
           "resolvedTextStyle": {
             "fontSize": 13,
             "typeface": "PingFang SC",
@@ -840,121 +806,111 @@
           "runs": [
             {
               "index": 1,
-              "text": "绑定 user_id 与 character_id",
+              "text": "会话归属当前用户",
               "fontSize": 13,
               "typeface": "PingFang SC",
-              "color": "#64748B",
-              "alignment": "center"
+              "color": "#64748B"
             }
           ],
           "marginLeft": 0
         }
-      ]
+      ],
+      "fillColor": "rgba(0, 0, 0, 0)",
+      "lineColor": "rgba(0, 0, 0, 0)",
+      "lineWidth": 0
     },
     {
       "order": 22,
       "kind": "shape",
       "scope": "slide",
-      "aid": "sh/fepkzupw",
+      "aid": "sh/itgfmlkj",
       "id": "22",
       "bbox": [
-        0,
-        0,
-        70,
+        825,
+        313,
+        55,
         3
       ],
-      "composeSource": {
-        "run": 1,
-        "path": "0.21"
-      },
       "geometry": "rect",
-      "fillColor": "#94A3B8"
+      "fillColor": "#94A3B8",
+      "lineColor": "rgba(0, 0, 0, 0)",
+      "lineWidth": 0
     },
     {
       "order": 23,
       "kind": "shape",
       "scope": "slide",
-      "aid": "sh/mtwra5gb",
+      "aid": "sh/7ed8bat4",
       "id": "23",
       "bbox": [
-        0,
-        0,
+        876,
+        306,
         16,
         16
       ],
-      "composeSource": {
-        "run": 1,
-        "path": "0.22"
-      },
       "geometry": "triangle",
-      "fillColor": "#94A3B8"
+      "fillColor": "#94A3B8",
+      "lineColor": "#94A3B8",
+      "lineWidth": 0
     },
     {
       "order": 24,
       "kind": "shape",
       "scope": "slide",
-      "aid": "sh/xc3ylc7u",
+      "aid": "sh/0nuxc3yl",
       "id": "24",
       "bbox": [
-        0,
-        0,
-        170,
-        120
+        895,
+        250,
+        185,
+        130
       ],
-      "composeSource": {
-        "run": 1,
-        "path": "0.23"
-      },
-      "geometry": "roundRect",
+      "geometry": "rect",
       "fillColor": "#FFFFFF",
-      "lineColor": "#16A34A",
-      "lineWidth": 1.5
+      "lineColor": "#F59E0B",
+      "lineWidth": 1.4
     },
     {
       "order": 25,
       "kind": "shape",
       "scope": "slide",
-      "aid": "sh/4r65wjud",
+      "aid": "sh/p8nqxs72",
       "id": "25",
       "bbox": [
-        0,
-        0,
-        170,
+        895,
+        250,
+        185,
         7
       ],
-      "composeSource": {
-        "run": 1,
-        "path": "0.24"
-      },
-      "geometry": "roundRect",
-      "fillColor": "#16A34A"
+      "geometry": "rect",
+      "fillColor": "#F59E0B",
+      "lineColor": "rgba(0, 0, 0, 0)",
+      "lineWidth": 0
     },
     {
       "order": 26,
       "kind": "shape",
       "scope": "slide",
-      "aid": "sh/f6dcbulw",
+      "aid": "sh/ih4byhgn",
       "id": "26",
       "bbox": [
-        0,
-        0,
-        138,
-        720
+        909,
+        272,
+        157,
+        28
       ],
-      "composeSource": {
-        "run": 1,
-        "path": "0.25"
-      },
       "geometry": "rect",
       "text": "发送消息",
       "textPreview": "发送消息",
       "resolvedFontSize": 19,
       "resolvedTextStyle": {
+        "anchor": 1,
         "fontSize": 19,
         "typeface": "PingFang SC",
         "color": "#111827",
         "bold": true,
         "alignment": "center",
+        "verticalAlignment": "top",
         "insets": {
           "top": 0,
           "right": 0,
@@ -989,39 +945,39 @@
               "fontSize": 19,
               "typeface": "PingFang SC",
               "color": "#111827",
-              "bold": true,
-              "alignment": "center"
+              "bold": true
             }
           ],
           "marginLeft": 0
         }
-      ]
+      ],
+      "fillColor": "rgba(0, 0, 0, 0)",
+      "lineColor": "rgba(0, 0, 0, 0)",
+      "lineWidth": 0
     },
     {
       "order": 27,
       "kind": "shape",
       "scope": "slide",
-      "aid": "sh/mlkjm1cf",
+      "aid": "sh/72x4nap4",
       "id": "27",
       "bbox": [
-        0,
-        0,
-        142,
-        720
+        913,
+        308,
+        149,
+        64
       ],
-      "composeSource": {
-        "run": 1,
-        "path": "0.26"
-      },
       "geometry": "rect",
-      "text": "用户消息 + AI 回复",
-      "textPreview": "用户消息 + AI 回复",
+      "text": "保存用户消息和 AI 回复",
+      "textPreview": "保存用户消息和 AI 回复",
       "resolvedFontSize": 13,
       "resolvedTextStyle": {
+        "anchor": 1,
         "fontSize": 13,
         "typeface": "PingFang SC",
         "color": "#64748B",
         "alignment": "center",
+        "verticalAlignment": "top",
         "insets": {
           "top": 0,
           "right": 0,
@@ -1034,14 +990,14 @@
         "lines": [
           {
             "index": 1,
-            "text": "用户消息 + AI 回复"
+            "text": "保存用户消息和 AI 回复"
           }
         ]
       },
       "paragraphs": [
         {
           "index": 1,
-          "text": "用户消息 + AI 回复",
+          "text": "保存用户消息和 AI 回复",
           "resolvedTextStyle": {
             "fontSize": 13,
             "typeface": "PingFang SC",
@@ -1051,121 +1007,111 @@
           "runs": [
             {
               "index": 1,
-              "text": "用户消息 + AI 回复",
+              "text": "保存用户消息和 AI 回复",
               "fontSize": 13,
               "typeface": "PingFang SC",
-              "color": "#64748B",
-              "alignment": "center"
+              "color": "#64748B"
             }
           ],
           "marginLeft": 0
         }
-      ]
+      ],
+      "fillColor": "rgba(0, 0, 0, 0)",
+      "lineColor": "rgba(0, 0, 0, 0)",
+      "lineWidth": 0
     },
     {
       "order": 28,
       "kind": "shape",
       "scope": "slide",
-      "aid": "sh/x0nuxc3y",
+      "aid": "sh/wjudg7ad",
       "id": "28",
       "bbox": [
-        0,
-        0,
-        60,
+        1098,
+        313,
+        45,
         3
       ],
-      "composeSource": {
-        "run": 1,
-        "path": "0.27"
-      },
       "geometry": "rect",
-      "fillColor": "#94A3B8"
+      "fillColor": "#94A3B8",
+      "lineColor": "rgba(0, 0, 0, 0)",
+      "lineWidth": 0
     },
     {
       "order": 29,
       "kind": "shape",
       "scope": "slide",
-      "aid": "sh/4fu18jqh",
+      "aid": "sh/p4r65wju",
       "id": "29",
       "bbox": [
-        0,
-        0,
+        1139,
+        306,
         16,
         16
       ],
-      "composeSource": {
-        "run": 1,
-        "path": "0.28"
-      },
       "geometry": "triangle",
-      "fillColor": "#94A3B8"
+      "fillColor": "#94A3B8",
+      "lineColor": "#94A3B8",
+      "lineWidth": 0
     },
     {
       "order": 30,
       "kind": "shape",
       "scope": "slide",
-      "aid": "sh/ed8v6psf",
+      "aid": "sh/f6dcbulw",
       "id": "30",
       "bbox": [
-        0,
-        0,
-        110,
-        120
+        1150,
+        250,
+        95,
+        130
       ],
-      "composeSource": {
-        "run": 1,
-        "path": "0.29"
-      },
-      "geometry": "roundRect",
+      "geometry": "rect",
       "fillColor": "#FFFFFF",
-      "lineColor": "#F59E0B",
-      "lineWidth": 1.5
+      "lineColor": "#7C3AED",
+      "lineWidth": 1.4
     },
     {
       "order": 31,
       "kind": "shape",
       "scope": "slide",
-      "aid": "sh/7y1kre1w",
+      "aid": "sh/mlkjm1cf",
       "id": "31",
       "bbox": [
-        0,
-        0,
-        110,
+        1150,
+        250,
+        95,
         7
       ],
-      "composeSource": {
-        "run": 1,
-        "path": "0.30"
-      },
-      "geometry": "roundRect",
-      "fillColor": "#F59E0B"
+      "geometry": "rect",
+      "fillColor": "#7C3AED",
+      "lineColor": "rgba(0, 0, 0, 0)",
+      "lineWidth": 0
     },
     {
       "order": 32,
       "kind": "shape",
       "scope": "slide",
-      "aid": "sh/wjudg7ad",
+      "aid": "sh/xc3ylc7u",
       "id": "32",
       "bbox": [
-        0,
-        0,
-        78,
-        720
+        1164,
+        272,
+        67,
+        28
       ],
-      "composeSource": {
-        "run": 1,
-        "path": "0.31"
-      },
       "geometry": "rect",
       "text": "过程入库",
       "textPreview": "过程入库",
       "resolvedFontSize": 19,
       "resolvedTextStyle": {
+        "anchor": 1,
         "fontSize": 19,
         "typeface": "PingFang SC",
         "color": "#111827",
         "bold": true,
         "alignment": "center",
+        "verticalAlignment": "top",
         "insets": {
           "top": 0,
           "right": 0,
@@ -1174,11 +1120,15 @@
         }
       },
       "textLayout": {
-        "lineCount": 1,
+        "lineCount": 2,
         "lines": [
           {
             "index": 1,
-            "text": "过程入库"
+            "text": "过程入"
+          },
+          {
+            "index": 2,
+            "text": "库"
           }
         ]
       },
@@ -1200,39 +1150,39 @@
               "fontSize": 19,
               "typeface": "PingFang SC",
               "color": "#111827",
-              "bold": true,
-              "alignment": "center"
+              "bold": true
             }
           ],
           "marginLeft": 0
         }
-      ]
+      ],
+      "fillColor": "rgba(0, 0, 0, 0)",
+      "lineColor": "rgba(0, 0, 0, 0)",
+      "lineWidth": 0
     },
     {
       "order": 33,
       "kind": "shape",
       "scope": "slide",
-      "aid": "sh/p4r65wju",
+      "aid": "sh/4r65wjud",
       "id": "33",
       "bbox": [
-        0,
-        0,
-        82,
-        720
+        1168,
+        308,
+        59,
+        64
       ],
-      "composeSource": {
-        "run": 1,
-        "path": "0.32"
-      },
       "geometry": "rect",
-      "text": "正文 / 推理 / 工具 / 元数据",
-      "textPreview": "正文 / 推理 / 工具 / 元数据",
+      "text": "reasoning / tools / metadata",
+      "textPreview": "reasoning / tools / metadata",
       "resolvedFontSize": 13,
       "resolvedTextStyle": {
+        "anchor": 1,
         "fontSize": 13,
         "typeface": "PingFang SC",
         "color": "#64748B",
         "alignment": "center",
+        "verticalAlignment": "top",
         "insets": {
           "top": 0,
           "right": 0,
@@ -1241,26 +1191,34 @@
         }
       },
       "textLayout": {
-        "lineCount": 3,
+        "lineCount": 5,
         "lines": [
           {
             "index": 1,
-            "text": "正文 / 推理 /"
+            "text": "reasonin"
           },
           {
             "index": 2,
-            "text": "工具 /"
+            "text": "g / tools"
           },
           {
             "index": 3,
-            "text": "元数据"
+            "text": "/"
+          },
+          {
+            "index": 4,
+            "text": "metadat"
+          },
+          {
+            "index": 5,
+            "text": "a"
           }
         ]
       },
       "paragraphs": [
         {
           "index": 1,
-          "text": "正文 / 推理 / 工具 / 元数据",
+          "text": "reasoning / tools / metadata",
           "resolvedTextStyle": {
             "fontSize": 13,
             "typeface": "PingFang SC",
@@ -1270,64 +1228,43 @@
           "runs": [
             {
               "index": 1,
-              "text": "正文 / 推理 / 工具 / 元数据",
+              "text": "reasoning / tools / metadata",
               "fontSize": 13,
               "typeface": "PingFang SC",
-              "color": "#64748B",
-              "alignment": "center"
+              "color": "#64748B"
             }
           ],
           "marginLeft": 0
         }
-      ]
+      ],
+      "fillColor": "rgba(0, 0, 0, 0)",
+      "lineColor": "rgba(0, 0, 0, 0)",
+      "lineWidth": 0
     },
     {
       "order": 34,
       "kind": "shape",
       "scope": "slide",
-      "aid": "sh/i5sneloj",
+      "aid": "sh/fepkzupw",
       "id": "34",
       "bbox": [
-        0,
-        0,
-        1088,
-        96
+        125,
+        470,
+        1000,
+        34
       ],
-      "composeSource": {
-        "run": 1,
-        "path": "0.33"
-      },
-      "geometry": "roundRect",
-      "fillColor": "#FFFFFF",
-      "lineColor": "#CBD5E1",
-      "lineWidth": 1
-    },
-    {
-      "order": 35,
-      "kind": "shape",
-      "scope": "slide",
-      "aid": "sh/7qpg3ex0",
-      "id": "35",
-      "bbox": [
-        0,
-        0,
-        980,
-        720
-      ],
-      "composeSource": {
-        "run": 1,
-        "path": "0.34"
-      },
       "geometry": "rect",
-      "text": "沉淀后的数据可继续支撑：收藏复用、反馈评价、消息审核、系统统计、角色优化。",
-      "textPreview": "沉淀后的数据可继续支撑：收藏复用、反馈评价、消息审核、系统统计、角色优化。",
-      "resolvedFontSize": 24,
+      "text": "流程闭环：消息可查看、可收藏、可反馈；后台可按用户、角色、消息、日志进行治理。",
+      "textPreview": "流程闭环：消息可查看、可收藏、可反馈；后台可按用户、角色、消息、日志进行治理。",
+      "resolvedFontSize": 22,
       "resolvedTextStyle": {
-        "fontSize": 24,
+        "anchor": 1,
+        "fontSize": 22,
         "typeface": "PingFang SC",
         "color": "#111827",
         "bold": true,
         "alignment": "center",
+        "verticalAlignment": "top",
         "insets": {
           "top": 0,
           "right": 0,
@@ -1340,16 +1277,16 @@
         "lines": [
           {
             "index": 1,
-            "text": "沉淀后的数据可继续支撑：收藏复用、反馈评价、消息审核、系统统计、角色优化。"
+            "text": "流程闭环：消息可查看、可收藏、可反馈；后台可按用户、角色、消息、日志进行治理。"
           }
         ]
       },
       "paragraphs": [
         {
           "index": 1,
-          "text": "沉淀后的数据可继续支撑：收藏复用、反馈评价、消息审核、系统统计、角色优化。",
+          "text": "流程闭环：消息可查看、可收藏、可反馈；后台可按用户、角色、消息、日志进行治理。",
           "resolvedTextStyle": {
-            "fontSize": 24,
+            "fontSize": 22,
             "typeface": "PingFang SC",
             "color": "#111827",
             "bold": true,
@@ -1358,43 +1295,108 @@
           "runs": [
             {
               "index": 1,
-              "text": "沉淀后的数据可继续支撑：收藏复用、反馈评价、消息审核、系统统计、角色优化。",
-              "fontSize": 24,
+              "text": "流程闭环：消息可查看、可收藏、可反馈；后台可按用户、角色、消息、日志进行治理。",
+              "fontSize": 22,
               "typeface": "PingFang SC",
               "color": "#111827",
-              "bold": true,
-              "alignment": "center"
+              "bold": true
             }
           ],
           "marginLeft": 0
         }
-      ]
+      ],
+      "fillColor": "rgba(0, 0, 0, 0)",
+      "lineColor": "rgba(0, 0, 0, 0)",
+      "lineWidth": 0
+    },
+    {
+      "order": 35,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/mtwra5gb",
+      "id": "35",
+      "bbox": [
+        150,
+        520,
+        950,
+        26
+      ],
+      "geometry": "rect",
+      "text": "本轮已重点验证路由、权限、收藏状态、中文编码、消息详情与管理端接口。",
+      "textPreview": "本轮已重点验证路由、权限、收藏状态、中文编码、消息详情与管理端接口。",
+      "resolvedFontSize": 17,
+      "resolvedTextStyle": {
+        "anchor": 1,
+        "fontSize": 17,
+        "typeface": "PingFang SC",
+        "color": "#64748B",
+        "alignment": "center",
+        "verticalAlignment": "top",
+        "insets": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "本轮已重点验证路由、权限、收藏状态、中文编码、消息详情与管理端接口。"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "本轮已重点验证路由、权限、收藏状态、中文编码、消息详情与管理端接口。",
+          "resolvedTextStyle": {
+            "fontSize": 17,
+            "typeface": "PingFang SC",
+            "color": "#64748B",
+            "alignment": "center"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "本轮已重点验证路由、权限、收藏状态、中文编码、消息详情与管理端接口。",
+              "fontSize": 17,
+              "typeface": "PingFang SC",
+              "color": "#64748B"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "fillColor": "rgba(0, 0, 0, 0)",
+      "lineColor": "rgba(0, 0, 0, 0)",
+      "lineWidth": 0
     },
     {
       "order": 36,
       "kind": "shape",
       "scope": "slide",
-      "aid": "sh/0bi9s36h",
+      "aid": "sh/xkf6dcbu",
       "id": "36",
       "bbox": [
-        0,
-        0,
-        620,
-        720
+        56,
+        684,
+        640,
+        20
       ],
-      "composeSource": {
-        "run": 1,
-        "path": "0.35"
-      },
       "geometry": "rect",
       "text": "课程设计答辩 | AI 会话过程管理系统",
       "textPreview": "课程设计答辩 | AI 会话过程管理系统",
       "resolvedFontSize": 12,
       "resolvedTextStyle": {
+        "anchor": 1,
         "fontSize": 12,
         "typeface": "PingFang SC",
         "color": "#94A3B8",
         "alignment": "left",
+        "verticalAlignment": "top",
         "insets": {
           "top": 0,
           "right": 0,
@@ -1418,7 +1420,8 @@
           "resolvedTextStyle": {
             "fontSize": 12,
             "typeface": "PingFang SC",
-            "color": "#94A3B8"
+            "color": "#94A3B8",
+            "alignment": "left"
           },
           "runs": [
             {
@@ -1431,33 +1434,34 @@
           ],
           "marginLeft": 0
         }
-      ]
+      ],
+      "fillColor": "rgba(0, 0, 0, 0)",
+      "lineColor": "rgba(0, 0, 0, 0)",
+      "lineWidth": 0
     },
     {
       "order": 37,
       "kind": "shape",
       "scope": "slide",
-      "aid": "sh/pwb2hwfy",
+      "aid": "sh/4zidonyd",
       "id": "37",
       "bbox": [
-        0,
-        0,
-        36,
-        720
+        1186,
+        684,
+        40,
+        20
       ],
-      "composeSource": {
-        "run": 1,
-        "path": "0.36"
-      },
       "geometry": "rect",
       "text": "04",
       "textPreview": "04",
       "resolvedFontSize": 12,
       "resolvedTextStyle": {
+        "anchor": 1,
         "fontSize": 12,
         "typeface": "PingFang SC",
         "color": "#94A3B8",
         "alignment": "right",
+        "verticalAlignment": "top",
         "insets": {
           "top": 0,
           "right": 0,
@@ -1490,1546 +1494,16 @@
               "text": "04",
               "fontSize": 12,
               "typeface": "PingFang SC",
-              "color": "#94A3B8",
-              "alignment": "right"
+              "color": "#94A3B8"
             }
           ],
           "marginLeft": 0
         }
-      ]
+      ],
+      "fillColor": "rgba(0, 0, 0, 0)",
+      "lineColor": "rgba(0, 0, 0, 0)",
+      "lineWidth": 0
     }
   ],
-  "composeRuns": [
-    {
-      "index": 1,
-      "frame": {
-        "left": 0,
-        "top": 0,
-        "width": 1280,
-        "height": 720
-      },
-      "root": {
-        "path": "0",
-        "kind": "layers",
-        "requestedSize": {
-          "width": {
-            "mode": "fixed",
-            "value": 1280
-          },
-          "height": {
-            "mode": "fixed",
-            "value": 720
-          }
-        },
-        "intrinsicSize": {
-          "width": 1280,
-          "height": 5382
-        },
-        "frame": {
-          "left": 0,
-          "top": 0,
-          "width": 1280,
-          "height": 720
-        },
-        "children": [
-          {
-            "path": "0.0",
-            "kind": "shape",
-            "requestedSize": {
-              "width": {
-                "mode": "fixed",
-                "value": 1280
-              },
-              "height": {
-                "mode": "fixed",
-                "value": 720
-              }
-            },
-            "intrinsicSize": {
-              "width": 1280,
-              "height": 720
-            },
-            "frame": {
-              "left": 0,
-              "top": 0,
-              "width": 1280,
-              "height": 720
-            },
-            "children": [],
-            "geometry": "rect",
-            "element": {
-              "aid": "sh/qpg3ex0n",
-              "id": "1",
-              "kind": "shape"
-            }
-          },
-          {
-            "path": "0.1",
-            "kind": "shape",
-            "requestedSize": {
-              "width": {
-                "mode": "fixed",
-                "value": 1280
-              },
-              "height": {
-                "mode": "fixed",
-                "value": 74
-              }
-            },
-            "intrinsicSize": {
-              "width": 1280,
-              "height": 74
-            },
-            "frame": {
-              "left": 0,
-              "top": 0,
-              "width": 1280,
-              "height": 74
-            },
-            "children": [],
-            "geometry": "rect",
-            "element": {
-              "aid": "sh/xczed8v6",
-              "id": "2",
-              "kind": "shape"
-            }
-          },
-          {
-            "path": "0.2",
-            "kind": "shape",
-            "requestedSize": {
-              "width": {
-                "mode": "fixed",
-                "value": 1280
-              },
-              "height": {
-                "mode": "fixed",
-                "value": 1
-              }
-            },
-            "intrinsicSize": {
-              "width": 1280,
-              "height": 1
-            },
-            "frame": {
-              "left": 0,
-              "top": 0,
-              "width": 1280,
-              "height": 1
-            },
-            "children": [],
-            "geometry": "rect",
-            "element": {
-              "aid": "sh/8v6psfil",
-              "id": "3",
-              "kind": "shape"
-            }
-          },
-          {
-            "path": "0.3",
-            "kind": "text",
-            "requestedSize": {
-              "width": {
-                "mode": "fixed",
-                "value": 360
-              },
-              "height": {
-                "mode": "hug"
-              }
-            },
-            "intrinsicSize": {
-              "width": 360,
-              "height": 19.2
-            },
-            "frame": {
-              "left": 0,
-              "top": 0,
-              "width": 360,
-              "height": 720
-            },
-            "children": [],
-            "text": "AIChatProcessManager",
-            "transform": "none",
-            "element": {
-              "aid": "sh/fyxobm58",
-              "id": "4",
-              "kind": "shape"
-            }
-          },
-          {
-            "path": "0.4",
-            "kind": "text",
-            "requestedSize": {
-              "width": {
-                "mode": "fixed",
-                "value": 900
-              },
-              "height": {
-                "mode": "hug"
-              }
-            },
-            "intrinsicSize": {
-              "width": 900,
-              "height": 40.8
-            },
-            "frame": {
-              "left": 0,
-              "top": 0,
-              "width": 900,
-              "height": 720
-            },
-            "children": [],
-            "text": "核心业务流程：从会话创建到过程沉淀",
-            "transform": "none",
-            "element": {
-              "aid": "sh/qd4vmtwr",
-              "id": "5",
-              "kind": "shape"
-            }
-          },
-          {
-            "path": "0.5",
-            "kind": "shape",
-            "requestedSize": {
-              "width": {
-                "mode": "fixed",
-                "value": 160
-              },
-              "height": {
-                "mode": "fixed",
-                "value": 120
-              }
-            },
-            "intrinsicSize": {
-              "width": 160,
-              "height": 120
-            },
-            "frame": {
-              "left": 0,
-              "top": 0,
-              "width": 160,
-              "height": 120
-            },
-            "children": [],
-            "geometry": "rect",
-            "element": {
-              "aid": "sh/x4nap4r6",
-              "id": "6",
-              "kind": "shape"
-            }
-          },
-          {
-            "path": "0.6",
-            "kind": "shape",
-            "requestedSize": {
-              "width": {
-                "mode": "fixed",
-                "value": 160
-              },
-              "height": {
-                "mode": "fixed",
-                "value": 7
-              }
-            },
-            "intrinsicSize": {
-              "width": 160,
-              "height": 7
-            },
-            "frame": {
-              "left": 0,
-              "top": 0,
-              "width": 160,
-              "height": 7
-            },
-            "children": [],
-            "geometry": "rect",
-            "element": {
-              "aid": "sh/8jqh0fep",
-              "id": "7",
-              "kind": "shape"
-            }
-          },
-          {
-            "path": "0.7",
-            "kind": "text",
-            "requestedSize": {
-              "width": {
-                "mode": "fixed",
-                "value": 128
-              },
-              "height": {
-                "mode": "hug"
-              }
-            },
-            "intrinsicSize": {
-              "width": 128,
-              "height": 22.8
-            },
-            "frame": {
-              "left": 0,
-              "top": 0,
-              "width": 128,
-              "height": 720
-            },
-            "children": [],
-            "text": "登录鉴权",
-            "transform": "none",
-            "element": {
-              "aid": "sh/fmlkjm1c",
-              "id": "8",
-              "kind": "shape"
-            }
-          },
-          {
-            "path": "0.8",
-            "kind": "text",
-            "requestedSize": {
-              "width": {
-                "mode": "fixed",
-                "value": 132
-              },
-              "height": {
-                "mode": "hug"
-              }
-            },
-            "intrinsicSize": {
-              "width": 132,
-              "height": 1794
-            },
-            "frame": {
-              "left": 0,
-              "top": 0,
-              "width": 132,
-              "height": 720
-            },
-            "children": [],
-            "text": "JWT + bcrypt",
-            "transform": "none",
-            "element": {
-              "aid": "sh/q1orytsv",
-              "id": "9",
-              "kind": "shape"
-            }
-          },
-          {
-            "path": "0.9",
-            "kind": "shape",
-            "requestedSize": {
-              "width": {
-                "mode": "fixed",
-                "value": 70
-              },
-              "height": {
-                "mode": "fixed",
-                "value": 3
-              }
-            },
-            "intrinsicSize": {
-              "width": 70,
-              "height": 3
-            },
-            "frame": {
-              "left": 0,
-              "top": 0,
-              "width": 70,
-              "height": 3
-            },
-            "children": [],
-            "geometry": "rect",
-            "element": {
-              "aid": "sh/4nap4r65",
-              "id": "10",
-              "kind": "shape"
-            }
-          },
-          {
-            "path": "0.10",
-            "kind": "shape",
-            "requestedSize": {
-              "width": {
-                "mode": "fixed",
-                "value": 16
-              },
-              "height": {
-                "mode": "fixed",
-                "value": 16
-              }
-            },
-            "intrinsicSize": {
-              "width": 16,
-              "height": 16
-            },
-            "frame": {
-              "left": 0,
-              "top": 0,
-              "width": 16,
-              "height": 16
-            },
-            "children": [],
-            "geometry": "triangle",
-            "element": {
-              "aid": "sh/t83itgfm",
-              "id": "11",
-              "kind": "shape"
-            }
-          },
-          {
-            "path": "0.11",
-            "kind": "shape",
-            "requestedSize": {
-              "width": {
-                "mode": "fixed",
-                "value": 190
-              },
-              "height": {
-                "mode": "fixed",
-                "value": 120
-              }
-            },
-            "intrinsicSize": {
-              "width": 190,
-              "height": 120
-            },
-            "frame": {
-              "left": 0,
-              "top": 0,
-              "width": 190,
-              "height": 120
-            },
-            "children": [],
-            "geometry": "rect",
-            "element": {
-              "aid": "sh/mhk3q5o7",
-              "id": "12",
-              "kind": "shape"
-            }
-          },
-          {
-            "path": "0.12",
-            "kind": "shape",
-            "requestedSize": {
-              "width": {
-                "mode": "fixed",
-                "value": 190
-              },
-              "height": {
-                "mode": "fixed",
-                "value": 7
-              }
-            },
-            "intrinsicSize": {
-              "width": 190,
-              "height": 7
-            },
-            "frame": {
-              "left": 0,
-              "top": 0,
-              "width": 190,
-              "height": 7
-            },
-            "children": [],
-            "geometry": "rect",
-            "element": {
-              "aid": "sh/b2hwfyxo",
-              "id": "13",
-              "kind": "shape"
-            }
-          },
-          {
-            "path": "0.13",
-            "kind": "text",
-            "requestedSize": {
-              "width": {
-                "mode": "fixed",
-                "value": 158
-              },
-              "height": {
-                "mode": "hug"
-              }
-            },
-            "intrinsicSize": {
-              "width": 158,
-              "height": 22.8
-            },
-            "frame": {
-              "left": 0,
-              "top": 0,
-              "width": 158,
-              "height": 720
-            },
-            "children": [],
-            "text": "选择角色",
-            "transform": "none",
-            "element": {
-              "aid": "sh/4byhgn29",
-              "id": "14",
-              "kind": "shape"
-            }
-          },
-          {
-            "path": "0.14",
-            "kind": "text",
-            "requestedSize": {
-              "width": {
-                "mode": "fixed",
-                "value": 162
-              },
-              "height": {
-                "mode": "hug"
-              }
-            },
-            "intrinsicSize": {
-              "width": 162,
-              "height": 3588
-            },
-            "frame": {
-              "left": 0,
-              "top": 0,
-              "width": 162,
-              "height": 720
-            },
-            "children": [],
-            "text": "通用助手 / 代码专家 / 文档写手",
-            "transform": "none",
-            "element": {
-              "aid": "sh/twra5gbq",
-              "id": "15",
-              "kind": "shape"
-            }
-          },
-          {
-            "path": "0.15",
-            "kind": "shape",
-            "requestedSize": {
-              "width": {
-                "mode": "fixed",
-                "value": 70
-              },
-              "height": {
-                "mode": "fixed",
-                "value": 3
-              }
-            },
-            "intrinsicSize": {
-              "width": 70,
-              "height": 3
-            },
-            "frame": {
-              "left": 0,
-              "top": 0,
-              "width": 70,
-              "height": 3
-            },
-            "children": [],
-            "geometry": "rect",
-            "element": {
-              "aid": "sh/m58z25kb",
-              "id": "16",
-              "kind": "shape"
-            }
-          },
-          {
-            "path": "0.16",
-            "kind": "shape",
-            "requestedSize": {
-              "width": {
-                "mode": "fixed",
-                "value": 16
-              },
-              "height": {
-                "mode": "fixed",
-                "value": 16
-              }
-            },
-            "intrinsicSize": {
-              "width": 16,
-              "height": 16
-            },
-            "frame": {
-              "left": 0,
-              "top": 0,
-              "width": 16,
-              "height": 16
-            },
-            "children": [],
-            "geometry": "triangle",
-            "element": {
-              "aid": "sh/bq1oryts",
-              "id": "17",
-              "kind": "shape"
-            }
-          },
-          {
-            "path": "0.17",
-            "kind": "shape",
-            "requestedSize": {
-              "width": {
-                "mode": "fixed",
-                "value": 190
-              },
-              "height": {
-                "mode": "fixed",
-                "value": 120
-              }
-            },
-            "intrinsicSize": {
-              "width": 190,
-              "height": 120
-            },
-            "frame": {
-              "left": 0,
-              "top": 0,
-              "width": 190,
-              "height": 120
-            },
-            "children": [],
-            "geometry": "rect",
-            "element": {
-              "aid": "sh/47y1kre1",
-              "id": "18",
-              "kind": "shape"
-            }
-          },
-          {
-            "path": "0.18",
-            "kind": "shape",
-            "requestedSize": {
-              "width": {
-                "mode": "fixed",
-                "value": 190
-              },
-              "height": {
-                "mode": "fixed",
-                "value": 7
-              }
-            },
-            "intrinsicSize": {
-              "width": 190,
-              "height": 7
-            },
-            "frame": {
-              "left": 0,
-              "top": 0,
-              "width": 190,
-              "height": 7
-            },
-            "children": [],
-            "geometry": "rect",
-            "element": {
-              "aid": "sh/tsvu9kni",
-              "id": "19",
-              "kind": "shape"
-            }
-          },
-          {
-            "path": "0.19",
-            "kind": "text",
-            "requestedSize": {
-              "width": {
-                "mode": "fixed",
-                "value": 158
-              },
-              "height": {
-                "mode": "hug"
-              }
-            },
-            "intrinsicSize": {
-              "width": 158,
-              "height": 22.8
-            },
-            "frame": {
-              "left": 0,
-              "top": 0,
-              "width": 158,
-              "height": 720
-            },
-            "children": [],
-            "text": "创建会话",
-            "transform": "none",
-            "element": {
-              "aid": "sh/xkf6dcbu",
-              "id": "20",
-              "kind": "shape"
-            }
-          },
-          {
-            "path": "0.20",
-            "kind": "text",
-            "requestedSize": {
-              "width": {
-                "mode": "fixed",
-                "value": 162
-              },
-              "height": {
-                "mode": "hug"
-              }
-            },
-            "intrinsicSize": {
-              "width": 162,
-              "height": 3588
-            },
-            "frame": {
-              "left": 0,
-              "top": 0,
-              "width": 162,
-              "height": 720
-            },
-            "children": [],
-            "text": "绑定 user_id 与 character_id",
-            "transform": "none",
-            "element": {
-              "aid": "sh/4zidonyd",
-              "id": "21",
-              "kind": "shape"
-            }
-          },
-          {
-            "path": "0.21",
-            "kind": "shape",
-            "requestedSize": {
-              "width": {
-                "mode": "fixed",
-                "value": 70
-              },
-              "height": {
-                "mode": "fixed",
-                "value": 3
-              }
-            },
-            "intrinsicSize": {
-              "width": 70,
-              "height": 3
-            },
-            "frame": {
-              "left": 0,
-              "top": 0,
-              "width": 70,
-              "height": 3
-            },
-            "children": [],
-            "geometry": "rect",
-            "element": {
-              "aid": "sh/fepkzupw",
-              "id": "22",
-              "kind": "shape"
-            }
-          },
-          {
-            "path": "0.22",
-            "kind": "shape",
-            "requestedSize": {
-              "width": {
-                "mode": "fixed",
-                "value": 16
-              },
-              "height": {
-                "mode": "fixed",
-                "value": 16
-              }
-            },
-            "intrinsicSize": {
-              "width": 16,
-              "height": 16
-            },
-            "frame": {
-              "left": 0,
-              "top": 0,
-              "width": 16,
-              "height": 16
-            },
-            "children": [],
-            "geometry": "triangle",
-            "element": {
-              "aid": "sh/mtwra5gb",
-              "id": "23",
-              "kind": "shape"
-            }
-          },
-          {
-            "path": "0.23",
-            "kind": "shape",
-            "requestedSize": {
-              "width": {
-                "mode": "fixed",
-                "value": 170
-              },
-              "height": {
-                "mode": "fixed",
-                "value": 120
-              }
-            },
-            "intrinsicSize": {
-              "width": 170,
-              "height": 120
-            },
-            "frame": {
-              "left": 0,
-              "top": 0,
-              "width": 170,
-              "height": 120
-            },
-            "children": [],
-            "geometry": "rect",
-            "element": {
-              "aid": "sh/xc3ylc7u",
-              "id": "24",
-              "kind": "shape"
-            }
-          },
-          {
-            "path": "0.24",
-            "kind": "shape",
-            "requestedSize": {
-              "width": {
-                "mode": "fixed",
-                "value": 170
-              },
-              "height": {
-                "mode": "fixed",
-                "value": 7
-              }
-            },
-            "intrinsicSize": {
-              "width": 170,
-              "height": 7
-            },
-            "frame": {
-              "left": 0,
-              "top": 0,
-              "width": 170,
-              "height": 7
-            },
-            "children": [],
-            "geometry": "rect",
-            "element": {
-              "aid": "sh/4r65wjud",
-              "id": "25",
-              "kind": "shape"
-            }
-          },
-          {
-            "path": "0.25",
-            "kind": "text",
-            "requestedSize": {
-              "width": {
-                "mode": "fixed",
-                "value": 138
-              },
-              "height": {
-                "mode": "hug"
-              }
-            },
-            "intrinsicSize": {
-              "width": 138,
-              "height": 22.8
-            },
-            "frame": {
-              "left": 0,
-              "top": 0,
-              "width": 138,
-              "height": 720
-            },
-            "children": [],
-            "text": "发送消息",
-            "transform": "none",
-            "element": {
-              "aid": "sh/f6dcbulw",
-              "id": "26",
-              "kind": "shape"
-            }
-          },
-          {
-            "path": "0.26",
-            "kind": "text",
-            "requestedSize": {
-              "width": {
-                "mode": "fixed",
-                "value": 142
-              },
-              "height": {
-                "mode": "hug"
-              }
-            },
-            "intrinsicSize": {
-              "width": 142,
-              "height": 1794
-            },
-            "frame": {
-              "left": 0,
-              "top": 0,
-              "width": 142,
-              "height": 720
-            },
-            "children": [],
-            "text": "用户消息 + AI 回复",
-            "transform": "none",
-            "element": {
-              "aid": "sh/mlkjm1cf",
-              "id": "27",
-              "kind": "shape"
-            }
-          },
-          {
-            "path": "0.27",
-            "kind": "shape",
-            "requestedSize": {
-              "width": {
-                "mode": "fixed",
-                "value": 60
-              },
-              "height": {
-                "mode": "fixed",
-                "value": 3
-              }
-            },
-            "intrinsicSize": {
-              "width": 60,
-              "height": 3
-            },
-            "frame": {
-              "left": 0,
-              "top": 0,
-              "width": 60,
-              "height": 3
-            },
-            "children": [],
-            "geometry": "rect",
-            "element": {
-              "aid": "sh/x0nuxc3y",
-              "id": "28",
-              "kind": "shape"
-            }
-          },
-          {
-            "path": "0.28",
-            "kind": "shape",
-            "requestedSize": {
-              "width": {
-                "mode": "fixed",
-                "value": 16
-              },
-              "height": {
-                "mode": "fixed",
-                "value": 16
-              }
-            },
-            "intrinsicSize": {
-              "width": 16,
-              "height": 16
-            },
-            "frame": {
-              "left": 0,
-              "top": 0,
-              "width": 16,
-              "height": 16
-            },
-            "children": [],
-            "geometry": "triangle",
-            "element": {
-              "aid": "sh/4fu18jqh",
-              "id": "29",
-              "kind": "shape"
-            }
-          },
-          {
-            "path": "0.29",
-            "kind": "shape",
-            "requestedSize": {
-              "width": {
-                "mode": "fixed",
-                "value": 110
-              },
-              "height": {
-                "mode": "fixed",
-                "value": 120
-              }
-            },
-            "intrinsicSize": {
-              "width": 110,
-              "height": 120
-            },
-            "frame": {
-              "left": 0,
-              "top": 0,
-              "width": 110,
-              "height": 120
-            },
-            "children": [],
-            "geometry": "rect",
-            "element": {
-              "aid": "sh/ed8v6psf",
-              "id": "30",
-              "kind": "shape"
-            }
-          },
-          {
-            "path": "0.30",
-            "kind": "shape",
-            "requestedSize": {
-              "width": {
-                "mode": "fixed",
-                "value": 110
-              },
-              "height": {
-                "mode": "fixed",
-                "value": 7
-              }
-            },
-            "intrinsicSize": {
-              "width": 110,
-              "height": 7
-            },
-            "frame": {
-              "left": 0,
-              "top": 0,
-              "width": 110,
-              "height": 7
-            },
-            "children": [],
-            "geometry": "rect",
-            "element": {
-              "aid": "sh/7y1kre1w",
-              "id": "31",
-              "kind": "shape"
-            }
-          },
-          {
-            "path": "0.31",
-            "kind": "text",
-            "requestedSize": {
-              "width": {
-                "mode": "fixed",
-                "value": 78
-              },
-              "height": {
-                "mode": "hug"
-              }
-            },
-            "intrinsicSize": {
-              "width": 78,
-              "height": 22.8
-            },
-            "frame": {
-              "left": 0,
-              "top": 0,
-              "width": 78,
-              "height": 720
-            },
-            "children": [],
-            "text": "过程入库",
-            "transform": "none",
-            "element": {
-              "aid": "sh/wjudg7ad",
-              "id": "32",
-              "kind": "shape"
-            }
-          },
-          {
-            "path": "0.32",
-            "kind": "text",
-            "requestedSize": {
-              "width": {
-                "mode": "fixed",
-                "value": 82
-              },
-              "height": {
-                "mode": "hug"
-              }
-            },
-            "intrinsicSize": {
-              "width": 82,
-              "height": 5382
-            },
-            "frame": {
-              "left": 0,
-              "top": 0,
-              "width": 82,
-              "height": 720
-            },
-            "children": [],
-            "text": "正文 / 推理 / 工具 / 元数据",
-            "transform": "none",
-            "element": {
-              "aid": "sh/p4r65wju",
-              "id": "33",
-              "kind": "shape"
-            }
-          },
-          {
-            "path": "0.33",
-            "kind": "shape",
-            "requestedSize": {
-              "width": {
-                "mode": "fixed",
-                "value": 1088
-              },
-              "height": {
-                "mode": "fixed",
-                "value": 96
-              }
-            },
-            "intrinsicSize": {
-              "width": 1088,
-              "height": 96
-            },
-            "frame": {
-              "left": 0,
-              "top": 0,
-              "width": 1088,
-              "height": 96
-            },
-            "children": [],
-            "geometry": "rect",
-            "element": {
-              "aid": "sh/i5sneloj",
-              "id": "34",
-              "kind": "shape"
-            }
-          },
-          {
-            "path": "0.34",
-            "kind": "text",
-            "requestedSize": {
-              "width": {
-                "mode": "fixed",
-                "value": 980
-              },
-              "height": {
-                "mode": "hug"
-              }
-            },
-            "intrinsicSize": {
-              "width": 980,
-              "height": 28.8
-            },
-            "frame": {
-              "left": 0,
-              "top": 0,
-              "width": 980,
-              "height": 720
-            },
-            "children": [],
-            "text": "沉淀后的数据可继续支撑：收藏复用、反馈评价、消息审核、系统统计、角色优化。",
-            "transform": "none",
-            "element": {
-              "aid": "sh/7qpg3ex0",
-              "id": "35",
-              "kind": "shape"
-            }
-          },
-          {
-            "path": "0.35",
-            "kind": "text",
-            "requestedSize": {
-              "width": {
-                "mode": "fixed",
-                "value": 620
-              },
-              "height": {
-                "mode": "hug"
-              }
-            },
-            "intrinsicSize": {
-              "width": 620,
-              "height": 14.4
-            },
-            "frame": {
-              "left": 0,
-              "top": 0,
-              "width": 620,
-              "height": 720
-            },
-            "children": [],
-            "text": "课程设计答辩 | AI 会话过程管理系统",
-            "transform": "none",
-            "element": {
-              "aid": "sh/0bi9s36h",
-              "id": "36",
-              "kind": "shape"
-            }
-          },
-          {
-            "path": "0.36",
-            "kind": "text",
-            "requestedSize": {
-              "width": {
-                "mode": "fixed",
-                "value": 36
-              },
-              "height": {
-                "mode": "hug"
-              }
-            },
-            "intrinsicSize": {
-              "width": 36,
-              "height": 14.4
-            },
-            "frame": {
-              "left": 0,
-              "top": 0,
-              "width": 36,
-              "height": 720
-            },
-            "children": [],
-            "text": "04",
-            "transform": "none",
-            "element": {
-              "aid": "sh/pwb2hwfy",
-              "id": "37",
-              "kind": "shape"
-            }
-          }
-        ],
-        "padding": {
-          "top": 0,
-          "right": 0,
-          "bottom": 0,
-          "left": 0
-        },
-        "alignItems": "stretch",
-        "justifyItems": "stretch",
-        "contentFrame": {
-          "left": 0,
-          "top": 0,
-          "width": 1280,
-          "height": 720
-        },
-        "items": [
-          {
-            "path": "0.0",
-            "frame": {
-              "left": 0,
-              "top": 0,
-              "width": 1280,
-              "height": 720
-            }
-          },
-          {
-            "path": "0.1",
-            "frame": {
-              "left": 0,
-              "top": 0,
-              "width": 1280,
-              "height": 74
-            }
-          },
-          {
-            "path": "0.2",
-            "frame": {
-              "left": 0,
-              "top": 0,
-              "width": 1280,
-              "height": 1
-            }
-          },
-          {
-            "path": "0.3",
-            "frame": {
-              "left": 0,
-              "top": 0,
-              "width": 360,
-              "height": 720
-            }
-          },
-          {
-            "path": "0.4",
-            "frame": {
-              "left": 0,
-              "top": 0,
-              "width": 900,
-              "height": 720
-            }
-          },
-          {
-            "path": "0.5",
-            "frame": {
-              "left": 0,
-              "top": 0,
-              "width": 160,
-              "height": 120
-            }
-          },
-          {
-            "path": "0.6",
-            "frame": {
-              "left": 0,
-              "top": 0,
-              "width": 160,
-              "height": 7
-            }
-          },
-          {
-            "path": "0.7",
-            "frame": {
-              "left": 0,
-              "top": 0,
-              "width": 128,
-              "height": 720
-            }
-          },
-          {
-            "path": "0.8",
-            "frame": {
-              "left": 0,
-              "top": 0,
-              "width": 132,
-              "height": 720
-            }
-          },
-          {
-            "path": "0.9",
-            "frame": {
-              "left": 0,
-              "top": 0,
-              "width": 70,
-              "height": 3
-            }
-          },
-          {
-            "path": "0.10",
-            "frame": {
-              "left": 0,
-              "top": 0,
-              "width": 16,
-              "height": 16
-            }
-          },
-          {
-            "path": "0.11",
-            "frame": {
-              "left": 0,
-              "top": 0,
-              "width": 190,
-              "height": 120
-            }
-          },
-          {
-            "path": "0.12",
-            "frame": {
-              "left": 0,
-              "top": 0,
-              "width": 190,
-              "height": 7
-            }
-          },
-          {
-            "path": "0.13",
-            "frame": {
-              "left": 0,
-              "top": 0,
-              "width": 158,
-              "height": 720
-            }
-          },
-          {
-            "path": "0.14",
-            "frame": {
-              "left": 0,
-              "top": 0,
-              "width": 162,
-              "height": 720
-            }
-          },
-          {
-            "path": "0.15",
-            "frame": {
-              "left": 0,
-              "top": 0,
-              "width": 70,
-              "height": 3
-            }
-          },
-          {
-            "path": "0.16",
-            "frame": {
-              "left": 0,
-              "top": 0,
-              "width": 16,
-              "height": 16
-            }
-          },
-          {
-            "path": "0.17",
-            "frame": {
-              "left": 0,
-              "top": 0,
-              "width": 190,
-              "height": 120
-            }
-          },
-          {
-            "path": "0.18",
-            "frame": {
-              "left": 0,
-              "top": 0,
-              "width": 190,
-              "height": 7
-            }
-          },
-          {
-            "path": "0.19",
-            "frame": {
-              "left": 0,
-              "top": 0,
-              "width": 158,
-              "height": 720
-            }
-          },
-          {
-            "path": "0.20",
-            "frame": {
-              "left": 0,
-              "top": 0,
-              "width": 162,
-              "height": 720
-            }
-          },
-          {
-            "path": "0.21",
-            "frame": {
-              "left": 0,
-              "top": 0,
-              "width": 70,
-              "height": 3
-            }
-          },
-          {
-            "path": "0.22",
-            "frame": {
-              "left": 0,
-              "top": 0,
-              "width": 16,
-              "height": 16
-            }
-          },
-          {
-            "path": "0.23",
-            "frame": {
-              "left": 0,
-              "top": 0,
-              "width": 170,
-              "height": 120
-            }
-          },
-          {
-            "path": "0.24",
-            "frame": {
-              "left": 0,
-              "top": 0,
-              "width": 170,
-              "height": 7
-            }
-          },
-          {
-            "path": "0.25",
-            "frame": {
-              "left": 0,
-              "top": 0,
-              "width": 138,
-              "height": 720
-            }
-          },
-          {
-            "path": "0.26",
-            "frame": {
-              "left": 0,
-              "top": 0,
-              "width": 142,
-              "height": 720
-            }
-          },
-          {
-            "path": "0.27",
-            "frame": {
-              "left": 0,
-              "top": 0,
-              "width": 60,
-              "height": 3
-            }
-          },
-          {
-            "path": "0.28",
-            "frame": {
-              "left": 0,
-              "top": 0,
-              "width": 16,
-              "height": 16
-            }
-          },
-          {
-            "path": "0.29",
-            "frame": {
-              "left": 0,
-              "top": 0,
-              "width": 110,
-              "height": 120
-            }
-          },
-          {
-            "path": "0.30",
-            "frame": {
-              "left": 0,
-              "top": 0,
-              "width": 110,
-              "height": 7
-            }
-          },
-          {
-            "path": "0.31",
-            "frame": {
-              "left": 0,
-              "top": 0,
-              "width": 78,
-              "height": 720
-            }
-          },
-          {
-            "path": "0.32",
-            "frame": {
-              "left": 0,
-              "top": 0,
-              "width": 82,
-              "height": 720
-            }
-          },
-          {
-            "path": "0.33",
-            "frame": {
-              "left": 0,
-              "top": 0,
-              "width": 1088,
-              "height": 96
-            }
-          },
-          {
-            "path": "0.34",
-            "frame": {
-              "left": 0,
-              "top": 0,
-              "width": 980,
-              "height": 720
-            }
-          },
-          {
-            "path": "0.35",
-            "frame": {
-              "left": 0,
-              "top": 0,
-              "width": 620,
-              "height": 720
-            }
-          },
-          {
-            "path": "0.36",
-            "frame": {
-              "left": 0,
-              "top": 0,
-              "width": 36,
-              "height": 720
-            }
-          }
-        ]
-      }
-    }
-  ]
+  "composeRuns": []
 }

@@ -1,27 +1,18 @@
-import { colors, slideBg, foot, txt, rect } from "./common.mjs";
-
-function step(a, n, title, body, x, y, color) {
-  return [
-    rect(a, x, y, 230, 152, colors.white, "#E2E8F0 1px", 10),
-    rect(a, x + 18, y + 18, 34, 34, color, "none", 17),
-    txt(a, String(n), x + 18, y + 26, 34, 15, colors.white, "font-weight: 900; alignment: center"),
-    txt(a, title, x + 66, y + 23, 140, 19, colors.ink, "font-weight: 850"),
-    txt(a, body, x + 24, y + 70, 178, 14, colors.muted, "leading: 120"),
-  ];
-}
+import { colors, titleSlide, footer, node, arrow, text, box } from "./common.mjs";
 
 export async function slide10(presentation, ctx) {
-  const a = ctx.artifact;
   const slide = presentation.slides.add();
-  slide.compose(a.layers({ width: 1280, height: 720 }, [
-    ...slideBg(a, "答辩演示路线"),
-    ...step(a, 1, "普通用户登录", "展示首页、会话列表、角色标签与基础菜单。", 68, 195, colors.sky),
-    ...step(a, 2, "创建会话", "从 AI 角色页进入聊天，发送消息并查看回复。", 326, 195, colors.blue),
-    ...step(a, 3, "查看过程", "打开消息详情，展示 reasoning、工具调用和 metadata。", 584, 195, colors.purple),
-    ...step(a, 4, "互动闭环", "收藏消息、切换页面后回到会话，验证已收藏状态恢复。", 842, 195, colors.green),
-    ...step(a, 5, "管理员后台", "切换 admin，展示用户管理、消息管理、反馈与统计。", 455, 410, colors.red),
-    txt(a, "演示重点：不要只展示“能聊天”，要突出“过程数据被结构化管理”。", 216, 600, 848, 24, colors.ink, "font-weight: 850; alignment: center"),
-    ...foot(a, 10),
-  ]));
+  titleSlide(ctx, slide, "演示路线建议");
+  node(ctx, slide, "1. 登录", "user1 / manager / admin", 80, 220, 185, 120, colors.blue);
+  arrow(ctx, slide, 285, 278, 55);
+  node(ctx, slide, "2. 会话列表", "查看中文数据与角色名称", 360, 220, 205, 120, colors.green);
+  arrow(ctx, slide, 585, 278, 55);
+  node(ctx, slide, "3. 聊天详情", "查看消息和过程数据", 660, 220, 200, 120, colors.cyan);
+  arrow(ctx, slide, 880, 278, 55);
+  node(ctx, slide, "4. 收藏恢复", "收藏后切换页面再返回", 955, 220, 205, 120, colors.amber);
+  box(ctx, slide, 125, 430, 1030, 110, colors.white, "#E2E8F0", 1);
+  text(ctx, slide, "管理员补充演示", 155, 458, 240, 28, 22, colors.ink, { bold: true });
+  text(ctx, slide, "进入管理后台，依次展示用户管理、角色管理、消息管理、反馈管理、系统日志和统计页面，说明管理员与角色维护者的权限差异。", 360, 460, 710, 44, 18, colors.muted);
+  footer(ctx, slide, 10);
   return slide;
 }

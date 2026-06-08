@@ -16,15 +16,15 @@
           <el-icon class="is-loading" :size="32"><Loading /></el-icon>
           <p>加载消息中...</p>
         </div>
-        <MessageBubble
-          v-for="msg in messages"
-          :key="msg.id"
-          :message="msg"
-          :is-favorited="favIds.has(msg.id)"
-          @favorite="handleFavorite(msg)"
-          @feedback="showFeedback(msg)"
-          @detail="showDetail(msg)"
-        />
+        <div v-for="msg in messages" :key="msg.id" :ref="el => setMsgRef(msg.id, el)">
+          <MessageBubble
+            :message="msg"
+            :is-favorited="favIds.has(msg.id)"
+            @favorite="handleFavorite(msg)"
+            @feedback="showFeedback(msg)"
+            @detail="showDetail(msg)"
+          />
+        </div>
         <div v-if="sending" class="typing-indicator">
           <span class="dot"></span><span class="dot"></span><span class="dot"></span>
           <span class="typing-text">AI 正在思考...</span>
@@ -82,6 +82,11 @@ const detailVisible = ref(false)
 const detailMsgId = ref<number | null>(null)
 
 const msgListRef = ref<HTMLElement>()
+const msgRefs: Record<number, HTMLElement | null> = {}
+
+function setMsgRef(id: number, el: any) {
+  if (el) msgRefs[id] = el
+}
 
 // 加载会话列表
 async function loadConversations() {
@@ -158,9 +163,14 @@ function showDetail(msg: Message) {
 }
 
 function scrollToBottom() {
-  if (msgListRef.value) {
-    msgListRef.value.scrollTop = msgListRef.value.scrollHeight
-  }
+  nextTick(() => {
+    // 两次 nextTick 确保 DOM 完全渲染（消息 + AI 回复 content）
+    nextTick(() => {
+      if (msgListRef.value) {
+        msgListRef.value.scrollTop = msgListRef.value.scrollHeight
+      }
+    })
+  })
 }
 
 onMounted(async () => {

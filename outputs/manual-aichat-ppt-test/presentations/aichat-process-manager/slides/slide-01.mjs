@@ -1,24 +1,20 @@
-import { W, H, colors, txt, rect, metric, chip } from "./common.mjs";
+import { colors, box, text, chip, metric } from "./common.mjs";
 
 export async function slide01(presentation, ctx) {
-  const { layers } = ctx.artifact;
-  const a = ctx.artifact;
   const slide = presentation.slides.add();
-  slide.compose(layers({ width: W, height: H }, [
-    rect(a, 0, 0, W, H, colors.navy),
-    rect(a, 0, 0, W, 720, "#0F172A"),
-    rect(a, 704, 0, 576, 720, "#1E3A8A"),
-    rect(a, 984, 0, 296, 720, "#0F766E"),
-    ...chip(a, "课程设计答辩", 82, 74, "#93C5FD"),
-    txt(a, "AIChatProcessManager", 80, 150, 900, 58, colors.white, "font-weight: 900"),
-    txt(a, "AI 会话过程管理系统", 84, 226, 680, 30, "#C7D2FE", "font-weight: 650"),
-    txt(a, "面向 AI 回复过程链路的数据建模、权限管理与后台治理", 84, 290, 800, 22, "#E0F2FE"),
-    rect(a, 80, 410, 960, 1, "#93C5FD80"),
-    ...metric(a, "13", "核心数据表", 90, 455, "#FFFFFF"),
-    ...metric(a, "3", "权限角色", 300, 455, "#FFFFFF"),
-    ...metric(a, "10+", "API 模块", 510, 455, "#FFFFFF"),
-    ...metric(a, "5", "过程数据维度", 720, 455, "#FFFFFF"),
-    txt(a, "Vue 3 / FastAPI / SQLAlchemy / MySQL / Docker Compose", 84, 650, 760, 16, "#BFDBFE"),
-  ]));
+  box(ctx, slide, 0, 0, 1280, 720, colors.navy);
+  box(ctx, slide, 760, 0, 520, 720, "#1D4ED8");
+  box(ctx, slide, 1040, 0, 240, 720, "#0F766E");
+  chip(ctx, slide, "课程设计答辩", 84, 78, "#93C5FD", 150);
+  text(ctx, slide, "AIChatProcessManager", 84, 158, 880, 70, 56, colors.white, { bold: true });
+  text(ctx, slide, "AI 会话过程管理系统", 88, 238, 620, 42, 30, "#DBEAFE", { bold: true });
+  text(ctx, slide, "面向 AI 回复过程链路的数据建模、权限管理与后台治理", 88, 308, 780, 34, 22, "#E0F2FE");
+  box(ctx, slide, 84, 410, 930, 1, "#93C5FD88");
+  metric(ctx, slide, "13", "核心数据表", 92, 462, "#FFFFFF");
+  metric(ctx, slide, "3", "业务角色", 268, 462, "#FFFFFF");
+  metric(ctx, slide, "10+", "API 模块", 444, 462, "#FFFFFF");
+  metric(ctx, slide, "5", "过程数据维度", 620, 462, "#FFFFFF");
+  text(ctx, slide, "Vue 3 / FastAPI / SQLAlchemy / MySQL / Docker Compose", 88, 650, 760, 24, 16, "#BFDBFE");
+  text(ctx, slide, "Phase 1 可运行核验版", 970, 640, 230, 26, 16, "#D1FAE5", { align: "right", bold: true });
   return slide;
 }

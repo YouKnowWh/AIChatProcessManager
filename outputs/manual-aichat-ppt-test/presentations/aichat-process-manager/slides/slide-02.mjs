@@ -1,15 +1,16 @@
-import { colors, slideBg, foot, card } from "./common.mjs";
+import { colors, titleSlide, footer, card, bullets } from "./common.mjs";
 
 export async function slide02(presentation, ctx) {
-  const a = ctx.artifact;
   const slide = presentation.slides.add();
-  slide.compose(a.layers({ width: 1280, height: 720 }, [
-    ...slideBg(a, "项目要解决的问题"),
-    ...card(a, 64, 190, 330, 250, "普通聊天系统的问题", "只保存最终回答，缺少 AI 回复背后的推理、工具调用、模型元数据，后续无法审计、复盘或做质量评估。", colors.red),
-    ...card(a, 475, 190, 330, 250, "课程设计的目标", "围绕“用户 - AI 角色 - 会话 - 消息过程”建模，完整保存正文、reasoning、tool_calls、tool_results 与 metadata。", colors.blue),
-    ...card(a, 886, 190, 330, 250, "管理侧的价值", "支持角色维护、消息审核、反馈分析、用户管理和系统统计，让 AI 会话过程从黑盒变成可管理资产。", colors.green),
-    ...card(a, 168, 500, 944, 86, "核心论点", "本项目不是简单聊天 Demo，而是一个面向 AI 会话过程数据治理的全栈管理系统。", colors.purple),
-    ...foot(a, 2),
-  ]));
+  titleSlide(ctx, slide, "项目要解决什么问题");
+  card(ctx, slide, 70, 190, 340, 310, "传统 AI 对话系统", "通常只保留用户问题和最终回复，AI 在回复过程中的推理、工具调用、结果、元数据很难被复盘。", colors.red);
+  card(ctx, slide, 470, 190, 340, 310, "本项目的核心目标", "把一次 AI 会话拆成可管理、可审计、可收藏、可反馈的数据链路，让过程数据真正进入业务系统。", colors.blue);
+  card(ctx, slide, 870, 190, 340, 310, "管理端价值", "管理员可以查看用户、角色、消息、反馈和日志；角色维护者专注维护 AI 角色，不碰系统级权限。", colors.green);
+  bullets(ctx, slide, [
+    "从“聊天页面”升级为“AI 会话过程管理平台”",
+    "第一阶段重点：数据结构、权限边界、前后台完整运行",
+    "为后续接入真实大模型、流式响应和统计分析留出接口"
+  ], 120, 555, 980, 18);
+  footer(ctx, slide, 2);
   return slide;
 }

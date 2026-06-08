@@ -1,28 +1,18 @@
-import { colors, slideBg, foot, txt, rect } from "./common.mjs";
-
-function row(a, y, item, rule, result, color) {
-  return [
-    rect(a, 92, y, 1096, 54, colors.white, "#E2E8F0 1px", 6),
-    txt(a, item, 118, y + 17, 260, 16, colors.ink, "font-weight: 800"),
-    txt(a, rule, 406, y + 17, 420, 15, colors.muted),
-    txt(a, result, 878, y + 17, 250, 15, color, "font-weight: 800"),
-  ];
-}
+import { colors, titleSlide, footer, bullets, box, text } from "./common.mjs";
 
 export async function slide09(presentation, ctx) {
-  const a = ctx.artifact;
   const slide = presentation.slides.add();
-  slide.compose(a.layers({ width: 1280, height: 720 }, [
-    ...slideBg(a, "业务逻辑核验：演示前已修正的关键风险"),
-    txt(a, "核验项", 118, 178, 180, 14, colors.muted, "font-weight: 800"),
-    txt(a, "业务规则", 406, 178, 180, 14, colors.muted, "font-weight: 800"),
-    txt(a, "当前结果", 878, 178, 180, 14, colors.muted, "font-weight: 800"),
-    ...row(a, 205, "路由前缀", "前端统一请求 /api/...；FastAPI 路由全部挂载到 /api", "Not Found 已清理", colors.green),
-    ...row(a, 270, "中文字符", "MySQL 初始化和 PyMySQL 连接统一 utf8mb4", "乱码已修复", colors.green),
-    ...row(a, 335, "收藏状态", "消息列表返回 is_favorited；切换页面后恢复状态", "可持久显示", colors.green),
-    ...row(a, 400, "权限隔离", "只能访问、收藏、反馈自己会话里的消息", "越权返回 403", colors.green),
-    ...row(a, 465, "角色删除", "业务删除改为禁用，保留历史会话关联", "避免外键 500", colors.green),
-    ...foot(a, 9),
-  ]));
+  titleSlide(ctx, slide, "业务逻辑核验与修正");
+  box(ctx, slide, 75, 180, 1130, 385, colors.white, "#E2E8F0", 1);
+  bullets(ctx, slide, [
+    "路由前缀统一：messages / users / favorites / feedbacks 修正为 /api 路径，解决 Not Found。",
+    "中文编码修正：MySQL、SQLAlchemy、seed 数据统一 utf8mb4，清理页面乱码。",
+    "收藏状态持久化：消息列表返回 is_favorited，切换页面后仍显示“已收藏”。",
+    "权限隔离：用户不能读取、收藏或反馈别人的消息；维护者不能进入管理员接口。",
+    "角色删除改为禁用：避免物理删除影响历史会话数据。",
+    "登录提示时长缩短：成功消息 1 秒自动消失，避免挡住页面操作。"
+  ], 120, 215, 980, 18, colors.ink, 50);
+  text(ctx, slide, "核验结论：第一阶段已经从“能构建”推进到“主要业务链路可运行”。", 120, 605, 960, 30, 21, colors.green, { bold: true });
+  footer(ctx, slide, 9);
   return slide;
 }

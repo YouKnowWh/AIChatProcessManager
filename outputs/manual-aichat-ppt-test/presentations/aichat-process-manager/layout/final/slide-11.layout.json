@@ -2,13 +2,13 @@
   "schema": "openai.presentation.layout/v4",
   "unit": "px",
   "slide": {
-    "aid": "sl/t2xf8n",
-    "id": "t2xf8n",
+    "aid": "sl/h31rx4",
+    "id": "h31rx4",
     "slide": 11,
-    "layoutId": "82d14659-639b-4d6e-8e72-7828b77cafd0",
+    "layoutId": "e96e0f20-46d6-48c0-823f-cc39ba8b8cf4",
     "layoutName": "Title Slide",
     "layoutType": "title",
-    "masterLayoutId": "afa3dcc7-d52e-4537-a876-059472ff297e",
+    "masterLayoutId": "c4940938-650c-4056-bb9c-aed6e5694eca",
     "masterLayoutName": "Master",
     "frame": {
       "left": 0,
@@ -44,15 +44,15 @@
   "inheritedLayers": [
     {
       "scope": "layout",
-      "id": "82d14659-639b-4d6e-8e72-7828b77cafd0",
+      "id": "e96e0f20-46d6-48c0-823f-cc39ba8b8cf4",
       "name": "Title Slide",
       "type": "title",
-      "parentLayoutId": "afa3dcc7-d52e-4537-a876-059472ff297e",
+      "parentLayoutId": "c4940938-650c-4056-bb9c-aed6e5694eca",
       "elements": []
     },
     {
       "scope": "master",
-      "id": "afa3dcc7-d52e-4537-a876-059472ff297e",
+      "id": "c4940938-650c-4056-bb9c-aed6e5694eca",
       "name": "Master",
       "type": "master",
       "elements": []
@@ -63,7 +63,7 @@
       "order": 1,
       "kind": "shape",
       "scope": "slide",
-      "aid": "sh/gfmlkjm1",
+      "aid": "sh/cbulwval",
       "id": "1",
       "bbox": [
         0,
@@ -71,77 +71,837 @@
         1280,
         720
       ],
-      "composeSource": {
-        "run": 1,
-        "path": "0.0"
-      },
       "geometry": "rect",
-      "fillColor": "#F8FAFC"
+      "fillColor": "#0B1220",
+      "lineColor": "rgba(0, 0, 0, 0)",
+      "lineWidth": 0
     },
     {
       "order": 2,
       "kind": "shape",
       "scope": "slide",
-      "aid": "sh/rytsvu9k",
+      "aid": "sh/nqxs72x4",
       "id": "2",
       "bbox": [
-        0,
-        0,
-        1280,
-        74
+        84,
+        76,
+        120,
+        34
       ],
-      "composeSource": {
-        "run": 1,
-        "path": "0.1"
-      },
       "geometry": "rect",
-      "fillColor": "#FFFFFF"
+      "fillColor": "rgba(147, 197, 253, 0.09412)",
+      "lineColor": "#93C5FD",
+      "lineWidth": 1
     },
     {
       "order": 3,
       "kind": "shape",
       "scope": "slide",
-      "aid": "sh/yd0z6103",
+      "aid": "sh/u54zidon",
       "id": "3",
       "bbox": [
-        0,
-        0,
-        1280,
-        1
+        96,
+        84,
+        96,
+        18
       ],
-      "composeSource": {
-        "run": 1,
-        "path": "0.2"
-      },
       "geometry": "rect",
-      "fillColor": "#E2E8F0"
+      "text": "Summary",
+      "textPreview": "Summary",
+      "resolvedFontSize": 13,
+      "resolvedTextStyle": {
+        "anchor": 1,
+        "fontSize": 13,
+        "typeface": "PingFang SC",
+        "color": "#93C5FD",
+        "bold": true,
+        "alignment": "center",
+        "verticalAlignment": "top",
+        "insets": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "Summary"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "Summary",
+          "resolvedTextStyle": {
+            "fontSize": 13,
+            "typeface": "PingFang SC",
+            "color": "#93C5FD",
+            "bold": true,
+            "alignment": "center"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "Summary",
+              "fontSize": 13,
+              "typeface": "PingFang SC",
+              "color": "#93C5FD",
+              "bold": true
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "fillColor": "rgba(0, 0, 0, 0)",
+      "lineColor": "rgba(0, 0, 0, 0)",
+      "lineWidth": 0
     },
     {
       "order": 4,
       "kind": "shape",
       "scope": "slide",
-      "aid": "sh/9s36hcrm",
+      "aid": "sh/5kb6xkf6",
       "id": "4",
       "bbox": [
-        0,
-        0,
-        360,
-        720
+        84,
+        145,
+        760,
+        58
       ],
-      "composeSource": {
-        "run": 1,
-        "path": "0.3"
+      "geometry": "rect",
+      "text": "阶段总结与下一步",
+      "textPreview": "阶段总结与下一步",
+      "resolvedFontSize": 48,
+      "resolvedTextStyle": {
+        "anchor": 1,
+        "fontSize": 48,
+        "typeface": "PingFang SC",
+        "color": "#FFFFFF",
+        "bold": true,
+        "alignment": "left",
+        "verticalAlignment": "top",
+        "insets": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
       },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "阶段总结与下一步"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "阶段总结与下一步",
+          "resolvedTextStyle": {
+            "fontSize": 48,
+            "typeface": "PingFang SC",
+            "color": "#FFFFFF",
+            "bold": true,
+            "alignment": "left"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "阶段总结与下一步",
+              "fontSize": 48,
+              "typeface": "PingFang SC",
+              "color": "#FFFFFF",
+              "bold": true
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "fillColor": "rgba(0, 0, 0, 0)",
+      "lineColor": "rgba(0, 0, 0, 0)",
+      "lineWidth": 0
+    },
+    {
+      "order": 5,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/czed8v6p",
+      "id": "5",
+      "bbox": [
+        88,
+        220,
+        850,
+        34
+      ],
+      "geometry": "rect",
+      "text": "第一阶段已经完成核心模型、前后台页面、权限边界与可运行核验。",
+      "textPreview": "第一阶段已经完成核心模型、前后台页面、权限边界与可运行核验。",
+      "resolvedFontSize": 22,
+      "resolvedTextStyle": {
+        "anchor": 1,
+        "fontSize": 22,
+        "typeface": "PingFang SC",
+        "color": "#DBEAFE",
+        "alignment": "left",
+        "verticalAlignment": "top",
+        "insets": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "第一阶段已经完成核心模型、前后台页面、权限边界与可运行核验。"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "第一阶段已经完成核心模型、前后台页面、权限边界与可运行核验。",
+          "resolvedTextStyle": {
+            "fontSize": 22,
+            "typeface": "PingFang SC",
+            "color": "#DBEAFE",
+            "alignment": "left"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "第一阶段已经完成核心模型、前后台页面、权限边界与可运行核验。",
+              "fontSize": 22,
+              "typeface": "PingFang SC",
+              "color": "#DBEAFE"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "fillColor": "rgba(0, 0, 0, 0)",
+      "lineColor": "rgba(0, 0, 0, 0)",
+      "lineWidth": 0
+    },
+    {
+      "order": 6,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/neloj2t8",
+      "id": "6",
+      "bbox": [
+        90,
+        330,
+        330,
+        145
+      ],
+      "geometry": "rect",
+      "fillColor": "#FFFFFF",
+      "lineColor": "#E2E8F0",
+      "lineWidth": 1
+    },
+    {
+      "order": 7,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/ytsvu9kn",
+      "id": "7",
+      "bbox": [
+        90,
+        330,
+        6,
+        145
+      ],
+      "geometry": "rect",
+      "fillColor": "#16A34A",
+      "lineColor": "rgba(0, 0, 0, 0)",
+      "lineWidth": 0
+    },
+    {
+      "order": 8,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/58z25kb6",
+      "id": "8",
+      "bbox": [
+        114,
+        352,
+        282,
+        28
+      ],
+      "geometry": "rect",
+      "text": "已经完成",
+      "textPreview": "已经完成",
+      "resolvedFontSize": 21,
+      "resolvedTextStyle": {
+        "anchor": 1,
+        "fontSize": 21,
+        "typeface": "PingFang SC",
+        "color": "#111827",
+        "bold": true,
+        "alignment": "left",
+        "verticalAlignment": "top",
+        "insets": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "已经完成"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "已经完成",
+          "resolvedTextStyle": {
+            "fontSize": 21,
+            "typeface": "PingFang SC",
+            "color": "#111827",
+            "bold": true,
+            "alignment": "left"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "已经完成",
+              "fontSize": 21,
+              "typeface": "PingFang SC",
+              "color": "#111827",
+              "bold": true
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "fillColor": "rgba(0, 0, 0, 0)",
+      "lineColor": "rgba(0, 0, 0, 0)",
+      "lineWidth": 0
+    },
+    {
+      "order": 9,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/gn29gr2p",
+      "id": "9",
+      "bbox": [
+        114,
+        392,
+        282,
+        67
+      ],
+      "geometry": "rect",
+      "text": "13 张表注册、前后端构建、Docker 编排、API 冒烟测试、关键业务 bug 修复。",
+      "textPreview": "13 张表注册、前后端构建、Docker 编排、API 冒烟测试、关键业务 bug 修复。",
+      "resolvedFontSize": 15,
+      "resolvedTextStyle": {
+        "anchor": 1,
+        "fontSize": 15,
+        "typeface": "PingFang SC",
+        "color": "#64748B",
+        "alignment": "left",
+        "verticalAlignment": "top",
+        "insets": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      },
+      "textLayout": {
+        "lineCount": 3,
+        "lines": [
+          {
+            "index": 1,
+            "text": "13 张表注册、前后端构建、Docker"
+          },
+          {
+            "index": 2,
+            "text": "编排、API 冒烟测试、关键业务 bug"
+          },
+          {
+            "index": 3,
+            "text": "修复。"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "13 张表注册、前后端构建、Docker 编排、API 冒烟测试、关键业务 bug 修复。",
+          "resolvedTextStyle": {
+            "fontSize": 15,
+            "typeface": "PingFang SC",
+            "color": "#64748B",
+            "alignment": "left"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "13 张表注册、前后端构建、Docker 编排、API 冒烟测试、关键业务 bug 修复。",
+              "fontSize": 15,
+              "typeface": "PingFang SC",
+              "color": "#64748B"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "fillColor": "rgba(0, 0, 0, 0)",
+      "lineColor": "rgba(0, 0, 0, 0)",
+      "lineWidth": 0
+    },
+    {
+      "order": 10,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/u54zidon",
+      "id": "10",
+      "bbox": [
+        475,
+        330,
+        330,
+        145
+      ],
+      "geometry": "rect",
+      "fillColor": "#FFFFFF",
+      "lineColor": "#E2E8F0",
+      "lineWidth": 1
+    },
+    {
+      "order": 11,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/nqxs72x4",
+      "id": "11",
+      "bbox": [
+        475,
+        330,
+        6,
+        145
+      ],
+      "geometry": "rect",
+      "fillColor": "#2563EB",
+      "lineColor": "rgba(0, 0, 0, 0)",
+      "lineWidth": 0
+    },
+    {
+      "order": 12,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/cbulwval",
+      "id": "12",
+      "bbox": [
+        499,
+        352,
+        282,
+        28
+      ],
+      "geometry": "rect",
+      "text": "项目亮点",
+      "textPreview": "项目亮点",
+      "resolvedFontSize": 21,
+      "resolvedTextStyle": {
+        "anchor": 1,
+        "fontSize": 21,
+        "typeface": "PingFang SC",
+        "color": "#111827",
+        "bold": true,
+        "alignment": "left",
+        "verticalAlignment": "top",
+        "insets": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "项目亮点"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "项目亮点",
+          "resolvedTextStyle": {
+            "fontSize": 21,
+            "typeface": "PingFang SC",
+            "color": "#111827",
+            "bold": true,
+            "alignment": "left"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "项目亮点",
+              "fontSize": 21,
+              "typeface": "PingFang SC",
+              "color": "#111827",
+              "bold": true
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "fillColor": "rgba(0, 0, 0, 0)",
+      "lineColor": "rgba(0, 0, 0, 0)",
+      "lineWidth": 0
+    },
+    {
+      "order": 13,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/5sneloj2",
+      "id": "13",
+      "bbox": [
+        499,
+        392,
+        282,
+        67
+      ],
+      "geometry": "rect",
+      "text": "不是普通聊天应用，而是把 AI 回复过程作为可管理数据资产沉淀下来。",
+      "textPreview": "不是普通聊天应用，而是把 AI 回复过程作为可管理数据资产沉淀下来。",
+      "resolvedFontSize": 15,
+      "resolvedTextStyle": {
+        "anchor": 1,
+        "fontSize": 15,
+        "typeface": "PingFang SC",
+        "color": "#64748B",
+        "alignment": "left",
+        "verticalAlignment": "top",
+        "insets": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      },
+      "textLayout": {
+        "lineCount": 2,
+        "lines": [
+          {
+            "index": 1,
+            "text": "不是普通聊天应用，而是把 AI"
+          },
+          {
+            "index": 2,
+            "text": "回复过程作为可管理数据资产沉淀下来。"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "不是普通聊天应用，而是把 AI 回复过程作为可管理数据资产沉淀下来。",
+          "resolvedTextStyle": {
+            "fontSize": 15,
+            "typeface": "PingFang SC",
+            "color": "#64748B",
+            "alignment": "left"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "不是普通聊天应用，而是把 AI 回复过程作为可管理数据资产沉淀下来。",
+              "fontSize": 15,
+              "typeface": "PingFang SC",
+              "color": "#64748B"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "fillColor": "rgba(0, 0, 0, 0)",
+      "lineColor": "rgba(0, 0, 0, 0)",
+      "lineWidth": 0
+    },
+    {
+      "order": 14,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/ytsvu9kn",
+      "id": "14",
+      "bbox": [
+        860,
+        330,
+        330,
+        145
+      ],
+      "geometry": "rect",
+      "fillColor": "#FFFFFF",
+      "lineColor": "#E2E8F0",
+      "lineWidth": 1
+    },
+    {
+      "order": 15,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/neloj2t8",
+      "id": "15",
+      "bbox": [
+        860,
+        330,
+        6,
+        145
+      ],
+      "geometry": "rect",
+      "fillColor": "#F59E0B",
+      "lineColor": "rgba(0, 0, 0, 0)",
+      "lineWidth": 0
+    },
+    {
+      "order": 16,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/czed8v6p",
+      "id": "16",
+      "bbox": [
+        884,
+        352,
+        282,
+        28
+      ],
+      "geometry": "rect",
+      "text": "后续扩展",
+      "textPreview": "后续扩展",
+      "resolvedFontSize": 21,
+      "resolvedTextStyle": {
+        "anchor": 1,
+        "fontSize": 21,
+        "typeface": "PingFang SC",
+        "color": "#111827",
+        "bold": true,
+        "alignment": "left",
+        "verticalAlignment": "top",
+        "insets": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "后续扩展"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "后续扩展",
+          "resolvedTextStyle": {
+            "fontSize": 21,
+            "typeface": "PingFang SC",
+            "color": "#111827",
+            "bold": true,
+            "alignment": "left"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "后续扩展",
+              "fontSize": 21,
+              "typeface": "PingFang SC",
+              "color": "#111827",
+              "bold": true
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "fillColor": "rgba(0, 0, 0, 0)",
+      "lineColor": "rgba(0, 0, 0, 0)",
+      "lineWidth": 0
+    },
+    {
+      "order": 17,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/5kb6xkf6",
+      "id": "17",
+      "bbox": [
+        884,
+        392,
+        282,
+        67
+      ],
+      "geometry": "rect",
+      "text": "真实模型接入、流式响应、统计图表、更多审计策略和自动化测试。",
+      "textPreview": "真实模型接入、流式响应、统计图表、更多审计策略和自动化测试。",
+      "resolvedFontSize": 15,
+      "resolvedTextStyle": {
+        "anchor": 1,
+        "fontSize": 15,
+        "typeface": "PingFang SC",
+        "color": "#64748B",
+        "alignment": "left",
+        "verticalAlignment": "top",
+        "insets": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      },
+      "textLayout": {
+        "lineCount": 2,
+        "lines": [
+          {
+            "index": 1,
+            "text": "真实模型接入、流式响应、统计图表、更"
+          },
+          {
+            "index": 2,
+            "text": "多审计策略和自动化测试。"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "真实模型接入、流式响应、统计图表、更多审计策略和自动化测试。",
+          "resolvedTextStyle": {
+            "fontSize": 15,
+            "typeface": "PingFang SC",
+            "color": "#64748B",
+            "alignment": "left"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "真实模型接入、流式响应、统计图表、更多审计策略和自动化测试。",
+              "fontSize": 15,
+              "typeface": "PingFang SC",
+              "color": "#64748B"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "fillColor": "rgba(0, 0, 0, 0)",
+      "lineColor": "rgba(0, 0, 0, 0)",
+      "lineWidth": 0
+    },
+    {
+      "order": 18,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/yhgn29gr",
+      "id": "18",
+      "bbox": [
+        86,
+        615,
+        340,
+        38
+      ],
+      "geometry": "rect",
+      "text": "Thank You",
+      "textPreview": "Thank You",
+      "resolvedFontSize": 30,
+      "resolvedTextStyle": {
+        "anchor": 1,
+        "fontSize": 30,
+        "typeface": "PingFang SC",
+        "color": "#BFDBFE",
+        "bold": true,
+        "alignment": "left",
+        "verticalAlignment": "top",
+        "insets": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "Thank You"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "Thank You",
+          "resolvedTextStyle": {
+            "fontSize": 30,
+            "typeface": "PingFang SC",
+            "color": "#BFDBFE",
+            "bold": true,
+            "alignment": "left"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "Thank You",
+              "fontSize": 30,
+              "typeface": "PingFang SC",
+              "color": "#BFDBFE",
+              "bold": true
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "fillColor": "rgba(0, 0, 0, 0)",
+      "lineColor": "rgba(0, 0, 0, 0)",
+      "lineWidth": 0
+    },
+    {
+      "order": 19,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/n29gr2p8",
+      "id": "19",
+      "bbox": [
+        860,
+        630,
+        330,
+        24
+      ],
       "geometry": "rect",
       "text": "AIChatProcessManager",
       "textPreview": "AIChatProcessManager",
       "resolvedFontSize": 16,
       "resolvedTextStyle": {
+        "anchor": 1,
         "fontSize": 16,
         "typeface": "PingFang SC",
-        "color": "#2563EB",
-        "bold": true,
-        "alignment": "left",
+        "color": "#93C5FD",
+        "alignment": "right",
+        "verticalAlignment": "top",
         "insets": {
           "top": 0,
           "right": 0,
@@ -165,8 +925,8 @@
           "resolvedTextStyle": {
             "fontSize": 16,
             "typeface": "PingFang SC",
-            "color": "#2563EB",
-            "bold": true
+            "color": "#93C5FD",
+            "alignment": "right"
           },
           "runs": [
             {
@@ -174,1771 +934,16 @@
               "text": "AIChatProcessManager",
               "fontSize": 16,
               "typeface": "PingFang SC",
-              "color": "#2563EB",
-              "bold": true
+              "color": "#93C5FD"
             }
           ],
           "marginLeft": 0
         }
-      ]
-    },
-    {
-      "order": 5,
-      "kind": "shape",
-      "scope": "slide",
-      "aid": "sh/g7adsji5",
-      "id": "5",
-      "bbox": [
-        0,
-        0,
-        900,
-        720
       ],
-      "composeSource": {
-        "run": 1,
-        "path": "0.4"
-      },
-      "geometry": "rect",
-      "text": "总结与后续扩展",
-      "textPreview": "总结与后续扩展",
-      "resolvedFontSize": 34,
-      "resolvedTextStyle": {
-        "fontSize": 34,
-        "typeface": "PingFang SC",
-        "color": "#111827",
-        "bold": true,
-        "alignment": "left",
-        "insets": {
-          "top": 0,
-          "right": 0,
-          "bottom": 0,
-          "left": 0
-        }
-      },
-      "textLayout": {
-        "lineCount": 1,
-        "lines": [
-          {
-            "index": 1,
-            "text": "总结与后续扩展"
-          }
-        ]
-      },
-      "paragraphs": [
-        {
-          "index": 1,
-          "text": "总结与后续扩展",
-          "resolvedTextStyle": {
-            "fontSize": 34,
-            "typeface": "PingFang SC",
-            "color": "#111827",
-            "bold": true
-          },
-          "runs": [
-            {
-              "index": 1,
-              "text": "总结与后续扩展",
-              "fontSize": 34,
-              "typeface": "PingFang SC",
-              "color": "#111827",
-              "bold": true
-            }
-          ],
-          "marginLeft": 0
-        }
-      ]
-    },
-    {
-      "order": 6,
-      "kind": "shape",
-      "scope": "slide",
-      "aid": "sh/rmhk3q5o",
-      "id": "6",
-      "bbox": [
-        0,
-        0,
-        332,
-        168
-      ],
-      "composeSource": {
-        "run": 1,
-        "path": "0.5"
-      },
-      "geometry": "roundRect",
-      "fillColor": "#FFFFFF",
-      "lineColor": "#E2E8F0",
-      "lineWidth": 1
-    },
-    {
-      "order": 7,
-      "kind": "shape",
-      "scope": "slide",
-      "aid": "sh/y1kre1w7",
-      "id": "7",
-      "bbox": [
-        0,
-        0,
-        5,
-        168
-      ],
-      "composeSource": {
-        "run": 1,
-        "path": "0.6"
-      },
-      "geometry": "roundRect",
-      "fillColor": "#16A34A"
-    },
-    {
-      "order": 8,
-      "kind": "shape",
-      "scope": "slide",
-      "aid": "sh/5o7qpg3e",
-      "id": "8",
-      "bbox": [
-        0,
-        0,
-        288,
-        720
-      ],
-      "composeSource": {
-        "run": 1,
-        "path": "0.7"
-      },
-      "geometry": "rect",
-      "text": "已完成",
-      "textPreview": "已完成",
-      "resolvedFontSize": 20,
-      "resolvedTextStyle": {
-        "fontSize": 20,
-        "typeface": "PingFang SC",
-        "color": "#111827",
-        "bold": true,
-        "alignment": "left",
-        "insets": {
-          "top": 0,
-          "right": 0,
-          "bottom": 0,
-          "left": 0
-        }
-      },
-      "textLayout": {
-        "lineCount": 1,
-        "lines": [
-          {
-            "index": 1,
-            "text": "已完成"
-          }
-        ]
-      },
-      "paragraphs": [
-        {
-          "index": 1,
-          "text": "已完成",
-          "resolvedTextStyle": {
-            "fontSize": 20,
-            "typeface": "PingFang SC",
-            "color": "#111827",
-            "bold": true
-          },
-          "runs": [
-            {
-              "index": 1,
-              "text": "已完成",
-              "fontSize": 20,
-              "typeface": "PingFang SC",
-              "color": "#111827",
-              "bold": true
-            }
-          ],
-          "marginLeft": 0
-        }
-      ]
-    },
-    {
-      "order": 9,
-      "kind": "shape",
-      "scope": "slide",
-      "aid": "sh/g3ex0nux",
-      "id": "9",
-      "bbox": [
-        0,
-        0,
-        288,
-        720
-      ],
-      "composeSource": {
-        "run": 1,
-        "path": "0.8"
-      },
-      "geometry": "rect",
-      "text": "全栈架构、13 张表数据模型、三类权限、会话消息过程链路、收藏反馈、管理后台、Docker 运行核验。",
-      "textPreview": "全栈架构、13 张表数据模型、三类权限、会话消息过程链路、收藏反馈、管理后台、Docker 运行核验。",
-      "resolvedFontSize": 15,
-      "resolvedTextStyle": {
-        "fontSize": 15,
-        "typeface": "PingFang SC",
-        "color": "#64748B",
-        "alignment": "left",
-        "insets": {
-          "top": 0,
-          "right": 0,
-          "bottom": 0,
-          "left": 0
-        }
-      },
-      "textLayout": {
-        "lineCount": 4,
-        "lines": [
-          {
-            "index": 1,
-            "text": "全栈架构、13"
-          },
-          {
-            "index": 2,
-            "text": "张表数据模型、三类权限、会话消息过程"
-          },
-          {
-            "index": 3,
-            "text": "链路、收藏反馈、管理后台、Docker"
-          },
-          {
-            "index": 4,
-            "text": "运行核验。"
-          }
-        ]
-      },
-      "paragraphs": [
-        {
-          "index": 1,
-          "text": "全栈架构、13 张表数据模型、三类权限、会话消息过程链路、收藏反馈、管理后台、Docker 运行核验。",
-          "resolvedTextStyle": {
-            "fontSize": 15,
-            "typeface": "PingFang SC",
-            "color": "#64748B"
-          },
-          "runs": [
-            {
-              "index": 1,
-              "text": "全栈架构、13 张表数据模型、三类权限、会话消息过程链路、收藏反馈、管理后台、Docker 运行核验。",
-              "fontSize": 15,
-              "typeface": "PingFang SC",
-              "color": "#64748B"
-            }
-          ],
-          "marginLeft": 0
-        }
-      ]
-    },
-    {
-      "order": 10,
-      "kind": "shape",
-      "scope": "slide",
-      "aid": "sh/m94fu18j",
-      "id": "10",
-      "bbox": [
-        0,
-        0,
-        332,
-        168
-      ],
-      "composeSource": {
-        "run": 1,
-        "path": "0.9"
-      },
-      "geometry": "roundRect",
-      "fillColor": "#FFFFFF",
-      "lineColor": "#E2E8F0",
-      "lineWidth": 1
-    },
-    {
-      "order": 11,
-      "kind": "shape",
-      "scope": "slide",
-      "aid": "sh/fu18jqh0",
-      "id": "11",
-      "bbox": [
-        0,
-        0,
-        5,
-        168
-      ],
-      "composeSource": {
-        "run": 1,
-        "path": "0.10"
-      },
-      "geometry": "roundRect",
-      "fillColor": "#2563EB"
-    },
-    {
-      "order": 12,
-      "kind": "shape",
-      "scope": "slide",
-      "aid": "sh/4fu18jqh",
-      "id": "12",
-      "bbox": [
-        0,
-        0,
-        288,
-        720
-      ],
-      "composeSource": {
-        "run": 1,
-        "path": "0.11"
-      },
-      "geometry": "rect",
-      "text": "项目亮点",
-      "textPreview": "项目亮点",
-      "resolvedFontSize": 20,
-      "resolvedTextStyle": {
-        "fontSize": 20,
-        "typeface": "PingFang SC",
-        "color": "#111827",
-        "bold": true,
-        "alignment": "left",
-        "insets": {
-          "top": 0,
-          "right": 0,
-          "bottom": 0,
-          "left": 0
-        }
-      },
-      "textLayout": {
-        "lineCount": 1,
-        "lines": [
-          {
-            "index": 1,
-            "text": "项目亮点"
-          }
-        ]
-      },
-      "paragraphs": [
-        {
-          "index": 1,
-          "text": "项目亮点",
-          "resolvedTextStyle": {
-            "fontSize": 20,
-            "typeface": "PingFang SC",
-            "color": "#111827",
-            "bold": true
-          },
-          "runs": [
-            {
-              "index": 1,
-              "text": "项目亮点",
-              "fontSize": 20,
-              "typeface": "PingFang SC",
-              "color": "#111827",
-              "bold": true
-            }
-          ],
-          "marginLeft": 0
-        }
-      ]
-    },
-    {
-      "order": 13,
-      "kind": "shape",
-      "scope": "slide",
-      "aid": "sh/x0nuxc3y",
-      "id": "13",
-      "bbox": [
-        0,
-        0,
-        288,
-        720
-      ],
-      "composeSource": {
-        "run": 1,
-        "path": "0.12"
-      },
-      "geometry": "rect",
-      "text": "围绕 AI 回复过程建模，把 reasoning、tool_calls、tool_results、metadata 从“不可见”变成“可管理”。",
-      "textPreview": "围绕 AI 回复过程建模，把 reasoning、tool_calls、tool_results、metadata 从“不可见”变成“可管理”。",
-      "resolvedFontSize": 15,
-      "resolvedTextStyle": {
-        "fontSize": 15,
-        "typeface": "PingFang SC",
-        "color": "#64748B",
-        "alignment": "left",
-        "insets": {
-          "top": 0,
-          "right": 0,
-          "bottom": 0,
-          "left": 0
-        }
-      },
-      "textLayout": {
-        "lineCount": 3,
-        "lines": [
-          {
-            "index": 1,
-            "text": "围绕 AI 回复过程建模，把"
-          },
-          {
-            "index": 2,
-            "text": "reasoning、tool_calls、tool_results、m"
-          },
-          {
-            "index": 3,
-            "text": "etadata 从“不可见”变成“可管理”。"
-          }
-        ]
-      },
-      "paragraphs": [
-        {
-          "index": 1,
-          "text": "围绕 AI 回复过程建模，把 reasoning、tool_calls、tool_results、metadata 从“不可见”变成“可管理”。",
-          "resolvedTextStyle": {
-            "fontSize": 15,
-            "typeface": "PingFang SC",
-            "color": "#64748B"
-          },
-          "runs": [
-            {
-              "index": 1,
-              "text": "围绕 AI 回复过程建模，把 reasoning、tool_calls、tool_results、metadata 从“不可见”变成“可管理”。",
-              "fontSize": 15,
-              "typeface": "PingFang SC",
-              "color": "#64748B"
-            }
-          ],
-          "marginLeft": 0
-        }
-      ]
-    },
-    {
-      "order": 14,
-      "kind": "shape",
-      "scope": "slide",
-      "aid": "sh/qxs72x4n",
-      "id": "14",
-      "bbox": [
-        0,
-        0,
-        332,
-        168
-      ],
-      "composeSource": {
-        "run": 1,
-        "path": "0.13"
-      },
-      "geometry": "roundRect",
-      "fillColor": "#FFFFFF",
-      "lineColor": "#E2E8F0",
-      "lineWidth": 1
-    },
-    {
-      "order": 15,
-      "kind": "shape",
-      "scope": "slide",
-      "aid": "sh/fil0rqd4",
-      "id": "15",
-      "bbox": [
-        0,
-        0,
-        5,
-        168
-      ],
-      "composeSource": {
-        "run": 1,
-        "path": "0.14"
-      },
-      "geometry": "roundRect",
-      "fillColor": "#7C3AED"
-    },
-    {
-      "order": 16,
-      "kind": "shape",
-      "scope": "slide",
-      "aid": "sh/83itgfml",
-      "id": "16",
-      "bbox": [
-        0,
-        0,
-        288,
-        720
-      ],
-      "composeSource": {
-        "run": 1,
-        "path": "0.15"
-      },
-      "geometry": "rect",
-      "text": "可扩展方向",
-      "textPreview": "可扩展方向",
-      "resolvedFontSize": 20,
-      "resolvedTextStyle": {
-        "fontSize": 20,
-        "typeface": "PingFang SC",
-        "color": "#111827",
-        "bold": true,
-        "alignment": "left",
-        "insets": {
-          "top": 0,
-          "right": 0,
-          "bottom": 0,
-          "left": 0
-        }
-      },
-      "textLayout": {
-        "lineCount": 1,
-        "lines": [
-          {
-            "index": 1,
-            "text": "可扩展方向"
-          }
-        ]
-      },
-      "paragraphs": [
-        {
-          "index": 1,
-          "text": "可扩展方向",
-          "resolvedTextStyle": {
-            "fontSize": 20,
-            "typeface": "PingFang SC",
-            "color": "#111827",
-            "bold": true
-          },
-          "runs": [
-            {
-              "index": 1,
-              "text": "可扩展方向",
-              "fontSize": 20,
-              "typeface": "PingFang SC",
-              "color": "#111827",
-              "bold": true
-            }
-          ],
-          "marginLeft": 0
-        }
-      ]
-    },
-    {
-      "order": 17,
-      "kind": "shape",
-      "scope": "slide",
-      "aid": "sh/xobm58z2",
-      "id": "17",
-      "bbox": [
-        0,
-        0,
-        288,
-        720
-      ],
-      "composeSource": {
-        "run": 1,
-        "path": "0.16"
-      },
-      "geometry": "rect",
-      "text": "真实大模型接入、流式输出、自动化测试、统计图表增强、审计策略和多租户权限。",
-      "textPreview": "真实大模型接入、流式输出、自动化测试、统计图表增强、审计策略和多租户权限。",
-      "resolvedFontSize": 15,
-      "resolvedTextStyle": {
-        "fontSize": 15,
-        "typeface": "PingFang SC",
-        "color": "#64748B",
-        "alignment": "left",
-        "insets": {
-          "top": 0,
-          "right": 0,
-          "bottom": 0,
-          "left": 0
-        }
-      },
-      "textLayout": {
-        "lineCount": 3,
-        "lines": [
-          {
-            "index": 1,
-            "text": "真实大模型接入、流式输出、自动化测试"
-          },
-          {
-            "index": 2,
-            "text": "、统计图表增强、审计策略和多租户权限"
-          },
-          {
-            "index": 3,
-            "text": "。"
-          }
-        ]
-      },
-      "paragraphs": [
-        {
-          "index": 1,
-          "text": "真实大模型接入、流式输出、自动化测试、统计图表增强、审计策略和多租户权限。",
-          "resolvedTextStyle": {
-            "fontSize": 15,
-            "typeface": "PingFang SC",
-            "color": "#64748B"
-          },
-          "runs": [
-            {
-              "index": 1,
-              "text": "真实大模型接入、流式输出、自动化测试、统计图表增强、审计策略和多租户权限。",
-              "fontSize": 15,
-              "typeface": "PingFang SC",
-              "color": "#64748B"
-            }
-          ],
-          "marginLeft": 0
-        }
-      ]
-    },
-    {
-      "order": 18,
-      "kind": "shape",
-      "scope": "slide",
-      "aid": "sh/mtwra5gb",
-      "id": "18",
-      "bbox": [
-        0,
-        0,
-        220,
-        720
-      ],
-      "composeSource": {
-        "run": 1,
-        "path": "0.17"
-      },
-      "geometry": "rect",
-      "text": "一句话收束",
-      "textPreview": "一句话收束",
-      "resolvedFontSize": 24,
-      "resolvedTextStyle": {
-        "fontSize": 24,
-        "typeface": "PingFang SC",
-        "color": "#111827",
-        "bold": true,
-        "alignment": "left",
-        "insets": {
-          "top": 0,
-          "right": 0,
-          "bottom": 0,
-          "left": 0
-        }
-      },
-      "textLayout": {
-        "lineCount": 1,
-        "lines": [
-          {
-            "index": 1,
-            "text": "一句话收束"
-          }
-        ]
-      },
-      "paragraphs": [
-        {
-          "index": 1,
-          "text": "一句话收束",
-          "resolvedTextStyle": {
-            "fontSize": 24,
-            "typeface": "PingFang SC",
-            "color": "#111827",
-            "bold": true
-          },
-          "runs": [
-            {
-              "index": 1,
-              "text": "一句话收束",
-              "fontSize": 24,
-              "typeface": "PingFang SC",
-              "color": "#111827",
-              "bold": true
-            }
-          ],
-          "marginLeft": 0
-        }
-      ]
-    },
-    {
-      "order": 19,
-      "kind": "shape",
-      "scope": "slide",
-      "aid": "sh/fepkzupw",
-      "id": "19",
-      "bbox": [
-        0,
-        0,
-        1000,
-        720
-      ],
-      "composeSource": {
-        "run": 1,
-        "path": "0.18"
-      },
-      "geometry": "rect",
-      "text": "AIChatProcessManager 的核心价值，是为 AI 应用建立一套可追踪、可审计、可运营的会话过程数据底座。",
-      "textPreview": "AIChatProcessManager 的核心价值，是为 AI 应用建立一套可追踪、可审计、可运营的会话过程数据底座。",
-      "resolvedFontSize": 30,
-      "resolvedTextStyle": {
-        "fontSize": 30,
-        "typeface": "PingFang SC",
-        "color": "#111827",
-        "bold": true,
-        "alignment": "left",
-        "insets": {
-          "top": 0,
-          "right": 0,
-          "bottom": 0,
-          "left": 0
-        }
-      },
-      "textLayout": {
-        "lineCount": 2,
-        "lines": [
-          {
-            "index": 1,
-            "text": "AIChatProcessManager 的核心价值，是为 AI"
-          },
-          {
-            "index": 2,
-            "text": "应用建立一套可追踪、可审计、可运营的会话过程数据底座。"
-          }
-        ]
-      },
-      "paragraphs": [
-        {
-          "index": 1,
-          "text": "AIChatProcessManager 的核心价值，是为 AI 应用建立一套可追踪、可审计、可运营的会话过程数据底座。",
-          "resolvedTextStyle": {
-            "fontSize": 30,
-            "typeface": "PingFang SC",
-            "color": "#111827",
-            "bold": true
-          },
-          "runs": [
-            {
-              "index": 1,
-              "text": "AIChatProcessManager 的核心价值，是为 AI 应用建立一套可追踪、可审计、可运营的会话过程数据底座。",
-              "fontSize": 30,
-              "typeface": "PingFang SC",
-              "color": "#111827",
-              "bold": true
-            }
-          ],
-          "marginLeft": 0
-        }
-      ]
-    },
-    {
-      "order": 20,
-      "kind": "shape",
-      "scope": "slide",
-      "aid": "sh/72x4nap4",
-      "id": "20",
-      "bbox": [
-        0,
-        0,
-        620,
-        720
-      ],
-      "composeSource": {
-        "run": 1,
-        "path": "0.19"
-      },
-      "geometry": "rect",
-      "text": "课程设计答辩 | AI 会话过程管理系统",
-      "textPreview": "课程设计答辩 | AI 会话过程管理系统",
-      "resolvedFontSize": 12,
-      "resolvedTextStyle": {
-        "fontSize": 12,
-        "typeface": "PingFang SC",
-        "color": "#94A3B8",
-        "alignment": "left",
-        "insets": {
-          "top": 0,
-          "right": 0,
-          "bottom": 0,
-          "left": 0
-        }
-      },
-      "textLayout": {
-        "lineCount": 1,
-        "lines": [
-          {
-            "index": 1,
-            "text": "课程设计答辩 | AI 会话过程管理系统"
-          }
-        ]
-      },
-      "paragraphs": [
-        {
-          "index": 1,
-          "text": "课程设计答辩 | AI 会话过程管理系统",
-          "resolvedTextStyle": {
-            "fontSize": 12,
-            "typeface": "PingFang SC",
-            "color": "#94A3B8"
-          },
-          "runs": [
-            {
-              "index": 1,
-              "text": "课程设计答辩 | AI 会话过程管理系统",
-              "fontSize": 12,
-              "typeface": "PingFang SC",
-              "color": "#94A3B8"
-            }
-          ],
-          "marginLeft": 0
-        }
-      ]
-    },
-    {
-      "order": 21,
-      "kind": "shape",
-      "scope": "slide",
-      "aid": "sh/ih4byhgn",
-      "id": "21",
-      "bbox": [
-        0,
-        0,
-        36,
-        720
-      ],
-      "composeSource": {
-        "run": 1,
-        "path": "0.20"
-      },
-      "geometry": "rect",
-      "text": "11",
-      "textPreview": "11",
-      "resolvedFontSize": 12,
-      "resolvedTextStyle": {
-        "fontSize": 12,
-        "typeface": "PingFang SC",
-        "color": "#94A3B8",
-        "alignment": "right",
-        "insets": {
-          "top": 0,
-          "right": 0,
-          "bottom": 0,
-          "left": 0
-        }
-      },
-      "textLayout": {
-        "lineCount": 1,
-        "lines": [
-          {
-            "index": 1,
-            "text": "11"
-          }
-        ]
-      },
-      "paragraphs": [
-        {
-          "index": 1,
-          "text": "11",
-          "resolvedTextStyle": {
-            "fontSize": 12,
-            "typeface": "PingFang SC",
-            "color": "#94A3B8",
-            "alignment": "right"
-          },
-          "runs": [
-            {
-              "index": 1,
-              "text": "11",
-              "fontSize": 12,
-              "typeface": "PingFang SC",
-              "color": "#94A3B8",
-              "alignment": "right"
-            }
-          ],
-          "marginLeft": 0
-        }
-      ]
+      "fillColor": "rgba(0, 0, 0, 0)",
+      "lineColor": "rgba(0, 0, 0, 0)",
+      "lineWidth": 0
     }
   ],
-  "composeRuns": [
-    {
-      "index": 1,
-      "frame": {
-        "left": 0,
-        "top": 0,
-        "width": 1280,
-        "height": 720
-      },
-      "root": {
-        "path": "0",
-        "kind": "layers",
-        "requestedSize": {
-          "width": {
-            "mode": "fixed",
-            "value": 1280
-          },
-          "height": {
-            "mode": "fixed",
-            "value": 720
-          }
-        },
-        "intrinsicSize": {
-          "width": 1280,
-          "height": 8784
-        },
-        "frame": {
-          "left": 0,
-          "top": 0,
-          "width": 1280,
-          "height": 720
-        },
-        "children": [
-          {
-            "path": "0.0",
-            "kind": "shape",
-            "requestedSize": {
-              "width": {
-                "mode": "fixed",
-                "value": 1280
-              },
-              "height": {
-                "mode": "fixed",
-                "value": 720
-              }
-            },
-            "intrinsicSize": {
-              "width": 1280,
-              "height": 720
-            },
-            "frame": {
-              "left": 0,
-              "top": 0,
-              "width": 1280,
-              "height": 720
-            },
-            "children": [],
-            "geometry": "rect",
-            "element": {
-              "aid": "sh/gfmlkjm1",
-              "id": "1",
-              "kind": "shape"
-            }
-          },
-          {
-            "path": "0.1",
-            "kind": "shape",
-            "requestedSize": {
-              "width": {
-                "mode": "fixed",
-                "value": 1280
-              },
-              "height": {
-                "mode": "fixed",
-                "value": 74
-              }
-            },
-            "intrinsicSize": {
-              "width": 1280,
-              "height": 74
-            },
-            "frame": {
-              "left": 0,
-              "top": 0,
-              "width": 1280,
-              "height": 74
-            },
-            "children": [],
-            "geometry": "rect",
-            "element": {
-              "aid": "sh/rytsvu9k",
-              "id": "2",
-              "kind": "shape"
-            }
-          },
-          {
-            "path": "0.2",
-            "kind": "shape",
-            "requestedSize": {
-              "width": {
-                "mode": "fixed",
-                "value": 1280
-              },
-              "height": {
-                "mode": "fixed",
-                "value": 1
-              }
-            },
-            "intrinsicSize": {
-              "width": 1280,
-              "height": 1
-            },
-            "frame": {
-              "left": 0,
-              "top": 0,
-              "width": 1280,
-              "height": 1
-            },
-            "children": [],
-            "geometry": "rect",
-            "element": {
-              "aid": "sh/yd0z6103",
-              "id": "3",
-              "kind": "shape"
-            }
-          },
-          {
-            "path": "0.3",
-            "kind": "text",
-            "requestedSize": {
-              "width": {
-                "mode": "fixed",
-                "value": 360
-              },
-              "height": {
-                "mode": "hug"
-              }
-            },
-            "intrinsicSize": {
-              "width": 360,
-              "height": 19.2
-            },
-            "frame": {
-              "left": 0,
-              "top": 0,
-              "width": 360,
-              "height": 720
-            },
-            "children": [],
-            "text": "AIChatProcessManager",
-            "transform": "none",
-            "element": {
-              "aid": "sh/9s36hcrm",
-              "id": "4",
-              "kind": "shape"
-            }
-          },
-          {
-            "path": "0.4",
-            "kind": "text",
-            "requestedSize": {
-              "width": {
-                "mode": "fixed",
-                "value": 900
-              },
-              "height": {
-                "mode": "hug"
-              }
-            },
-            "intrinsicSize": {
-              "width": 900,
-              "height": 40.8
-            },
-            "frame": {
-              "left": 0,
-              "top": 0,
-              "width": 900,
-              "height": 720
-            },
-            "children": [],
-            "text": "总结与后续扩展",
-            "transform": "none",
-            "element": {
-              "aid": "sh/g7adsji5",
-              "id": "5",
-              "kind": "shape"
-            }
-          },
-          {
-            "path": "0.5",
-            "kind": "shape",
-            "requestedSize": {
-              "width": {
-                "mode": "fixed",
-                "value": 332
-              },
-              "height": {
-                "mode": "fixed",
-                "value": 168
-              }
-            },
-            "intrinsicSize": {
-              "width": 332,
-              "height": 168
-            },
-            "frame": {
-              "left": 0,
-              "top": 0,
-              "width": 332,
-              "height": 168
-            },
-            "children": [],
-            "geometry": "rect",
-            "element": {
-              "aid": "sh/rmhk3q5o",
-              "id": "6",
-              "kind": "shape"
-            }
-          },
-          {
-            "path": "0.6",
-            "kind": "shape",
-            "requestedSize": {
-              "width": {
-                "mode": "fixed",
-                "value": 5
-              },
-              "height": {
-                "mode": "fixed",
-                "value": 168
-              }
-            },
-            "intrinsicSize": {
-              "width": 5,
-              "height": 168
-            },
-            "frame": {
-              "left": 0,
-              "top": 0,
-              "width": 5,
-              "height": 168
-            },
-            "children": [],
-            "geometry": "rect",
-            "element": {
-              "aid": "sh/y1kre1w7",
-              "id": "7",
-              "kind": "shape"
-            }
-          },
-          {
-            "path": "0.7",
-            "kind": "text",
-            "requestedSize": {
-              "width": {
-                "mode": "fixed",
-                "value": 288
-              },
-              "height": {
-                "mode": "hug"
-              }
-            },
-            "intrinsicSize": {
-              "width": 288,
-              "height": 24
-            },
-            "frame": {
-              "left": 0,
-              "top": 0,
-              "width": 288,
-              "height": 720
-            },
-            "children": [],
-            "text": "已完成",
-            "transform": "none",
-            "element": {
-              "aid": "sh/5o7qpg3e",
-              "id": "8",
-              "kind": "shape"
-            }
-          },
-          {
-            "path": "0.8",
-            "kind": "text",
-            "requestedSize": {
-              "width": {
-                "mode": "fixed",
-                "value": 288
-              },
-              "height": {
-                "mode": "hug"
-              }
-            },
-            "intrinsicSize": {
-              "width": 288,
-              "height": 8784
-            },
-            "frame": {
-              "left": 0,
-              "top": 0,
-              "width": 288,
-              "height": 720
-            },
-            "children": [],
-            "text": "全栈架构、13 张表数据模型、三类权限、会话消息过程链路、收藏反馈、管理后台、Docker 运行核验。",
-            "transform": "none",
-            "element": {
-              "aid": "sh/g3ex0nux",
-              "id": "9",
-              "kind": "shape"
-            }
-          },
-          {
-            "path": "0.9",
-            "kind": "shape",
-            "requestedSize": {
-              "width": {
-                "mode": "fixed",
-                "value": 332
-              },
-              "height": {
-                "mode": "fixed",
-                "value": 168
-              }
-            },
-            "intrinsicSize": {
-              "width": 332,
-              "height": 168
-            },
-            "frame": {
-              "left": 0,
-              "top": 0,
-              "width": 332,
-              "height": 168
-            },
-            "children": [],
-            "geometry": "rect",
-            "element": {
-              "aid": "sh/m94fu18j",
-              "id": "10",
-              "kind": "shape"
-            }
-          },
-          {
-            "path": "0.10",
-            "kind": "shape",
-            "requestedSize": {
-              "width": {
-                "mode": "fixed",
-                "value": 5
-              },
-              "height": {
-                "mode": "fixed",
-                "value": 168
-              }
-            },
-            "intrinsicSize": {
-              "width": 5,
-              "height": 168
-            },
-            "frame": {
-              "left": 0,
-              "top": 0,
-              "width": 5,
-              "height": 168
-            },
-            "children": [],
-            "geometry": "rect",
-            "element": {
-              "aid": "sh/fu18jqh0",
-              "id": "11",
-              "kind": "shape"
-            }
-          },
-          {
-            "path": "0.11",
-            "kind": "text",
-            "requestedSize": {
-              "width": {
-                "mode": "fixed",
-                "value": 288
-              },
-              "height": {
-                "mode": "hug"
-              }
-            },
-            "intrinsicSize": {
-              "width": 288,
-              "height": 24
-            },
-            "frame": {
-              "left": 0,
-              "top": 0,
-              "width": 288,
-              "height": 720
-            },
-            "children": [],
-            "text": "项目亮点",
-            "transform": "none",
-            "element": {
-              "aid": "sh/4fu18jqh",
-              "id": "12",
-              "kind": "shape"
-            }
-          },
-          {
-            "path": "0.12",
-            "kind": "text",
-            "requestedSize": {
-              "width": {
-                "mode": "fixed",
-                "value": 288
-              },
-              "height": {
-                "mode": "hug"
-              }
-            },
-            "intrinsicSize": {
-              "width": 288,
-              "height": 6588
-            },
-            "frame": {
-              "left": 0,
-              "top": 0,
-              "width": 288,
-              "height": 720
-            },
-            "children": [],
-            "text": "围绕 AI 回复过程建模，把 reasoning、tool_calls、tool_results、metadata 从“不可见”变成“可管理”。",
-            "transform": "none",
-            "element": {
-              "aid": "sh/x0nuxc3y",
-              "id": "13",
-              "kind": "shape"
-            }
-          },
-          {
-            "path": "0.13",
-            "kind": "shape",
-            "requestedSize": {
-              "width": {
-                "mode": "fixed",
-                "value": 332
-              },
-              "height": {
-                "mode": "fixed",
-                "value": 168
-              }
-            },
-            "intrinsicSize": {
-              "width": 332,
-              "height": 168
-            },
-            "frame": {
-              "left": 0,
-              "top": 0,
-              "width": 332,
-              "height": 168
-            },
-            "children": [],
-            "geometry": "rect",
-            "element": {
-              "aid": "sh/qxs72x4n",
-              "id": "14",
-              "kind": "shape"
-            }
-          },
-          {
-            "path": "0.14",
-            "kind": "shape",
-            "requestedSize": {
-              "width": {
-                "mode": "fixed",
-                "value": 5
-              },
-              "height": {
-                "mode": "fixed",
-                "value": 168
-              }
-            },
-            "intrinsicSize": {
-              "width": 5,
-              "height": 168
-            },
-            "frame": {
-              "left": 0,
-              "top": 0,
-              "width": 5,
-              "height": 168
-            },
-            "children": [],
-            "geometry": "rect",
-            "element": {
-              "aid": "sh/fil0rqd4",
-              "id": "15",
-              "kind": "shape"
-            }
-          },
-          {
-            "path": "0.15",
-            "kind": "text",
-            "requestedSize": {
-              "width": {
-                "mode": "fixed",
-                "value": 288
-              },
-              "height": {
-                "mode": "hug"
-              }
-            },
-            "intrinsicSize": {
-              "width": 288,
-              "height": 24
-            },
-            "frame": {
-              "left": 0,
-              "top": 0,
-              "width": 288,
-              "height": 720
-            },
-            "children": [],
-            "text": "可扩展方向",
-            "transform": "none",
-            "element": {
-              "aid": "sh/83itgfml",
-              "id": "16",
-              "kind": "shape"
-            }
-          },
-          {
-            "path": "0.16",
-            "kind": "text",
-            "requestedSize": {
-              "width": {
-                "mode": "fixed",
-                "value": 288
-              },
-              "height": {
-                "mode": "hug"
-              }
-            },
-            "intrinsicSize": {
-              "width": 288,
-              "height": 6588
-            },
-            "frame": {
-              "left": 0,
-              "top": 0,
-              "width": 288,
-              "height": 720
-            },
-            "children": [],
-            "text": "真实大模型接入、流式输出、自动化测试、统计图表增强、审计策略和多租户权限。",
-            "transform": "none",
-            "element": {
-              "aid": "sh/xobm58z2",
-              "id": "17",
-              "kind": "shape"
-            }
-          },
-          {
-            "path": "0.17",
-            "kind": "text",
-            "requestedSize": {
-              "width": {
-                "mode": "fixed",
-                "value": 220
-              },
-              "height": {
-                "mode": "hug"
-              }
-            },
-            "intrinsicSize": {
-              "width": 220,
-              "height": 28.8
-            },
-            "frame": {
-              "left": 0,
-              "top": 0,
-              "width": 220,
-              "height": 720
-            },
-            "children": [],
-            "text": "一句话收束",
-            "transform": "none",
-            "element": {
-              "aid": "sh/mtwra5gb",
-              "id": "18",
-              "kind": "shape"
-            }
-          },
-          {
-            "path": "0.18",
-            "kind": "text",
-            "requestedSize": {
-              "width": {
-                "mode": "fixed",
-                "value": 1000
-              },
-              "height": {
-                "mode": "hug"
-              }
-            },
-            "intrinsicSize": {
-              "width": 1000,
-              "height": 8784
-            },
-            "frame": {
-              "left": 0,
-              "top": 0,
-              "width": 1000,
-              "height": 720
-            },
-            "children": [],
-            "text": "AIChatProcessManager 的核心价值，是为 AI 应用建立一套可追踪、可审计、可运营的会话过程数据底座。",
-            "transform": "none",
-            "element": {
-              "aid": "sh/fepkzupw",
-              "id": "19",
-              "kind": "shape"
-            }
-          },
-          {
-            "path": "0.19",
-            "kind": "text",
-            "requestedSize": {
-              "width": {
-                "mode": "fixed",
-                "value": 620
-              },
-              "height": {
-                "mode": "hug"
-              }
-            },
-            "intrinsicSize": {
-              "width": 620,
-              "height": 14.4
-            },
-            "frame": {
-              "left": 0,
-              "top": 0,
-              "width": 620,
-              "height": 720
-            },
-            "children": [],
-            "text": "课程设计答辩 | AI 会话过程管理系统",
-            "transform": "none",
-            "element": {
-              "aid": "sh/72x4nap4",
-              "id": "20",
-              "kind": "shape"
-            }
-          },
-          {
-            "path": "0.20",
-            "kind": "text",
-            "requestedSize": {
-              "width": {
-                "mode": "fixed",
-                "value": 36
-              },
-              "height": {
-                "mode": "hug"
-              }
-            },
-            "intrinsicSize": {
-              "width": 36,
-              "height": 14.4
-            },
-            "frame": {
-              "left": 0,
-              "top": 0,
-              "width": 36,
-              "height": 720
-            },
-            "children": [],
-            "text": "11",
-            "transform": "none",
-            "element": {
-              "aid": "sh/ih4byhgn",
-              "id": "21",
-              "kind": "shape"
-            }
-          }
-        ],
-        "padding": {
-          "top": 0,
-          "right": 0,
-          "bottom": 0,
-          "left": 0
-        },
-        "alignItems": "stretch",
-        "justifyItems": "stretch",
-        "contentFrame": {
-          "left": 0,
-          "top": 0,
-          "width": 1280,
-          "height": 720
-        },
-        "items": [
-          {
-            "path": "0.0",
-            "frame": {
-              "left": 0,
-              "top": 0,
-              "width": 1280,
-              "height": 720
-            }
-          },
-          {
-            "path": "0.1",
-            "frame": {
-              "left": 0,
-              "top": 0,
-              "width": 1280,
-              "height": 74
-            }
-          },
-          {
-            "path": "0.2",
-            "frame": {
-              "left": 0,
-              "top": 0,
-              "width": 1280,
-              "height": 1
-            }
-          },
-          {
-            "path": "0.3",
-            "frame": {
-              "left": 0,
-              "top": 0,
-              "width": 360,
-              "height": 720
-            }
-          },
-          {
-            "path": "0.4",
-            "frame": {
-              "left": 0,
-              "top": 0,
-              "width": 900,
-              "height": 720
-            }
-          },
-          {
-            "path": "0.5",
-            "frame": {
-              "left": 0,
-              "top": 0,
-              "width": 332,
-              "height": 168
-            }
-          },
-          {
-            "path": "0.6",
-            "frame": {
-              "left": 0,
-              "top": 0,
-              "width": 5,
-              "height": 168
-            }
-          },
-          {
-            "path": "0.7",
-            "frame": {
-              "left": 0,
-              "top": 0,
-              "width": 288,
-              "height": 720
-            }
-          },
-          {
-            "path": "0.8",
-            "frame": {
-              "left": 0,
-              "top": 0,
-              "width": 288,
-              "height": 720
-            }
-          },
-          {
-            "path": "0.9",
-            "frame": {
-              "left": 0,
-              "top": 0,
-              "width": 332,
-              "height": 168
-            }
-          },
-          {
-            "path": "0.10",
-            "frame": {
-              "left": 0,
-              "top": 0,
-              "width": 5,
-              "height": 168
-            }
-          },
-          {
-            "path": "0.11",
-            "frame": {
-              "left": 0,
-              "top": 0,
-              "width": 288,
-              "height": 720
-            }
-          },
-          {
-            "path": "0.12",
-            "frame": {
-              "left": 0,
-              "top": 0,
-              "width": 288,
-              "height": 720
-            }
-          },
-          {
-            "path": "0.13",
-            "frame": {
-              "left": 0,
-              "top": 0,
-              "width": 332,
-              "height": 168
-            }
-          },
-          {
-            "path": "0.14",
-            "frame": {
-              "left": 0,
-              "top": 0,
-              "width": 5,
-              "height": 168
-            }
-          },
-          {
-            "path": "0.15",
-            "frame": {
-              "left": 0,
-              "top": 0,
-              "width": 288,
-              "height": 720
-            }
-          },
-          {
-            "path": "0.16",
-            "frame": {
-              "left": 0,
-              "top": 0,
-              "width": 288,
-              "height": 720
-            }
-          },
-          {
-            "path": "0.17",
-            "frame": {
-              "left": 0,
-              "top": 0,
-              "width": 220,
-              "height": 720
-            }
-          },
-          {
-            "path": "0.18",
-            "frame": {
-              "left": 0,
-              "top": 0,
-              "width": 1000,
-              "height": 720
-            }
-          },
-          {
-            "path": "0.19",
-            "frame": {
-              "left": 0,
-              "top": 0,
-              "width": 620,
-              "height": 720
-            }
-          },
-          {
-            "path": "0.20",
-            "frame": {
-              "left": 0,
-              "top": 0,
-              "width": 36,
-              "height": 720
-            }
-          }
-        ]
-      }
-    }
-  ]
+  "composeRuns": []
 }

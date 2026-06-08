@@ -2,13 +2,13 @@
   "schema": "openai.presentation.layout/v4",
   "unit": "px",
   "slide": {
-    "aid": "sl/gqxx1p",
-    "id": "gqxx1p",
+    "aid": "sl/1d3paz",
+    "id": "1d3paz",
     "slide": 9,
-    "layoutId": "82d14659-639b-4d6e-8e72-7828b77cafd0",
+    "layoutId": "e96e0f20-46d6-48c0-823f-cc39ba8b8cf4",
     "layoutName": "Title Slide",
     "layoutType": "title",
-    "masterLayoutId": "afa3dcc7-d52e-4537-a876-059472ff297e",
+    "masterLayoutId": "c4940938-650c-4056-bb9c-aed6e5694eca",
     "masterLayoutName": "Master",
     "frame": {
       "left": 0,
@@ -44,15 +44,15 @@
   "inheritedLayers": [
     {
       "scope": "layout",
-      "id": "82d14659-639b-4d6e-8e72-7828b77cafd0",
+      "id": "e96e0f20-46d6-48c0-823f-cc39ba8b8cf4",
       "name": "Title Slide",
       "type": "title",
-      "parentLayoutId": "afa3dcc7-d52e-4537-a876-059472ff297e",
+      "parentLayoutId": "c4940938-650c-4056-bb9c-aed6e5694eca",
       "elements": []
     },
     {
       "scope": "master",
-      "id": "afa3dcc7-d52e-4537-a876-059472ff297e",
+      "id": "c4940938-650c-4056-bb9c-aed6e5694eca",
       "name": "Master",
       "type": "master",
       "elements": []
@@ -63,7 +63,7 @@
       "order": 1,
       "kind": "shape",
       "scope": "slide",
-      "aid": "sh/dsji5sne",
+      "aid": "sh/loj2t83i",
       "id": "1",
       "bbox": [
         0,
@@ -71,77 +71,69 @@
         1280,
         720
       ],
-      "composeSource": {
-        "run": 1,
-        "path": "0.0"
-      },
       "geometry": "rect",
-      "fillColor": "#F8FAFC"
+      "fillColor": "#F6F8FB",
+      "lineColor": "rgba(0, 0, 0, 0)",
+      "lineWidth": 0
     },
     {
       "order": 2,
       "kind": "shape",
       "scope": "slide",
-      "aid": "sh/61032lsz",
+      "aid": "sh/ex0nuxc3",
       "id": "2",
       "bbox": [
         0,
         0,
         1280,
-        74
+        78
       ],
-      "composeSource": {
-        "run": 1,
-        "path": "0.1"
-      },
       "geometry": "rect",
-      "fillColor": "#FFFFFF"
+      "fillColor": "#FFFFFF",
+      "lineColor": "rgba(0, 0, 0, 0)",
+      "lineWidth": 0
     },
     {
       "order": 3,
       "kind": "shape",
       "scope": "slide",
-      "aid": "sh/vmtwra5g",
+      "aid": "sh/3itgfmlk",
       "id": "3",
       "bbox": [
         0,
-        0,
+        77,
         1280,
         1
       ],
-      "composeSource": {
-        "run": 1,
-        "path": "0.2"
-      },
       "geometry": "rect",
-      "fillColor": "#E2E8F0"
+      "fillColor": "#E5EAF2",
+      "lineColor": "rgba(0, 0, 0, 0)",
+      "lineWidth": 0
     },
     {
       "order": 4,
       "kind": "shape",
       "scope": "slide",
-      "aid": "sh/oj2t83it",
+      "aid": "sh/wb2hwfyx",
       "id": "4",
       "bbox": [
-        0,
-        0,
-        360,
-        720
+        56,
+        25,
+        380,
+        24
       ],
-      "composeSource": {
-        "run": 1,
-        "path": "0.3"
-      },
       "geometry": "rect",
       "text": "AIChatProcessManager",
       "textPreview": "AIChatProcessManager",
       "resolvedFontSize": 16,
       "resolvedTextStyle": {
+        "anchor": 1,
         "fontSize": 16,
         "typeface": "PingFang SC",
         "color": "#2563EB",
         "bold": true,
         "alignment": "left",
+        "verticalAlignment": "top",
         "insets": {
           "top": 0,
           "right": 0,
@@ -166,7 +158,8 @@
             "fontSize": 16,
             "typeface": "PingFang SC",
             "color": "#2563EB",
-            "bold": true
+            "bold": true,
+            "alignment": "left"
           },
           "runs": [
             {
@@ -180,34 +173,35 @@
           ],
           "marginLeft": 0
         }
-      ]
+      ],
+      "fillColor": "rgba(0, 0, 0, 0)",
+      "lineColor": "rgba(0, 0, 0, 0)",
+      "lineWidth": 0
     },
     {
       "order": 5,
       "kind": "shape",
       "scope": "slide",
-      "aid": "sh/d4vmtwra",
+      "aid": "sh/lwval87e",
       "id": "5",
       "bbox": [
-        0,
-        0,
+        56,
+        104,
         900,
-        720
+        52
       ],
-      "composeSource": {
-        "run": 1,
-        "path": "0.4"
-      },
       "geometry": "rect",
-      "text": "业务逻辑核验：演示前已修正的关键风险",
-      "textPreview": "业务逻辑核验：演示前已修正的关键风险",
+      "text": "业务逻辑核验与修正",
+      "textPreview": "业务逻辑核验与修正",
       "resolvedFontSize": 34,
       "resolvedTextStyle": {
+        "anchor": 1,
         "fontSize": 34,
         "typeface": "PingFang SC",
         "color": "#111827",
         "bold": true,
         "alignment": "left",
+        "verticalAlignment": "top",
         "insets": {
           "top": 0,
           "right": 0,
@@ -220,24 +214,25 @@
         "lines": [
           {
             "index": 1,
-            "text": "业务逻辑核验：演示前已修正的关键风险"
+            "text": "业务逻辑核验与修正"
           }
         ]
       },
       "paragraphs": [
         {
           "index": 1,
-          "text": "业务逻辑核验：演示前已修正的关键风险",
+          "text": "业务逻辑核验与修正",
           "resolvedTextStyle": {
             "fontSize": 34,
             "typeface": "PingFang SC",
             "color": "#111827",
-            "bold": true
+            "bold": true,
+            "alignment": "left"
           },
           "runs": [
             {
               "index": 1,
-              "text": "业务逻辑核验：演示前已修正的关键风险",
+              "text": "业务逻辑核验与修正",
               "fontSize": 34,
               "typeface": "PingFang SC",
               "color": "#111827",
@@ -246,166 +241,68 @@
           ],
           "marginLeft": 0
         }
-      ]
+      ],
+      "fillColor": "rgba(0, 0, 0, 0)",
+      "lineColor": "rgba(0, 0, 0, 0)",
+      "lineWidth": 0
     },
     {
       "order": 6,
       "kind": "shape",
       "scope": "slide",
-      "aid": "sh/6dcbulwv",
+      "aid": "sh/e9cvixcz",
       "id": "6",
       "bbox": [
-        0,
-        0,
+        75,
         180,
-        720
+        1130,
+        385
       ],
-      "composeSource": {
-        "run": 1,
-        "path": "0.5"
-      },
       "geometry": "rect",
-      "text": "核验项",
-      "textPreview": "核验项",
-      "resolvedFontSize": 14,
-      "resolvedTextStyle": {
-        "fontSize": 14,
-        "typeface": "PingFang SC",
-        "color": "#64748B",
-        "bold": true,
-        "alignment": "left",
-        "insets": {
-          "top": 0,
-          "right": 0,
-          "bottom": 0,
-          "left": 0
-        }
-      },
-      "textLayout": {
-        "lineCount": 1,
-        "lines": [
-          {
-            "index": 1,
-            "text": "核验项"
-          }
-        ]
-      },
-      "paragraphs": [
-        {
-          "index": 1,
-          "text": "核验项",
-          "resolvedTextStyle": {
-            "fontSize": 14,
-            "typeface": "PingFang SC",
-            "color": "#64748B",
-            "bold": true
-          },
-          "runs": [
-            {
-              "index": 1,
-              "text": "核验项",
-              "fontSize": 14,
-              "typeface": "PingFang SC",
-              "color": "#64748B",
-              "bold": true
-            }
-          ],
-          "marginLeft": 0
-        }
-      ]
+      "fillColor": "#FFFFFF",
+      "lineColor": "#E2E8F0",
+      "lineWidth": 1
     },
     {
       "order": 7,
       "kind": "shape",
       "scope": "slide",
-      "aid": "sh/vy90je9c",
+      "aid": "sh/3q5o7qpg",
       "id": "7",
       "bbox": [
-        0,
-        0,
-        180,
-        720
+        120,
+        222,
+        8,
+        8
       ],
-      "composeSource": {
-        "run": 1,
-        "path": "0.29"
-      },
       "geometry": "rect",
-      "text": "业务规则",
-      "textPreview": "业务规则",
-      "resolvedFontSize": 14,
-      "resolvedTextStyle": {
-        "fontSize": 14,
-        "typeface": "PingFang SC",
-        "color": "#64748B",
-        "bold": true,
-        "alignment": "left",
-        "insets": {
-          "top": 0,
-          "right": 0,
-          "bottom": 0,
-          "left": 0
-        }
-      },
-      "textLayout": {
-        "lineCount": 1,
-        "lines": [
-          {
-            "index": 1,
-            "text": "业务规则"
-          }
-        ]
-      },
-      "paragraphs": [
-        {
-          "index": 1,
-          "text": "业务规则",
-          "resolvedTextStyle": {
-            "fontSize": 14,
-            "typeface": "PingFang SC",
-            "color": "#64748B",
-            "bold": true
-          },
-          "runs": [
-            {
-              "index": 1,
-              "text": "业务规则",
-              "fontSize": 14,
-              "typeface": "PingFang SC",
-              "color": "#64748B",
-              "bold": true
-            }
-          ],
-          "marginLeft": 0
-        }
-      ]
+      "fillColor": "#2563EB",
+      "lineColor": "rgba(0, 0, 0, 0)",
+      "lineWidth": 0
     },
     {
       "order": 8,
       "kind": "shape",
       "scope": "slide",
-      "aid": "sh/onyd0z61",
+      "aid": "sh/sneloj2t",
       "id": "8",
       "bbox": [
-        0,
-        0,
-        180,
-        720
+        144,
+        215,
+        956,
+        58
       ],
-      "composeSource": {
-        "run": 1,
-        "path": "0.7"
-      },
       "geometry": "rect",
-      "text": "当前结果",
-      "textPreview": "当前结果",
-      "resolvedFontSize": 14,
+      "text": "路由前缀统一：messages / users / favorites / feedbacks 修正为 /api 路径，解决 Not Found。",
+      "textPreview": "路由前缀统一：messages / users / favorites / feedbacks 修正为 /api 路径，解决 Not Found。",
+      "resolvedFontSize": 18,
       "resolvedTextStyle": {
-        "fontSize": 14,
+        "anchor": 1,
+        "fontSize": 18,
         "typeface": "PingFang SC",
-        "color": "#64748B",
-        "bold": true,
+        "color": "#111827",
         "alignment": "left",
+        "verticalAlignment": "top",
         "insets": {
           "top": 0,
           "right": 0,
@@ -418,81 +315,76 @@
         "lines": [
           {
             "index": 1,
-            "text": "当前结果"
+            "text": "路由前缀统一：messages / users / favorites / feedbacks 修正为 /api 路径，解决 Not Found。"
           }
         ]
       },
       "paragraphs": [
         {
           "index": 1,
-          "text": "当前结果",
+          "text": "路由前缀统一：messages / users / favorites / feedbacks 修正为 /api 路径，解决 Not Found。",
           "resolvedTextStyle": {
-            "fontSize": 14,
+            "fontSize": 18,
             "typeface": "PingFang SC",
-            "color": "#64748B",
-            "bold": true
+            "color": "#111827",
+            "alignment": "left"
           },
           "runs": [
             {
               "index": 1,
-              "text": "当前结果",
-              "fontSize": 14,
+              "text": "路由前缀统一：messages / users / favorites / feedbacks 修正为 /api 路径，解决 Not Found。",
+              "fontSize": 18,
               "typeface": "PingFang SC",
-              "color": "#64748B",
-              "bold": true
+              "color": "#111827"
             }
           ],
           "marginLeft": 0
         }
-      ]
+      ],
+      "fillColor": "rgba(0, 0, 0, 0)",
+      "lineColor": "rgba(0, 0, 0, 0)",
+      "lineWidth": 0
     },
     {
       "order": 9,
       "kind": "shape",
       "scope": "slide",
-      "aid": "sh/d8v6psfi",
+      "aid": "sh/l87ed8ba",
       "id": "9",
       "bbox": [
-        0,
-        0,
-        1096,
-        54
+        120,
+        272,
+        8,
+        8
       ],
-      "composeSource": {
-        "run": 1,
-        "path": "0.8"
-      },
-      "geometry": "roundRect",
-      "fillColor": "#FFFFFF",
-      "lineColor": "#E2E8F0",
-      "lineWidth": 1
+      "geometry": "rect",
+      "fillColor": "#2563EB",
+      "lineColor": "rgba(0, 0, 0, 0)",
+      "lineWidth": 0
     },
     {
       "order": 10,
       "kind": "shape",
       "scope": "slide",
-      "aid": "sh/twra5gbq",
+      "aid": "sh/5kb6xkf6",
       "id": "10",
       "bbox": [
-        0,
-        0,
-        260,
-        720
+        144,
+        265,
+        956,
+        58
       ],
-      "composeSource": {
-        "run": 1,
-        "path": "0.9"
-      },
       "geometry": "rect",
-      "text": "路由前缀",
-      "textPreview": "路由前缀",
-      "resolvedFontSize": 16,
+      "text": "中文编码修正：MySQL、SQLAlchemy、seed 数据统一 utf8mb4，清理页面乱码。",
+      "textPreview": "中文编码修正：MySQL、SQLAlchemy、seed 数据统一 utf8mb4，清理页面乱码。",
+      "resolvedFontSize": 18,
       "resolvedTextStyle": {
-        "fontSize": 16,
+        "anchor": 1,
+        "fontSize": 18,
         "typeface": "PingFang SC",
         "color": "#111827",
-        "bold": true,
         "alignment": "left",
+        "verticalAlignment": "top",
         "insets": {
           "top": 0,
           "right": 0,
@@ -505,123 +397,76 @@
         "lines": [
           {
             "index": 1,
-            "text": "路由前缀"
+            "text": "中文编码修正：MySQL、SQLAlchemy、seed 数据统一 utf8mb4，清理页面乱码。"
           }
         ]
       },
       "paragraphs": [
         {
           "index": 1,
-          "text": "路由前缀",
+          "text": "中文编码修正：MySQL、SQLAlchemy、seed 数据统一 utf8mb4，清理页面乱码。",
           "resolvedTextStyle": {
-            "fontSize": 16,
+            "fontSize": 18,
             "typeface": "PingFang SC",
             "color": "#111827",
-            "bold": true
+            "alignment": "left"
           },
           "runs": [
             {
               "index": 1,
-              "text": "路由前缀",
-              "fontSize": 16,
+              "text": "中文编码修正：MySQL、SQLAlchemy、seed 数据统一 utf8mb4，清理页面乱码。",
+              "fontSize": 18,
               "typeface": "PingFang SC",
-              "color": "#111827",
-              "bold": true
+              "color": "#111827"
             }
           ],
           "marginLeft": 0
         }
-      ]
+      ],
+      "fillColor": "rgba(0, 0, 0, 0)",
+      "lineColor": "rgba(0, 0, 0, 0)",
+      "lineWidth": 0
     },
     {
       "order": 11,
       "kind": "shape",
       "scope": "slide",
-      "aid": "sh/4byhgn29",
+      "aid": "sh/czed8v6p",
       "id": "11",
       "bbox": [
-        0,
-        0,
-        420,
-        720
+        120,
+        322,
+        8,
+        8
       ],
-      "composeSource": {
-        "run": 1,
-        "path": "0.10"
-      },
       "geometry": "rect",
-      "text": "前端统一请求 /api/...；FastAPI 路由全部挂载到 /api",
-      "textPreview": "前端统一请求 /api/...；FastAPI 路由全部挂载到 /api",
-      "resolvedFontSize": 15,
-      "resolvedTextStyle": {
-        "fontSize": 15,
-        "typeface": "PingFang SC",
-        "color": "#64748B",
-        "alignment": "left",
-        "insets": {
-          "top": 0,
-          "right": 0,
-          "bottom": 0,
-          "left": 0
-        }
-      },
-      "textLayout": {
-        "lineCount": 1,
-        "lines": [
-          {
-            "index": 1,
-            "text": "前端统一请求 /api/...；FastAPI 路由全部挂载到 /api"
-          }
-        ]
-      },
-      "paragraphs": [
-        {
-          "index": 1,
-          "text": "前端统一请求 /api/...；FastAPI 路由全部挂载到 /api",
-          "resolvedTextStyle": {
-            "fontSize": 15,
-            "typeface": "PingFang SC",
-            "color": "#64748B"
-          },
-          "runs": [
-            {
-              "index": 1,
-              "text": "前端统一请求 /api/...；FastAPI 路由全部挂载到 /api",
-              "fontSize": 15,
-              "typeface": "PingFang SC",
-              "color": "#64748B"
-            }
-          ],
-          "marginLeft": 0
-        }
-      ]
+      "fillColor": "#2563EB",
+      "lineColor": "rgba(0, 0, 0, 0)",
+      "lineWidth": 0
     },
     {
       "order": 12,
       "kind": "shape",
       "scope": "slide",
-      "aid": "sh/bq1oryts",
+      "aid": "sh/neloj2t8",
       "id": "12",
       "bbox": [
-        0,
-        0,
-        250,
-        720
+        144,
+        315,
+        956,
+        58
       ],
-      "composeSource": {
-        "run": 1,
-        "path": "0.11"
-      },
       "geometry": "rect",
-      "text": "Not Found 已清理",
-      "textPreview": "Not Found 已清理",
-      "resolvedFontSize": 15,
+      "text": "收藏状态持久化：消息列表返回 is_favorited，切换页面后仍显示“已收藏”。",
+      "textPreview": "收藏状态持久化：消息列表返回 is_favorited，切换页面后仍显示“已收藏”。",
+      "resolvedFontSize": 18,
       "resolvedTextStyle": {
-        "fontSize": 15,
+        "anchor": 1,
+        "fontSize": 18,
         "typeface": "PingFang SC",
-        "color": "#16A34A",
-        "bold": true,
+        "color": "#111827",
         "alignment": "left",
+        "verticalAlignment": "top",
         "insets": {
           "top": 0,
           "right": 0,
@@ -634,81 +479,76 @@
         "lines": [
           {
             "index": 1,
-            "text": "Not Found 已清理"
+            "text": "收藏状态持久化：消息列表返回 is_favorited，切换页面后仍显示“已收藏”。"
           }
         ]
       },
       "paragraphs": [
         {
           "index": 1,
-          "text": "Not Found 已清理",
+          "text": "收藏状态持久化：消息列表返回 is_favorited，切换页面后仍显示“已收藏”。",
           "resolvedTextStyle": {
-            "fontSize": 15,
+            "fontSize": 18,
             "typeface": "PingFang SC",
-            "color": "#16A34A",
-            "bold": true
+            "color": "#111827",
+            "alignment": "left"
           },
           "runs": [
             {
               "index": 1,
-              "text": "Not Found 已清理",
-              "fontSize": 15,
+              "text": "收藏状态持久化：消息列表返回 is_favorited，切换页面后仍显示“已收藏”。",
+              "fontSize": 18,
               "typeface": "PingFang SC",
-              "color": "#16A34A",
-              "bold": true
+              "color": "#111827"
             }
           ],
           "marginLeft": 0
         }
-      ]
+      ],
+      "fillColor": "rgba(0, 0, 0, 0)",
+      "lineColor": "rgba(0, 0, 0, 0)",
+      "lineWidth": 0
     },
     {
       "order": 13,
       "kind": "shape",
       "scope": "slide",
-      "aid": "sh/m58z25kb",
+      "aid": "sh/ytsvu9kn",
       "id": "13",
       "bbox": [
-        0,
-        0,
-        1096,
-        54
+        120,
+        372,
+        8,
+        8
       ],
-      "composeSource": {
-        "run": 1,
-        "path": "0.12"
-      },
-      "geometry": "roundRect",
-      "fillColor": "#FFFFFF",
-      "lineColor": "#E2E8F0",
-      "lineWidth": 1
+      "geometry": "rect",
+      "fillColor": "#2563EB",
+      "lineColor": "rgba(0, 0, 0, 0)",
+      "lineWidth": 0
     },
     {
       "order": 14,
       "kind": "shape",
       "scope": "slide",
-      "aid": "sh/t83itgfm",
+      "aid": "sh/5sneloj2",
       "id": "14",
       "bbox": [
-        0,
-        0,
-        260,
-        720
+        144,
+        365,
+        956,
+        58
       ],
-      "composeSource": {
-        "run": 1,
-        "path": "0.13"
-      },
       "geometry": "rect",
-      "text": "中文字符",
-      "textPreview": "中文字符",
-      "resolvedFontSize": 16,
+      "text": "权限隔离：用户不能读取、收藏或反馈别人的消息；维护者不能进入管理员接口。",
+      "textPreview": "权限隔离：用户不能读取、收藏或反馈别人的消息；维护者不能进入管理员接口。",
+      "resolvedFontSize": 18,
       "resolvedTextStyle": {
-        "fontSize": 16,
+        "anchor": 1,
+        "fontSize": 18,
         "typeface": "PingFang SC",
         "color": "#111827",
-        "bold": true,
         "alignment": "left",
+        "verticalAlignment": "top",
         "insets": {
           "top": 0,
           "right": 0,
@@ -721,123 +561,76 @@
         "lines": [
           {
             "index": 1,
-            "text": "中文字符"
+            "text": "权限隔离：用户不能读取、收藏或反馈别人的消息；维护者不能进入管理员接口。"
           }
         ]
       },
       "paragraphs": [
         {
           "index": 1,
-          "text": "中文字符",
+          "text": "权限隔离：用户不能读取、收藏或反馈别人的消息；维护者不能进入管理员接口。",
           "resolvedTextStyle": {
-            "fontSize": 16,
+            "fontSize": 18,
             "typeface": "PingFang SC",
             "color": "#111827",
-            "bold": true
+            "alignment": "left"
           },
           "runs": [
             {
               "index": 1,
-              "text": "中文字符",
-              "fontSize": 16,
+              "text": "权限隔离：用户不能读取、收藏或反馈别人的消息；维护者不能进入管理员接口。",
+              "fontSize": 18,
               "typeface": "PingFang SC",
-              "color": "#111827",
-              "bold": true
+              "color": "#111827"
             }
           ],
           "marginLeft": 0
         }
-      ]
+      ],
+      "fillColor": "rgba(0, 0, 0, 0)",
+      "lineColor": "rgba(0, 0, 0, 0)",
+      "lineWidth": 0
     },
     {
       "order": 15,
       "kind": "shape",
       "scope": "slide",
-      "aid": "sh/4nap4r65",
+      "aid": "sh/cbulwval",
       "id": "15",
       "bbox": [
-        0,
-        0,
-        420,
-        720
+        120,
+        422,
+        8,
+        8
       ],
-      "composeSource": {
-        "run": 1,
-        "path": "0.14"
-      },
       "geometry": "rect",
-      "text": "MySQL 初始化和 PyMySQL 连接统一 utf8mb4",
-      "textPreview": "MySQL 初始化和 PyMySQL 连接统一 utf8mb4",
-      "resolvedFontSize": 15,
-      "resolvedTextStyle": {
-        "fontSize": 15,
-        "typeface": "PingFang SC",
-        "color": "#64748B",
-        "alignment": "left",
-        "insets": {
-          "top": 0,
-          "right": 0,
-          "bottom": 0,
-          "left": 0
-        }
-      },
-      "textLayout": {
-        "lineCount": 1,
-        "lines": [
-          {
-            "index": 1,
-            "text": "MySQL 初始化和 PyMySQL 连接统一 utf8mb4"
-          }
-        ]
-      },
-      "paragraphs": [
-        {
-          "index": 1,
-          "text": "MySQL 初始化和 PyMySQL 连接统一 utf8mb4",
-          "resolvedTextStyle": {
-            "fontSize": 15,
-            "typeface": "PingFang SC",
-            "color": "#64748B"
-          },
-          "runs": [
-            {
-              "index": 1,
-              "text": "MySQL 初始化和 PyMySQL 连接统一 utf8mb4",
-              "fontSize": 15,
-              "typeface": "PingFang SC",
-              "color": "#64748B"
-            }
-          ],
-          "marginLeft": 0
-        }
-      ]
+      "fillColor": "#2563EB",
+      "lineColor": "rgba(0, 0, 0, 0)",
+      "lineWidth": 0
     },
     {
       "order": 16,
       "kind": "shape",
       "scope": "slide",
-      "aid": "sh/b2hwfyxo",
+      "aid": "sh/nqxs72x4",
       "id": "16",
       "bbox": [
-        0,
-        0,
-        250,
-        720
+        144,
+        415,
+        956,
+        58
       ],
-      "composeSource": {
-        "run": 1,
-        "path": "0.15"
-      },
       "geometry": "rect",
-      "text": "乱码已修复",
-      "textPreview": "乱码已修复",
-      "resolvedFontSize": 15,
+      "text": "角色删除改为禁用：避免物理删除影响历史会话数据。",
+      "textPreview": "角色删除改为禁用：避免物理删除影响历史会话数据。",
+      "resolvedFontSize": 18,
       "resolvedTextStyle": {
-        "fontSize": 15,
+        "anchor": 1,
+        "fontSize": 18,
         "typeface": "PingFang SC",
-        "color": "#16A34A",
-        "bold": true,
+        "color": "#111827",
         "alignment": "left",
+        "verticalAlignment": "top",
         "insets": {
           "top": 0,
           "right": 0,
@@ -850,81 +643,76 @@
         "lines": [
           {
             "index": 1,
-            "text": "乱码已修复"
+            "text": "角色删除改为禁用：避免物理删除影响历史会话数据。"
           }
         ]
       },
       "paragraphs": [
         {
           "index": 1,
-          "text": "乱码已修复",
+          "text": "角色删除改为禁用：避免物理删除影响历史会话数据。",
           "resolvedTextStyle": {
-            "fontSize": 15,
+            "fontSize": 18,
             "typeface": "PingFang SC",
-            "color": "#16A34A",
-            "bold": true
+            "color": "#111827",
+            "alignment": "left"
           },
           "runs": [
             {
               "index": 1,
-              "text": "乱码已修复",
-              "fontSize": 15,
+              "text": "角色删除改为禁用：避免物理删除影响历史会话数据。",
+              "fontSize": 18,
               "typeface": "PingFang SC",
-              "color": "#16A34A",
-              "bold": true
+              "color": "#111827"
             }
           ],
           "marginLeft": 0
         }
-      ]
+      ],
+      "fillColor": "rgba(0, 0, 0, 0)",
+      "lineColor": "rgba(0, 0, 0, 0)",
+      "lineWidth": 0
     },
     {
       "order": 17,
       "kind": "shape",
       "scope": "slide",
-      "aid": "sh/mhk3q5o7",
+      "aid": "sh/u54zidon",
       "id": "17",
       "bbox": [
-        0,
-        0,
-        1096,
-        54
+        120,
+        472,
+        8,
+        8
       ],
-      "composeSource": {
-        "run": 1,
-        "path": "0.16"
-      },
-      "geometry": "roundRect",
-      "fillColor": "#FFFFFF",
-      "lineColor": "#E2E8F0",
-      "lineWidth": 1
+      "geometry": "rect",
+      "fillColor": "#2563EB",
+      "lineColor": "rgba(0, 0, 0, 0)",
+      "lineWidth": 0
     },
     {
       "order": 18,
       "kind": "shape",
       "scope": "slide",
-      "aid": "sh/tgfmlkjm",
+      "aid": "sh/5wjudg7a",
       "id": "18",
       "bbox": [
-        0,
-        0,
-        260,
-        720
+        144,
+        465,
+        956,
+        58
       ],
-      "composeSource": {
-        "run": 1,
-        "path": "0.17"
-      },
       "geometry": "rect",
-      "text": "收藏状态",
-      "textPreview": "收藏状态",
-      "resolvedFontSize": 16,
+      "text": "登录提示时长缩短：成功消息 1 秒自动消失，避免挡住页面操作。",
+      "textPreview": "登录提示时长缩短：成功消息 1 秒自动消失，避免挡住页面操作。",
+      "resolvedFontSize": 18,
       "resolvedTextStyle": {
-        "fontSize": 16,
+        "anchor": 1,
+        "fontSize": 18,
         "typeface": "PingFang SC",
         "color": "#111827",
-        "bold": true,
         "alignment": "left",
+        "verticalAlignment": "top",
         "insets": {
           "top": 0,
           "right": 0,
@@ -937,59 +725,60 @@
         "lines": [
           {
             "index": 1,
-            "text": "收藏状态"
+            "text": "登录提示时长缩短：成功消息 1 秒自动消失，避免挡住页面操作。"
           }
         ]
       },
       "paragraphs": [
         {
           "index": 1,
-          "text": "收藏状态",
+          "text": "登录提示时长缩短：成功消息 1 秒自动消失，避免挡住页面操作。",
           "resolvedTextStyle": {
-            "fontSize": 16,
+            "fontSize": 18,
             "typeface": "PingFang SC",
             "color": "#111827",
-            "bold": true
+            "alignment": "left"
           },
           "runs": [
             {
               "index": 1,
-              "text": "收藏状态",
-              "fontSize": 16,
+              "text": "登录提示时长缩短：成功消息 1 秒自动消失，避免挡住页面操作。",
+              "fontSize": 18,
               "typeface": "PingFang SC",
-              "color": "#111827",
-              "bold": true
+              "color": "#111827"
             }
           ],
           "marginLeft": 0
         }
-      ]
+      ],
+      "fillColor": "rgba(0, 0, 0, 0)",
+      "lineColor": "rgba(0, 0, 0, 0)",
+      "lineWidth": 0
     },
     {
       "order": 19,
       "kind": "shape",
       "scope": "slide",
-      "aid": "sh/4vmtwra5",
+      "aid": "sh/gbq1oryt",
       "id": "19",
       "bbox": [
-        0,
-        0,
-        420,
-        720
+        120,
+        605,
+        960,
+        30
       ],
-      "composeSource": {
-        "run": 1,
-        "path": "0.18"
-      },
       "geometry": "rect",
-      "text": "消息列表返回 is_favorited；切换页面后恢复状态",
-      "textPreview": "消息列表返回 is_favorited；切换页面后恢复状态",
-      "resolvedFontSize": 15,
+      "text": "核验结论：第一阶段已经从“能构建”推进到“主要业务链路可运行”。",
+      "textPreview": "核验结论：第一阶段已经从“能构建”推进到“主要业务链路可运行”。",
+      "resolvedFontSize": 21,
       "resolvedTextStyle": {
-        "fontSize": 15,
+        "anchor": 1,
+        "fontSize": 21,
         "typeface": "PingFang SC",
-        "color": "#64748B",
+        "color": "#16A34A",
+        "bold": true,
         "alignment": "left",
+        "verticalAlignment": "top",
         "insets": {
           "top": 0,
           "right": 0,
@@ -1002,555 +791,61 @@
         "lines": [
           {
             "index": 1,
-            "text": "消息列表返回 is_favorited；切换页面后恢复状态"
+            "text": "核验结论：第一阶段已经从“能构建”推进到“主要业务链路可运行”。"
           }
         ]
       },
       "paragraphs": [
         {
           "index": 1,
-          "text": "消息列表返回 is_favorited；切换页面后恢复状态",
+          "text": "核验结论：第一阶段已经从“能构建”推进到“主要业务链路可运行”。",
           "resolvedTextStyle": {
-            "fontSize": 15,
+            "fontSize": 21,
             "typeface": "PingFang SC",
-            "color": "#64748B"
+            "color": "#16A34A",
+            "bold": true,
+            "alignment": "left"
           },
           "runs": [
             {
               "index": 1,
-              "text": "消息列表返回 is_favorited；切换页面后恢复状态",
-              "fontSize": 15,
+              "text": "核验结论：第一阶段已经从“能构建”推进到“主要业务链路可运行”。",
+              "fontSize": 21,
               "typeface": "PingFang SC",
-              "color": "#64748B"
+              "color": "#16A34A",
+              "bold": true
             }
           ],
           "marginLeft": 0
         }
-      ]
+      ],
+      "fillColor": "rgba(0, 0, 0, 0)",
+      "lineColor": "rgba(0, 0, 0, 0)",
+      "lineWidth": 0
     },
     {
       "order": 20,
       "kind": "shape",
       "scope": "slide",
-      "aid": "sh/gr2p8nqx",
+      "aid": "sh/cj6tovah",
       "id": "20",
       "bbox": [
-        0,
-        0,
-        250,
-        720
+        56,
+        684,
+        640,
+        20
       ],
-      "composeSource": {
-        "run": 1,
-        "path": "0.19"
-      },
-      "geometry": "rect",
-      "text": "可持久显示",
-      "textPreview": "可持久显示",
-      "resolvedFontSize": 15,
-      "resolvedTextStyle": {
-        "fontSize": 15,
-        "typeface": "PingFang SC",
-        "color": "#16A34A",
-        "bold": true,
-        "alignment": "left",
-        "insets": {
-          "top": 0,
-          "right": 0,
-          "bottom": 0,
-          "left": 0
-        }
-      },
-      "textLayout": {
-        "lineCount": 1,
-        "lines": [
-          {
-            "index": 1,
-            "text": "可持久显示"
-          }
-        ]
-      },
-      "paragraphs": [
-        {
-          "index": 1,
-          "text": "可持久显示",
-          "resolvedTextStyle": {
-            "fontSize": 15,
-            "typeface": "PingFang SC",
-            "color": "#16A34A",
-            "bold": true
-          },
-          "runs": [
-            {
-              "index": 1,
-              "text": "可持久显示",
-              "fontSize": 15,
-              "typeface": "PingFang SC",
-              "color": "#16A34A",
-              "bold": true
-            }
-          ],
-          "marginLeft": 0
-        }
-      ]
-    },
-    {
-      "order": 21,
-      "kind": "shape",
-      "scope": "slide",
-      "aid": "sh/9cvixcze",
-      "id": "21",
-      "bbox": [
-        0,
-        0,
-        1096,
-        54
-      ],
-      "composeSource": {
-        "run": 1,
-        "path": "0.20"
-      },
-      "geometry": "roundRect",
-      "fillColor": "#FFFFFF",
-      "lineColor": "#E2E8F0",
-      "lineWidth": 1
-    },
-    {
-      "order": 22,
-      "kind": "shape",
-      "scope": "slide",
-      "aid": "sh/ylc7u54z",
-      "id": "22",
-      "bbox": [
-        0,
-        0,
-        260,
-        720
-      ],
-      "composeSource": {
-        "run": 1,
-        "path": "0.21"
-      },
-      "geometry": "rect",
-      "text": "权限隔离",
-      "textPreview": "权限隔离",
-      "resolvedFontSize": 16,
-      "resolvedTextStyle": {
-        "fontSize": 16,
-        "typeface": "PingFang SC",
-        "color": "#111827",
-        "bold": true,
-        "alignment": "left",
-        "insets": {
-          "top": 0,
-          "right": 0,
-          "bottom": 0,
-          "left": 0
-        }
-      },
-      "textLayout": {
-        "lineCount": 1,
-        "lines": [
-          {
-            "index": 1,
-            "text": "权限隔离"
-          }
-        ]
-      },
-      "paragraphs": [
-        {
-          "index": 1,
-          "text": "权限隔离",
-          "resolvedTextStyle": {
-            "fontSize": 16,
-            "typeface": "PingFang SC",
-            "color": "#111827",
-            "bold": true
-          },
-          "runs": [
-            {
-              "index": 1,
-              "text": "权限隔离",
-              "fontSize": 16,
-              "typeface": "PingFang SC",
-              "color": "#111827",
-              "bold": true
-            }
-          ],
-          "marginLeft": 0
-        }
-      ]
-    },
-    {
-      "order": 23,
-      "kind": "shape",
-      "scope": "slide",
-      "aid": "sh/r65wjudg",
-      "id": "23",
-      "bbox": [
-        0,
-        0,
-        420,
-        720
-      ],
-      "composeSource": {
-        "run": 1,
-        "path": "0.22"
-      },
-      "geometry": "rect",
-      "text": "只能访问、收藏、反馈自己会话里的消息",
-      "textPreview": "只能访问、收藏、反馈自己会话里的消息",
-      "resolvedFontSize": 15,
-      "resolvedTextStyle": {
-        "fontSize": 15,
-        "typeface": "PingFang SC",
-        "color": "#64748B",
-        "alignment": "left",
-        "insets": {
-          "top": 0,
-          "right": 0,
-          "bottom": 0,
-          "left": 0
-        }
-      },
-      "textLayout": {
-        "lineCount": 1,
-        "lines": [
-          {
-            "index": 1,
-            "text": "只能访问、收藏、反馈自己会话里的消息"
-          }
-        ]
-      },
-      "paragraphs": [
-        {
-          "index": 1,
-          "text": "只能访问、收藏、反馈自己会话里的消息",
-          "resolvedTextStyle": {
-            "fontSize": 15,
-            "typeface": "PingFang SC",
-            "color": "#64748B"
-          },
-          "runs": [
-            {
-              "index": 1,
-              "text": "只能访问、收藏、反馈自己会话里的消息",
-              "fontSize": 15,
-              "typeface": "PingFang SC",
-              "color": "#64748B"
-            }
-          ],
-          "marginLeft": 0
-        }
-      ]
-    },
-    {
-      "order": 24,
-      "kind": "shape",
-      "scope": "slide",
-      "aid": "sh/g3ex0nux",
-      "id": "24",
-      "bbox": [
-        0,
-        0,
-        250,
-        720
-      ],
-      "composeSource": {
-        "run": 1,
-        "path": "0.23"
-      },
-      "geometry": "rect",
-      "text": "越权返回 403",
-      "textPreview": "越权返回 403",
-      "resolvedFontSize": 15,
-      "resolvedTextStyle": {
-        "fontSize": 15,
-        "typeface": "PingFang SC",
-        "color": "#16A34A",
-        "bold": true,
-        "alignment": "left",
-        "insets": {
-          "top": 0,
-          "right": 0,
-          "bottom": 0,
-          "left": 0
-        }
-      },
-      "textLayout": {
-        "lineCount": 1,
-        "lines": [
-          {
-            "index": 1,
-            "text": "越权返回 403"
-          }
-        ]
-      },
-      "paragraphs": [
-        {
-          "index": 1,
-          "text": "越权返回 403",
-          "resolvedTextStyle": {
-            "fontSize": 15,
-            "typeface": "PingFang SC",
-            "color": "#16A34A",
-            "bold": true
-          },
-          "runs": [
-            {
-              "index": 1,
-              "text": "越权返回 403",
-              "fontSize": 15,
-              "typeface": "PingFang SC",
-              "color": "#16A34A",
-              "bold": true
-            }
-          ],
-          "marginLeft": 0
-        }
-      ]
-    },
-    {
-      "order": 25,
-      "kind": "shape",
-      "scope": "slide",
-      "aid": "sh/5o7qpg3e",
-      "id": "25",
-      "bbox": [
-        0,
-        0,
-        1096,
-        54
-      ],
-      "composeSource": {
-        "run": 1,
-        "path": "0.24"
-      },
-      "geometry": "roundRect",
-      "fillColor": "#FFFFFF",
-      "lineColor": "#E2E8F0",
-      "lineWidth": 1
-    },
-    {
-      "order": 26,
-      "kind": "shape",
-      "scope": "slide",
-      "aid": "sh/yxobm58z",
-      "id": "26",
-      "bbox": [
-        0,
-        0,
-        260,
-        720
-      ],
-      "composeSource": {
-        "run": 1,
-        "path": "0.25"
-      },
-      "geometry": "rect",
-      "text": "角色删除",
-      "textPreview": "角色删除",
-      "resolvedFontSize": 16,
-      "resolvedTextStyle": {
-        "fontSize": 16,
-        "typeface": "PingFang SC",
-        "color": "#111827",
-        "bold": true,
-        "alignment": "left",
-        "insets": {
-          "top": 0,
-          "right": 0,
-          "bottom": 0,
-          "left": 0
-        }
-      },
-      "textLayout": {
-        "lineCount": 1,
-        "lines": [
-          {
-            "index": 1,
-            "text": "角色删除"
-          }
-        ]
-      },
-      "paragraphs": [
-        {
-          "index": 1,
-          "text": "角色删除",
-          "resolvedTextStyle": {
-            "fontSize": 16,
-            "typeface": "PingFang SC",
-            "color": "#111827",
-            "bold": true
-          },
-          "runs": [
-            {
-              "index": 1,
-              "text": "角色删除",
-              "fontSize": 16,
-              "typeface": "PingFang SC",
-              "color": "#111827",
-              "bold": true
-            }
-          ],
-          "marginLeft": 0
-        }
-      ]
-    },
-    {
-      "order": 27,
-      "kind": "shape",
-      "scope": "slide",
-      "aid": "sh/nih4byhg",
-      "id": "27",
-      "bbox": [
-        0,
-        0,
-        420,
-        720
-      ],
-      "composeSource": {
-        "run": 1,
-        "path": "0.26"
-      },
-      "geometry": "rect",
-      "text": "业务删除改为禁用，保留历史会话关联",
-      "textPreview": "业务删除改为禁用，保留历史会话关联",
-      "resolvedFontSize": 15,
-      "resolvedTextStyle": {
-        "fontSize": 15,
-        "typeface": "PingFang SC",
-        "color": "#64748B",
-        "alignment": "left",
-        "insets": {
-          "top": 0,
-          "right": 0,
-          "bottom": 0,
-          "left": 0
-        }
-      },
-      "textLayout": {
-        "lineCount": 1,
-        "lines": [
-          {
-            "index": 1,
-            "text": "业务删除改为禁用，保留历史会话关联"
-          }
-        ]
-      },
-      "paragraphs": [
-        {
-          "index": 1,
-          "text": "业务删除改为禁用，保留历史会话关联",
-          "resolvedTextStyle": {
-            "fontSize": 15,
-            "typeface": "PingFang SC",
-            "color": "#64748B"
-          },
-          "runs": [
-            {
-              "index": 1,
-              "text": "业务删除改为禁用，保留历史会话关联",
-              "fontSize": 15,
-              "typeface": "PingFang SC",
-              "color": "#64748B"
-            }
-          ],
-          "marginLeft": 0
-        }
-      ]
-    },
-    {
-      "order": 28,
-      "kind": "shape",
-      "scope": "slide",
-      "aid": "sh/g7adsji5",
-      "id": "28",
-      "bbox": [
-        0,
-        0,
-        250,
-        720
-      ],
-      "composeSource": {
-        "run": 1,
-        "path": "0.27"
-      },
-      "geometry": "rect",
-      "text": "避免外键 500",
-      "textPreview": "避免外键 500",
-      "resolvedFontSize": 15,
-      "resolvedTextStyle": {
-        "fontSize": 15,
-        "typeface": "PingFang SC",
-        "color": "#16A34A",
-        "bold": true,
-        "alignment": "left",
-        "insets": {
-          "top": 0,
-          "right": 0,
-          "bottom": 0,
-          "left": 0
-        }
-      },
-      "textLayout": {
-        "lineCount": 1,
-        "lines": [
-          {
-            "index": 1,
-            "text": "避免外键 500"
-          }
-        ]
-      },
-      "paragraphs": [
-        {
-          "index": 1,
-          "text": "避免外键 500",
-          "resolvedTextStyle": {
-            "fontSize": 15,
-            "typeface": "PingFang SC",
-            "color": "#16A34A",
-            "bold": true
-          },
-          "runs": [
-            {
-              "index": 1,
-              "text": "避免外键 500",
-              "fontSize": 15,
-              "typeface": "PingFang SC",
-              "color": "#16A34A",
-              "bold": true
-            }
-          ],
-          "marginLeft": 0
-        }
-      ]
-    },
-    {
-      "order": 29,
-      "kind": "shape",
-      "scope": "slide",
-      "aid": "sh/9s36hcrm",
-      "id": "29",
-      "bbox": [
-        0,
-        0,
-        620,
-        720
-      ],
-      "composeSource": {
-        "run": 1,
-        "path": "0.28"
-      },
       "geometry": "rect",
       "text": "课程设计答辩 | AI 会话过程管理系统",
       "textPreview": "课程设计答辩 | AI 会话过程管理系统",
       "resolvedFontSize": 12,
       "resolvedTextStyle": {
+        "anchor": 1,
         "fontSize": 12,
         "typeface": "PingFang SC",
         "color": "#94A3B8",
         "alignment": "left",
+        "verticalAlignment": "top",
         "insets": {
           "top": 0,
           "right": 0,
@@ -1574,7 +869,8 @@
           "resolvedTextStyle": {
             "fontSize": 12,
             "typeface": "PingFang SC",
-            "color": "#94A3B8"
+            "color": "#94A3B8",
+            "alignment": "left"
           },
           "runs": [
             {
@@ -1587,33 +883,34 @@
           ],
           "marginLeft": 0
         }
-      ]
+      ],
+      "fillColor": "rgba(0, 0, 0, 0)",
+      "lineColor": "rgba(0, 0, 0, 0)",
+      "lineWidth": 0
     },
     {
-      "order": 30,
+      "order": 21,
       "kind": "shape",
       "scope": "slide",
-      "aid": "sh/vy90je9c",
-      "id": "30",
+      "aid": "sh/54zidony",
+      "id": "21",
       "bbox": [
-        0,
-        0,
-        36,
-        720
+        1186,
+        684,
+        40,
+        20
       ],
-      "composeSource": {
-        "run": 1,
-        "path": "0.29"
-      },
       "geometry": "rect",
       "text": "09",
       "textPreview": "09",
       "resolvedFontSize": 12,
       "resolvedTextStyle": {
+        "anchor": 1,
         "fontSize": 12,
         "typeface": "PingFang SC",
         "color": "#94A3B8",
         "alignment": "right",
+        "verticalAlignment": "top",
         "insets": {
           "top": 0,
           "right": 0,
@@ -1646,1266 +943,16 @@
               "text": "09",
               "fontSize": 12,
               "typeface": "PingFang SC",
-              "color": "#94A3B8",
-              "alignment": "right"
+              "color": "#94A3B8"
             }
           ],
           "marginLeft": 0
         }
-      ]
+      ],
+      "fillColor": "rgba(0, 0, 0, 0)",
+      "lineColor": "rgba(0, 0, 0, 0)",
+      "lineWidth": 0
     }
   ],
-  "composeRuns": [
-    {
-      "index": 1,
-      "frame": {
-        "left": 0,
-        "top": 0,
-        "width": 1280,
-        "height": 720
-      },
-      "root": {
-        "path": "0",
-        "kind": "layers",
-        "requestedSize": {
-          "width": {
-            "mode": "fixed",
-            "value": 1280
-          },
-          "height": {
-            "mode": "fixed",
-            "value": 720
-          }
-        },
-        "intrinsicSize": {
-          "width": 1280,
-          "height": 720
-        },
-        "frame": {
-          "left": 0,
-          "top": 0,
-          "width": 1280,
-          "height": 720
-        },
-        "children": [
-          {
-            "path": "0.0",
-            "kind": "shape",
-            "requestedSize": {
-              "width": {
-                "mode": "fixed",
-                "value": 1280
-              },
-              "height": {
-                "mode": "fixed",
-                "value": 720
-              }
-            },
-            "intrinsicSize": {
-              "width": 1280,
-              "height": 720
-            },
-            "frame": {
-              "left": 0,
-              "top": 0,
-              "width": 1280,
-              "height": 720
-            },
-            "children": [],
-            "geometry": "rect",
-            "element": {
-              "aid": "sh/dsji5sne",
-              "id": "1",
-              "kind": "shape"
-            }
-          },
-          {
-            "path": "0.1",
-            "kind": "shape",
-            "requestedSize": {
-              "width": {
-                "mode": "fixed",
-                "value": 1280
-              },
-              "height": {
-                "mode": "fixed",
-                "value": 74
-              }
-            },
-            "intrinsicSize": {
-              "width": 1280,
-              "height": 74
-            },
-            "frame": {
-              "left": 0,
-              "top": 0,
-              "width": 1280,
-              "height": 74
-            },
-            "children": [],
-            "geometry": "rect",
-            "element": {
-              "aid": "sh/61032lsz",
-              "id": "2",
-              "kind": "shape"
-            }
-          },
-          {
-            "path": "0.2",
-            "kind": "shape",
-            "requestedSize": {
-              "width": {
-                "mode": "fixed",
-                "value": 1280
-              },
-              "height": {
-                "mode": "fixed",
-                "value": 1
-              }
-            },
-            "intrinsicSize": {
-              "width": 1280,
-              "height": 1
-            },
-            "frame": {
-              "left": 0,
-              "top": 0,
-              "width": 1280,
-              "height": 1
-            },
-            "children": [],
-            "geometry": "rect",
-            "element": {
-              "aid": "sh/vmtwra5g",
-              "id": "3",
-              "kind": "shape"
-            }
-          },
-          {
-            "path": "0.3",
-            "kind": "text",
-            "requestedSize": {
-              "width": {
-                "mode": "fixed",
-                "value": 360
-              },
-              "height": {
-                "mode": "hug"
-              }
-            },
-            "intrinsicSize": {
-              "width": 360,
-              "height": 19.2
-            },
-            "frame": {
-              "left": 0,
-              "top": 0,
-              "width": 360,
-              "height": 720
-            },
-            "children": [],
-            "text": "AIChatProcessManager",
-            "transform": "none",
-            "element": {
-              "aid": "sh/oj2t83it",
-              "id": "4",
-              "kind": "shape"
-            }
-          },
-          {
-            "path": "0.4",
-            "kind": "text",
-            "requestedSize": {
-              "width": {
-                "mode": "fixed",
-                "value": 900
-              },
-              "height": {
-                "mode": "hug"
-              }
-            },
-            "intrinsicSize": {
-              "width": 900,
-              "height": 40.8
-            },
-            "frame": {
-              "left": 0,
-              "top": 0,
-              "width": 900,
-              "height": 720
-            },
-            "children": [],
-            "text": "业务逻辑核验：演示前已修正的关键风险",
-            "transform": "none",
-            "element": {
-              "aid": "sh/d4vmtwra",
-              "id": "5",
-              "kind": "shape"
-            }
-          },
-          {
-            "path": "0.5",
-            "kind": "text",
-            "requestedSize": {
-              "width": {
-                "mode": "fixed",
-                "value": 180
-              },
-              "height": {
-                "mode": "hug"
-              }
-            },
-            "intrinsicSize": {
-              "width": 180,
-              "height": 16.8
-            },
-            "frame": {
-              "left": 0,
-              "top": 0,
-              "width": 180,
-              "height": 720
-            },
-            "children": [],
-            "text": "核验项",
-            "transform": "none",
-            "element": {
-              "aid": "sh/6dcbulwv",
-              "id": "6",
-              "kind": "shape"
-            }
-          },
-          {
-            "path": "0.6",
-            "kind": "text",
-            "requestedSize": {
-              "width": {
-                "mode": "fixed",
-                "value": 180
-              },
-              "height": {
-                "mode": "hug"
-              }
-            },
-            "intrinsicSize": {
-              "width": 180,
-              "height": 16.8
-            },
-            "frame": {
-              "left": 0,
-              "top": 0,
-              "width": 180,
-              "height": 720
-            },
-            "children": [],
-            "text": "业务规则",
-            "transform": "none",
-            "element": {
-              "aid": "sh/vy90je9c",
-              "id": "7",
-              "kind": "shape"
-            }
-          },
-          {
-            "path": "0.7",
-            "kind": "text",
-            "requestedSize": {
-              "width": {
-                "mode": "fixed",
-                "value": 180
-              },
-              "height": {
-                "mode": "hug"
-              }
-            },
-            "intrinsicSize": {
-              "width": 180,
-              "height": 16.8
-            },
-            "frame": {
-              "left": 0,
-              "top": 0,
-              "width": 180,
-              "height": 720
-            },
-            "children": [],
-            "text": "当前结果",
-            "transform": "none",
-            "element": {
-              "aid": "sh/onyd0z61",
-              "id": "8",
-              "kind": "shape"
-            }
-          },
-          {
-            "path": "0.8",
-            "kind": "shape",
-            "requestedSize": {
-              "width": {
-                "mode": "fixed",
-                "value": 1096
-              },
-              "height": {
-                "mode": "fixed",
-                "value": 54
-              }
-            },
-            "intrinsicSize": {
-              "width": 1096,
-              "height": 54
-            },
-            "frame": {
-              "left": 0,
-              "top": 0,
-              "width": 1096,
-              "height": 54
-            },
-            "children": [],
-            "geometry": "rect",
-            "element": {
-              "aid": "sh/d8v6psfi",
-              "id": "9",
-              "kind": "shape"
-            }
-          },
-          {
-            "path": "0.9",
-            "kind": "text",
-            "requestedSize": {
-              "width": {
-                "mode": "fixed",
-                "value": 260
-              },
-              "height": {
-                "mode": "hug"
-              }
-            },
-            "intrinsicSize": {
-              "width": 260,
-              "height": 19.2
-            },
-            "frame": {
-              "left": 0,
-              "top": 0,
-              "width": 260,
-              "height": 720
-            },
-            "children": [],
-            "text": "路由前缀",
-            "transform": "none",
-            "element": {
-              "aid": "sh/twra5gbq",
-              "id": "10",
-              "kind": "shape"
-            }
-          },
-          {
-            "path": "0.10",
-            "kind": "text",
-            "requestedSize": {
-              "width": {
-                "mode": "fixed",
-                "value": 420
-              },
-              "height": {
-                "mode": "hug"
-              }
-            },
-            "intrinsicSize": {
-              "width": 420,
-              "height": 18
-            },
-            "frame": {
-              "left": 0,
-              "top": 0,
-              "width": 420,
-              "height": 720
-            },
-            "children": [],
-            "text": "前端统一请求 /api/...；FastAPI 路由全部挂载到 /api",
-            "transform": "none",
-            "element": {
-              "aid": "sh/4byhgn29",
-              "id": "11",
-              "kind": "shape"
-            }
-          },
-          {
-            "path": "0.11",
-            "kind": "text",
-            "requestedSize": {
-              "width": {
-                "mode": "fixed",
-                "value": 250
-              },
-              "height": {
-                "mode": "hug"
-              }
-            },
-            "intrinsicSize": {
-              "width": 250,
-              "height": 18
-            },
-            "frame": {
-              "left": 0,
-              "top": 0,
-              "width": 250,
-              "height": 720
-            },
-            "children": [],
-            "text": "Not Found 已清理",
-            "transform": "none",
-            "element": {
-              "aid": "sh/bq1oryts",
-              "id": "12",
-              "kind": "shape"
-            }
-          },
-          {
-            "path": "0.12",
-            "kind": "shape",
-            "requestedSize": {
-              "width": {
-                "mode": "fixed",
-                "value": 1096
-              },
-              "height": {
-                "mode": "fixed",
-                "value": 54
-              }
-            },
-            "intrinsicSize": {
-              "width": 1096,
-              "height": 54
-            },
-            "frame": {
-              "left": 0,
-              "top": 0,
-              "width": 1096,
-              "height": 54
-            },
-            "children": [],
-            "geometry": "rect",
-            "element": {
-              "aid": "sh/m58z25kb",
-              "id": "13",
-              "kind": "shape"
-            }
-          },
-          {
-            "path": "0.13",
-            "kind": "text",
-            "requestedSize": {
-              "width": {
-                "mode": "fixed",
-                "value": 260
-              },
-              "height": {
-                "mode": "hug"
-              }
-            },
-            "intrinsicSize": {
-              "width": 260,
-              "height": 19.2
-            },
-            "frame": {
-              "left": 0,
-              "top": 0,
-              "width": 260,
-              "height": 720
-            },
-            "children": [],
-            "text": "中文字符",
-            "transform": "none",
-            "element": {
-              "aid": "sh/t83itgfm",
-              "id": "14",
-              "kind": "shape"
-            }
-          },
-          {
-            "path": "0.14",
-            "kind": "text",
-            "requestedSize": {
-              "width": {
-                "mode": "fixed",
-                "value": 420
-              },
-              "height": {
-                "mode": "hug"
-              }
-            },
-            "intrinsicSize": {
-              "width": 420,
-              "height": 18
-            },
-            "frame": {
-              "left": 0,
-              "top": 0,
-              "width": 420,
-              "height": 720
-            },
-            "children": [],
-            "text": "MySQL 初始化和 PyMySQL 连接统一 utf8mb4",
-            "transform": "none",
-            "element": {
-              "aid": "sh/4nap4r65",
-              "id": "15",
-              "kind": "shape"
-            }
-          },
-          {
-            "path": "0.15",
-            "kind": "text",
-            "requestedSize": {
-              "width": {
-                "mode": "fixed",
-                "value": 250
-              },
-              "height": {
-                "mode": "hug"
-              }
-            },
-            "intrinsicSize": {
-              "width": 250,
-              "height": 18
-            },
-            "frame": {
-              "left": 0,
-              "top": 0,
-              "width": 250,
-              "height": 720
-            },
-            "children": [],
-            "text": "乱码已修复",
-            "transform": "none",
-            "element": {
-              "aid": "sh/b2hwfyxo",
-              "id": "16",
-              "kind": "shape"
-            }
-          },
-          {
-            "path": "0.16",
-            "kind": "shape",
-            "requestedSize": {
-              "width": {
-                "mode": "fixed",
-                "value": 1096
-              },
-              "height": {
-                "mode": "fixed",
-                "value": 54
-              }
-            },
-            "intrinsicSize": {
-              "width": 1096,
-              "height": 54
-            },
-            "frame": {
-              "left": 0,
-              "top": 0,
-              "width": 1096,
-              "height": 54
-            },
-            "children": [],
-            "geometry": "rect",
-            "element": {
-              "aid": "sh/mhk3q5o7",
-              "id": "17",
-              "kind": "shape"
-            }
-          },
-          {
-            "path": "0.17",
-            "kind": "text",
-            "requestedSize": {
-              "width": {
-                "mode": "fixed",
-                "value": 260
-              },
-              "height": {
-                "mode": "hug"
-              }
-            },
-            "intrinsicSize": {
-              "width": 260,
-              "height": 19.2
-            },
-            "frame": {
-              "left": 0,
-              "top": 0,
-              "width": 260,
-              "height": 720
-            },
-            "children": [],
-            "text": "收藏状态",
-            "transform": "none",
-            "element": {
-              "aid": "sh/tgfmlkjm",
-              "id": "18",
-              "kind": "shape"
-            }
-          },
-          {
-            "path": "0.18",
-            "kind": "text",
-            "requestedSize": {
-              "width": {
-                "mode": "fixed",
-                "value": 420
-              },
-              "height": {
-                "mode": "hug"
-              }
-            },
-            "intrinsicSize": {
-              "width": 420,
-              "height": 18
-            },
-            "frame": {
-              "left": 0,
-              "top": 0,
-              "width": 420,
-              "height": 720
-            },
-            "children": [],
-            "text": "消息列表返回 is_favorited；切换页面后恢复状态",
-            "transform": "none",
-            "element": {
-              "aid": "sh/4vmtwra5",
-              "id": "19",
-              "kind": "shape"
-            }
-          },
-          {
-            "path": "0.19",
-            "kind": "text",
-            "requestedSize": {
-              "width": {
-                "mode": "fixed",
-                "value": 250
-              },
-              "height": {
-                "mode": "hug"
-              }
-            },
-            "intrinsicSize": {
-              "width": 250,
-              "height": 18
-            },
-            "frame": {
-              "left": 0,
-              "top": 0,
-              "width": 250,
-              "height": 720
-            },
-            "children": [],
-            "text": "可持久显示",
-            "transform": "none",
-            "element": {
-              "aid": "sh/gr2p8nqx",
-              "id": "20",
-              "kind": "shape"
-            }
-          },
-          {
-            "path": "0.20",
-            "kind": "shape",
-            "requestedSize": {
-              "width": {
-                "mode": "fixed",
-                "value": 1096
-              },
-              "height": {
-                "mode": "fixed",
-                "value": 54
-              }
-            },
-            "intrinsicSize": {
-              "width": 1096,
-              "height": 54
-            },
-            "frame": {
-              "left": 0,
-              "top": 0,
-              "width": 1096,
-              "height": 54
-            },
-            "children": [],
-            "geometry": "rect",
-            "element": {
-              "aid": "sh/9cvixcze",
-              "id": "21",
-              "kind": "shape"
-            }
-          },
-          {
-            "path": "0.21",
-            "kind": "text",
-            "requestedSize": {
-              "width": {
-                "mode": "fixed",
-                "value": 260
-              },
-              "height": {
-                "mode": "hug"
-              }
-            },
-            "intrinsicSize": {
-              "width": 260,
-              "height": 19.2
-            },
-            "frame": {
-              "left": 0,
-              "top": 0,
-              "width": 260,
-              "height": 720
-            },
-            "children": [],
-            "text": "权限隔离",
-            "transform": "none",
-            "element": {
-              "aid": "sh/ylc7u54z",
-              "id": "22",
-              "kind": "shape"
-            }
-          },
-          {
-            "path": "0.22",
-            "kind": "text",
-            "requestedSize": {
-              "width": {
-                "mode": "fixed",
-                "value": 420
-              },
-              "height": {
-                "mode": "hug"
-              }
-            },
-            "intrinsicSize": {
-              "width": 420,
-              "height": 18
-            },
-            "frame": {
-              "left": 0,
-              "top": 0,
-              "width": 420,
-              "height": 720
-            },
-            "children": [],
-            "text": "只能访问、收藏、反馈自己会话里的消息",
-            "transform": "none",
-            "element": {
-              "aid": "sh/r65wjudg",
-              "id": "23",
-              "kind": "shape"
-            }
-          },
-          {
-            "path": "0.23",
-            "kind": "text",
-            "requestedSize": {
-              "width": {
-                "mode": "fixed",
-                "value": 250
-              },
-              "height": {
-                "mode": "hug"
-              }
-            },
-            "intrinsicSize": {
-              "width": 250,
-              "height": 18
-            },
-            "frame": {
-              "left": 0,
-              "top": 0,
-              "width": 250,
-              "height": 720
-            },
-            "children": [],
-            "text": "越权返回 403",
-            "transform": "none",
-            "element": {
-              "aid": "sh/g3ex0nux",
-              "id": "24",
-              "kind": "shape"
-            }
-          },
-          {
-            "path": "0.24",
-            "kind": "shape",
-            "requestedSize": {
-              "width": {
-                "mode": "fixed",
-                "value": 1096
-              },
-              "height": {
-                "mode": "fixed",
-                "value": 54
-              }
-            },
-            "intrinsicSize": {
-              "width": 1096,
-              "height": 54
-            },
-            "frame": {
-              "left": 0,
-              "top": 0,
-              "width": 1096,
-              "height": 54
-            },
-            "children": [],
-            "geometry": "rect",
-            "element": {
-              "aid": "sh/5o7qpg3e",
-              "id": "25",
-              "kind": "shape"
-            }
-          },
-          {
-            "path": "0.25",
-            "kind": "text",
-            "requestedSize": {
-              "width": {
-                "mode": "fixed",
-                "value": 260
-              },
-              "height": {
-                "mode": "hug"
-              }
-            },
-            "intrinsicSize": {
-              "width": 260,
-              "height": 19.2
-            },
-            "frame": {
-              "left": 0,
-              "top": 0,
-              "width": 260,
-              "height": 720
-            },
-            "children": [],
-            "text": "角色删除",
-            "transform": "none",
-            "element": {
-              "aid": "sh/yxobm58z",
-              "id": "26",
-              "kind": "shape"
-            }
-          },
-          {
-            "path": "0.26",
-            "kind": "text",
-            "requestedSize": {
-              "width": {
-                "mode": "fixed",
-                "value": 420
-              },
-              "height": {
-                "mode": "hug"
-              }
-            },
-            "intrinsicSize": {
-              "width": 420,
-              "height": 18
-            },
-            "frame": {
-              "left": 0,
-              "top": 0,
-              "width": 420,
-              "height": 720
-            },
-            "children": [],
-            "text": "业务删除改为禁用，保留历史会话关联",
-            "transform": "none",
-            "element": {
-              "aid": "sh/nih4byhg",
-              "id": "27",
-              "kind": "shape"
-            }
-          },
-          {
-            "path": "0.27",
-            "kind": "text",
-            "requestedSize": {
-              "width": {
-                "mode": "fixed",
-                "value": 250
-              },
-              "height": {
-                "mode": "hug"
-              }
-            },
-            "intrinsicSize": {
-              "width": 250,
-              "height": 18
-            },
-            "frame": {
-              "left": 0,
-              "top": 0,
-              "width": 250,
-              "height": 720
-            },
-            "children": [],
-            "text": "避免外键 500",
-            "transform": "none",
-            "element": {
-              "aid": "sh/g7adsji5",
-              "id": "28",
-              "kind": "shape"
-            }
-          },
-          {
-            "path": "0.28",
-            "kind": "text",
-            "requestedSize": {
-              "width": {
-                "mode": "fixed",
-                "value": 620
-              },
-              "height": {
-                "mode": "hug"
-              }
-            },
-            "intrinsicSize": {
-              "width": 620,
-              "height": 14.4
-            },
-            "frame": {
-              "left": 0,
-              "top": 0,
-              "width": 620,
-              "height": 720
-            },
-            "children": [],
-            "text": "课程设计答辩 | AI 会话过程管理系统",
-            "transform": "none",
-            "element": {
-              "aid": "sh/9s36hcrm",
-              "id": "29",
-              "kind": "shape"
-            }
-          },
-          {
-            "path": "0.29",
-            "kind": "text",
-            "requestedSize": {
-              "width": {
-                "mode": "fixed",
-                "value": 36
-              },
-              "height": {
-                "mode": "hug"
-              }
-            },
-            "intrinsicSize": {
-              "width": 36,
-              "height": 14.4
-            },
-            "frame": {
-              "left": 0,
-              "top": 0,
-              "width": 36,
-              "height": 720
-            },
-            "children": [],
-            "text": "09",
-            "transform": "none",
-            "element": {
-              "aid": "sh/vy90je9c",
-              "id": "30",
-              "kind": "shape"
-            }
-          }
-        ],
-        "padding": {
-          "top": 0,
-          "right": 0,
-          "bottom": 0,
-          "left": 0
-        },
-        "alignItems": "stretch",
-        "justifyItems": "stretch",
-        "contentFrame": {
-          "left": 0,
-          "top": 0,
-          "width": 1280,
-          "height": 720
-        },
-        "items": [
-          {
-            "path": "0.0",
-            "frame": {
-              "left": 0,
-              "top": 0,
-              "width": 1280,
-              "height": 720
-            }
-          },
-          {
-            "path": "0.1",
-            "frame": {
-              "left": 0,
-              "top": 0,
-              "width": 1280,
-              "height": 74
-            }
-          },
-          {
-            "path": "0.2",
-            "frame": {
-              "left": 0,
-              "top": 0,
-              "width": 1280,
-              "height": 1
-            }
-          },
-          {
-            "path": "0.3",
-            "frame": {
-              "left": 0,
-              "top": 0,
-              "width": 360,
-              "height": 720
-            }
-          },
-          {
-            "path": "0.4",
-            "frame": {
-              "left": 0,
-              "top": 0,
-              "width": 900,
-              "height": 720
-            }
-          },
-          {
-            "path": "0.5",
-            "frame": {
-              "left": 0,
-              "top": 0,
-              "width": 180,
-              "height": 720
-            }
-          },
-          {
-            "path": "0.6",
-            "frame": {
-              "left": 0,
-              "top": 0,
-              "width": 180,
-              "height": 720
-            }
-          },
-          {
-            "path": "0.7",
-            "frame": {
-              "left": 0,
-              "top": 0,
-              "width": 180,
-              "height": 720
-            }
-          },
-          {
-            "path": "0.8",
-            "frame": {
-              "left": 0,
-              "top": 0,
-              "width": 1096,
-              "height": 54
-            }
-          },
-          {
-            "path": "0.9",
-            "frame": {
-              "left": 0,
-              "top": 0,
-              "width": 260,
-              "height": 720
-            }
-          },
-          {
-            "path": "0.10",
-            "frame": {
-              "left": 0,
-              "top": 0,
-              "width": 420,
-              "height": 720
-            }
-          },
-          {
-            "path": "0.11",
-            "frame": {
-              "left": 0,
-              "top": 0,
-              "width": 250,
-              "height": 720
-            }
-          },
-          {
-            "path": "0.12",
-            "frame": {
-              "left": 0,
-              "top": 0,
-              "width": 1096,
-              "height": 54
-            }
-          },
-          {
-            "path": "0.13",
-            "frame": {
-              "left": 0,
-              "top": 0,
-              "width": 260,
-              "height": 720
-            }
-          },
-          {
-            "path": "0.14",
-            "frame": {
-              "left": 0,
-              "top": 0,
-              "width": 420,
-              "height": 720
-            }
-          },
-          {
-            "path": "0.15",
-            "frame": {
-              "left": 0,
-              "top": 0,
-              "width": 250,
-              "height": 720
-            }
-          },
-          {
-            "path": "0.16",
-            "frame": {
-              "left": 0,
-              "top": 0,
-              "width": 1096,
-              "height": 54
-            }
-          },
-          {
-            "path": "0.17",
-            "frame": {
-              "left": 0,
-              "top": 0,
-              "width": 260,
-              "height": 720
-            }
-          },
-          {
-            "path": "0.18",
-            "frame": {
-              "left": 0,
-              "top": 0,
-              "width": 420,
-              "height": 720
-            }
-          },
-          {
-            "path": "0.19",
-            "frame": {
-              "left": 0,
-              "top": 0,
-              "width": 250,
-              "height": 720
-            }
-          },
-          {
-            "path": "0.20",
-            "frame": {
-              "left": 0,
-              "top": 0,
-              "width": 1096,
-              "height": 54
-            }
-          },
-          {
-            "path": "0.21",
-            "frame": {
-              "left": 0,
-              "top": 0,
-              "width": 260,
-              "height": 720
-            }
-          },
-          {
-            "path": "0.22",
-            "frame": {
-              "left": 0,
-              "top": 0,
-              "width": 420,
-              "height": 720
-            }
-          },
-          {
-            "path": "0.23",
-            "frame": {
-              "left": 0,
-              "top": 0,
-              "width": 250,
-              "height": 720
-            }
-          },
-          {
-            "path": "0.24",
-            "frame": {
-              "left": 0,
-              "top": 0,
-              "width": 1096,
-              "height": 54
-            }
-          },
-          {
-            "path": "0.25",
-            "frame": {
-              "left": 0,
-              "top": 0,
-              "width": 260,
-              "height": 720
-            }
-          },
-          {
-            "path": "0.26",
-            "frame": {
-              "left": 0,
-              "top": 0,
-              "width": 420,
-              "height": 720
-            }
-          },
-          {
-            "path": "0.27",
-            "frame": {
-              "left": 0,
-              "top": 0,
-              "width": 250,
-              "height": 720
-            }
-          },
-          {
-            "path": "0.28",
-            "frame": {
-              "left": 0,
-              "top": 0,
-              "width": 620,
-              "height": 720
-            }
-          },
-          {
-            "path": "0.29",
-            "frame": {
-              "left": 0,
-              "top": 0,
-              "width": 36,
-              "height": 720
-            }
-          }
-        ]
-      }
-    }
-  ]
+  "composeRuns": []
 }

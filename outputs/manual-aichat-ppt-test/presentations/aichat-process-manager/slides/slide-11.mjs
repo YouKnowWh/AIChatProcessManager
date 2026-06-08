@@ -1,16 +1,15 @@
-import { colors, slideBg, foot, card, txt } from "./common.mjs";
+import { colors, box, text, chip, card } from "./common.mjs";
 
 export async function slide11(presentation, ctx) {
-  const a = ctx.artifact;
   const slide = presentation.slides.add();
-  slide.compose(a.layers({ width: 1280, height: 720 }, [
-    ...slideBg(a, "总结与后续扩展"),
-    ...card(a, 88, 185, 332, 168, "已完成", "全栈架构、13 张表数据模型、三类权限、会话消息过程链路、收藏反馈、管理后台、Docker 运行核验。", colors.green),
-    ...card(a, 474, 185, 332, 168, "项目亮点", "围绕 AI 回复过程建模，把 reasoning、tool_calls、tool_results、metadata 从“不可见”变成“可管理”。", colors.blue),
-    ...card(a, 860, 185, 332, 168, "可扩展方向", "真实大模型接入、流式输出、自动化测试、统计图表增强、审计策略和多租户权限。", colors.purple),
-    txt(a, "一句话收束", 140, 450, 220, 24, colors.ink, "font-weight: 900"),
-    txt(a, "AIChatProcessManager 的核心价值，是为 AI 应用建立一套可追踪、可审计、可运营的会话过程数据底座。", 140, 494, 1000, 30, colors.ink, "font-weight: 850; leading: 122"),
-    ...foot(a, 11),
-  ]));
+  box(ctx, slide, 0, 0, 1280, 720, "#0B1220");
+  chip(ctx, slide, "Summary", 84, 76, "#93C5FD", 120);
+  text(ctx, slide, "阶段总结与下一步", 84, 145, 760, 58, 48, colors.white, { bold: true });
+  text(ctx, slide, "第一阶段已经完成核心模型、前后台页面、权限边界与可运行核验。", 88, 220, 850, 34, 22, "#DBEAFE");
+  card(ctx, slide, 90, 330, 330, 145, "已经完成", "13 张表注册、前后端构建、Docker 编排、API 冒烟测试、关键业务 bug 修复。", colors.green);
+  card(ctx, slide, 475, 330, 330, 145, "项目亮点", "不是普通聊天应用，而是把 AI 回复过程作为可管理数据资产沉淀下来。", colors.blue);
+  card(ctx, slide, 860, 330, 330, 145, "后续扩展", "真实模型接入、流式响应、统计图表、更多审计策略和自动化测试。", colors.amber);
+  text(ctx, slide, "Thank You", 86, 615, 340, 38, 30, "#BFDBFE", { bold: true });
+  text(ctx, slide, "AIChatProcessManager", 860, 630, 330, 24, 16, "#93C5FD", { align: "right" });
   return slide;
 }

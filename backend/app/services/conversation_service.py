@@ -27,8 +27,7 @@ class ConversationService:
             query = query.filter(Conversation.character_id == character_id)
 
         items = query.order_by(
-            Conversation.last_message_at.is_(None),
-            Conversation.last_message_at.desc(),
+            Conversation.last_message_at.desc().nullsfirst(),
             Conversation.id.desc(),
         ).all()
 

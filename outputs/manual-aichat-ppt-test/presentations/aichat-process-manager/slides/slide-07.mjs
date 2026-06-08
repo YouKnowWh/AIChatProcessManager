@@ -1,21 +1,19 @@
-import { colors, slideBg, foot, node, arrow, txt } from "./common.mjs";
+import { colors, titleSlide, footer, node, arrow, text } from "./common.mjs";
 
 export async function slide07(presentation, ctx) {
-  const a = ctx.artifact;
   const slide = presentation.slides.add();
-  slide.compose(a.layers({ width: 1280, height: 720 }, [
-    ...slideBg(a, "消息过程链路：把 AI 回复从黑盒拆开保存"),
-    ...node(a, "messages", "消息主表：角色、序号、状态", 78, 248, 160, 120, colors.blue),
-    ...arrow(a, 250, 306, 312, 306),
-    ...node(a, "contents", "多段正文：text / code / markdown", 322, 248, 170, 120, colors.sky),
-    ...arrow(a, 505, 306, 567, 306),
-    ...node(a, "reasoning", "推理过程：可见性控制", 577, 248, 170, 120, colors.purple),
-    ...arrow(a, 760, 306, 822, 306),
-    ...node(a, "tool calls", "工具名、参数、状态、call_id", 832, 248, 170, 120, colors.amber),
-    ...arrow(a, 1015, 306, 1077, 306),
-    ...node(a, "metadata", "模型、tokens、耗时、finish_reason", 1087, 248, 150, 120, colors.green),
-    txt(a, "展示层支持：普通消息流 + 详情弹窗。详情页可查看 reasoning、tool_calls、tool_results、metadata，适合答辩演示“过程管理”的核心差异。", 122, 472, 1036, 24, colors.ink, "font-weight: 750; alignment: center; leading: 125"),
-    ...foot(a, 7),
-  ]));
+  titleSlide(ctx, slide, "消息过程数据链路");
+  node(ctx, slide, "messages", "一条用户或 AI 消息", 80, 235, 175, 130, colors.blue);
+  arrow(ctx, slide, 270, 298, 55);
+  node(ctx, slide, "contents", "文本 / 图片 / 文件等内容块", 340, 235, 190, 130, colors.cyan);
+  arrow(ctx, slide, 550, 298, 55);
+  node(ctx, slide, "reasoning", "模型思考过程摘要", 620, 235, 180, 130, colors.purple);
+  arrow(ctx, slide, 818, 298, 55);
+  node(ctx, slide, "tool calls", "调用名称、参数、状态", 888, 235, 175, 130, colors.amber);
+  arrow(ctx, slide, 1080, 298, 45);
+  node(ctx, slide, "results", "工具返回结果与耗时", 1140, 235, 100, 130, colors.green);
+  text(ctx, slide, "附加元数据：token、模型、延迟、质量标签等写入 message_metadata。", 150, 455, 980, 28, 22, colors.ink, { bold: true, align: "center" });
+  text(ctx, slide, "这样后续接入真实模型时，不需要重做表结构，只需要把生成过程映射到既有链路。", 160, 505, 960, 26, 17, colors.muted, { align: "center" });
+  footer(ctx, slide, 7);
   return slide;
 }

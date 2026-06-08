@@ -2,13 +2,13 @@
   "schema": "openai.presentation.layout/v4",
   "unit": "px",
   "slide": {
-    "aid": "sl/5rtbya",
-    "id": "5rtbya",
+    "aid": "sl/jnzc6m",
+    "id": "jnzc6m",
     "slide": 3,
-    "layoutId": "82d14659-639b-4d6e-8e72-7828b77cafd0",
+    "layoutId": "e96e0f20-46d6-48c0-823f-cc39ba8b8cf4",
     "layoutName": "Title Slide",
     "layoutType": "title",
-    "masterLayoutId": "afa3dcc7-d52e-4537-a876-059472ff297e",
+    "masterLayoutId": "c4940938-650c-4056-bb9c-aed6e5694eca",
     "masterLayoutName": "Master",
     "frame": {
       "left": 0,
@@ -44,15 +44,15 @@
   "inheritedLayers": [
     {
       "scope": "layout",
-      "id": "82d14659-639b-4d6e-8e72-7828b77cafd0",
+      "id": "e96e0f20-46d6-48c0-823f-cc39ba8b8cf4",
       "name": "Title Slide",
       "type": "title",
-      "parentLayoutId": "afa3dcc7-d52e-4537-a876-059472ff297e",
+      "parentLayoutId": "c4940938-650c-4056-bb9c-aed6e5694eca",
       "elements": []
     },
     {
       "scope": "master",
-      "id": "afa3dcc7-d52e-4537-a876-059472ff297e",
+      "id": "c4940938-650c-4056-bb9c-aed6e5694eca",
       "name": "Master",
       "type": "master",
       "elements": []
@@ -63,7 +63,7 @@
       "order": 1,
       "kind": "shape",
       "scope": "slide",
-      "aid": "sh/rqd4vmtw",
+      "aid": "sh/wra5gbq1",
       "id": "1",
       "bbox": [
         0,
@@ -71,77 +71,69 @@
         1280,
         720
       ],
-      "composeSource": {
-        "run": 1,
-        "path": "0.0"
-      },
       "geometry": "rect",
-      "fillColor": "#F8FAFC"
+      "fillColor": "#F6F8FB",
+      "lineColor": "rgba(0, 0, 0, 0)",
+      "lineWidth": 0
     },
     {
       "order": 2,
       "kind": "shape",
       "scope": "slide",
-      "aid": "sh/kb6xkf6d",
+      "aid": "sh/36hcrmhk",
       "id": "2",
       "bbox": [
         0,
         0,
         1280,
-        74
+        78
       ],
-      "composeSource": {
-        "run": 1,
-        "path": "0.1"
-      },
       "geometry": "rect",
-      "fillColor": "#FFFFFF"
+      "fillColor": "#FFFFFF",
+      "lineColor": "rgba(0, 0, 0, 0)",
+      "lineWidth": 0
     },
     {
       "order": 3,
       "kind": "shape",
       "scope": "slide",
-      "aid": "sh/9w3m94fu",
+      "aid": "sh/eloj2t83",
       "id": "3",
       "bbox": [
         0,
-        0,
+        77,
         1280,
         1
       ],
-      "composeSource": {
-        "run": 1,
-        "path": "0.2"
-      },
       "geometry": "rect",
-      "fillColor": "#E2E8F0"
+      "fillColor": "#E5EAF2",
+      "lineColor": "rgba(0, 0, 0, 0)",
+      "lineWidth": 0
     },
     {
       "order": 4,
       "kind": "shape",
       "scope": "slide",
-      "aid": "sh/2t83itgf",
+      "aid": "sh/l0rqd4vm",
       "id": "4",
       "bbox": [
-        0,
-        0,
-        360,
-        720
+        56,
+        25,
+        380,
+        24
       ],
-      "composeSource": {
-        "run": 1,
-        "path": "0.3"
-      },
       "geometry": "rect",
       "text": "AIChatProcessManager",
       "textPreview": "AIChatProcessManager",
       "resolvedFontSize": 16,
       "resolvedTextStyle": {
+        "anchor": 1,
         "fontSize": 16,
         "typeface": "PingFang SC",
         "color": "#2563EB",
         "bold": true,
         "alignment": "left",
+        "verticalAlignment": "top",
         "insets": {
           "top": 0,
           "right": 0,
@@ -166,7 +158,8 @@
             "fontSize": 16,
             "typeface": "PingFang SC",
             "color": "#2563EB",
-            "bold": true
+            "bold": true,
+            "alignment": "left"
           },
           "runs": [
             {
@@ -180,34 +173,35 @@
           ],
           "marginLeft": 0
         }
-      ]
+      ],
+      "fillColor": "rgba(0, 0, 0, 0)",
+      "lineColor": "rgba(0, 0, 0, 0)",
+      "lineWidth": 0
     },
     {
       "order": 5,
       "kind": "shape",
       "scope": "slide",
-      "aid": "sh/re1w7mp0",
+      "aid": "sh/wfyxobm5",
       "id": "5",
       "bbox": [
-        0,
-        0,
+        56,
+        104,
         900,
-        720
+        52
       ],
-      "composeSource": {
-        "run": 1,
-        "path": "0.4"
-      },
       "geometry": "rect",
-      "text": "三类角色：权限继承但职责分离",
-      "textPreview": "三类角色：权限继承但职责分离",
+      "text": "三类角色与权限边界",
+      "textPreview": "三类角色与权限边界",
       "resolvedFontSize": 34,
       "resolvedTextStyle": {
+        "anchor": 1,
         "fontSize": 34,
         "typeface": "PingFang SC",
         "color": "#111827",
         "bold": true,
         "alignment": "left",
+        "verticalAlignment": "top",
         "insets": {
           "top": 0,
           "right": 0,
@@ -220,24 +214,25 @@
         "lines": [
           {
             "index": 1,
-            "text": "三类角色：权限继承但职责分离"
+            "text": "三类角色与权限边界"
           }
         ]
       },
       "paragraphs": [
         {
           "index": 1,
-          "text": "三类角色：权限继承但职责分离",
+          "text": "三类角色与权限边界",
           "resolvedTextStyle": {
             "fontSize": 34,
             "typeface": "PingFang SC",
             "color": "#111827",
-            "bold": true
+            "bold": true,
+            "alignment": "left"
           },
           "runs": [
             {
               "index": 1,
-              "text": "三类角色：权限继承但职责分离",
+              "text": "三类角色与权限边界",
               "fontSize": 34,
               "typeface": "PingFang SC",
               "color": "#111827",
@@ -246,74 +241,69 @@
           ],
           "marginLeft": 0
         }
-      ]
+      ],
+      "fillColor": "rgba(0, 0, 0, 0)",
+      "lineColor": "rgba(0, 0, 0, 0)",
+      "lineWidth": 0
     },
     {
       "order": 6,
       "kind": "shape",
       "scope": "slide",
-      "aid": "sh/kzupwb2h",
+      "aid": "sh/7u54zido",
       "id": "6",
       "bbox": [
-        0,
-        0,
-        245,
-        150
+        95,
+        215,
+        285,
+        170
       ],
-      "composeSource": {
-        "run": 1,
-        "path": "0.5"
-      },
-      "geometry": "roundRect",
+      "geometry": "rect",
       "fillColor": "#FFFFFF",
-      "lineColor": "#0EA5E9",
-      "lineWidth": 1.5
+      "lineColor": "#2563EB",
+      "lineWidth": 1.4
     },
     {
       "order": 7,
       "kind": "shape",
       "scope": "slide",
-      "aid": "sh/9knih4by",
+      "aid": "sh/ed8bat47",
       "id": "7",
       "bbox": [
-        0,
-        0,
-        245,
+        95,
+        215,
+        285,
         7
       ],
-      "composeSource": {
-        "run": 1,
-        "path": "0.6"
-      },
-      "geometry": "roundRect",
-      "fillColor": "#0EA5E9"
+      "geometry": "rect",
+      "fillColor": "#2563EB",
+      "lineColor": "rgba(0, 0, 0, 0)",
+      "lineWidth": 0
     },
     {
       "order": 8,
       "kind": "shape",
       "scope": "slide",
-      "aid": "sh/2p8nqxs7",
+      "aid": "sh/psfil0rq",
       "id": "8",
       "bbox": [
-        0,
-        0,
-        213,
-        720
+        109,
+        237,
+        257,
+        28
       ],
-      "composeSource": {
-        "run": 1,
-        "path": "0.7"
-      },
       "geometry": "rect",
       "text": "普通用户",
       "textPreview": "普通用户",
       "resolvedFontSize": 19,
       "resolvedTextStyle": {
+        "anchor": 1,
         "fontSize": 19,
         "typeface": "PingFang SC",
         "color": "#111827",
         "bold": true,
         "alignment": "center",
+        "verticalAlignment": "top",
         "insets": {
           "top": 0,
           "right": 0,
@@ -348,39 +338,39 @@
               "fontSize": 19,
               "typeface": "PingFang SC",
               "color": "#111827",
-              "bold": true,
-              "alignment": "center"
+              "bold": true
             }
           ],
           "marginLeft": 0
         }
-      ]
+      ],
+      "fillColor": "rgba(0, 0, 0, 0)",
+      "lineColor": "rgba(0, 0, 0, 0)",
+      "lineWidth": 0
     },
     {
       "order": 9,
       "kind": "shape",
       "scope": "slide",
-      "aid": "sh/ra5gbq1o",
+      "aid": "sh/w7mp0bi9",
       "id": "9",
       "bbox": [
-        0,
-        0,
-        217,
-        720
+        113,
+        273,
+        249,
+        104
       ],
-      "composeSource": {
-        "run": 1,
-        "path": "0.8"
-      },
       "geometry": "rect",
-      "text": "会话、消息、收藏、反馈、个人统计",
-      "textPreview": "会话、消息、收藏、反馈、个人统计",
+      "text": "发起会话、查看消息过程、收藏消息、提交反馈",
+      "textPreview": "发起会话、查看消息过程、收藏消息、提交反馈",
       "resolvedFontSize": 13,
       "resolvedTextStyle": {
+        "anchor": 1,
         "fontSize": 13,
         "typeface": "PingFang SC",
         "color": "#64748B",
         "alignment": "center",
+        "verticalAlignment": "top",
         "insets": {
           "top": 0,
           "right": 0,
@@ -389,18 +379,22 @@
         }
       },
       "textLayout": {
-        "lineCount": 1,
+        "lineCount": 2,
         "lines": [
           {
             "index": 1,
-            "text": "会话、消息、收藏、反馈、个人统计"
+            "text": "发起会话、查看消息过程、收藏消息、提"
+          },
+          {
+            "index": 2,
+            "text": "交反馈"
           }
         ]
       },
       "paragraphs": [
         {
           "index": 1,
-          "text": "会话、消息、收藏、反馈、个人统计",
+          "text": "发起会话、查看消息过程、收藏消息、提交反馈",
           "resolvedTextStyle": {
             "fontSize": 13,
             "typeface": "PingFang SC",
@@ -410,121 +404,111 @@
           "runs": [
             {
               "index": 1,
-              "text": "会话、消息、收藏、反馈、个人统计",
+              "text": "发起会话、查看消息过程、收藏消息、提交反馈",
               "fontSize": 13,
               "typeface": "PingFang SC",
-              "color": "#64748B",
-              "alignment": "center"
+              "color": "#64748B"
             }
           ],
           "marginLeft": 0
         }
-      ]
+      ],
+      "fillColor": "rgba(0, 0, 0, 0)",
+      "lineColor": "rgba(0, 0, 0, 0)",
+      "lineWidth": 0
     },
     {
       "order": 10,
       "kind": "shape",
       "scope": "slide",
-      "aid": "sh/3m94fu18",
+      "aid": "sh/eloj2t83",
       "id": "10",
       "bbox": [
-        0,
-        0,
+        400,
+        298,
         95,
         3
       ],
-      "composeSource": {
-        "run": 1,
-        "path": "0.9"
-      },
       "geometry": "rect",
-      "fillColor": "#94A3B8"
+      "fillColor": "#94A3B8",
+      "lineColor": "rgba(0, 0, 0, 0)",
+      "lineWidth": 0
     },
     {
       "order": 11,
       "kind": "shape",
       "scope": "slide",
-      "aid": "sh/a5gbq1or",
+      "aid": "sh/36hcrmhk",
       "id": "11",
       "bbox": [
-        0,
-        0,
+        491,
+        291,
         16,
         16
       ],
-      "composeSource": {
-        "run": 1,
-        "path": "0.10"
-      },
       "geometry": "triangle",
-      "fillColor": "#94A3B8"
+      "fillColor": "#94A3B8",
+      "lineColor": "#94A3B8",
+      "lineWidth": 0
     },
     {
       "order": 12,
       "kind": "shape",
       "scope": "slide",
-      "aid": "sh/lszqtcj6",
+      "aid": "sh/wra5gbq1",
       "id": "12",
       "bbox": [
-        0,
-        0,
+        515,
+        215,
         285,
-        150
+        170
       ],
-      "composeSource": {
-        "run": 1,
-        "path": "0.11"
-      },
-      "geometry": "roundRect",
+      "geometry": "rect",
       "fillColor": "#FFFFFF",
       "lineColor": "#F59E0B",
-      "lineWidth": 1.5
+      "lineWidth": 1.4
     },
     {
       "order": 13,
       "kind": "shape",
       "scope": "slide",
-      "aid": "sh/s72x4nap",
+      "aid": "sh/lc7u54zi",
       "id": "13",
       "bbox": [
-        0,
-        0,
+        515,
+        215,
         285,
         7
       ],
-      "composeSource": {
-        "run": 1,
-        "path": "0.12"
-      },
-      "geometry": "roundRect",
-      "fillColor": "#F59E0B"
+      "geometry": "rect",
+      "fillColor": "#F59E0B",
+      "lineColor": "rgba(0, 0, 0, 0)",
+      "lineWidth": 0
     },
     {
       "order": 14,
       "kind": "shape",
       "scope": "slide",
-      "aid": "sh/3ylc7u54",
+      "aid": "sh/ed8bat47",
       "id": "14",
       "bbox": [
-        0,
-        0,
-        253,
-        720
+        529,
+        237,
+        257,
+        28
       ],
-      "composeSource": {
-        "run": 1,
-        "path": "0.13"
-      },
       "geometry": "rect",
       "text": "角色维护者",
       "textPreview": "角色维护者",
       "resolvedFontSize": 19,
       "resolvedTextStyle": {
+        "anchor": 1,
         "fontSize": 19,
         "typeface": "PingFang SC",
         "color": "#111827",
         "bold": true,
         "alignment": "center",
+        "verticalAlignment": "top",
         "insets": {
           "top": 0,
           "right": 0,
@@ -559,39 +543,39 @@
               "fontSize": 19,
               "typeface": "PingFang SC",
               "color": "#111827",
-              "bold": true,
-              "alignment": "center"
+              "bold": true
             }
           ],
           "marginLeft": 0
         }
-      ]
+      ],
+      "fillColor": "rgba(0, 0, 0, 0)",
+      "lineColor": "rgba(0, 0, 0, 0)",
+      "lineWidth": 0
     },
     {
       "order": 15,
       "kind": "shape",
       "scope": "slide",
-      "aid": "sh/adsji5sn",
+      "aid": "sh/7u54zido",
       "id": "15",
       "bbox": [
-        0,
-        0,
-        257,
-        720
+        533,
+        273,
+        249,
+        104
       ],
-      "composeSource": {
-        "run": 1,
-        "path": "0.14"
-      },
       "geometry": "rect",
-      "text": "普通用户能力 + AI 角色维护、角色统计、角色反馈",
-      "textPreview": "普通用户能力 + AI 角色维护、角色统计、角色反馈",
+      "text": "维护 AI 角色资料与状态，服务内容侧配置",
+      "textPreview": "维护 AI 角色资料与状态，服务内容侧配置",
       "resolvedFontSize": 13,
       "resolvedTextStyle": {
+        "anchor": 1,
         "fontSize": 13,
         "typeface": "PingFang SC",
         "color": "#64748B",
         "alignment": "center",
+        "verticalAlignment": "top",
         "insets": {
           "top": 0,
           "right": 0,
@@ -600,22 +584,18 @@
         }
       },
       "textLayout": {
-        "lineCount": 2,
+        "lineCount": 1,
         "lines": [
           {
             "index": 1,
-            "text": "普通用户能力 + AI"
-          },
-          {
-            "index": 2,
-            "text": "角色维护、角色统计、角色反馈"
+            "text": "维护 AI 角色资料与状态，服务内容侧配置"
           }
         ]
       },
       "paragraphs": [
         {
           "index": 1,
-          "text": "普通用户能力 + AI 角色维护、角色统计、角色反馈",
+          "text": "维护 AI 角色资料与状态，服务内容侧配置",
           "resolvedTextStyle": {
             "fontSize": 13,
             "typeface": "PingFang SC",
@@ -625,121 +605,111 @@
           "runs": [
             {
               "index": 1,
-              "text": "普通用户能力 + AI 角色维护、角色统计、角色反馈",
+              "text": "维护 AI 角色资料与状态，服务内容侧配置",
               "fontSize": 13,
               "typeface": "PingFang SC",
-              "color": "#64748B",
-              "alignment": "center"
+              "color": "#64748B"
             }
           ],
           "marginLeft": 0
         }
-      ]
+      ],
+      "fillColor": "rgba(0, 0, 0, 0)",
+      "lineColor": "rgba(0, 0, 0, 0)",
+      "lineWidth": 0
     },
     {
       "order": 16,
       "kind": "shape",
       "scope": "slide",
-      "aid": "sh/h4byhgn2",
+      "aid": "sh/wfyxobm5",
       "id": "16",
       "bbox": [
-        0,
-        0,
+        820,
+        298,
         95,
         3
       ],
-      "composeSource": {
-        "run": 1,
-        "path": "0.15"
-      },
       "geometry": "rect",
-      "fillColor": "#94A3B8"
+      "fillColor": "#94A3B8",
+      "lineColor": "rgba(0, 0, 0, 0)",
+      "lineWidth": 0
     },
     {
       "order": 17,
       "kind": "shape",
       "scope": "slide",
-      "aid": "sh/sji5snel",
+      "aid": "sh/l0rqd4vm",
       "id": "17",
       "bbox": [
-        0,
-        0,
+        911,
+        291,
         16,
         16
       ],
-      "composeSource": {
-        "run": 1,
-        "path": "0.16"
-      },
       "geometry": "triangle",
-      "fillColor": "#94A3B8"
+      "fillColor": "#94A3B8",
+      "lineColor": "#94A3B8",
+      "lineWidth": 0
     },
     {
       "order": 18,
       "kind": "shape",
       "scope": "slide",
-      "aid": "sh/za1gvy90",
+      "aid": "sh/e1w7mp0b",
       "id": "18",
       "bbox": [
-        0,
-        0,
+        935,
+        215,
         285,
-        150
+        170
       ],
-      "composeSource": {
-        "run": 1,
-        "path": "0.17"
-      },
-      "geometry": "roundRect",
+      "geometry": "rect",
       "fillColor": "#FFFFFF",
-      "lineColor": "#DC2626",
-      "lineWidth": 1.5
+      "lineColor": "#7C3AED",
+      "lineWidth": 1.4
     },
     {
       "order": 19,
       "kind": "shape",
       "scope": "slide",
-      "aid": "sh/ap4r65wj",
+      "aid": "sh/7mp0bi9s",
       "id": "19",
       "bbox": [
-        0,
-        0,
+        935,
+        215,
         285,
         7
       ],
-      "composeSource": {
-        "run": 1,
-        "path": "0.18"
-      },
-      "geometry": "roundRect",
-      "fillColor": "#DC2626"
+      "geometry": "rect",
+      "fillColor": "#7C3AED",
+      "lineColor": "rgba(0, 0, 0, 0)",
+      "lineWidth": 0
     },
     {
       "order": 20,
       "kind": "shape",
       "scope": "slide",
-      "aid": "sh/yd0z6103",
+      "aid": "sh/zed8v6ps",
       "id": "20",
       "bbox": [
-        0,
-        0,
-        253,
-        720
+        949,
+        237,
+        257,
+        28
       ],
-      "composeSource": {
-        "run": 1,
-        "path": "0.19"
-      },
       "geometry": "rect",
       "text": "管理员",
       "textPreview": "管理员",
       "resolvedFontSize": 19,
       "resolvedTextStyle": {
+        "anchor": 1,
         "fontSize": 19,
         "typeface": "PingFang SC",
         "color": "#111827",
         "bold": true,
         "alignment": "center",
+        "verticalAlignment": "top",
         "insets": {
           "top": 0,
           "right": 0,
@@ -774,39 +744,39 @@
               "fontSize": 19,
               "typeface": "PingFang SC",
               "color": "#111827",
-              "bold": true,
-              "alignment": "center"
+              "bold": true
             }
           ],
           "marginLeft": 0
         }
-      ]
+      ],
+      "fillColor": "rgba(0, 0, 0, 0)",
+      "lineColor": "rgba(0, 0, 0, 0)",
+      "lineWidth": 0
     },
     {
       "order": 21,
       "kind": "shape",
       "scope": "slide",
-      "aid": "sh/rytsvu9k",
+      "aid": "sh/6xkf6dcb",
       "id": "21",
       "bbox": [
-        0,
-        0,
-        257,
-        720
+        953,
+        273,
+        249,
+        104
       ],
-      "composeSource": {
-        "run": 1,
-        "path": "0.20"
-      },
       "geometry": "rect",
-      "text": "角色维护者能力 + 用户管理、消息审核、系统日志、全局统计",
-      "textPreview": "角色维护者能力 + 用户管理、消息审核、系统日志、全局统计",
+      "text": "用户管理、消息管理、反馈、日志、统计，继承维护者能力",
+      "textPreview": "用户管理、消息管理、反馈、日志、统计，继承维护者能力",
       "resolvedFontSize": 13,
       "resolvedTextStyle": {
+        "anchor": 1,
         "fontSize": 13,
         "typeface": "PingFang SC",
         "color": "#64748B",
         "alignment": "center",
+        "verticalAlignment": "top",
         "insets": {
           "top": 0,
           "right": 0,
@@ -819,18 +789,18 @@
         "lines": [
           {
             "index": 1,
-            "text": "角色维护者能力 +"
+            "text": "用户管理、消息管理、反馈、日志、统计"
           },
           {
             "index": 2,
-            "text": "用户管理、消息审核、系统日志、全局统计"
+            "text": "，继承维护者能力"
           }
         ]
       },
       "paragraphs": [
         {
           "index": 1,
-          "text": "角色维护者能力 + 用户管理、消息审核、系统日志、全局统计",
+          "text": "用户管理、消息管理、反馈、日志、统计，继承维护者能力",
           "resolvedTextStyle": {
             "fontSize": 13,
             "typeface": "PingFang SC",
@@ -840,34 +810,32 @@
           "runs": [
             {
               "index": 1,
-              "text": "角色维护者能力 + 用户管理、消息审核、系统日志、全局统计",
+              "text": "用户管理、消息管理、反馈、日志、统计，继承维护者能力",
               "fontSize": 13,
               "typeface": "PingFang SC",
-              "color": "#64748B",
-              "alignment": "center"
+              "color": "#64748B"
             }
           ],
           "marginLeft": 0
         }
-      ]
+      ],
+      "fillColor": "rgba(0, 0, 0, 0)",
+      "lineColor": "rgba(0, 0, 0, 0)",
+      "lineWidth": 0
     },
     {
       "order": 22,
       "kind": "shape",
       "scope": "slide",
-      "aid": "sh/gfmlkjm1",
+      "aid": "sh/hk3q5o7q",
       "id": "22",
       "bbox": [
-        0,
-        0,
-        1040,
-        96
+        130,
+        455,
+        1020,
+        110
       ],
-      "composeSource": {
-        "run": 1,
-        "path": "0.21"
-      },
-      "geometry": "roundRect",
+      "geometry": "rect",
       "fillColor": "#FFFFFF",
       "lineColor": "#E2E8F0",
       "lineWidth": 1
@@ -876,28 +844,26 @@
       "order": 23,
       "kind": "shape",
       "scope": "slide",
-      "aid": "sh/90je9cvi",
+      "aid": "sh/oza1gvy9",
       "id": "23",
       "bbox": [
-        0,
-        0,
-        260,
-        720
+        160,
+        482,
+        520,
+        28
       ],
-      "composeSource": {
-        "run": 1,
-        "path": "0.22"
-      },
       "geometry": "rect",
-      "text": "为什么不合并后两者？",
-      "textPreview": "为什么不合并后两者？",
+      "text": "为什么角色维护者和管理员不合并？",
+      "textPreview": "为什么角色维护者和管理员不合并？",
       "resolvedFontSize": 22,
       "resolvedTextStyle": {
+        "anchor": 1,
         "fontSize": 22,
         "typeface": "PingFang SC",
         "color": "#111827",
         "bold": true,
         "alignment": "left",
+        "verticalAlignment": "top",
         "insets": {
           "top": 0,
           "right": 0,
@@ -910,24 +876,25 @@
         "lines": [
           {
             "index": 1,
-            "text": "为什么不合并后两者？"
+            "text": "为什么角色维护者和管理员不合并？"
           }
         ]
       },
       "paragraphs": [
         {
           "index": 1,
-          "text": "为什么不合并后两者？",
+          "text": "为什么角色维护者和管理员不合并？",
           "resolvedTextStyle": {
             "fontSize": 22,
             "typeface": "PingFang SC",
             "color": "#111827",
-            "bold": true
+            "bold": true,
+            "alignment": "left"
           },
           "runs": [
             {
               "index": 1,
-              "text": "为什么不合并后两者？",
+              "text": "为什么角色维护者和管理员不合并？",
               "fontSize": 22,
               "typeface": "PingFang SC",
               "color": "#111827",
@@ -936,33 +903,34 @@
           ],
           "marginLeft": 0
         }
-      ]
+      ],
+      "fillColor": "rgba(0, 0, 0, 0)",
+      "lineColor": "rgba(0, 0, 0, 0)",
+      "lineWidth": 0
     },
     {
       "order": 24,
       "kind": "shape",
       "scope": "slide",
-      "aid": "sh/y1kre1w7",
+      "aid": "sh/zqtcj6to",
       "id": "24",
       "bbox": [
-        0,
-        0,
-        675,
-        720
+        160,
+        522,
+        900,
+        40
       ],
-      "composeSource": {
-        "run": 1,
-        "path": "0.23"
-      },
       "geometry": "rect",
-      "text": "角色维护者是内容运营权限，管理员是平台治理权限。合并会导致维护角色的人同时拥有禁用用户、查看全站消息、改系统数据的能力，权限过大。",
-      "textPreview": "角色维护者是内容运营权限，管理员是平台治理权限。合并会导致维护角色的人同时拥有禁用用户、查看全站消息、改系统数据的能力，权限过大。",
-      "resolvedFontSize": 18,
+      "text": "角色维护是内容配置权限；管理员是平台治理权限。拆开可以避免“能改角色的人也能改用户、看日志、看统计”的越权问题。管理员继承维护能力，但维护者不能反向进入系统管理。",
+      "textPreview": "角色维护是内容配置权限；管理员是平台治理权限。拆开可以避免“能改角色的人也能改用户、看日志、看统计”的越权问题。管理员继承维护能力，但维护者不能反向进入系统管理。",
+      "resolvedFontSize": 17,
       "resolvedTextStyle": {
-        "fontSize": 18,
+        "anchor": 1,
+        "fontSize": 17,
         "typeface": "PingFang SC",
         "color": "#64748B",
         "alignment": "left",
+        "verticalAlignment": "top",
         "insets": {
           "top": 0,
           "right": 0,
@@ -975,61 +943,63 @@
         "lines": [
           {
             "index": 1,
-            "text": "角色维护者是内容运营权限，管理员是平台治理权限。合并会导致维护角色的人同"
+            "text": "角色维护是内容配置权限；管理员是平台治理权限。拆开可以避免“能改角色的人也能改用户、看日志、看统计”的越"
           },
           {
             "index": 2,
-            "text": "时拥有禁用用户、查看全站消息、改系统数据的能力，权限过大。"
+            "text": "权问题。管理员继承维护能力，但维护者不能反向进入系统管理。"
           }
         ]
       },
       "paragraphs": [
         {
           "index": 1,
-          "text": "角色维护者是内容运营权限，管理员是平台治理权限。合并会导致维护角色的人同时拥有禁用用户、查看全站消息、改系统数据的能力，权限过大。",
+          "text": "角色维护是内容配置权限；管理员是平台治理权限。拆开可以避免“能改角色的人也能改用户、看日志、看统计”的越权问题。管理员继承维护能力，但维护者不能反向进入系统管理。",
           "resolvedTextStyle": {
-            "fontSize": 18,
+            "fontSize": 17,
             "typeface": "PingFang SC",
-            "color": "#64748B"
+            "color": "#64748B",
+            "alignment": "left"
           },
           "runs": [
             {
               "index": 1,
-              "text": "角色维护者是内容运营权限，管理员是平台治理权限。合并会导致维护角色的人同时拥有禁用用户、查看全站消息、改系统数据的能力，权限过大。",
-              "fontSize": 18,
+              "text": "角色维护是内容配置权限；管理员是平台治理权限。拆开可以避免“能改角色的人也能改用户、看日志、看统计”的越权问题。管理员继承维护能力，但维护者不能反向进入系统管理。",
+              "fontSize": 17,
               "typeface": "PingFang SC",
               "color": "#64748B"
             }
           ],
           "marginLeft": 0
         }
-      ]
+      ],
+      "fillColor": "rgba(0, 0, 0, 0)",
+      "lineColor": "rgba(0, 0, 0, 0)",
+      "lineWidth": 0
     },
     {
       "order": 25,
       "kind": "shape",
       "scope": "slide",
-      "aid": "sh/rmhk3q5o",
+      "aid": "sh/65wjudg7",
       "id": "25",
       "bbox": [
-        0,
-        0,
-        620,
-        720
+        56,
+        684,
+        640,
+        20
       ],
-      "composeSource": {
-        "run": 1,
-        "path": "0.24"
-      },
       "geometry": "rect",
       "text": "课程设计答辩 | AI 会话过程管理系统",
       "textPreview": "课程设计答辩 | AI 会话过程管理系统",
       "resolvedFontSize": 12,
       "resolvedTextStyle": {
+        "anchor": 1,
         "fontSize": 12,
         "typeface": "PingFang SC",
         "color": "#94A3B8",
         "alignment": "left",
+        "verticalAlignment": "top",
         "insets": {
           "top": 0,
           "right": 0,
@@ -1053,7 +1023,8 @@
           "resolvedTextStyle": {
             "fontSize": 12,
             "typeface": "PingFang SC",
-            "color": "#94A3B8"
+            "color": "#94A3B8",
+            "alignment": "left"
           },
           "runs": [
             {
@@ -1066,33 +1037,34 @@
           ],
           "marginLeft": 0
         }
-      ]
+      ],
+      "fillColor": "rgba(0, 0, 0, 0)",
+      "lineColor": "rgba(0, 0, 0, 0)",
+      "lineWidth": 0
     },
     {
       "order": 26,
       "kind": "shape",
       "scope": "slide",
-      "aid": "sh/g7adsji5",
+      "aid": "sh/hwfyxobm",
       "id": "26",
       "bbox": [
-        0,
-        0,
-        36,
-        720
+        1186,
+        684,
+        40,
+        20
       ],
-      "composeSource": {
-        "run": 1,
-        "path": "0.25"
-      },
       "geometry": "rect",
       "text": "03",
       "textPreview": "03",
       "resolvedFontSize": 12,
       "resolvedTextStyle": {
+        "anchor": 1,
         "fontSize": 12,
         "typeface": "PingFang SC",
         "color": "#94A3B8",
         "alignment": "right",
+        "verticalAlignment": "top",
         "insets": {
           "top": 0,
           "right": 0,
@@ -1125,1106 +1097,16 @@
               "text": "03",
               "fontSize": 12,
               "typeface": "PingFang SC",
-              "color": "#94A3B8",
-              "alignment": "right"
+              "color": "#94A3B8"
             }
           ],
           "marginLeft": 0
         }
-      ]
+      ],
+      "fillColor": "rgba(0, 0, 0, 0)",
+      "lineColor": "rgba(0, 0, 0, 0)",
+      "lineWidth": 0
     }
   ],
-  "composeRuns": [
-    {
-      "index": 1,
-      "frame": {
-        "left": 0,
-        "top": 0,
-        "width": 1280,
-        "height": 720
-      },
-      "root": {
-        "path": "0",
-        "kind": "layers",
-        "requestedSize": {
-          "width": {
-            "mode": "fixed",
-            "value": 1280
-          },
-          "height": {
-            "mode": "fixed",
-            "value": 720
-          }
-        },
-        "intrinsicSize": {
-          "width": 1280,
-          "height": 5356.8
-        },
-        "frame": {
-          "left": 0,
-          "top": 0,
-          "width": 1280,
-          "height": 720
-        },
-        "children": [
-          {
-            "path": "0.0",
-            "kind": "shape",
-            "requestedSize": {
-              "width": {
-                "mode": "fixed",
-                "value": 1280
-              },
-              "height": {
-                "mode": "fixed",
-                "value": 720
-              }
-            },
-            "intrinsicSize": {
-              "width": 1280,
-              "height": 720
-            },
-            "frame": {
-              "left": 0,
-              "top": 0,
-              "width": 1280,
-              "height": 720
-            },
-            "children": [],
-            "geometry": "rect",
-            "element": {
-              "aid": "sh/rqd4vmtw",
-              "id": "1",
-              "kind": "shape"
-            }
-          },
-          {
-            "path": "0.1",
-            "kind": "shape",
-            "requestedSize": {
-              "width": {
-                "mode": "fixed",
-                "value": 1280
-              },
-              "height": {
-                "mode": "fixed",
-                "value": 74
-              }
-            },
-            "intrinsicSize": {
-              "width": 1280,
-              "height": 74
-            },
-            "frame": {
-              "left": 0,
-              "top": 0,
-              "width": 1280,
-              "height": 74
-            },
-            "children": [],
-            "geometry": "rect",
-            "element": {
-              "aid": "sh/kb6xkf6d",
-              "id": "2",
-              "kind": "shape"
-            }
-          },
-          {
-            "path": "0.2",
-            "kind": "shape",
-            "requestedSize": {
-              "width": {
-                "mode": "fixed",
-                "value": 1280
-              },
-              "height": {
-                "mode": "fixed",
-                "value": 1
-              }
-            },
-            "intrinsicSize": {
-              "width": 1280,
-              "height": 1
-            },
-            "frame": {
-              "left": 0,
-              "top": 0,
-              "width": 1280,
-              "height": 1
-            },
-            "children": [],
-            "geometry": "rect",
-            "element": {
-              "aid": "sh/9w3m94fu",
-              "id": "3",
-              "kind": "shape"
-            }
-          },
-          {
-            "path": "0.3",
-            "kind": "text",
-            "requestedSize": {
-              "width": {
-                "mode": "fixed",
-                "value": 360
-              },
-              "height": {
-                "mode": "hug"
-              }
-            },
-            "intrinsicSize": {
-              "width": 360,
-              "height": 19.2
-            },
-            "frame": {
-              "left": 0,
-              "top": 0,
-              "width": 360,
-              "height": 720
-            },
-            "children": [],
-            "text": "AIChatProcessManager",
-            "transform": "none",
-            "element": {
-              "aid": "sh/2t83itgf",
-              "id": "4",
-              "kind": "shape"
-            }
-          },
-          {
-            "path": "0.4",
-            "kind": "text",
-            "requestedSize": {
-              "width": {
-                "mode": "fixed",
-                "value": 900
-              },
-              "height": {
-                "mode": "hug"
-              }
-            },
-            "intrinsicSize": {
-              "width": 900,
-              "height": 40.8
-            },
-            "frame": {
-              "left": 0,
-              "top": 0,
-              "width": 900,
-              "height": 720
-            },
-            "children": [],
-            "text": "三类角色：权限继承但职责分离",
-            "transform": "none",
-            "element": {
-              "aid": "sh/re1w7mp0",
-              "id": "5",
-              "kind": "shape"
-            }
-          },
-          {
-            "path": "0.5",
-            "kind": "shape",
-            "requestedSize": {
-              "width": {
-                "mode": "fixed",
-                "value": 245
-              },
-              "height": {
-                "mode": "fixed",
-                "value": 150
-              }
-            },
-            "intrinsicSize": {
-              "width": 245,
-              "height": 150
-            },
-            "frame": {
-              "left": 0,
-              "top": 0,
-              "width": 245,
-              "height": 150
-            },
-            "children": [],
-            "geometry": "rect",
-            "element": {
-              "aid": "sh/kzupwb2h",
-              "id": "6",
-              "kind": "shape"
-            }
-          },
-          {
-            "path": "0.6",
-            "kind": "shape",
-            "requestedSize": {
-              "width": {
-                "mode": "fixed",
-                "value": 245
-              },
-              "height": {
-                "mode": "fixed",
-                "value": 7
-              }
-            },
-            "intrinsicSize": {
-              "width": 245,
-              "height": 7
-            },
-            "frame": {
-              "left": 0,
-              "top": 0,
-              "width": 245,
-              "height": 7
-            },
-            "children": [],
-            "geometry": "rect",
-            "element": {
-              "aid": "sh/9knih4by",
-              "id": "7",
-              "kind": "shape"
-            }
-          },
-          {
-            "path": "0.7",
-            "kind": "text",
-            "requestedSize": {
-              "width": {
-                "mode": "fixed",
-                "value": 213
-              },
-              "height": {
-                "mode": "hug"
-              }
-            },
-            "intrinsicSize": {
-              "width": 213,
-              "height": 22.8
-            },
-            "frame": {
-              "left": 0,
-              "top": 0,
-              "width": 213,
-              "height": 720
-            },
-            "children": [],
-            "text": "普通用户",
-            "transform": "none",
-            "element": {
-              "aid": "sh/2p8nqxs7",
-              "id": "8",
-              "kind": "shape"
-            }
-          },
-          {
-            "path": "0.8",
-            "kind": "text",
-            "requestedSize": {
-              "width": {
-                "mode": "fixed",
-                "value": 217
-              },
-              "height": {
-                "mode": "hug"
-              }
-            },
-            "intrinsicSize": {
-              "width": 217,
-              "height": 1794
-            },
-            "frame": {
-              "left": 0,
-              "top": 0,
-              "width": 217,
-              "height": 720
-            },
-            "children": [],
-            "text": "会话、消息、收藏、反馈、个人统计",
-            "transform": "none",
-            "element": {
-              "aid": "sh/ra5gbq1o",
-              "id": "9",
-              "kind": "shape"
-            }
-          },
-          {
-            "path": "0.9",
-            "kind": "shape",
-            "requestedSize": {
-              "width": {
-                "mode": "fixed",
-                "value": 95
-              },
-              "height": {
-                "mode": "fixed",
-                "value": 3
-              }
-            },
-            "intrinsicSize": {
-              "width": 95,
-              "height": 3
-            },
-            "frame": {
-              "left": 0,
-              "top": 0,
-              "width": 95,
-              "height": 3
-            },
-            "children": [],
-            "geometry": "rect",
-            "element": {
-              "aid": "sh/3m94fu18",
-              "id": "10",
-              "kind": "shape"
-            }
-          },
-          {
-            "path": "0.10",
-            "kind": "shape",
-            "requestedSize": {
-              "width": {
-                "mode": "fixed",
-                "value": 16
-              },
-              "height": {
-                "mode": "fixed",
-                "value": 16
-              }
-            },
-            "intrinsicSize": {
-              "width": 16,
-              "height": 16
-            },
-            "frame": {
-              "left": 0,
-              "top": 0,
-              "width": 16,
-              "height": 16
-            },
-            "children": [],
-            "geometry": "triangle",
-            "element": {
-              "aid": "sh/a5gbq1or",
-              "id": "11",
-              "kind": "shape"
-            }
-          },
-          {
-            "path": "0.11",
-            "kind": "shape",
-            "requestedSize": {
-              "width": {
-                "mode": "fixed",
-                "value": 285
-              },
-              "height": {
-                "mode": "fixed",
-                "value": 150
-              }
-            },
-            "intrinsicSize": {
-              "width": 285,
-              "height": 150
-            },
-            "frame": {
-              "left": 0,
-              "top": 0,
-              "width": 285,
-              "height": 150
-            },
-            "children": [],
-            "geometry": "rect",
-            "element": {
-              "aid": "sh/lszqtcj6",
-              "id": "12",
-              "kind": "shape"
-            }
-          },
-          {
-            "path": "0.12",
-            "kind": "shape",
-            "requestedSize": {
-              "width": {
-                "mode": "fixed",
-                "value": 285
-              },
-              "height": {
-                "mode": "fixed",
-                "value": 7
-              }
-            },
-            "intrinsicSize": {
-              "width": 285,
-              "height": 7
-            },
-            "frame": {
-              "left": 0,
-              "top": 0,
-              "width": 285,
-              "height": 7
-            },
-            "children": [],
-            "geometry": "rect",
-            "element": {
-              "aid": "sh/s72x4nap",
-              "id": "13",
-              "kind": "shape"
-            }
-          },
-          {
-            "path": "0.13",
-            "kind": "text",
-            "requestedSize": {
-              "width": {
-                "mode": "fixed",
-                "value": 253
-              },
-              "height": {
-                "mode": "hug"
-              }
-            },
-            "intrinsicSize": {
-              "width": 253,
-              "height": 22.8
-            },
-            "frame": {
-              "left": 0,
-              "top": 0,
-              "width": 253,
-              "height": 720
-            },
-            "children": [],
-            "text": "角色维护者",
-            "transform": "none",
-            "element": {
-              "aid": "sh/3ylc7u54",
-              "id": "14",
-              "kind": "shape"
-            }
-          },
-          {
-            "path": "0.14",
-            "kind": "text",
-            "requestedSize": {
-              "width": {
-                "mode": "fixed",
-                "value": 257
-              },
-              "height": {
-                "mode": "hug"
-              }
-            },
-            "intrinsicSize": {
-              "width": 257,
-              "height": 3588
-            },
-            "frame": {
-              "left": 0,
-              "top": 0,
-              "width": 257,
-              "height": 720
-            },
-            "children": [],
-            "text": "普通用户能力 + AI 角色维护、角色统计、角色反馈",
-            "transform": "none",
-            "element": {
-              "aid": "sh/adsji5sn",
-              "id": "15",
-              "kind": "shape"
-            }
-          },
-          {
-            "path": "0.15",
-            "kind": "shape",
-            "requestedSize": {
-              "width": {
-                "mode": "fixed",
-                "value": 95
-              },
-              "height": {
-                "mode": "fixed",
-                "value": 3
-              }
-            },
-            "intrinsicSize": {
-              "width": 95,
-              "height": 3
-            },
-            "frame": {
-              "left": 0,
-              "top": 0,
-              "width": 95,
-              "height": 3
-            },
-            "children": [],
-            "geometry": "rect",
-            "element": {
-              "aid": "sh/h4byhgn2",
-              "id": "16",
-              "kind": "shape"
-            }
-          },
-          {
-            "path": "0.16",
-            "kind": "shape",
-            "requestedSize": {
-              "width": {
-                "mode": "fixed",
-                "value": 16
-              },
-              "height": {
-                "mode": "fixed",
-                "value": 16
-              }
-            },
-            "intrinsicSize": {
-              "width": 16,
-              "height": 16
-            },
-            "frame": {
-              "left": 0,
-              "top": 0,
-              "width": 16,
-              "height": 16
-            },
-            "children": [],
-            "geometry": "triangle",
-            "element": {
-              "aid": "sh/sji5snel",
-              "id": "17",
-              "kind": "shape"
-            }
-          },
-          {
-            "path": "0.17",
-            "kind": "shape",
-            "requestedSize": {
-              "width": {
-                "mode": "fixed",
-                "value": 285
-              },
-              "height": {
-                "mode": "fixed",
-                "value": 150
-              }
-            },
-            "intrinsicSize": {
-              "width": 285,
-              "height": 150
-            },
-            "frame": {
-              "left": 0,
-              "top": 0,
-              "width": 285,
-              "height": 150
-            },
-            "children": [],
-            "geometry": "rect",
-            "element": {
-              "aid": "sh/za1gvy90",
-              "id": "18",
-              "kind": "shape"
-            }
-          },
-          {
-            "path": "0.18",
-            "kind": "shape",
-            "requestedSize": {
-              "width": {
-                "mode": "fixed",
-                "value": 285
-              },
-              "height": {
-                "mode": "fixed",
-                "value": 7
-              }
-            },
-            "intrinsicSize": {
-              "width": 285,
-              "height": 7
-            },
-            "frame": {
-              "left": 0,
-              "top": 0,
-              "width": 285,
-              "height": 7
-            },
-            "children": [],
-            "geometry": "rect",
-            "element": {
-              "aid": "sh/ap4r65wj",
-              "id": "19",
-              "kind": "shape"
-            }
-          },
-          {
-            "path": "0.19",
-            "kind": "text",
-            "requestedSize": {
-              "width": {
-                "mode": "fixed",
-                "value": 253
-              },
-              "height": {
-                "mode": "hug"
-              }
-            },
-            "intrinsicSize": {
-              "width": 253,
-              "height": 22.8
-            },
-            "frame": {
-              "left": 0,
-              "top": 0,
-              "width": 253,
-              "height": 720
-            },
-            "children": [],
-            "text": "管理员",
-            "transform": "none",
-            "element": {
-              "aid": "sh/yd0z6103",
-              "id": "20",
-              "kind": "shape"
-            }
-          },
-          {
-            "path": "0.20",
-            "kind": "text",
-            "requestedSize": {
-              "width": {
-                "mode": "fixed",
-                "value": 257
-              },
-              "height": {
-                "mode": "hug"
-              }
-            },
-            "intrinsicSize": {
-              "width": 257,
-              "height": 3588
-            },
-            "frame": {
-              "left": 0,
-              "top": 0,
-              "width": 257,
-              "height": 720
-            },
-            "children": [],
-            "text": "角色维护者能力 + 用户管理、消息审核、系统日志、全局统计",
-            "transform": "none",
-            "element": {
-              "aid": "sh/rytsvu9k",
-              "id": "21",
-              "kind": "shape"
-            }
-          },
-          {
-            "path": "0.21",
-            "kind": "shape",
-            "requestedSize": {
-              "width": {
-                "mode": "fixed",
-                "value": 1040
-              },
-              "height": {
-                "mode": "fixed",
-                "value": 96
-              }
-            },
-            "intrinsicSize": {
-              "width": 1040,
-              "height": 96
-            },
-            "frame": {
-              "left": 0,
-              "top": 0,
-              "width": 1040,
-              "height": 96
-            },
-            "children": [],
-            "geometry": "rect",
-            "element": {
-              "aid": "sh/gfmlkjm1",
-              "id": "22",
-              "kind": "shape"
-            }
-          },
-          {
-            "path": "0.22",
-            "kind": "text",
-            "requestedSize": {
-              "width": {
-                "mode": "fixed",
-                "value": 260
-              },
-              "height": {
-                "mode": "hug"
-              }
-            },
-            "intrinsicSize": {
-              "width": 260,
-              "height": 26.4
-            },
-            "frame": {
-              "left": 0,
-              "top": 0,
-              "width": 260,
-              "height": 720
-            },
-            "children": [],
-            "text": "为什么不合并后两者？",
-            "transform": "none",
-            "element": {
-              "aid": "sh/90je9cvi",
-              "id": "23",
-              "kind": "shape"
-            }
-          },
-          {
-            "path": "0.23",
-            "kind": "text",
-            "requestedSize": {
-              "width": {
-                "mode": "fixed",
-                "value": 675
-              },
-              "height": {
-                "mode": "hug"
-              }
-            },
-            "intrinsicSize": {
-              "width": 675,
-              "height": 5356.8
-            },
-            "frame": {
-              "left": 0,
-              "top": 0,
-              "width": 675,
-              "height": 720
-            },
-            "children": [],
-            "text": "角色维护者是内容运营权限，管理员是平台治理权限。合并会导致维护角色的人同时拥有禁用用户、查看全站消息、改系统数据的能力，权限过大。",
-            "transform": "none",
-            "element": {
-              "aid": "sh/y1kre1w7",
-              "id": "24",
-              "kind": "shape"
-            }
-          },
-          {
-            "path": "0.24",
-            "kind": "text",
-            "requestedSize": {
-              "width": {
-                "mode": "fixed",
-                "value": 620
-              },
-              "height": {
-                "mode": "hug"
-              }
-            },
-            "intrinsicSize": {
-              "width": 620,
-              "height": 14.4
-            },
-            "frame": {
-              "left": 0,
-              "top": 0,
-              "width": 620,
-              "height": 720
-            },
-            "children": [],
-            "text": "课程设计答辩 | AI 会话过程管理系统",
-            "transform": "none",
-            "element": {
-              "aid": "sh/rmhk3q5o",
-              "id": "25",
-              "kind": "shape"
-            }
-          },
-          {
-            "path": "0.25",
-            "kind": "text",
-            "requestedSize": {
-              "width": {
-                "mode": "fixed",
-                "value": 36
-              },
-              "height": {
-                "mode": "hug"
-              }
-            },
-            "intrinsicSize": {
-              "width": 36,
-              "height": 14.4
-            },
-            "frame": {
-              "left": 0,
-              "top": 0,
-              "width": 36,
-              "height": 720
-            },
-            "children": [],
-            "text": "03",
-            "transform": "none",
-            "element": {
-              "aid": "sh/g7adsji5",
-              "id": "26",
-              "kind": "shape"
-            }
-          }
-        ],
-        "padding": {
-          "top": 0,
-          "right": 0,
-          "bottom": 0,
-          "left": 0
-        },
-        "alignItems": "stretch",
-        "justifyItems": "stretch",
-        "contentFrame": {
-          "left": 0,
-          "top": 0,
-          "width": 1280,
-          "height": 720
-        },
-        "items": [
-          {
-            "path": "0.0",
-            "frame": {
-              "left": 0,
-              "top": 0,
-              "width": 1280,
-              "height": 720
-            }
-          },
-          {
-            "path": "0.1",
-            "frame": {
-              "left": 0,
-              "top": 0,
-              "width": 1280,
-              "height": 74
-            }
-          },
-          {
-            "path": "0.2",
-            "frame": {
-              "left": 0,
-              "top": 0,
-              "width": 1280,
-              "height": 1
-            }
-          },
-          {
-            "path": "0.3",
-            "frame": {
-              "left": 0,
-              "top": 0,
-              "width": 360,
-              "height": 720
-            }
-          },
-          {
-            "path": "0.4",
-            "frame": {
-              "left": 0,
-              "top": 0,
-              "width": 900,
-              "height": 720
-            }
-          },
-          {
-            "path": "0.5",
-            "frame": {
-              "left": 0,
-              "top": 0,
-              "width": 245,
-              "height": 150
-            }
-          },
-          {
-            "path": "0.6",
-            "frame": {
-              "left": 0,
-              "top": 0,
-              "width": 245,
-              "height": 7
-            }
-          },
-          {
-            "path": "0.7",
-            "frame": {
-              "left": 0,
-              "top": 0,
-              "width": 213,
-              "height": 720
-            }
-          },
-          {
-            "path": "0.8",
-            "frame": {
-              "left": 0,
-              "top": 0,
-              "width": 217,
-              "height": 720
-            }
-          },
-          {
-            "path": "0.9",
-            "frame": {
-              "left": 0,
-              "top": 0,
-              "width": 95,
-              "height": 3
-            }
-          },
-          {
-            "path": "0.10",
-            "frame": {
-              "left": 0,
-              "top": 0,
-              "width": 16,
-              "height": 16
-            }
-          },
-          {
-            "path": "0.11",
-            "frame": {
-              "left": 0,
-              "top": 0,
-              "width": 285,
-              "height": 150
-            }
-          },
-          {
-            "path": "0.12",
-            "frame": {
-              "left": 0,
-              "top": 0,
-              "width": 285,
-              "height": 7
-            }
-          },
-          {
-            "path": "0.13",
-            "frame": {
-              "left": 0,
-              "top": 0,
-              "width": 253,
-              "height": 720
-            }
-          },
-          {
-            "path": "0.14",
-            "frame": {
-              "left": 0,
-              "top": 0,
-              "width": 257,
-              "height": 720
-            }
-          },
-          {
-            "path": "0.15",
-            "frame": {
-              "left": 0,
-              "top": 0,
-              "width": 95,
-              "height": 3
-            }
-          },
-          {
-            "path": "0.16",
-            "frame": {
-              "left": 0,
-              "top": 0,
-              "width": 16,
-              "height": 16
-            }
-          },
-          {
-            "path": "0.17",
-            "frame": {
-              "left": 0,
-              "top": 0,
-              "width": 285,
-              "height": 150
-            }
-          },
-          {
-            "path": "0.18",
-            "frame": {
-              "left": 0,
-              "top": 0,
-              "width": 285,
-              "height": 7
-            }
-          },
-          {
-            "path": "0.19",
-            "frame": {
-              "left": 0,
-              "top": 0,
-              "width": 253,
-              "height": 720
-            }
-          },
-          {
-            "path": "0.20",
-            "frame": {
-              "left": 0,
-              "top": 0,
-              "width": 257,
-              "height": 720
-            }
-          },
-          {
-            "path": "0.21",
-            "frame": {
-              "left": 0,
-              "top": 0,
-              "width": 1040,
-              "height": 96
-            }
-          },
-          {
-            "path": "0.22",
-            "frame": {
-              "left": 0,
-              "top": 0,
-              "width": 260,
-              "height": 720
-            }
-          },
-          {
-            "path": "0.23",
-            "frame": {
-              "left": 0,
-              "top": 0,
-              "width": 675,
-              "height": 720
-            }
-          },
-          {
-            "path": "0.24",
-            "frame": {
-              "left": 0,
-              "top": 0,
-              "width": 620,
-              "height": 720
-            }
-          },
-          {
-            "path": "0.25",
-            "frame": {
-              "left": 0,
-              "top": 0,
-              "width": 36,
-              "height": 720
-            }
-          }
-        ]
-      }
-    }
-  ]
+  "composeRuns": []
 }
