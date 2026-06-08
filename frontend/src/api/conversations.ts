@@ -16,6 +16,9 @@ export const conversationsApi = {
   archive(id: number) {
     return request.put(`/conversations/${id}/archive`)
   },
+  unarchive(id: number) {
+    return request.put(`/conversations/${id}/unarchive`)
+  },
   delete(id: number) {
     return request.delete(`/conversations/${id}`)
   },

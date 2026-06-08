@@ -22,7 +22,7 @@ const routes: RouteRecordRaw[] = [
     children: [
       { path: '', name: 'Dashboard', component: () => import('@/views/DashboardView.vue') },
       { path: 'characters', name: 'Characters', component: () => import('@/views/CharacterListView.vue') },
-      { path: 'conversations', name: 'Conversations', component: () => import('@/views/ConversationListView.vue') },
+      { path: 'conversations', name: 'Conversations', component: () => import('@/views/ConversationListView.vue'), meta: { role: 'character_manager' } },
       { path: 'chat/:id', name: 'Chat', component: () => import('@/views/ChatView.vue'), props: true },
       { path: 'search', name: 'MessageSearch', component: () => import('@/views/MessageSearchView.vue') },
       { path: 'favorites', name: 'Favorites', component: () => import('@/views/FavoriteView.vue') },

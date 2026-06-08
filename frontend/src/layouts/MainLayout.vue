@@ -16,13 +16,13 @@
             <el-icon><Service /></el-icon>
             <span>AI 角色</span>
           </el-menu-item>
-          <el-menu-item index="/conversations">
-            <el-icon><ChatLineSquare /></el-icon>
-            <span>会话</span>
-          </el-menu-item>
           <el-menu-item index="/favorites">
             <el-icon><Star /></el-icon>
             <span>收藏</span>
+          </el-menu-item>
+          <el-menu-item v-if="auth.isManager()" index="/conversations">
+            <el-icon><ChatLineSquare /></el-icon>
+            <span>会话管理</span>
           </el-menu-item>
           <el-menu-item v-if="auth.isManager()" index="/characters/manage">
             <el-icon><Setting /></el-icon>

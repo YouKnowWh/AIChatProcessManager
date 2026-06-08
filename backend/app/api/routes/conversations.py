@@ -78,6 +78,20 @@ def archive_conversation(
     )
 
 
+@router.put("/{conversation_id}/unarchive", summary="取消归档")
+def unarchive_conversation(
+    conversation_id: int,
+    db: Session = Depends(get_db),
+    current_user: User = Depends(get_current_user),
+):
+    conversation = ConversationService.get_by_id(db, conversation_id, current_user)
+    conversation = ConversationService.unarchive(db, conversation)
+    return APIResponse.ok(
+        data=ConversationResponse.model_validate(conversation).model_dump(),
+        message="会话已恢复",
+    )
+
+
 @router.delete("/{conversation_id}", summary="删除会话（软删除）")
 def delete_conversation(
     conversation_id: int,

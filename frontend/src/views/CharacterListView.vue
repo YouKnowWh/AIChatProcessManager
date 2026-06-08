@@ -32,6 +32,14 @@ onMounted(async () => {
 })
 
 async function startChat(char: CharacterBrief) {
+  // 先查是否有同角色的 active 会话可复用
+  const listRes = await conversationsApi.list({ character_id: char.id })
+  const existing = listRes.data?.find((c: any) => c.status === 'active')
+  if (existing) {
+    router.push(`/chat/${existing.id}`)
+    return
+  }
+  // 没有则新建
   const res = await conversationsApi.create({ character_id: char.id, title: `与 ${char.name} 的对话` })
   router.push(`/chat/${res.data.id}`)
 }

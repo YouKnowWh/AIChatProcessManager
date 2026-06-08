@@ -95,6 +95,13 @@ class ConversationService:
         return conversation
 
     @staticmethod
+    def unarchive(db: Session, conversation: Conversation) -> Conversation:
+        conversation.status = "active"
+        db.commit()
+        db.refresh(conversation)
+        return conversation
+
+    @staticmethod
     def soft_delete(db: Session, conversation: Conversation) -> Conversation:
         conversation.status = "deleted"
         db.commit()
