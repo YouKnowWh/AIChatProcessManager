@@ -19,46 +19,43 @@
 git clone https://github.com/YouKnowWh/AIChatProcessManager.git
 cd AIChatProcessManager
 
-# 2. 配置环境变量
+# 2. 配置环境变量（已提供默认值，直接可用）
 cp .env.example .env
-# 编辑 .env 填入实际值
 
-# 3. 启动服务
+# 3. 一键启动（MySQL + 自动建表 + 填充测试数据）
 docker compose up -d
 
-# 4. 初始化数据库
-docker compose exec backend python init_db.py
-
-# 5. 访问
-# 前端: http://localhost:5173
+# 4. 访问
 # API 文档: http://localhost:8000/docs
+# 健康检查: http://localhost:8000/api/health
 ```
+
+> `.env` 已加入 `.gitignore`，仓库内提供 `.env.example` 作为模板。
 
 ## 项目结构
 
 ```
 AIChatProcessManager/
-├── backend/          # FastAPI 后端
+├── backend/              # FastAPI 后端
+│   ├── Dockerfile
+│   ├── requirements.txt
 │   └── app/
-│       ├── api/routes/    # 路由
-│       ├── core/          # 配置、安全、依赖
-│       ├── db/            # 数据库连接
-│       ├── models/        # SQLAlchemy 模型
-│       ├── schemas/       # Pydantic schemas
-│       ├── services/      # 业务逻辑
-│       └── utils/         # 工具函数
-├── frontend/         # Vue 3 前端
-│   └── src/
-│       ├── api/           # API 请求
-│       ├── components/    # 组件
-│       ├── layouts/       # 布局
-│       ├── router/        # 路由
-│       ├── stores/        # Pinia 状态
-│       └── views/         # 页面
-├── database/         # SQL 脚本
-│   ├── schema.sql    # 建表
-│   └── seed.sql      # 测试数据
-└── docs/             # 文档
+│       ├── main.py           # 应用入口，路由注册
+│       ├── api/routes/       # 10 个路由模块
+│       ├── core/             # config, security, deps
+│       ├── db/               # SQLAlchemy engine
+│       ├── models/           # 13 个 ORM 模型
+│       ├── schemas/          # Pydantic schemas
+│       ├── services/         # 业务逻辑
+│       └── utils/            # APIResponse 等工具
+├── database/             # MySQL 脚本
+│   ├── schema.sql            # 13 张表完整 DDL
+│   └── seed.sql              # 测试数据
+├── docs/                 # 文档
+│   └── database_design.md    # ER 图 + 表设计
+├── docker-compose.yml    # MySQL + Backend 编排
+├── .env.example          # 环境变量模板
+└── .gitignore
 ```
 
 ## License
