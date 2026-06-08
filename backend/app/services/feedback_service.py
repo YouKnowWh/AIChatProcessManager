@@ -17,6 +17,8 @@ class FeedbackService:
         msg = db.query(Message).filter(Message.id == message_id).first()
         if not msg:
             raise HTTPException(status_code=status.HTTP_404_NOT_FOUND, detail="消息不存在")
+        if msg.conversation.user_id != user.id:
+            raise HTTPException(status_code=status.HTTP_403_FORBIDDEN, detail="无权反馈该消息")
 
         # 同用户对同一消息同类型不重复（like/dislike 不可重复，text 可以多条）
         if req.feedback_type in ("like", "dislike"):

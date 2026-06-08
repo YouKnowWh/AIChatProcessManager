@@ -92,7 +92,7 @@ class CharacterService:
 
     @staticmethod
     def delete(db: Session, character: AICharacter) -> None:
-        db.delete(character)
+        character.status = "disabled"
         db.commit()
 
     @staticmethod

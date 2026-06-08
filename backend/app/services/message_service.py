@@ -16,7 +16,7 @@ from app.models.tool_result import ToolResult
 from app.models.user import User
 from app.services.conversation_service import ConversationService
 from app.services.character_service import CharacterService
-from app.services.fake_ai_service import FakeAIService
+from app.services.deepseek_service import DeepSeekService
 
 
 class MessageService:
@@ -114,9 +114,9 @@ class MessageService:
         # 更新最后消息时间
         ConversationService.touch_last_message(db, conversation)
 
-        # 4. 调用模拟 AI 服务
+        # 4. 调用 AI 服务（DeepSeek 真实 API，失败自动回退 FakeAI）
         character = conversation.character
-        ai_result = FakeAIService.generate(
+        ai_result = DeepSeekService.generate_safe(
             user_content=content,
             character_name=character.name,
             character_prompt=character.system_prompt,
