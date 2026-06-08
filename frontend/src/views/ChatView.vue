@@ -184,9 +184,9 @@ function showDetail(msg: Message) {
 }
 
 function scrollToBottom() {
+  // requestAnimationFrame + nextTick 确保内容完全渲染
   nextTick(() => {
-    // 两次 nextTick 确保 DOM 完全渲染（消息 + AI 回复 content）
-    nextTick(() => {
+    requestAnimationFrame(() => {
       if (msgListRef.value) {
         msgListRef.value.scrollTop = msgListRef.value.scrollHeight
       }
