@@ -25,10 +25,10 @@ INSERT INTO users (username, email, password_hash, nickname, role, status, bio, 
 -- 2. AI 角色数据 (4 条)
 -- ============================================================
 INSERT INTO ai_characters (id, creator_id, name, avatar, description, system_prompt, category, tags, status, usage_count) VALUES
-(1, 2, '通用助手',   'https://api.dicebear.com/7.x/bottts/svg?seed=assistant', '一个通用的 AI 助手，可以回答各种问题。',     '你是一个乐于助人的 AI 助手，请用中文简洁回答用户的问题。',                     '通用', '聊天,问答,日常',       'active', 15),
-(2, 2, '代码专家',   'https://api.dicebear.com/7.x/bottts/svg?seed=coder',     '擅长编程和代码审查的 AI 助手。',             '你是一个资深代码专家，精通多种编程语言。回答代码问题时请给出清晰解释和示例。',   '编程', '代码,调试,架构',       'active', 8),
-(3, 2, '文档写手',   'https://api.dicebear.com/7.x/bottts/svg?seed=writer',    '帮助撰写技术文档和报告的 AI 助手。',         '你是一个技术文档撰写专家，擅长写清晰结构化的文档。请使用 Markdown 格式回复。', '写作', '文档,报告,Markdown',   'active', 5),
-(4, 2, '翻译官',     'https://api.dicebear.com/7.x/bottts/svg?seed=translator', '支持中英日韩多语言互译。',                   '你是一个专业的翻译助手，支持中文、英文、日文、韩文之间的互译。',               '翻译', '翻译,多语言',           'disabled', 2);
+(1, 3, '通用助手',   'https://api.dicebear.com/7.x/bottts/svg?seed=assistant', '一个通用的 AI 助手，可以回答各种问题。',     '你是一个乐于助人的 AI 助手，请用中文简洁回答用户的问题。',                     '通用', '聊天,问答,日常',       'active', 15),
+(2, 3, '代码专家',   'https://api.dicebear.com/7.x/bottts/svg?seed=coder',     '擅长编程和代码审查的 AI 助手。',             '你是一个资深代码专家，精通多种编程语言。回答代码问题时请给出清晰解释和示例。',   '编程', '代码,调试,架构',       'active', 8),
+(3, 4, '文档写手',   'https://api.dicebear.com/7.x/bottts/svg?seed=writer',    '帮助撰写技术文档和报告的 AI 助手。',         '你是一个技术文档撰写专家，擅长写清晰结构化的文档。请使用 Markdown 格式回复。', '写作', '文档,报告,Markdown',   'active', 5),
+(4, 4, '翻译官',     'https://api.dicebear.com/7.x/bottts/svg?seed=translator', '支持中英日韩多语言互译。',                   '你是一个专业的翻译助手，支持中文、英文、日文、韩文之间的互译。',               '翻译', '翻译,多语言',           'disabled', 2);
 
 -- ============================================================
 -- 3. 会话数据 (4 条)
