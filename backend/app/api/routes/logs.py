@@ -23,27 +23,21 @@ def list_logs(
     _admin: User = Depends(get_current_admin),
 ):
     items, total = LogService.list_by_admin(
-        db,
-        page=page,
-        page_size=page_size,
-        user_id=user_id,
-        action=action,
-        target_type=target_type,
+        db, page=page, page_size=page_size,
+        user_id=user_id, action=action, target_type=target_type,
     )
     return APIResponse.paginated(
-        items=[
-            {
-                "id": log.id,
-                "user_id": log.user_id,
-                "action": log.action,
-                "target_type": log.target_type,
-                "target_id": log.target_id,
-                "detail": log.detail,
-                "ip_address": log.ip_address,
-                "created_at": log.created_at.isoformat(),
-            }
-            for log in items
-        ],
+        items=[{
+            "id": log.id,
+            "user_id": log.user_id,
+            "username": username or "—",
+            "action": log.action,
+            "target_type": log.target_type,
+            "target_id": log.target_id,
+            "detail": log.detail,
+            "ip_address": log.ip_address,
+            "created_at": log.created_at.isoformat(),
+        } for log, username in items],
         total=total,
         page=page,
         page_size=page_size,

@@ -17,6 +17,7 @@ from app.models.user import User
 from app.services.conversation_service import ConversationService
 from app.services.character_service import CharacterService
 from app.services.deepseek_service import DeepSeekService
+from app.services.log_service import LogService
 
 
 class MessageService:
@@ -176,6 +177,22 @@ class MessageService:
                 )
                 db.add(tool_result)
 
+                # 记录工具调用日志
+                import json
+                LogService.write(
+                    db,
+                    action="tool_call",
+                    user_id=user.id,
+                    target_type="tool_call",
+                    target_id=tool_call.id,
+                    detail=json.dumps({
+                        "message_id": ai_msg.id,
+                        "tool_name": tc_data["tool_name"],
+                        "tool_type": tc_data["tool_type"],
+                        "status": tc_data["status"],
+                    }, ensure_ascii=False),
+                )
+
         # 9. 保存元数据
         metadata = MessageMetadata(
             message_id=ai_msg.id,
@@ -196,6 +213,14 @@ class MessageService:
 
         # 11. 更新最后消息时间
         ConversationService.touch_last_message(db, conversation)
+
+        # 12. 记录系统日志
+        import json
+        LogService.write(
+            db, action="send_message", user_id=user.id,
+            target_type="message", target_id=user_msg.id,
+            detail=json.dumps({"conversation_id": conversation_id, "ai_message_id": ai_msg.id, "has_tools": len(ai_result.tool_calls) > 0}, ensure_ascii=False),
+        )
 
         db.commit()
 

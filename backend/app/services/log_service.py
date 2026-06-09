@@ -3,6 +3,7 @@
 from sqlalchemy.orm import Session
 
 from app.models.system_log import SystemLog
+from app.models.user import User
 
 
 class LogService:
@@ -39,8 +40,10 @@ class LogService:
         action: str | None = None,
         target_type: str | None = None,
     ):
-        """管理员查询日志"""
-        query = db.query(SystemLog)
+        """管理员查询日志（含用户名）"""
+        query = db.query(SystemLog, User.username).outerjoin(
+            User, User.id == SystemLog.user_id
+        )
         if user_id:
             query = query.filter(SystemLog.user_id == user_id)
         if action:
@@ -49,11 +52,11 @@ class LogService:
             query = query.filter(SystemLog.target_type == target_type)
 
         total = query.count()
-        items = (
+        rows = (
             query
             .order_by(SystemLog.created_at.desc())
             .offset((page - 1) * page_size)
             .limit(page_size)
             .all()
         )
-        return items, total
+        return rows, total

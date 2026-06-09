@@ -1,7 +1,7 @@
 <template>
   <div class="page">
     <div class="page-header">
-      <h3>角色管理</h3>
+      <h3>我的 AI 角色</h3>
       <el-button type="primary" :icon="Plus" @click="openCreate">创建角色</el-button>
     </div>
 

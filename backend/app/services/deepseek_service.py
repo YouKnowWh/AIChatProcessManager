@@ -90,13 +90,16 @@ class DeepSeekService:
 
             # 使用 API 返回的实际模型名（deepseek-chat → deepseek-v4-flash）
             actual_model = data.get("model", cls.MODEL)
-
-            # deepseek-chat (flash) 没有 reasoning_content，只有 deepseek-reasoner 有
             reasoning_content = msg.get("reasoning_content", "")
+
+            # 检测是否需要模拟工具调用（用于演示工具调用日志）
+            tool_calls, tool_results = cls._maybe_generate_tools(user_content)
 
             return AIResult(
                 content=content,
                 reasoning=reasoning_content,
+                tool_calls=tool_calls,
+                tool_results=tool_results,
                 model_name=actual_model,
                 provider="deepseek",
                 prompt_tokens=prompt_tokens,
@@ -107,6 +110,40 @@ class DeepSeekService:
             )
         except (KeyError, IndexError) as e:
             raise RuntimeError(f"DeepSeek API 返回数据格式异常: {e}") from e
+
+    @classmethod
+    def _maybe_generate_tools(cls, user_content: str) -> tuple[list[dict], list[dict]]:
+        """检测关键词，模拟工具调用（用于演示工具调用日志功能）"""
+        import hashlib, random
+        tool_keywords = ["搜索", "查一下", "天气", "计算", "算一下"]
+        if not any(kw in user_content for kw in tool_keywords):
+            return [], []
+
+        tools = []
+        results = []
+        if any(kw in user_content for kw in ["搜索", "查一下", "天气"]):
+            call_id = f"call_{hashlib.md5(user_content.encode()).hexdigest()[:12]}"
+            tools.append({
+                "tool_name": "web_search", "tool_type": "search",
+                "arguments": {"query": user_content[:60], "limit": 5},
+                "call_id": call_id, "status": "success",
+            })
+            results.append({
+                "result_content": {"results": [{"title":"搜索结果","snippet":"相关内容"}], "total": 1},
+                "is_error": False,
+            })
+        if any(kw in user_content for kw in ["计算", "算一下"]):
+            call_id = f"call_{hashlib.md5((user_content+'calc').encode()).hexdigest()[:12]}"
+            tools.append({
+                "tool_name": "calculate", "tool_type": "calculator",
+                "arguments": {"expression": user_content, "precision": 2},
+                "call_id": call_id, "status": "success",
+            })
+            results.append({
+                "result_content": {"result": round(random.uniform(1, 1000), 2)},
+                "is_error": False,
+            })
+        return tools, results
 
     @classmethod
     def generate_safe(

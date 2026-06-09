@@ -26,7 +26,7 @@
           </el-menu-item>
           <el-menu-item index="/characters/manage">
             <el-icon><Setting /></el-icon>
-            <span>角色管理</span>
+            <span>我的 AI 角色</span>
           </el-menu-item>
           <el-menu-item v-if="auth.isAdmin()" index="/admin">
             <el-icon><Monitor /></el-icon>
@@ -63,7 +63,7 @@
                 <el-icon><User /></el-icon>个人信息
               </el-dropdown-item>
               <el-dropdown-item @click="$router.push('/characters/manage')">
-                <el-icon><Setting /></el-icon>角色管理
+                <el-icon><Setting /></el-icon>我的 AI 角色
               </el-dropdown-item>
               <el-dropdown-item v-if="auth.isAdmin()" @click="$router.push('/admin')">
                 <el-icon><Monitor /></el-icon>系统管理
