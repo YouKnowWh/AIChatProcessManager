@@ -11,13 +11,16 @@ from app.schemas.ai_character import CharacterCreate, CharacterUpdate
 class CharacterService:
 
     @staticmethod
-    def list_active(db: Session, category: str | None = None, search: str | None = None) -> list[AICharacter]:
+    def list_active(db: Session, category: str | None = None, search: str | None = None,
+                    creator_id: int | None = None) -> list[AICharacter]:
         """列出所有已启用的角色"""
         query = db.query(AICharacter).filter(AICharacter.status == "active")
         if category:
             query = query.filter(AICharacter.category == category)
         if search:
             query = query.filter(AICharacter.name.contains(search))
+        if creator_id is not None:
+            query = query.filter(AICharacter.creator_id == creator_id)
         return query.order_by(AICharacter.usage_count.desc()).all()
 
     @staticmethod

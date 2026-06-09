@@ -20,10 +20,11 @@ def list_characters(
     category: str | None = Query(None),
     search: str | None = Query(None),
     db: Session = Depends(get_db),
-    _user: User = Depends(get_current_user),
+    current_user: User = Depends(get_current_user),
 ):
-    """列出所有 active 状态的角色，支持按分类和名称搜索"""
-    characters = CharacterService.list_active(db, category=category, search=search)
+    """列出当前用户可用的 AI 角色（用户只能看到自己创建的，管理员看全部）"""
+    creator = None if current_user.role == "admin" else current_user.id
+    characters = CharacterService.list_active(db, category=category, search=search, creator_id=creator)
     return APIResponse.ok(data=[CharacterBrief.model_validate(c).model_dump() for c in characters])
 
 
