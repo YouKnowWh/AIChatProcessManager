@@ -1,51 +1,38 @@
 <template>
   <div class="page">
     <h3>AI 角色</h3>
+    <el-row :gutter="20">
+      <el-col :span="6" v-for="char in characters" :key="char.id">
+        <el-card shadow="hover" class="character-card">
+          <div class="char-avatar">
+            <el-avatar :size="64" :src="char.avatar" />
+          </div>
+          <h4>{{ char.name }}</h4>
+          <p class="char-desc">{{ char.description || '暂无简介' }}</p>
+          <el-tag v-if="char.category" size="small">{{ char.category }}</el-tag>
 
-    <el-collapse v-model="expandedChars" accordion>
-      <el-collapse-item
-        v-for="char in characters"
-        :key="char.id"
-        :name="char.id"
-        @change="(visible: boolean) => visible && loadConversations(char)"
-      >
-        <template #title>
-          <div class="char-title">
-            <el-avatar :size="32" :src="char.avatar" />
-            <span class="char-name">{{ char.name }}</span>
-            <el-tag v-if="char.category" size="small">{{ char.category }}</el-tag>
-            <span class="char-desc-text">{{ char.description || '暂无简介' }}</span>
+          <div class="conv-mini-list">
+            <div v-if="!convMap[char.id]" style="font-size:12px;color:#c0c4cc;padding:8px 0">加载中...</div>
+            <div v-else-if="!convMap[char.id].length" style="padding:8px 0">
+              <el-button text type="primary" size="small" @click="createChat(char)">+ 新建会话</el-button>
+            </div>
+            <div v-for="conv in convMap[char.id]?.slice(0, 3)" :key="conv.id"
+              class="conv-link" @click="enterChat(conv.id)">
+              <span>{{ conv.title }}</span>
+              <span class="conv-msg-count">{{ conv.message_count }} 条</span>
+            </div>
+            <div v-if="convMap[char.id]?.length > 3" style="padding:4px 0">
+              <el-button text size="small" type="primary" @click="enterCharChat(char)">查看全部 →</el-button>
+            </div>
           </div>
-        </template>
-
-        <!-- 该角色的会话列表 -->
-        <div v-loading="convLoading[char.id]" class="conv-sub-list">
-          <div v-if="!convMap[char.id]?.length" class="no-conv" style="padding:16px;color:#909399">
-            暂无会话 —
-            <el-button text type="primary" size="small" @click.stop="createConv(char)">新建</el-button>
-          </div>
-          <div
-            v-for="conv in convMap[char.id]"
-            :key="conv.id"
-            class="conv-row"
-            @click.stop="enterChat(conv.id)"
-          >
-            <span class="conv-row-title">{{ conv.title }}</span>
-            <span class="conv-row-meta">{{ conv.message_count }} 条消息</span>
-            <span class="conv-row-time">{{ conv.last_message_at ? fmtTime(conv.last_message_at) : '—' }}</span>
-            <el-tag v-if="conv.status === 'archived'" size="small" type="info">已归档</el-tag>
-          </div>
-          <div style="padding:8px 16px">
-            <el-button text type="primary" size="small" @click.stop="createConv(char)">+ 新建会话</el-button>
-          </div>
-        </div>
-      </el-collapse-item>
-    </el-collapse>
+        </el-card>
+      </el-col>
+    </el-row>
   </div>
 </template>
 
 <script setup lang="ts">
-import { ref, reactive } from 'vue'
+import { ref, reactive, onMounted } from 'vue'
 import { useRouter } from 'vue-router'
 import { charactersApi } from '@/api/characters'
 import { conversationsApi } from '@/api/conversations'
@@ -53,23 +40,19 @@ import type { CharacterBrief, Conversation } from '@/types'
 
 const router = useRouter()
 const characters = ref<CharacterBrief[]>([])
-const expandedChars = ref<number[]>([])
-
 const convMap = reactive<Record<number, Conversation[]>>({})
-const convLoading = reactive<Record<number, boolean>>({})
 
-charactersApi.list().then(res => characters.value = res.data)
+onMounted(async () => {
+  const res = await charactersApi.list()
+  characters.value = res.data
+  // 加载每个角色的会话
+  for (const char of characters.value) {
+    const cr = await conversationsApi.list({ character_id: char.id })
+    convMap[char.id] = cr.data
+  }
+})
 
-async function loadConversations(char: CharacterBrief) {
-  if (convMap[char.id]) return
-  convLoading[char.id] = true
-  try {
-    const res = await conversationsApi.list({ character_id: char.id })
-    convMap[char.id] = res.data
-  } finally { convLoading[char.id] = false }
-}
-
-async function createConv(char: CharacterBrief) {
+async function createChat(char: CharacterBrief) {
   const res = await conversationsApi.create({ character_id: char.id, title: `与 ${char.name} 的对话` })
   router.push(`/chat/${res.data.id}`)
 }
@@ -78,19 +61,24 @@ function enterChat(convId: number) {
   router.push(`/chat/${convId}`)
 }
 
-function fmtTime(ts: string) {
-  return new Date(ts).toLocaleString('zh-CN')
+function enterCharChat(char: CharacterBrief) {
+  // 如果有 active 会话则跳转第一个，否则创建新会话
+  const active = convMap[char.id]?.find(c => c.status === 'active')
+  if (active) {
+    router.push(`/chat/${active.id}`)
+  } else {
+    createChat(char)
+  }
 }
 </script>
 
 <style scoped>
-.char-title { display: flex; align-items: center; gap: 12px; width: 100%; }
-.char-name { font-weight: 600; font-size: 15px; }
-.char-desc-text { color: #909399; font-size: 13px; flex: 1; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
-.conv-sub-list { background: #fafafa; border-top: 1px solid #ebeef5; }
-.conv-row { display: flex; align-items: center; gap: 16px; padding: 10px 16px 10px 48px; cursor: pointer; border-bottom: 1px solid #f0f0f0; transition: background .15s; }
-.conv-row:hover { background: #ecf5ff; }
-.conv-row-title { flex: 1; font-size: 14px; color: #303133; }
-.conv-row-meta { font-size: 12px; color: #909399; }
-.conv-row-time { font-size: 12px; color: #c0c4cc; min-width: 140px; }
+.character-card { text-align: center; transition: transform .2s; }
+.character-card:hover { transform: translateY(-2px); }
+.char-avatar { margin-bottom: 8px; }
+.char-desc { color: #909399; font-size: 13px; min-height: 36px; margin-bottom: 8px; }
+.conv-mini-list { margin-top: 12px; padding-top: 12px; border-top: 1px solid #ebeef5; text-align: left; }
+.conv-link { display: flex; justify-content: space-between; align-items: center; padding: 6px 0; cursor: pointer; font-size: 13px; color: #606266; border-bottom: 1px solid #f5f5f5; }
+.conv-link:hover { color: #409eff; }
+.conv-msg-count { font-size: 11px; color: #c0c4cc; }
 </style>
