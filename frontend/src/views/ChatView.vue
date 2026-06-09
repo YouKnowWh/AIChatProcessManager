@@ -51,14 +51,13 @@
 </template>
 
 <script setup lang="ts">
-import { ref, computed, onMounted, nextTick, watch } from 'vue'
+import { ref, onMounted, nextTick, watch } from 'vue'
 import { useRoute } from 'vue-router'
 import { ElMessage } from 'element-plus'
 import { ChatDotRound, Loading } from '@element-plus/icons-vue'
 import { conversationsApi } from '@/api/conversations'
 import { messagesApi } from '@/api/messages'
 import { favoritesApi } from '@/api/favorites'
-import { feedbacksApi } from '@/api/feedbacks'
 import ConversationSidebar from '@/components/chat/ConversationSidebar.vue'
 import MessageBubble from '@/components/chat/MessageBubble.vue'
 import MessageInput from '@/components/chat/MessageInput.vue'
@@ -67,40 +66,45 @@ import type { Conversation, Message } from '@/types'
 
 const route = useRoute()
 
-// 会话列表
 const conversations = ref<Conversation[]>([])
 const activeConvId = ref<number | null>(null)
+const activeCharId = ref<number | null>(null)
 
-// 消息
 const messages = ref<Message[]>([])
 const loading = ref(false)
 const sending = ref(false)
 const favIds = ref(new Set<number>())
 
-// 详情弹窗
 const detailVisible = ref(false)
 const detailMsgId = ref<number | null>(null)
 
 const msgListRef = ref<HTMLElement>()
-const msgRefs: Record<number, HTMLElement | null> = {}
 
 function setMsgRef(id: number, el: any) {
-  if (el) msgRefs[id] = el
+  if (el) msgListRef.value = el
 }
 
-// 加载会话列表
-async function loadConversations() {
-  const res = await conversationsApi.list()
-  conversations.value = res.data
-}
-
-// 选择会话
-async function selectConversation(convId: number) {
+// 根据当前会话设置角色过滤
+async function setActiveConversation(convId: number) {
   activeConvId.value = convId
+  // 找出当前会话的角色，用于过滤侧边栏
+  const conv = conversations.value.find(c => c.id === convId)
+  activeCharId.value = conv?.character_id ?? null
+  await loadConversations()
   await loadMessages()
 }
 
-// 加载消息
+async function loadConversations() {
+  const params: any = {}
+  if (activeCharId.value) params.character_id = activeCharId.value
+  const res = await conversationsApi.list(params)
+  conversations.value = res.data
+}
+
+async function selectConversation(convId: number) {
+  setActiveConversation(convId)
+}
+
 async function loadMessages() {
   if (!activeConvId.value) return
   loading.value = true
@@ -108,9 +112,7 @@ async function loadMessages() {
     const res = await messagesApi.list(activeConvId.value)
     messages.value = res.data.items
     favIds.value = new Set(
-      messages.value
-        .filter((msg) => msg.is_favorited)
-        .map((msg) => msg.id)
+      messages.value.filter((msg: Message) => (msg as any).is_favorited).map((msg: Message) => msg.id)
     )
     await nextTick()
     scrollToBottom()
@@ -119,19 +121,13 @@ async function loadMessages() {
   }
 }
 
-// 发送消息
 async function handleSend(content: string) {
   if (!activeConvId.value || !content.trim()) return
 
-  // 1. 乐观更新 — 用户消息立即显示
   const tempId = -Date.now()
   const optimisticMsg: Message = {
-    id: tempId,
-    conversation_id: activeConvId.value,
-    parent_message_id: null,
-    sender_type: 'user',
-    role: 'user',
-    status: 'normal',
+    id: tempId, conversation_id: activeConvId.value, parent_message_id: null,
+    sender_type: 'user', role: 'user', status: 'normal',
     sequence_number: messages.value.length + 1,
     created_at: new Date().toISOString(),
     contents: [{ id: tempId, content_type: 'text', content, sort_order: 0 }],
@@ -140,11 +136,9 @@ async function handleSend(content: string) {
   await nextTick()
   scrollToBottom()
 
-  // 2. 发送到后端，等待 AI 回复
   sending.value = true
   try {
     const res = await messagesApi.send(activeConvId.value, content)
-    // 替换临时用户消息为真实数据，追加 AI 回复
     const idx = messages.value.findIndex(m => m.id === tempId)
     if (idx >= 0) messages.value.splice(idx, 1, res.data.user_message)
     messages.value.push(res.data.ai_message)
@@ -153,14 +147,12 @@ async function handleSend(content: string) {
     await loadConversations()
   } catch {
     ElMessage.error('发送失败')
-    // 移除失败的临时消息
     messages.value = messages.value.filter(m => m.id !== tempId)
   } finally {
     sending.value = false
   }
 }
 
-// 收藏/取消收藏
 async function handleFavorite(msg: Message) {
   const res = await favoritesApi.toggle(msg.id)
   if (res.data.favorited) {
@@ -172,44 +164,34 @@ async function handleFavorite(msg: Message) {
   }
 }
 
-// 反馈
-function showFeedback(msg: Message) {
-  ElMessage.info('反馈功能 — 点赞/点踩')
-}
-
-// 查看详情
-function showDetail(msg: Message) {
-  detailMsgId.value = msg.id
-  detailVisible.value = true
-}
+function showFeedback(msg: Message) { ElMessage.info('反馈功能') }
+function showDetail(msg: Message) { detailMsgId.value = msg.id; detailVisible.value = true }
 
 function scrollToBottom() {
-  // requestAnimationFrame + nextTick 确保内容完全渲染
   nextTick(() => {
     requestAnimationFrame(() => {
-      if (msgListRef.value) {
-        msgListRef.value.scrollTop = msgListRef.value.scrollHeight
-      }
+      if (msgListRef.value) msgListRef.value.scrollTop = msgListRef.value.scrollHeight
     })
   })
 }
 
 onMounted(async () => {
-  await loadConversations()
-  // 如果路由带 id，自动选中
   const routeId = Number(route.params.id)
   if (routeId) {
     activeConvId.value = routeId
+    const convRes = await conversationsApi.getById(routeId)
+    activeCharId.value = convRes.data.character_id
+    await loadConversations()
     await loadMessages()
+  } else {
+    await loadConversations()
   }
 })
 
-// 路由变化时切换会话
 watch(() => route.params.id, async (newId) => {
   const id = Number(newId)
   if (id && id !== activeConvId.value) {
-    activeConvId.value = id
-    await loadMessages()
+    setActiveConversation(id)
   }
 })
 </script>
