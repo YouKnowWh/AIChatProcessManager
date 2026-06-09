@@ -4,6 +4,9 @@ export const charactersApi = {
   list(params?: any) {
     return request.get('/characters', { params })
   },
+  listMine() {
+    return request.get('/characters/manage')
+  },
   getById(id: number) {
     return request.get(`/characters/${id}`)
   },

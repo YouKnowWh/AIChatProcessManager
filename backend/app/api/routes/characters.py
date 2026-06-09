@@ -27,6 +27,19 @@ def list_characters(
     return APIResponse.ok(data=[CharacterBrief.model_validate(c).model_dump() for c in characters])
 
 
+@router.get("/manage", summary="查看我创建的 AI 角色")
+def list_my_characters(
+    db: Session = Depends(get_db),
+    current_user: User = Depends(get_current_user),
+):
+    """角色管理页 — 展示当前用户创建的所有角色（管理员看全部）"""
+    if current_user.role == "admin":
+        items, _ = CharacterService.list_all(db, page=1, page_size=1000)
+    else:
+        items, _ = CharacterService.list_by_creator(db, current_user, page=1, page_size=1000)
+    return APIResponse.ok(data=[CharacterBrief.model_validate(c).model_dump() for c in items])
+
+
 @router.get("/{character_id}", summary="查看 AI 角色详情")
 def get_character(
     character_id: int,

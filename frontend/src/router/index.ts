@@ -27,10 +27,8 @@ const routes: RouteRecordRaw[] = [
       { path: 'search', name: 'MessageSearch', component: () => import('@/views/MessageSearchView.vue') },
       { path: 'favorites', name: 'Favorites', component: () => import('@/views/FavoriteView.vue') },
       { path: 'profile', name: 'Profile', component: () => import('@/views/ProfileView.vue') },
-      // 角色管理（所有用户可用）
+      // 角色管理（弹窗模式）
       { path: 'characters/manage', name: 'CharacterManage', component: () => import('@/views/CharacterManageView.vue') },
-      { path: 'characters/:id/edit', name: 'CharacterEdit', component: () => import('@/views/CharacterEditView.vue'), props: true },
-      { path: 'characters/:id/stats', name: 'CharacterStats', component: () => import('@/views/CharacterStatsView.vue'), props: true },
     ],
   },
   // 管理端（AdminLayout）
