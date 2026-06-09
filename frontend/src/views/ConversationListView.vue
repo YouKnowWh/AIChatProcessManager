@@ -35,8 +35,12 @@ const conversations = ref<Conversation[]>([])
 onMounted(loadData)
 
 async function loadData() {
-  const res = await conversationsApi.list()
-  conversations.value = res.data
+  try {
+    const res = await conversationsApi.list()
+    conversations.value = res.data
+  } catch {
+    // 错误已由拦截器提示，此处仅忽略
+  }
 }
 
 async function handleUnarchive(row: Conversation) {

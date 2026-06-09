@@ -27,7 +27,8 @@ class ConversationService:
             query = query.filter(Conversation.character_id == character_id)
 
         items = query.order_by(
-            Conversation.last_message_at.desc().nullsfirst(),
+            Conversation.last_message_at.is_(None).desc(),  # NULL 排最前（新会话）
+            Conversation.last_message_at.desc(),
             Conversation.id.desc(),
         ).all()
 
