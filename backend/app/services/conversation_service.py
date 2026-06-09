@@ -73,6 +73,15 @@ class ConversationService:
         if not character:
             raise HTTPException(status_code=status.HTTP_400_BAD_REQUEST, detail="AI 角色不存在或已禁用")
 
+        # 防止重复创建：已有 active 会话则直接返回
+        existing = db.query(Conversation).filter(
+            Conversation.user_id == user.id,
+            Conversation.character_id == req.character_id,
+            Conversation.status == "active",
+        ).first()
+        if existing:
+            return existing
+
         conversation = Conversation(
             user_id=user.id,
             character_id=req.character_id,
