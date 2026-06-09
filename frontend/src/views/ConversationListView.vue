@@ -1,7 +1,7 @@
 <template>
   <div class="page">
     <h3>会话管理</h3>
-    <el-table :data="conversations" stripe>
+    <el-table :data="conversations" stripe @row-click="(row: any) => $router.push(`/chat/${row.id}`)" style="cursor: pointer">
       <el-table-column prop="id" label="ID" width="60" />
       <el-table-column prop="title" label="标题" />
       <el-table-column prop="character_name" label="AI 角色" width="120" />
@@ -14,11 +14,10 @@
       <el-table-column prop="last_message_at" label="最后消息" width="170">
         <template #default="{ row }">{{ row.last_message_at || '-' }}</template>
       </el-table-column>
-      <el-table-column label="操作" width="120">
+      <el-table-column label="操作" width="100">
         <template #default="{ row }">
-          <el-button text size="small" type="primary" @click="$router.push(`/chat/${row.id}`)">进入</el-button>
-          <el-button v-if="row.status === 'archived'" text size="small" type="success" @click="handleUnarchive(row)">恢复</el-button>
-          <el-button v-if="row.status === 'active'" text size="small" type="warning" @click="handleArchive(row)">归档</el-button>
+          <el-button v-if="row.status === 'archived'" text size="small" type="success" @click.stop="handleUnarchive(row)">恢复</el-button>
+          <el-button v-if="row.status === 'active'" text size="small" type="warning" @click.stop="handleArchive(row)">归档</el-button>
         </template>
       </el-table-column>
     </el-table>
