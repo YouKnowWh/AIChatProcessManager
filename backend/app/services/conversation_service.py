@@ -16,10 +16,13 @@ class ConversationService:
 
     @staticmethod
     def list_by_user(db: Session, user: User, status: str | None = None, character_id: int | None = None):
-        """列出当前用户的会话"""
-        query = db.query(Conversation).filter(
+        """列出当前用户的会话（仅含用户自己拥有的角色）"""
+        query = db.query(Conversation).join(
+            AICharacter, AICharacter.id == Conversation.character_id
+        ).filter(
             Conversation.user_id == user.id,
             Conversation.status != "deleted",
+            AICharacter.creator_id == user.id,  # 只看自己角色的会话
         )
         if status:
             query = query.filter(Conversation.status == status)
