@@ -22,23 +22,35 @@ def list_characters(
     db: Session = Depends(get_db),
     current_user: User = Depends(get_current_user),
 ):
-    """列出当前用户可用的 AI 角色（用户只能看到自己创建的，管理员看全部）"""
-    creator = None if current_user.role == "admin" else current_user.id
+    """列出当前用户可用的 AI 角色（角色维护者和管理员看全部，普通用户只看自己的）"""
+    if current_user.role in ("character_manager", "admin"):
+        creator = None
+    else:
+        creator = current_user.id
     characters = CharacterService.list_active(db, category=category, search=search, creator_id=creator)
     return APIResponse.ok(data=[CharacterBrief.model_validate(c).model_dump() for c in characters])
 
 
-@router.get("/manage", summary="查看我创建的 AI 角色")
+@router.get("/manage", summary="查看可管理的 AI 角色")
 def list_manageable_characters(
     db: Session = Depends(get_db),
     current_user: User = Depends(get_current_user),
 ):
-    """角色管理页 — 只展示当前用户创建的角色（管理员看全部）"""
-    if current_user.role == "admin":
+    """角色管理页 — 角色维护者和管理员看全部，普通用户只看自己创建的"""
+    if current_user.role in ("character_manager", "admin"):
         characters = CharacterService.list_active(db)
     else:
         characters = CharacterService.list_active(db, creator_id=current_user.id)
-    return APIResponse.ok(data=[CharacterBrief.model_validate(c).model_dump() for c in characters])
+
+    # 附带创建者用户名
+    from app.models.user import User as UserModel
+    creator_ids = {c.creator_id for c in characters}
+    users_map = {u.id: u.username for u in db.query(UserModel).filter(UserModel.id.in_(creator_ids)).all()}
+
+    return APIResponse.ok(data=[{
+        **CharacterBrief.model_validate(c).model_dump(),
+        "creator_username": users_map.get(c.creator_id, "—"),
+    } for c in characters])
 
 
 @router.get("/{character_id}", summary="查看 AI 角色详情")

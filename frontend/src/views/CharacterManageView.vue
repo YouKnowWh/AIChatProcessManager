@@ -13,6 +13,7 @@
       <el-table-column prop="category" label="分类" width="100">
         <template #default="{ row }"><el-tag v-if="row.category" size="small">{{ row.category }}</el-tag></template>
       </el-table-column>
+      <el-table-column prop="creator_username" label="创建者" width="100" />
       <el-table-column prop="usage_count" label="使用" width="70" />
       <el-table-column prop="status" label="状态" width="80">
         <template #default="{ row }">
