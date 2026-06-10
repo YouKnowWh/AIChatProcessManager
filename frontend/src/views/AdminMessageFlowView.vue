@@ -20,8 +20,15 @@
             <div>
               <div class="flow-title">Trace {{ flow.traceId }}</div>
               <div class="flow-meta">
-                会话 {{ flow.conversationId }} / 用户消息 {{ flow.userMessageId }} / AI 消息 {{ flow.aiMessageId }}
+                会话 {{ flow.conversationId }} / 角色 {{ flow.characterName || '-' }}
+                <span v-if="flow.model"> / {{ flow.model }} {{ flow.totalTokens }}tokens {{ flow.duration }}ms</span>
               </div>
+            </div>
+            <div v-if="flow.userContent" class="flow-context">
+              <div class="context-label">用户：</div><div class="context-text">{{ flow.userContent }}</div>
+            </div>
+            <div v-if="flow.aiPreview" class="flow-context">
+              <div class="context-label">AI：</div><div class="context-text">{{ flow.aiPreview }}</div>
             </div>
             <div class="flow-time">{{ formatTime(flow.createdAt) }}</div>
           </div>
@@ -92,6 +99,12 @@ async function load() {
         conversationId: detail.conversation_id,
         userMessageId: detail.user_message_id,
         aiMessageId: detail.ai_message_id,
+        characterName: detail.character_name || '',
+        userContent: detail.user_content || '',
+        aiPreview: detail.ai_content_preview || '',
+        model: detail.model || '',
+        totalTokens: detail.total_tokens || '',
+        duration: detail.duration_ms || '',
         createdAt: item.created_at,
         steps: detail.steps || [],
       }
@@ -169,6 +182,13 @@ function formatExtra(extra?: Record<string, unknown>) {
   font-size: 13px;
   color: #6b7280;
 }
+
+.flow-context {
+  display: flex; gap: 8px; margin-top: 8px; padding: 8px 12px;
+  background: #f0f9ff; border-radius: 6px; font-size: 13px;
+}
+.context-label { color: #909399; flex-shrink: 0; font-weight: 600; }
+.context-text { color: #303133; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
 
 .step-title {
   font-weight: 600;
