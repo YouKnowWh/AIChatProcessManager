@@ -177,6 +177,7 @@ class MessageService:
                 "content_block_id": user_content.id,
                 "content_type": user_content.content_type,
                 "sort_order": user_content.sort_order,
+                "content": content[:200],
             },
         )
 
@@ -233,6 +234,7 @@ class MessageService:
                 "content_block_id": ai_content.id,
                 "content_type": ai_content.content_type,
                 "sort_order": ai_content.sort_order,
+                "content": ai_result.content[:200],
             },
         )
 
