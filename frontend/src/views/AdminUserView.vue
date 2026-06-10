@@ -4,6 +4,7 @@
     <div class="filter-bar">
       <el-select v-model="filterRole" placeholder="角色筛选" clearable @change="loadUsers" style="width: 150px">
         <el-option label="普通用户" value="user" />
+        <el-option label="角色维护者" value="character_manager" />
         <el-option label="管理员" value="admin" />
       </el-select>
       <el-select v-model="filterStatus" placeholder="状态筛选" clearable @change="loadUsers" style="width: 150px">
@@ -19,7 +20,7 @@
       <el-table-column prop="nickname" label="昵称" width="120" />
       <el-table-column prop="role" label="角色" width="110">
         <template #default="{ row }">
-          <el-tag :type="row.role === 'admin' ? 'danger' : 'info'" size="small">{{ roleLabel(row.role) }}</el-tag>
+          <el-tag :type="row.role === 'admin' ? 'danger' : row.role === 'character_manager' ? 'warning' : 'info'" size="small">{{ roleLabel(row.role) }}</el-tag>
         </template>
       </el-table-column>
       <el-table-column prop="status" label="状态" width="80" align="center">
@@ -52,7 +53,8 @@
         <el-form-item label="角色">
           <el-select v-model="editForm.role" style="width: 100%">
             <el-option label="普通用户" value="user" />
-            <el-option label="管理员" value="admin" />
+            <el-option label="角色维护者" value="character_manager" />
+        <el-option label="管理员" value="admin" />
           </el-select>
         </el-form-item>
         <el-form-item label="简介"><el-input v-model="editForm.bio" type="textarea" /></el-form-item>
@@ -138,7 +140,7 @@ async function delUser(row: any) {
   loadUsers()
 }
 
-function roleLabel(r: string) { const m: Record<string, string> = { admin: '管理员', user: '普通用户' }; return m[r] || r }
+function roleLabel(r: string) { const m: Record<string, string> = { admin: '管理员', character_manager: '角色维护者', user: '普通用户' }; return m[r] || r }
 function fmt(ts: string) { return new Date(ts).toLocaleString('zh-CN') }
 </script>
 

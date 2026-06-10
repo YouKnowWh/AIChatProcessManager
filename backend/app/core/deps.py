@@ -51,6 +51,4 @@ def require_role(*roles: str):
 
 # 快捷依赖
 get_current_admin = require_role("admin")
-# 注意：角色已简化为 user 和 admin 两级
-# - user: 聊天 + 管理自己的 AI 角色 + 查看统计
-# - admin: 用户管理 + 审核 + 日志 + 系统统计（不参与聊天）
+get_current_manager = require_role("character_manager", "admin")

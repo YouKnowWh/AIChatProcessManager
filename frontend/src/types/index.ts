@@ -27,7 +27,7 @@ export interface UserBrief {
   username: string
   email: string
   nickname: string | null
-  role: 'user' | 'admin'
+  role: 'user' | 'character_manager' | 'admin'
   avatar: string | null
 }
 

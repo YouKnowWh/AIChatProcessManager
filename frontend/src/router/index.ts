@@ -30,7 +30,7 @@ const routes: RouteRecordRaw[] = [
       // 知识库
       { path: 'knowledge', name: 'Knowledge', component: () => import('@/views/KnowledgeView.vue') },
       // 角色管理（弹窗模式）
-      { path: 'characters/manage', name: 'CharacterManage', component: () => import('@/views/CharacterManageView.vue') },
+      { path: 'characters/manage', name: 'CharacterManage', component: () => import('@/views/CharacterManageView.vue'), meta: { role: 'character_manager' } },
     ],
   },
   // 管理端（AdminLayout）

@@ -20,7 +20,7 @@
             <el-icon><Star /></el-icon>
             <span>收藏</span>
           </el-menu-item>
-          <el-menu-item index="/conversations">
+          <el-menu-item v-if="auth.isManager()" index="/conversations">
             <el-icon><ChatLineSquare /></el-icon>
             <span>会话管理</span>
           </el-menu-item>
@@ -28,7 +28,7 @@
             <el-icon><Collection /></el-icon>
             <span>知识库</span>
           </el-menu-item>
-          <el-menu-item index="/characters/manage">
+          <el-menu-item v-if="auth.isManager()" index="/characters/manage">
             <el-icon><Setting /></el-icon>
             <span>角色管理</span>
           </el-menu-item>
@@ -66,7 +66,7 @@
               <el-dropdown-item @click="$router.push('/profile')">
                 <el-icon><User /></el-icon>个人信息
               </el-dropdown-item>
-              <el-dropdown-item @click="$router.push('/characters/manage')">
+              <el-dropdown-item v-if="auth.isManager()" @click="$router.push('/characters/manage')">
                 <el-icon><Setting /></el-icon>角色管理
               </el-dropdown-item>
               <el-dropdown-item v-if="auth.isAdmin()" @click="$router.push('/admin')">
@@ -107,12 +107,13 @@ onMounted(() => {
 })
 
 function roleLabel(role: string): string {
-  const map: Record<string, string> = { admin: '管理员', user: '普通用户' }
+  const map: Record<string, string> = { admin: '管理员', character_manager: '角色维护者', user: '普通用户' }
   return map[role] || role
 }
 
 function roleTagType(role: string): 'danger' | 'warning' | 'info' {
   if (role === 'admin') return 'danger'
+  if (role === 'character_manager') return 'warning'
   return 'info'
 }
 </script>

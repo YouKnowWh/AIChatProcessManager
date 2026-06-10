@@ -55,6 +55,7 @@ const form = reactive({ username: 'user1', password: 'user123' })
 const testAccounts = [
   { label: '👤 普通用户 (user1)', username: 'user1', password: 'user123', role: 'user' },
   { label: '👤 普通用户 (user2)', username: 'user2', password: 'user456', role: 'user' },
+  { label: '🔧 角色维护者 (manager)', username: 'manager', password: 'manager123', role: 'manager' },
   { label: '🛡️ 管理员 (admin)', username: 'admin', password: 'admin123', role: 'admin' },
 ]
 
