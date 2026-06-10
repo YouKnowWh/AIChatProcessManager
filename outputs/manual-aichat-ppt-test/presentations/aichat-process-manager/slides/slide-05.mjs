@@ -9,7 +9,7 @@ export async function slide05(presentation, ctx) {
   arrow(ctx, slide, 850, 305, 110);
   node(ctx, slide, "MySQL 8.0", "13 张核心表\nutf8mb4 中文支持\n种子数据", 995, 220, 210, 175, colors.amber);
   card(ctx, slide, 115, 475, 465, 100, "部署与运行", "Docker Compose 编排 MySQL / Backend / Frontend；当前说明已改为前台运行，避免后台进程和 watch/reload 模式。", colors.purple);
-  card(ctx, slide, 690, 475, 465, 100, "工程验证", "后端导入、ORM 表注册、前端 TypeScript、Vite 构建、Docker API 冒烟测试均已通过。", colors.cyan);
+  card(ctx, slide, 690, 475, 465, 100, "工程验证", "后端导入、ORM 表注册、前端 TypeScript、Vite 构建均已通过；真实模型适配层支持失败回退。", colors.cyan);
   footer(ctx, slide, 5);
   return slide;
 }

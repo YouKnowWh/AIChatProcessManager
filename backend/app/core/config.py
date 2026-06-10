@@ -1,5 +1,6 @@
 """应用配置 — 读取环境变量"""
 
+from pydantic import field_validator
 from pydantic_settings import BaseSettings
 
 
@@ -26,6 +27,17 @@ class Settings(BaseSettings):
     DEEPSEEK_API_KEY: str = ""
 
     model_config = {"env_file": ".env", "env_file_encoding": "utf-8", "extra": "allow"}
+
+    @field_validator("DEBUG", mode="before")
+    @classmethod
+    def parse_debug_flag(cls, value):
+        if isinstance(value, str):
+            normalized = value.strip().lower()
+            if normalized in {"release", "prod", "production"}:
+                return False
+            if normalized in {"debug", "dev", "development"}:
+                return True
+        return value
 
 
 settings = Settings()

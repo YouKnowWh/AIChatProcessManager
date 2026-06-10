@@ -1,0 +1,1 @@
+Sources: AIChatProcessManager.pptx, README.md, docs/database_design.md, repository file inventory. No external identity assets used.

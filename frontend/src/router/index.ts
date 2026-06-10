@@ -43,6 +43,7 @@ const routes: RouteRecordRaw[] = [
       { path: 'messages', name: 'AdminMessages', component: () => import('@/views/AdminMessageView.vue') },
       { path: 'feedbacks', name: 'AdminFeedbacks', component: () => import('@/views/AdminFeedbackView.vue') },
       { path: 'logs', name: 'AdminLogs', component: () => import('@/views/AdminLogView.vue') },
+      { path: 'message-flows', name: 'AdminMessageFlows', component: () => import('@/views/AdminMessageFlowView.vue') },
       { path: 'stats', name: 'AdminStats', component: () => import('@/views/AdminStatsView.vue') },
     ],
   },
@@ -73,7 +74,7 @@ router.beforeEach((to, _from, next) => {
     return next('/admin')
   }
 
-  // 角色控制：admin 继承角色维护者权限
+  // 角色控制：admin 进入管理端，普通用户进入前台功能
   const requiredRole = to.meta.role as string | undefined
   if (requiredRole && !hasRole(user?.role, requiredRole)) {
     return next('/')

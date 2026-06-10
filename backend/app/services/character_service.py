@@ -25,7 +25,7 @@ class CharacterService:
 
     @staticmethod
     def list_by_creator(db: Session, creator: User, page: int = 1, page_size: int = 20):
-        """角色维护者查看自己创建的角色"""
+        """用户查看自己创建的角色"""
         query = db.query(AICharacter).filter(AICharacter.creator_id == creator.id)
         total = query.count()
         items = query.order_by(AICharacter.id.desc()).offset((page - 1) * page_size).limit(page_size).all()
@@ -87,7 +87,7 @@ class CharacterService:
         if req.tags is not None:
             character.tags = req.tags
         if req.status is not None:
-            # 只有管理员可以改状态，角色维护者只能编辑基本信息
+            # 只有管理员可以改状态，普通用户只能编辑基本信息
             character.status = req.status
         db.commit()
         db.refresh(character)

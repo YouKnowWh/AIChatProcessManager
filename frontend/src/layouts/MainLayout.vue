@@ -103,7 +103,7 @@ onMounted(() => {
 })
 
 function roleLabel(role: string): string {
-  const map: Record<string, string> = { admin: '管理员', character_manager: '角色维护者', user: '普通用户' }
+  const map: Record<string, string> = { admin: '管理员', user: '普通用户' }
   return map[role] || role
 }
 

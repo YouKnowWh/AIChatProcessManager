@@ -2,13 +2,13 @@
   "schema": "openai.presentation.layout/v4",
   "unit": "px",
   "slide": {
-    "aid": "sl/d6j64z",
-    "id": "d6j64z",
+    "aid": "sl/bri4qf",
+    "id": "bri4qf",
     "slide": 10,
-    "layoutId": "e96e0f20-46d6-48c0-823f-cc39ba8b8cf4",
+    "layoutId": "f057ce63-5437-43fe-81ec-ca9675cb4e4b",
     "layoutName": "Title Slide",
     "layoutType": "title",
-    "masterLayoutId": "c4940938-650c-4056-bb9c-aed6e5694eca",
+    "masterLayoutId": "42c1dede-770a-406c-995b-d102b2ae146f",
     "masterLayoutName": "Master",
     "frame": {
       "left": 0,
@@ -44,15 +44,15 @@
   "inheritedLayers": [
     {
       "scope": "layout",
-      "id": "e96e0f20-46d6-48c0-823f-cc39ba8b8cf4",
+      "id": "f057ce63-5437-43fe-81ec-ca9675cb4e4b",
       "name": "Title Slide",
       "type": "title",
-      "parentLayoutId": "c4940938-650c-4056-bb9c-aed6e5694eca",
+      "parentLayoutId": "42c1dede-770a-406c-995b-d102b2ae146f",
       "elements": []
     },
     {
       "scope": "master",
-      "id": "c4940938-650c-4056-bb9c-aed6e5694eca",
+      "id": "42c1dede-770a-406c-995b-d102b2ae146f",
       "name": "Master",
       "type": "master",
       "elements": []
@@ -63,7 +63,7 @@
       "order": 1,
       "kind": "shape",
       "scope": "slide",
-      "aid": "sh/eloj2t83",
+      "aid": "sh/szqtcj6t",
       "id": "1",
       "bbox": [
         0,
@@ -80,7 +80,7 @@
       "order": 2,
       "kind": "shape",
       "scope": "slide",
-      "aid": "sh/lc7u54zi",
+      "aid": "sh/3ex0nuxc",
       "id": "2",
       "bbox": [
         0,
@@ -97,7 +97,7 @@
       "order": 3,
       "kind": "shape",
       "scope": "slide",
-      "aid": "sh/wra5gbq1",
+      "aid": "sh/at47y1kr",
       "id": "3",
       "bbox": [
         0,
@@ -114,7 +114,7 @@
       "order": 4,
       "kind": "shape",
       "scope": "slide",
-      "aid": "sh/7u54zido",
+      "aid": "sh/l87ed8ba",
       "id": "4",
       "bbox": [
         56,
@@ -182,7 +182,7 @@
       "order": 5,
       "kind": "shape",
       "scope": "slide",
-      "aid": "sh/ed8bat47",
+      "aid": "sh/sneloj2t",
       "id": "5",
       "bbox": [
         56,
@@ -250,7 +250,7 @@
       "order": 6,
       "kind": "shape",
       "scope": "slide",
-      "aid": "sh/l0rqd4vm",
+      "aid": "sh/32lszqtc",
       "id": "6",
       "bbox": [
         80,
@@ -267,7 +267,7 @@
       "order": 7,
       "kind": "shape",
       "scope": "slide",
-      "aid": "sh/wfyxobm5",
+      "aid": "sh/ahoza1gv",
       "id": "7",
       "bbox": [
         80,
@@ -284,7 +284,7 @@
       "order": 8,
       "kind": "shape",
       "scope": "slide",
-      "aid": "sh/7mp0bi9s",
+      "aid": "sh/lwval87e",
       "id": "8",
       "bbox": [
         94,
@@ -352,7 +352,7 @@
       "order": 9,
       "kind": "shape",
       "scope": "slide",
-      "aid": "sh/e1w7mp0b",
+      "aid": "sh/wb2hwfyx",
       "id": "9",
       "bbox": [
         98,
@@ -421,7 +421,7 @@
       "order": 10,
       "kind": "shape",
       "scope": "slide",
-      "aid": "sh/0rqd4vmt",
+      "aid": "sh/2lszqtcj",
       "id": "10",
       "bbox": [
         285,
@@ -438,7 +438,7 @@
       "order": 11,
       "kind": "shape",
       "scope": "slide",
-      "aid": "sh/tcj6tova",
+      "aid": "sh/v6psfil0",
       "id": "11",
       "bbox": [
         336,
@@ -455,7 +455,7 @@
       "order": 12,
       "kind": "shape",
       "scope": "slide",
-      "aid": "sh/il0rqd4v",
+      "aid": "sh/knih4byh",
       "id": "12",
       "bbox": [
         360,
@@ -472,7 +472,7 @@
       "order": 13,
       "kind": "shape",
       "scope": "slide",
-      "aid": "sh/b6xkf6dc",
+      "aid": "sh/d8bat47y",
       "id": "13",
       "bbox": [
         360,
@@ -489,7 +489,7 @@
       "order": 14,
       "kind": "shape",
       "scope": "slide",
-      "aid": "sh/0je9cvix",
+      "aid": "sh/29gr2p8n",
       "id": "14",
       "bbox": [
         374,
@@ -557,7 +557,7 @@
       "order": 15,
       "kind": "shape",
       "scope": "slide",
-      "aid": "sh/t47y1kre",
+      "aid": "sh/vu9knih4",
       "id": "15",
       "bbox": [
         378,
@@ -622,7 +622,7 @@
       "order": 16,
       "kind": "shape",
       "scope": "slide",
-      "aid": "sh/idonyd0z",
+      "aid": "sh/kf6dcbul",
       "id": "16",
       "bbox": [
         585,
@@ -639,7 +639,7 @@
       "order": 17,
       "kind": "shape",
       "scope": "slide",
-      "aid": "sh/byhgn29g",
+      "aid": "sh/d0z61032",
       "id": "17",
       "bbox": [
         636,
@@ -656,7 +656,7 @@
       "order": 18,
       "kind": "shape",
       "scope": "slide",
-      "aid": "sh/0fepkzup",
+      "aid": "sh/2x4nap4r",
       "id": "18",
       "bbox": [
         660,
@@ -673,7 +673,7 @@
       "order": 19,
       "kind": "shape",
       "scope": "slide",
-      "aid": "sh/p0bi9s36",
+      "aid": "sh/vixczed8",
       "id": "19",
       "bbox": [
         660,
@@ -690,7 +690,7 @@
       "order": 20,
       "kind": "shape",
       "scope": "slide",
-      "aid": "sh/tsvu9kni",
+      "aid": "sh/neloj2t8",
       "id": "20",
       "bbox": [
         674,
@@ -758,7 +758,7 @@
       "order": 21,
       "kind": "shape",
       "scope": "slide",
-      "aid": "sh/47y1kre1",
+      "aid": "sh/ytsvu9kn",
       "id": "21",
       "bbox": [
         678,
@@ -823,7 +823,7 @@
       "order": 22,
       "kind": "shape",
       "scope": "slide",
-      "aid": "sh/bm58z25k",
+      "aid": "sh/5kb6xkf6",
       "id": "22",
       "bbox": [
         880,
@@ -840,7 +840,7 @@
       "order": 23,
       "kind": "shape",
       "scope": "slide",
-      "aid": "sh/m1cfa9w3",
+      "aid": "sh/czed8v6p",
       "id": "23",
       "bbox": [
         931,
@@ -857,7 +857,7 @@
       "order": 24,
       "kind": "shape",
       "scope": "slide",
-      "aid": "sh/tgfmlkjm",
+      "aid": "sh/nqxs72x4",
       "id": "24",
       "bbox": [
         955,
@@ -874,7 +874,7 @@
       "order": 25,
       "kind": "shape",
       "scope": "slide",
-      "aid": "sh/4vmtwra5",
+      "aid": "sh/u54zidon",
       "id": "25",
       "bbox": [
         955,
@@ -891,7 +891,7 @@
       "order": 26,
       "kind": "shape",
       "scope": "slide",
-      "aid": "sh/bat47y1k",
+      "aid": "sh/5sneloj2",
       "id": "26",
       "bbox": [
         969,
@@ -959,7 +959,7 @@
       "order": 27,
       "kind": "shape",
       "scope": "slide",
-      "aid": "sh/mp0bi9s3",
+      "aid": "sh/cbulwval",
       "id": "27",
       "bbox": [
         973,
@@ -1024,7 +1024,7 @@
       "order": 28,
       "kind": "shape",
       "scope": "slide",
-      "aid": "sh/t83itgfm",
+      "aid": "sh/nuxc3ylc",
       "id": "28",
       "bbox": [
         125,
@@ -1041,7 +1041,7 @@
       "order": 29,
       "kind": "shape",
       "scope": "slide",
-      "aid": "sh/4nap4r65",
+      "aid": "sh/y90je9cv",
       "id": "29",
       "bbox": [
         155,
@@ -1109,7 +1109,7 @@
       "order": 30,
       "kind": "shape",
       "scope": "slide",
-      "aid": "sh/eloj2t83",
+      "aid": "sh/87ed8bat",
       "id": "30",
       "bbox": [
         360,
@@ -1118,8 +1118,8 @@
         44
       ],
       "geometry": "rect",
-      "text": "进入管理后台，依次展示用户管理、角色管理、消息管理、反馈管理、系统日志和统计页面，说明管理员与角色维护者的权限差异。",
-      "textPreview": "进入管理后台，依次展示用户管理、角色管理、消息管理、反馈管理、系统日志和统计页面，说明管理员与角色维护者的权限差异。",
+      "text": "进入管理后台，依次展示用户管理、角色管理、消息管理、反馈管理、系统日志和统计页面，说明管理员负责平台治理，普通用户负责自己的会话与角色。",
+      "textPreview": "进入管理后台，依次展示用户管理、角色管理、消息管理、反馈管理、系统日志和统计页面，说明管理员负责平台治理，普通用户负责自己的会话与角色。",
       "resolvedFontSize": 18,
       "resolvedTextStyle": {
         "anchor": 1,
@@ -1144,14 +1144,14 @@
           },
           {
             "index": 2,
-            "text": "页面，说明管理员与角色维护者的权限差异。"
+            "text": "页面，说明管理员负责平台治理，普通用户负责自己的会话与角色。"
           }
         ]
       },
       "paragraphs": [
         {
           "index": 1,
-          "text": "进入管理后台，依次展示用户管理、角色管理、消息管理、反馈管理、系统日志和统计页面，说明管理员与角色维护者的权限差异。",
+          "text": "进入管理后台，依次展示用户管理、角色管理、消息管理、反馈管理、系统日志和统计页面，说明管理员负责平台治理，普通用户负责自己的会话与角色。",
           "resolvedTextStyle": {
             "fontSize": 18,
             "typeface": "PingFang SC",
@@ -1161,7 +1161,7 @@
           "runs": [
             {
               "index": 1,
-              "text": "进入管理后台，依次展示用户管理、角色管理、消息管理、反馈管理、系统日志和统计页面，说明管理员与角色维护者的权限差异。",
+              "text": "进入管理后台，依次展示用户管理、角色管理、消息管理、反馈管理、系统日志和统计页面，说明管理员负责平台治理，普通用户负责自己的会话与角色。",
               "fontSize": 18,
               "typeface": "PingFang SC",
               "color": "#64748B"
@@ -1178,7 +1178,7 @@
       "order": 31,
       "kind": "shape",
       "scope": "slide",
-      "aid": "sh/36hcrmhk",
+      "aid": "sh/xs72x4na",
       "id": "31",
       "bbox": [
         56,
@@ -1243,7 +1243,7 @@
       "order": 32,
       "kind": "shape",
       "scope": "slide",
-      "aid": "sh/wra5gbq1",
+      "aid": "sh/q1orytsv",
       "id": "32",
       "bbox": [
         1186,

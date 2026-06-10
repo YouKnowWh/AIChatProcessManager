@@ -1,0 +1,3 @@
+task mode: create
+primary deck-profile: engineering-platform
+proof objects: architecture map, data model, process chain, API surface, permission lanes, verification and roadmap

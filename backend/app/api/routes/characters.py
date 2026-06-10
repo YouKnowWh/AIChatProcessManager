@@ -51,7 +51,7 @@ def get_character(
     return APIResponse.ok(data=CharacterResponse.model_validate(character).model_dump())
 
 
-# ==================== 角色维护者/管理员接口 ====================
+# ==================== 用户/管理员角色管理接口 ====================
 
 @router.post("", summary="创建 AI 角色")
 def create_character(
@@ -72,7 +72,7 @@ def update_character(
 ):
     character = CharacterService.get_by_id(db, character_id)
 
-    # 角色维护者只能编辑自己创建的角色，admin 可以编辑所有
+    # 普通用户只能编辑自己创建的角色，admin 可以编辑所有
     if current_user.role != "admin" and character.creator_id != current_user.id:
         from fastapi import HTTPException, status
         raise HTTPException(status_code=status.HTTP_403_FORBIDDEN, detail="只能编辑自己创建的角色")

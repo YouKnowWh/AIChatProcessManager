@@ -12,7 +12,7 @@ export async function slide10(presentation, ctx) {
   node(ctx, slide, "4. 收藏恢复", "收藏后切换页面再返回", 955, 220, 205, 120, colors.amber);
   box(ctx, slide, 125, 430, 1030, 110, colors.white, "#E2E8F0", 1);
   text(ctx, slide, "管理员补充演示", 155, 458, 240, 28, 22, colors.ink, { bold: true });
-  text(ctx, slide, "进入管理后台，依次展示用户管理、角色管理、消息管理、反馈管理、系统日志和统计页面，说明管理员与角色维护者的权限差异。", 360, 460, 710, 44, 18, colors.muted);
+  text(ctx, slide, "进入管理后台，依次展示用户管理、角色管理、消息管理、反馈管理、系统日志和统计页面，说明管理员负责平台治理，普通用户负责自己的会话与角色。", 360, 460, 710, 44, 18, colors.muted);
   footer(ctx, slide, 10);
   return slide;
 }

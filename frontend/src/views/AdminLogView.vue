@@ -8,6 +8,7 @@
         <el-option label="创建会话" value="create_conversation" />
         <el-option label="发送消息" value="send_message" />
         <el-option label="工具调用" value="tool_call" />
+        <el-option label="消息过程链路" value="message_flow_trace" />
         <el-option label="隐藏消息" value="hide_message" />
       </el-select>
     </div>
@@ -56,11 +57,11 @@ async function load() {
 }
 function fmt(ts: string) { return new Date(ts).toLocaleString('zh-CN') }
 function actionLabel(a: string) {
-  const m: Record<string,string> = { login:'登录', create_conversation:'创建会话', send_message:'发送消息', hide_message:'隐藏消息', tool_call:'工具调用' }
+  const m: Record<string,string> = { login:'登录', create_conversation:'创建会话', send_message:'发送消息', hide_message:'隐藏消息', tool_call:'工具调用', message_flow_trace:'消息过程链路' }
   return m[a] || a
 }
 function actionTag(a: string) {
-  const m: Record<string,string> = { login:'', create_conversation:'success', send_message:'info', hide_message:'warning', tool_call:'' }
+  const m: Record<string,string> = { login:'', create_conversation:'success', send_message:'info', hide_message:'warning', tool_call:'', message_flow_trace:'primary' }
   return m[a] || ''
 }
 </script>

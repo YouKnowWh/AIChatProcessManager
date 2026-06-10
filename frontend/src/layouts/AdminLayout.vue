@@ -38,6 +38,10 @@
           <el-icon><Document /></el-icon>
           <span>系统日志</span>
         </el-menu-item>
+        <el-menu-item index="/admin/message-flows">
+          <el-icon><Connection /></el-icon>
+          <span>消息过程日志</span>
+        </el-menu-item>
         <el-menu-item index="/admin/stats">
           <el-icon><DataAnalysis /></el-icon>
           <span>系统统计</span>
@@ -72,7 +76,7 @@ import { useRoute } from 'vue-router'
 import { useAuthStore } from '@/stores/auth'
 import {
   Monitor, HomeFilled, User, Service, ChatDotRound, StarFilled,
-  Document, DataAnalysis, Expand, Fold,
+  Document, DataAnalysis, Expand, Fold, Connection,
 } from '@element-plus/icons-vue'
 
 const route = useRoute()
@@ -80,7 +84,7 @@ const auth = useAuthStore()
 const collapsed = ref(false)
 
 function roleLabel(role: string): string {
-  const map: Record<string, string> = { admin: '管理员', character_manager: '角色维护者', user: '普通用户' }
+  const map: Record<string, string> = { admin: '管理员', user: '普通用户' }
   return map[role] || role
 }
 </script>

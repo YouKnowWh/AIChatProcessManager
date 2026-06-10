@@ -11,7 +11,7 @@ export async function slide01(presentation, ctx) {
   text(ctx, slide, "面向 AI 回复过程链路的数据建模、权限管理与后台治理", 88, 308, 780, 34, 22, "#E0F2FE");
   box(ctx, slide, 84, 410, 930, 1, "#93C5FD88");
   metric(ctx, slide, "13", "核心数据表", 92, 462, "#FFFFFF");
-  metric(ctx, slide, "3", "业务角色", 268, 462, "#FFFFFF");
+  metric(ctx, slide, "2", "用户角色", 268, 462, "#FFFFFF");
   metric(ctx, slide, "10+", "API 模块", 444, 462, "#FFFFFF");
   metric(ctx, slide, "5", "过程数据维度", 620, 462, "#FFFFFF");
   text(ctx, slide, "Vue 3 / FastAPI / SQLAlchemy / MySQL / Docker Compose", 88, 650, 760, 24, 16, "#BFDBFE");

@@ -13,6 +13,7 @@ from app.models.favorite import MessageFavorite
 from app.models.feedback import Feedback
 from app.models.system_log import SystemLog
 from app.models.audit_record import AuditRecord
+from app.models.knowledge_entry import KnowledgeEntry
 
 __all__ = [
     "User",
@@ -28,4 +29,5 @@ __all__ = [
     "Feedback",
     "SystemLog",
     "AuditRecord",
+    "KnowledgeEntry",
 ]

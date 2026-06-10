@@ -29,7 +29,7 @@ class UserUpdateRequest(BaseModel):
 
 
 class AdminUserUpdateRequest(UserUpdateRequest):
-    role: str | None = Field(None, pattern="^(user|character_manager|admin)$")
+    role: str | None = Field(None, pattern="^(user|admin)$")
     status: str | None = Field(None, pattern="^(active|disabled)$")
 
 

@@ -20,7 +20,7 @@ class User(Base):
     phone: Mapped[str | None] = mapped_column(String(20), nullable=True)
     bio: Mapped[str | None] = mapped_column(Text, nullable=True)
     role: Mapped[str] = mapped_column(
-        Enum("user", "character_manager", "admin", name="user_role"),
+        Enum("user", "admin", name="user_role"),
         nullable=False,
         default="user",
     )

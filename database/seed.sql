@@ -3,7 +3,7 @@
 -- 版本: 1.0
 -- 密码明文（仅供测试）:
 --   admin    / admin123
---   manager  / manager123
+--   manager  / manager123  (普通测试用户)
 --   user1    / user123
 --   user2    / user456
 -- ============================================================
@@ -17,7 +17,7 @@ SET NAMES utf8mb4 COLLATE utf8mb4_unicode_ci;
 -- ============================================================
 INSERT INTO users (username, email, password_hash, nickname, role, status, bio, last_login_at) VALUES
 ('admin',   'admin@test.com',   '$2b$12$154vT6oX9H1WWds.31L92e5xwEMKLvAtR6MrEiQkxwBDUF.TtjiP2', '系统管理员', 'admin',             'active', '系统管理员账户',           '2026-06-01 08:00:00'),
-('manager', 'manager@test.com', '$2b$12$TnVMpPJ1aH6gBS78dz73ueY8KYXnVAY30up9i5HN9rgEIhIFzYLCC', '角色维护者', 'character_manager', 'active', '负责维护 AI 角色',          '2026-06-01 09:00:00'),
+('manager', 'manager@test.com', '$2b$12$TnVMpPJ1aH6gBS78dz73ueY8KYXnVAY30up9i5HN9rgEIhIFzYLCC', '测试用户三', 'user',              'active', '普通用户三号，可维护自己的 AI 角色', '2026-06-01 09:00:00'),
 ('user1',   'user1@test.com',   '$2b$12$yBCV8NRRbHXZUNykG2.LQuEFoMMzcHaWl3Nk2Z91vtRqutMI.745u', '测试用户一', 'user',              'active', '普通用户一号',               '2026-06-02 10:00:00'),
 ('user2',   'user2@test.com',   '$2b$12$EN2d44yzMeHbQQHLErpuIegnMgIW1dK0Fz1VI6LZkmHm7cvheKVI6', '测试用户二', 'user',              'active', '普通用户二号',               '2026-06-02 11:00:00');
 
@@ -170,4 +170,4 @@ INSERT INTO system_logs (user_id, action, target_type, target_id, detail, ip_add
 -- ============================================================
 INSERT INTO audit_records (admin_id, target_type, target_id, action, comment, created_at) VALUES
 (1, 'message', 8, 'flag', '用户举报该消息含不当内容，已隐藏处理。', '2026-06-08 11:05:00'),
-(1, 'ai_character', 4, 'approve', '翻译官角色审核通过，目前处于禁用状态等待维护者启用。', '2026-06-05 14:00:00');
+(1, 'ai_character', 4, 'approve', '翻译官角色审核通过，目前处于禁用状态等待用户或管理员启用。', '2026-06-05 14:00:00');

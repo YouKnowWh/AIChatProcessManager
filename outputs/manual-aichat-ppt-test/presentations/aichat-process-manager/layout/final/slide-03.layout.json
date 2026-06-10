@@ -2,13 +2,13 @@
   "schema": "openai.presentation.layout/v4",
   "unit": "px",
   "slide": {
-    "aid": "sl/jnzc6m",
-    "id": "jnzc6m",
+    "aid": "sl/o80d0j",
+    "id": "o80d0j",
     "slide": 3,
-    "layoutId": "e96e0f20-46d6-48c0-823f-cc39ba8b8cf4",
+    "layoutId": "f057ce63-5437-43fe-81ec-ca9675cb4e4b",
     "layoutName": "Title Slide",
     "layoutType": "title",
-    "masterLayoutId": "c4940938-650c-4056-bb9c-aed6e5694eca",
+    "masterLayoutId": "42c1dede-770a-406c-995b-d102b2ae146f",
     "masterLayoutName": "Master",
     "frame": {
       "left": 0,
@@ -44,15 +44,15 @@
   "inheritedLayers": [
     {
       "scope": "layout",
-      "id": "e96e0f20-46d6-48c0-823f-cc39ba8b8cf4",
+      "id": "f057ce63-5437-43fe-81ec-ca9675cb4e4b",
       "name": "Title Slide",
       "type": "title",
-      "parentLayoutId": "c4940938-650c-4056-bb9c-aed6e5694eca",
+      "parentLayoutId": "42c1dede-770a-406c-995b-d102b2ae146f",
       "elements": []
     },
     {
       "scope": "master",
-      "id": "c4940938-650c-4056-bb9c-aed6e5694eca",
+      "id": "42c1dede-770a-406c-995b-d102b2ae146f",
       "name": "Master",
       "type": "master",
       "elements": []
@@ -63,7 +63,7 @@
       "order": 1,
       "kind": "shape",
       "scope": "slide",
-      "aid": "sh/wra5gbq1",
+      "aid": "sh/1kre1w7m",
       "id": "1",
       "bbox": [
         0,
@@ -80,7 +80,7 @@
       "order": 2,
       "kind": "shape",
       "scope": "slide",
-      "aid": "sh/36hcrmhk",
+      "aid": "sh/uxc3ylc7",
       "id": "2",
       "bbox": [
         0,
@@ -97,7 +97,7 @@
       "order": 3,
       "kind": "shape",
       "scope": "slide",
-      "aid": "sh/eloj2t83",
+      "aid": "sh/ji5snelo",
       "id": "3",
       "bbox": [
         0,
@@ -114,7 +114,7 @@
       "order": 4,
       "kind": "shape",
       "scope": "slide",
-      "aid": "sh/l0rqd4vm",
+      "aid": "sh/crmhk3q5",
       "id": "4",
       "bbox": [
         56,
@@ -182,7 +182,7 @@
       "order": 5,
       "kind": "shape",
       "scope": "slide",
-      "aid": "sh/wfyxobm5",
+      "aid": "sh/1cfa9w3m",
       "id": "5",
       "bbox": [
         56,
@@ -191,8 +191,8 @@
         52
       ],
       "geometry": "rect",
-      "text": "三类角色与权限边界",
-      "textPreview": "三类角色与权限边界",
+      "text": "两类用户角色与权限边界",
+      "textPreview": "两类用户角色与权限边界",
       "resolvedFontSize": 34,
       "resolvedTextStyle": {
         "anchor": 1,
@@ -214,14 +214,14 @@
         "lines": [
           {
             "index": 1,
-            "text": "三类角色与权限边界"
+            "text": "两类用户角色与权限边界"
           }
         ]
       },
       "paragraphs": [
         {
           "index": 1,
-          "text": "三类角色与权限边界",
+          "text": "两类用户角色与权限边界",
           "resolvedTextStyle": {
             "fontSize": 34,
             "typeface": "PingFang SC",
@@ -232,7 +232,7 @@
           "runs": [
             {
               "index": 1,
-              "text": "三类角色与权限边界",
+              "text": "两类用户角色与权限边界",
               "fontSize": 34,
               "typeface": "PingFang SC",
               "color": "#111827",
@@ -250,13 +250,13 @@
       "order": 6,
       "kind": "shape",
       "scope": "slide",
-      "aid": "sh/7u54zido",
+      "aid": "sh/ulwval87",
       "id": "6",
       "bbox": [
-        95,
-        215,
-        285,
-        170
+        170,
+        220,
+        320,
+        210
       ],
       "geometry": "rect",
       "fillColor": "#FFFFFF",
@@ -267,12 +267,12 @@
       "order": 7,
       "kind": "shape",
       "scope": "slide",
-      "aid": "sh/ed8bat47",
+      "aid": "sh/j6tovaho",
       "id": "7",
       "bbox": [
-        95,
-        215,
-        285,
+        170,
+        220,
+        320,
         7
       ],
       "geometry": "rect",
@@ -284,12 +284,12 @@
       "order": 8,
       "kind": "shape",
       "scope": "slide",
-      "aid": "sh/psfil0rq",
+      "aid": "sh/8nqxs72x",
       "id": "8",
       "bbox": [
-        109,
-        237,
-        257,
+        184,
+        242,
+        292,
         28
       ],
       "geometry": "rect",
@@ -352,17 +352,17 @@
       "order": 9,
       "kind": "shape",
       "scope": "slide",
-      "aid": "sh/w7mp0bi9",
+      "aid": "sh/18jqh0fe",
       "id": "9",
       "bbox": [
-        113,
-        273,
-        249,
-        104
+        188,
+        278,
+        284,
+        144
       ],
       "geometry": "rect",
-      "text": "发起会话、查看消息过程、收藏消息、提交反馈",
-      "textPreview": "发起会话、查看消息过程、收藏消息、提交反馈",
+      "text": "聊天会话\n自定义 AI 角色\n收藏消息\n提交反馈\n查看个人统计",
+      "textPreview": "聊天会话 | 自定义 AI 角色 | 收藏消息 | 提交反馈 | 查看个人统计",
       "resolvedFontSize": 13,
       "resolvedTextStyle": {
         "anchor": 1,
@@ -379,22 +379,34 @@
         }
       },
       "textLayout": {
-        "lineCount": 2,
+        "lineCount": 5,
         "lines": [
           {
             "index": 1,
-            "text": "发起会话、查看消息过程、收藏消息、提"
+            "text": "聊天会话"
           },
           {
             "index": 2,
-            "text": "交反馈"
+            "text": "自定义 AI 角色"
+          },
+          {
+            "index": 3,
+            "text": "收藏消息"
+          },
+          {
+            "index": 4,
+            "text": "提交反馈"
+          },
+          {
+            "index": 5,
+            "text": "查看个人统计"
           }
         ]
       },
       "paragraphs": [
         {
           "index": 1,
-          "text": "发起会话、查看消息过程、收藏消息、提交反馈",
+          "text": "聊天会话",
           "resolvedTextStyle": {
             "fontSize": 13,
             "typeface": "PingFang SC",
@@ -404,7 +416,87 @@
           "runs": [
             {
               "index": 1,
-              "text": "发起会话、查看消息过程、收藏消息、提交反馈",
+              "text": "聊天会话",
+              "fontSize": 13,
+              "typeface": "PingFang SC",
+              "color": "#64748B"
+            }
+          ],
+          "marginLeft": 0
+        },
+        {
+          "index": 2,
+          "text": "自定义 AI 角色",
+          "resolvedTextStyle": {
+            "fontSize": 13,
+            "typeface": "PingFang SC",
+            "color": "#64748B",
+            "alignment": "center"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "自定义 AI 角色",
+              "fontSize": 13,
+              "typeface": "PingFang SC",
+              "color": "#64748B"
+            }
+          ],
+          "marginLeft": 0
+        },
+        {
+          "index": 3,
+          "text": "收藏消息",
+          "resolvedTextStyle": {
+            "fontSize": 13,
+            "typeface": "PingFang SC",
+            "color": "#64748B",
+            "alignment": "center"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "收藏消息",
+              "fontSize": 13,
+              "typeface": "PingFang SC",
+              "color": "#64748B"
+            }
+          ],
+          "marginLeft": 0
+        },
+        {
+          "index": 4,
+          "text": "提交反馈",
+          "resolvedTextStyle": {
+            "fontSize": 13,
+            "typeface": "PingFang SC",
+            "color": "#64748B",
+            "alignment": "center"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "提交反馈",
+              "fontSize": 13,
+              "typeface": "PingFang SC",
+              "color": "#64748B"
+            }
+          ],
+          "marginLeft": 0
+        },
+        {
+          "index": 5,
+          "text": "查看个人统计",
+          "resolvedTextStyle": {
+            "fontSize": 13,
+            "typeface": "PingFang SC",
+            "color": "#64748B",
+            "alignment": "center"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "查看个人统计",
               "fontSize": 13,
               "typeface": "PingFang SC",
               "color": "#64748B"
@@ -421,12 +513,12 @@
       "order": 10,
       "kind": "shape",
       "scope": "slide",
-      "aid": "sh/eloj2t83",
+      "aid": "sh/psfil0rq",
       "id": "10",
       "bbox": [
-        400,
-        298,
-        95,
+        535,
+        322,
+        145,
         3
       ],
       "geometry": "rect",
@@ -438,11 +530,11 @@
       "order": 11,
       "kind": "shape",
       "scope": "slide",
-      "aid": "sh/36hcrmhk",
+      "aid": "sh/w7mp0bi9",
       "id": "11",
       "bbox": [
-        491,
-        291,
+        676,
+        315,
         16,
         16
       ],
@@ -455,214 +547,13 @@
       "order": 12,
       "kind": "shape",
       "scope": "slide",
-      "aid": "sh/wra5gbq1",
+      "aid": "sh/7mp0bi9s",
       "id": "12",
       "bbox": [
-        515,
-        215,
-        285,
-        170
-      ],
-      "geometry": "rect",
-      "fillColor": "#FFFFFF",
-      "lineColor": "#F59E0B",
-      "lineWidth": 1.4
-    },
-    {
-      "order": 13,
-      "kind": "shape",
-      "scope": "slide",
-      "aid": "sh/lc7u54zi",
-      "id": "13",
-      "bbox": [
-        515,
-        215,
-        285,
-        7
-      ],
-      "geometry": "rect",
-      "fillColor": "#F59E0B",
-      "lineColor": "rgba(0, 0, 0, 0)",
-      "lineWidth": 0
-    },
-    {
-      "order": 14,
-      "kind": "shape",
-      "scope": "slide",
-      "aid": "sh/ed8bat47",
-      "id": "14",
-      "bbox": [
-        529,
-        237,
-        257,
-        28
-      ],
-      "geometry": "rect",
-      "text": "角色维护者",
-      "textPreview": "角色维护者",
-      "resolvedFontSize": 19,
-      "resolvedTextStyle": {
-        "anchor": 1,
-        "fontSize": 19,
-        "typeface": "PingFang SC",
-        "color": "#111827",
-        "bold": true,
-        "alignment": "center",
-        "verticalAlignment": "top",
-        "insets": {
-          "top": 0,
-          "right": 0,
-          "bottom": 0,
-          "left": 0
-        }
-      },
-      "textLayout": {
-        "lineCount": 1,
-        "lines": [
-          {
-            "index": 1,
-            "text": "角色维护者"
-          }
-        ]
-      },
-      "paragraphs": [
-        {
-          "index": 1,
-          "text": "角色维护者",
-          "resolvedTextStyle": {
-            "fontSize": 19,
-            "typeface": "PingFang SC",
-            "color": "#111827",
-            "bold": true,
-            "alignment": "center"
-          },
-          "runs": [
-            {
-              "index": 1,
-              "text": "角色维护者",
-              "fontSize": 19,
-              "typeface": "PingFang SC",
-              "color": "#111827",
-              "bold": true
-            }
-          ],
-          "marginLeft": 0
-        }
-      ],
-      "fillColor": "rgba(0, 0, 0, 0)",
-      "lineColor": "rgba(0, 0, 0, 0)",
-      "lineWidth": 0
-    },
-    {
-      "order": 15,
-      "kind": "shape",
-      "scope": "slide",
-      "aid": "sh/7u54zido",
-      "id": "15",
-      "bbox": [
-        533,
-        273,
-        249,
-        104
-      ],
-      "geometry": "rect",
-      "text": "维护 AI 角色资料与状态，服务内容侧配置",
-      "textPreview": "维护 AI 角色资料与状态，服务内容侧配置",
-      "resolvedFontSize": 13,
-      "resolvedTextStyle": {
-        "anchor": 1,
-        "fontSize": 13,
-        "typeface": "PingFang SC",
-        "color": "#64748B",
-        "alignment": "center",
-        "verticalAlignment": "top",
-        "insets": {
-          "top": 0,
-          "right": 0,
-          "bottom": 0,
-          "left": 0
-        }
-      },
-      "textLayout": {
-        "lineCount": 1,
-        "lines": [
-          {
-            "index": 1,
-            "text": "维护 AI 角色资料与状态，服务内容侧配置"
-          }
-        ]
-      },
-      "paragraphs": [
-        {
-          "index": 1,
-          "text": "维护 AI 角色资料与状态，服务内容侧配置",
-          "resolvedTextStyle": {
-            "fontSize": 13,
-            "typeface": "PingFang SC",
-            "color": "#64748B",
-            "alignment": "center"
-          },
-          "runs": [
-            {
-              "index": 1,
-              "text": "维护 AI 角色资料与状态，服务内容侧配置",
-              "fontSize": 13,
-              "typeface": "PingFang SC",
-              "color": "#64748B"
-            }
-          ],
-          "marginLeft": 0
-        }
-      ],
-      "fillColor": "rgba(0, 0, 0, 0)",
-      "lineColor": "rgba(0, 0, 0, 0)",
-      "lineWidth": 0
-    },
-    {
-      "order": 16,
-      "kind": "shape",
-      "scope": "slide",
-      "aid": "sh/wfyxobm5",
-      "id": "16",
-      "bbox": [
-        820,
-        298,
-        95,
-        3
-      ],
-      "geometry": "rect",
-      "fillColor": "#94A3B8",
-      "lineColor": "rgba(0, 0, 0, 0)",
-      "lineWidth": 0
-    },
-    {
-      "order": 17,
-      "kind": "shape",
-      "scope": "slide",
-      "aid": "sh/l0rqd4vm",
-      "id": "17",
-      "bbox": [
-        911,
-        291,
-        16,
-        16
-      ],
-      "geometry": "triangle",
-      "fillColor": "#94A3B8",
-      "lineColor": "#94A3B8",
-      "lineWidth": 0
-    },
-    {
-      "order": 18,
-      "kind": "shape",
-      "scope": "slide",
-      "aid": "sh/e1w7mp0b",
-      "id": "18",
-      "bbox": [
-        935,
-        215,
-        285,
-        170
+        735,
+        220,
+        320,
+        210
       ],
       "geometry": "rect",
       "fillColor": "#FFFFFF",
@@ -670,15 +561,15 @@
       "lineWidth": 1.4
     },
     {
-      "order": 19,
+      "order": 13,
       "kind": "shape",
       "scope": "slide",
-      "aid": "sh/7mp0bi9s",
-      "id": "19",
+      "aid": "sh/e1w7mp0b",
+      "id": "13",
       "bbox": [
-        935,
-        215,
-        285,
+        735,
+        220,
+        320,
         7
       ],
       "geometry": "rect",
@@ -687,15 +578,15 @@
       "lineWidth": 0
     },
     {
-      "order": 20,
+      "order": 14,
       "kind": "shape",
       "scope": "slide",
-      "aid": "sh/zed8v6ps",
-      "id": "20",
+      "aid": "sh/pg3ex0nu",
+      "id": "14",
       "bbox": [
-        949,
-        237,
-        257,
+        749,
+        242,
+        292,
         28
       ],
       "geometry": "rect",
@@ -755,20 +646,20 @@
       "lineWidth": 0
     },
     {
-      "order": 21,
+      "order": 15,
       "kind": "shape",
       "scope": "slide",
-      "aid": "sh/6xkf6dcb",
-      "id": "21",
+      "aid": "sh/wval87ed",
+      "id": "15",
       "bbox": [
-        953,
-        273,
-        249,
-        104
+        753,
+        278,
+        284,
+        144
       ],
       "geometry": "rect",
-      "text": "用户管理、消息管理、反馈、日志、统计，继承维护者能力",
-      "textPreview": "用户管理、消息管理、反馈、日志、统计，继承维护者能力",
+      "text": "用户管理\nAI 角色状态管理\n消息治理\n反馈处理\n日志与系统统计",
+      "textPreview": "用户管理 | AI 角色状态管理 | 消息治理 | 反馈处理 | 日志与系统统计",
       "resolvedFontSize": 13,
       "resolvedTextStyle": {
         "anchor": 1,
@@ -785,22 +676,34 @@
         }
       },
       "textLayout": {
-        "lineCount": 2,
+        "lineCount": 5,
         "lines": [
           {
             "index": 1,
-            "text": "用户管理、消息管理、反馈、日志、统计"
+            "text": "用户管理"
           },
           {
             "index": 2,
-            "text": "，继承维护者能力"
+            "text": "AI 角色状态管理"
+          },
+          {
+            "index": 3,
+            "text": "消息治理"
+          },
+          {
+            "index": 4,
+            "text": "反馈处理"
+          },
+          {
+            "index": 5,
+            "text": "日志与系统统计"
           }
         ]
       },
       "paragraphs": [
         {
           "index": 1,
-          "text": "用户管理、消息管理、反馈、日志、统计，继承维护者能力",
+          "text": "用户管理",
           "resolvedTextStyle": {
             "fontSize": 13,
             "typeface": "PingFang SC",
@@ -810,7 +713,87 @@
           "runs": [
             {
               "index": 1,
-              "text": "用户管理、消息管理、反馈、日志、统计，继承维护者能力",
+              "text": "用户管理",
+              "fontSize": 13,
+              "typeface": "PingFang SC",
+              "color": "#64748B"
+            }
+          ],
+          "marginLeft": 0
+        },
+        {
+          "index": 2,
+          "text": "AI 角色状态管理",
+          "resolvedTextStyle": {
+            "fontSize": 13,
+            "typeface": "PingFang SC",
+            "color": "#64748B",
+            "alignment": "center"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "AI 角色状态管理",
+              "fontSize": 13,
+              "typeface": "PingFang SC",
+              "color": "#64748B"
+            }
+          ],
+          "marginLeft": 0
+        },
+        {
+          "index": 3,
+          "text": "消息治理",
+          "resolvedTextStyle": {
+            "fontSize": 13,
+            "typeface": "PingFang SC",
+            "color": "#64748B",
+            "alignment": "center"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "消息治理",
+              "fontSize": 13,
+              "typeface": "PingFang SC",
+              "color": "#64748B"
+            }
+          ],
+          "marginLeft": 0
+        },
+        {
+          "index": 4,
+          "text": "反馈处理",
+          "resolvedTextStyle": {
+            "fontSize": 13,
+            "typeface": "PingFang SC",
+            "color": "#64748B",
+            "alignment": "center"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "反馈处理",
+              "fontSize": 13,
+              "typeface": "PingFang SC",
+              "color": "#64748B"
+            }
+          ],
+          "marginLeft": 0
+        },
+        {
+          "index": 5,
+          "text": "日志与系统统计",
+          "resolvedTextStyle": {
+            "fontSize": 13,
+            "typeface": "PingFang SC",
+            "color": "#64748B",
+            "alignment": "center"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "日志与系统统计",
               "fontSize": 13,
               "typeface": "PingFang SC",
               "color": "#64748B"
@@ -824,16 +807,16 @@
       "lineWidth": 0
     },
     {
-      "order": 22,
+      "order": 16,
       "kind": "shape",
       "scope": "slide",
-      "aid": "sh/hk3q5o7q",
-      "id": "22",
+      "aid": "sh/7adsji5s",
+      "id": "16",
       "bbox": [
         130,
-        455,
+        500,
         1020,
-        110
+        96
       ],
       "geometry": "rect",
       "fillColor": "#FFFFFF",
@@ -841,20 +824,20 @@
       "lineWidth": 1
     },
     {
-      "order": 23,
+      "order": 17,
       "kind": "shape",
       "scope": "slide",
-      "aid": "sh/oza1gvy9",
-      "id": "23",
+      "aid": "sh/epkzupwb",
+      "id": "17",
       "bbox": [
         160,
-        482,
-        520,
+        525,
+        360,
         28
       ],
       "geometry": "rect",
-      "text": "为什么角色维护者和管理员不合并？",
-      "textPreview": "为什么角色维护者和管理员不合并？",
+      "text": "为什么合并“角色维护者”？",
+      "textPreview": "为什么合并“角色维护者”？",
       "resolvedFontSize": 22,
       "resolvedTextStyle": {
         "anchor": 1,
@@ -876,14 +859,14 @@
         "lines": [
           {
             "index": 1,
-            "text": "为什么角色维护者和管理员不合并？"
+            "text": "为什么合并“角色维护者”？"
           }
         ]
       },
       "paragraphs": [
         {
           "index": 1,
-          "text": "为什么角色维护者和管理员不合并？",
+          "text": "为什么合并“角色维护者”？",
           "resolvedTextStyle": {
             "fontSize": 22,
             "typeface": "PingFang SC",
@@ -894,7 +877,7 @@
           "runs": [
             {
               "index": 1,
-              "text": "为什么角色维护者和管理员不合并？",
+              "text": "为什么合并“角色维护者”？",
               "fontSize": 22,
               "typeface": "PingFang SC",
               "color": "#111827",
@@ -909,20 +892,20 @@
       "lineWidth": 0
     },
     {
-      "order": 24,
+      "order": 18,
       "kind": "shape",
       "scope": "slide",
-      "aid": "sh/zqtcj6to",
-      "id": "24",
+      "aid": "sh/lc7u54zi",
+      "id": "18",
       "bbox": [
-        160,
-        522,
-        900,
-        40
+        500,
+        526,
+        570,
+        42
       ],
       "geometry": "rect",
-      "text": "角色维护是内容配置权限；管理员是平台治理权限。拆开可以避免“能改角色的人也能改用户、看日志、看统计”的越权问题。管理员继承维护能力，但维护者不能反向进入系统管理。",
-      "textPreview": "角色维护是内容配置权限；管理员是平台治理权限。拆开可以避免“能改角色的人也能改用户、看日志、看统计”的越权问题。管理员继承维护能力，但维护者不能反向进入系统管理。",
+      "text": "它本质是用户侧自定义配置：普通用户维护自己的 AI 角色，管理员负责平台级审核和状态治理。这样角色体系更简单，答辩演示也更自然。",
+      "textPreview": "它本质是用户侧自定义配置：普通用户维护自己的 AI 角色，管理员负责平台级审核和状态治理。这样角色体系更简单，答辩演示也更自然。",
       "resolvedFontSize": 17,
       "resolvedTextStyle": {
         "anchor": 1,
@@ -939,22 +922,26 @@
         }
       },
       "textLayout": {
-        "lineCount": 2,
+        "lineCount": 3,
         "lines": [
           {
             "index": 1,
-            "text": "角色维护是内容配置权限；管理员是平台治理权限。拆开可以避免“能改角色的人也能改用户、看日志、看统计”的越"
+            "text": "它本质是用户侧自定义配置：普通用户维护自己的 AI"
           },
           {
             "index": 2,
-            "text": "权问题。管理员继承维护能力，但维护者不能反向进入系统管理。"
+            "text": "角色，管理员负责平台级审核和状态治理。这样角色体系更简单，答辩演"
+          },
+          {
+            "index": 3,
+            "text": "示也更自然。"
           }
         ]
       },
       "paragraphs": [
         {
           "index": 1,
-          "text": "角色维护是内容配置权限；管理员是平台治理权限。拆开可以避免“能改角色的人也能改用户、看日志、看统计”的越权问题。管理员继承维护能力，但维护者不能反向进入系统管理。",
+          "text": "它本质是用户侧自定义配置：普通用户维护自己的 AI 角色，管理员负责平台级审核和状态治理。这样角色体系更简单，答辩演示也更自然。",
           "resolvedTextStyle": {
             "fontSize": 17,
             "typeface": "PingFang SC",
@@ -964,7 +951,7 @@
           "runs": [
             {
               "index": 1,
-              "text": "角色维护是内容配置权限；管理员是平台治理权限。拆开可以避免“能改角色的人也能改用户、看日志、看统计”的越权问题。管理员继承维护能力，但维护者不能反向进入系统管理。",
+              "text": "它本质是用户侧自定义配置：普通用户维护自己的 AI 角色，管理员负责平台级审核和状态治理。这样角色体系更简单，答辩演示也更自然。",
               "fontSize": 17,
               "typeface": "PingFang SC",
               "color": "#64748B"
@@ -978,11 +965,11 @@
       "lineWidth": 0
     },
     {
-      "order": 25,
+      "order": 19,
       "kind": "shape",
       "scope": "slide",
-      "aid": "sh/65wjudg7",
-      "id": "25",
+      "aid": "sh/wra5gbq1",
+      "id": "19",
       "bbox": [
         56,
         684,
@@ -1043,11 +1030,11 @@
       "lineWidth": 0
     },
     {
-      "order": 26,
+      "order": 20,
       "kind": "shape",
       "scope": "slide",
-      "aid": "sh/hwfyxobm",
-      "id": "26",
+      "aid": "sh/s36hcrmh",
+      "id": "20",
       "bbox": [
         1186,
         684,

@@ -1,6 +1,8 @@
 """消息服务 — 消息发送、查询、删除"""
 
 from datetime import datetime
+import json
+from uuid import uuid4
 
 from fastapi import HTTPException, status
 from sqlalchemy.orm import Session, joinedload
@@ -21,6 +23,17 @@ from app.services.log_service import LogService
 
 
 class MessageService:
+    @staticmethod
+    def _emit_flow_terminal(trace_id: str, stage: str, table: str, summary: str, extra: dict | None = None):
+        payload = {
+            "trace_id": trace_id,
+            "stage": stage,
+            "table": table,
+            "summary": summary,
+        }
+        if extra:
+            payload["extra"] = extra
+        print(f"[message_flow] {json.dumps(payload, ensure_ascii=False)}")
 
     @staticmethod
     def list_by_conversation(db: Session, conversation_id: int, user: User,
@@ -82,15 +95,47 @@ class MessageService:
     @staticmethod
     def send_message(db: Session, conversation_id: int, user: User, content: str):
         """发送消息并触发模拟 AI 回复"""
+        trace_id = uuid4().hex[:8]
+        flow_steps: list[dict] = []
+
+        def record_flow(stage: str, table: str, summary: str, extra: dict | None = None):
+            step = {
+                "stage": stage,
+                "table": table,
+                "summary": summary,
+            }
+            if extra:
+                step["extra"] = extra
+            flow_steps.append(step)
+            MessageService._emit_flow_terminal(trace_id, stage, table, summary, extra)
+
         # 1. 校验会话权限
         conversation = ConversationService.get_by_id(db, conversation_id, user)
         if conversation.status != "active":
             raise HTTPException(status_code=status.HTTP_400_BAD_REQUEST, detail="会话已归档或删除，无法发送消息")
 
-        # 2. 确定序列号
-        max_seq = db.query(Message).filter(
+        history_message_count = db.query(Message).filter(
             Message.conversation_id == conversation_id
         ).count()
+        history_content_count = (
+            db.query(MessageContent)
+            .join(Message, Message.id == MessageContent.message_id)
+            .filter(Message.conversation_id == conversation_id)
+            .count()
+        )
+        record_flow(
+            "context_loaded",
+            "conversations/messages/message_contents",
+            "Rebuild message context from conversation history",
+            {
+                "conversation_id": conversation_id,
+                "history_messages": history_message_count,
+                "history_content_blocks": history_content_count,
+            },
+        )
+
+        # 2. 确定序列号
+        max_seq = history_message_count
 
         # 3. 保存用户消息
         user_msg = Message(
@@ -103,6 +148,17 @@ class MessageService:
         )
         db.add(user_msg)
         db.flush()
+        record_flow(
+            "write_user_message",
+            "messages",
+            "Insert user message row",
+            {
+                "message_id": user_msg.id,
+                "sender_type": user_msg.sender_type,
+                "role": user_msg.role,
+                "sequence_number": user_msg.sequence_number,
+            },
+        )
 
         user_content = MessageContent(
             message_id=user_msg.id,
@@ -111,6 +167,18 @@ class MessageService:
             sort_order=0,
         )
         db.add(user_content)
+        db.flush()
+        record_flow(
+            "write_user_content",
+            "message_contents",
+            "Insert user content block",
+            {
+                "message_id": user_msg.id,
+                "content_block_id": user_content.id,
+                "content_type": user_content.content_type,
+                "sort_order": user_content.sort_order,
+            },
+        )
 
         # 更新最后消息时间
         ConversationService.touch_last_message(db, conversation)
@@ -134,6 +202,18 @@ class MessageService:
         )
         db.add(ai_msg)
         db.flush()
+        record_flow(
+            "write_ai_message",
+            "messages",
+            "Insert assistant message row",
+            {
+                "message_id": ai_msg.id,
+                "parent_message_id": ai_msg.parent_message_id,
+                "sender_type": ai_msg.sender_type,
+                "role": ai_msg.role,
+                "sequence_number": ai_msg.sequence_number,
+            },
+        )
 
         # 6. 保存 AI 回复内容
         ai_content = MessageContent(
@@ -143,6 +223,18 @@ class MessageService:
             sort_order=0,
         )
         db.add(ai_content)
+        db.flush()
+        record_flow(
+            "write_ai_content",
+            "message_contents",
+            "Insert assistant content block",
+            {
+                "message_id": ai_msg.id,
+                "content_block_id": ai_content.id,
+                "content_type": ai_content.content_type,
+                "sort_order": ai_content.sort_order,
+            },
+        )
 
         # 7. 保存推理过程
         reasoning = MessageReasoning(
@@ -151,6 +243,17 @@ class MessageService:
             visibility="owner_visible",
         )
         db.add(reasoning)
+        db.flush()
+        record_flow(
+            "write_reasoning",
+            "message_reasoning",
+            "Insert reasoning block",
+            {
+                "message_id": ai_msg.id,
+                "reasoning_id": reasoning.id,
+                "visibility": reasoning.visibility,
+            },
+        )
 
         # 8. 保存工具调用和结果
         for i, tc_data in enumerate(ai_result.tool_calls):
@@ -166,6 +269,18 @@ class MessageService:
             )
             db.add(tool_call)
             db.flush()
+            record_flow(
+                "write_tool_call",
+                "tool_calls",
+                "Insert tool call block",
+                {
+                    "message_id": ai_msg.id,
+                    "tool_call_id": tool_call.id,
+                    "tool_name": tool_call.tool_name,
+                    "tool_type": tool_call.tool_type,
+                    "status": tool_call.status,
+                },
+            )
 
             # 保存工具结果
             if i < len(ai_result.tool_results):
@@ -176,9 +291,19 @@ class MessageService:
                     is_error=tr_data["is_error"],
                 )
                 db.add(tool_result)
+                db.flush()
+                record_flow(
+                    "write_tool_result",
+                    "tool_results",
+                    "Insert tool result block",
+                    {
+                        "tool_call_id": tool_call.id,
+                        "tool_result_id": tool_result.id,
+                        "is_error": tool_result.is_error,
+                    },
+                )
 
                 # 记录工具调用日志
-                import json
                 LogService.write(
                     db,
                     action="tool_call",
@@ -207,6 +332,20 @@ class MessageService:
             top_p=0.90,
         )
         db.add(metadata)
+        db.flush()
+        record_flow(
+            "write_metadata",
+            "message_metadata",
+            "Insert model metadata block",
+            {
+                "message_id": ai_msg.id,
+                "metadata_id": metadata.id,
+                "model_name": metadata.model_name,
+                "provider": metadata.provider,
+                "total_tokens": metadata.total_tokens,
+                "duration_ms": metadata.duration_ms,
+            },
+        )
 
         # 10. 更新角色使用次数
         CharacterService.increment_usage(db, character)
@@ -215,7 +354,6 @@ class MessageService:
         ConversationService.touch_last_message(db, conversation)
 
         # 12. 记录系统日志
-        import json
         LogService.write(
             db, action="send_message", user_id=user.id,
             target_type="message", target_id=user_msg.id,
@@ -223,6 +361,31 @@ class MessageService:
         )
 
         db.commit()
+        record_flow(
+            "write_log",
+            "system_logs",
+            "Insert system log row and commit transaction",
+            {
+                "user_message_id": user_msg.id,
+                "ai_message_id": ai_msg.id,
+                "tool_call_count": len(ai_result.tool_calls),
+            },
+        )
+        LogService.write(
+            db,
+            action="message_flow_trace",
+            user_id=user.id,
+            target_type="conversation",
+            target_id=conversation_id,
+            detail=json.dumps({
+                "trace_id": trace_id,
+                "conversation_id": conversation_id,
+                "user_message_id": user_msg.id,
+                "ai_message_id": ai_msg.id,
+                "character_id": character.id,
+                "steps": flow_steps,
+            }, ensure_ascii=False),
+        )
 
         # 重新加载完整数据返回
         return MessageService._build_response(db, user_msg, ai_msg)

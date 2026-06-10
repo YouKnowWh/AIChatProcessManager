@@ -1,0 +1,6 @@
+slide size: 1280x720.
+background: alternating deep ink technical pages and warm paper evidence pages.
+type: PingFang SC for Chinese readability; bold title hierarchy, compact labels.
+palette: deep ink, warm paper, cyan primary, mint success, amber proof, coral risk, violet admin.
+layout rhythm: cover, thesis, agenda, contrast, lanes, process chain, architecture map, table, module grids, roadmap.
+animation plan: post-export PowerPoint transitions added as smooth fade/push/wipe variants when compatible.
