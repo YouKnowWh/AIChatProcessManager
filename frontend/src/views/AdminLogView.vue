@@ -8,6 +8,7 @@
         <el-option label="创建会话" value="create_conversation" />
         <el-option label="发送消息" value="send_message" />
         <el-option label="工具调用" value="tool_call" />
+        <el-option label="知识库调用" value="knowledge_call" />
         <el-option label="消息过程链路" value="message_flow_trace" />
         <el-option label="隐藏消息" value="hide_message" />
       </el-select>

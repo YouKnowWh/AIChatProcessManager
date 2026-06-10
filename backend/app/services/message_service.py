@@ -305,18 +305,30 @@ class MessageService:
 
                 # 记录工具调用日志
                 LogService.write(
-                    db,
-                    action="tool_call",
-                    user_id=user.id,
-                    target_type="tool_call",
-                    target_id=tool_call.id,
-                    detail=json.dumps({
-                        "message_id": ai_msg.id,
-                        "tool_name": tc_data["tool_name"],
-                        "tool_type": tc_data["tool_type"],
-                        "status": tc_data["status"],
-                    }, ensure_ascii=False),
+                    db, action="tool_call", user_id=user.id,
+                    target_type="tool_call", target_id=tool_call.id,
+                    detail=json.dumps({"message_id": ai_msg.id, "tool_name": tc_data["tool_name"], "tool_type": tc_data["tool_type"], "status": tc_data["status"]}, ensure_ascii=False),
                 )
+
+        # 模拟知识库调用记录（记录角色知识库被查阅）
+        from app.models.knowledge_entry import KnowledgeEntry
+        knowledge_entries = db.query(KnowledgeEntry).filter(
+            KnowledgeEntry.character_id == character.id,
+            KnowledgeEntry.status == "active",
+        ).limit(3).all()
+        if knowledge_entries:
+            for ke in knowledge_entries:
+                LogService.write(
+                    db, action="knowledge_call", user_id=user.id,
+                    target_type="knowledge_entry", target_id=ke.id,
+                    detail=json.dumps({"message_id": ai_msg.id, "entry_title": ke.title, "character_name": character.name}, ensure_ascii=False),
+                )
+            record_flow(
+                "knowledge_lookup",
+                "knowledge_entries",
+                "Simulated knowledge base lookup",
+                {"character_id": character.id, "entries_found": len(knowledge_entries)},
+            )
 
         # 9. 保存元数据
         metadata = MessageMetadata(

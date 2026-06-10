@@ -171,3 +171,13 @@ INSERT INTO system_logs (user_id, action, target_type, target_id, detail, ip_add
 INSERT INTO audit_records (admin_id, target_type, target_id, action, comment, created_at) VALUES
 (1, 'message', 8, 'flag', '用户举报该消息含不当内容，已隐藏处理。', '2026-06-08 11:05:00'),
 (1, 'ai_character', 4, 'approve', '翻译官角色审核通过，目前处于禁用状态等待用户或管理员启用。', '2026-06-05 14:00:00');
+
+-- ============================================================
+-- 11. 知识库数据
+-- ============================================================
+INSERT INTO knowledge_entries (id, character_id, title, content, content_type, source, status) VALUES
+(1, 1, 'Python 基础语法', 'Python 是一种解释型、面向对象的高级编程语言。\n\n基本数据类型：int, float, str, bool, list, tuple, dict, set\n控制流：if/elif/else, for, while\n函数定义：def func_name(params):\n\n详细参考：https://docs.python.org/3/tutorial/', 'markdown', 'Python官方文档', 'active'),
+(2, 1, '常见问题解答模板', 'Q: 如何安装 Python？\nA: 访问 python.org 下载安装包，或使用包管理器：brew install python3 (macOS) / apt install python3 (Linux)\n\nQ: 如何创建虚拟环境？\nA: python -m venv myenv\n\nQ: pip 安装慢怎么办？\nA: pip install -i https://pypi.tuna.tsinghua.edu.cn/simple 包名', 'markdown', NULL, 'active'),
+(3, 2, '代码审查清单', '1. 命名规范：变量 snake_case，类 PascalCase\n2. 类型提示：函数参数和返回值应有类型注解\n3. 异常处理：不要裸 except\n4. 性能：避免 O(n²) 循环嵌套\n5. 安全：不拼接 SQL，用参数化查询\n6. 测试：关键函数覆盖率 > 80%', 'text', '团队内部规范', 'active'),
+(4, 3, 'Markdown 语法速查', '# 一级标题\n## 二级标题\n**加粗** *斜体*\n- 无序列表\n1. 有序列表\n[链接](url)\n![图片](url)\n```代码块```\n> 引用\n--- 分割线', 'markdown', NULL, 'active'),
+(5, 4, '翻译术语表', 'api -> 接口\nbackend -> 后端\ndeployment -> 部署\nmiddleware -> 中间件\ncontainer -> 容器\norchestration -> 编排', 'text', NULL, 'disabled');
