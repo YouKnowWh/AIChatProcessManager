@@ -12,19 +12,15 @@
             <el-icon><HomeFilled /></el-icon>
             <span>首页</span>
           </el-menu-item>
-          <el-menu-item index="/characters">
+          <el-menu-item v-if="!auth.isManager()" index="/characters">
             <el-icon><Service /></el-icon>
             <span>AI 角色</span>
           </el-menu-item>
-          <el-menu-item index="/favorites">
+          <el-menu-item v-if="!auth.isManager()" index="/favorites">
             <el-icon><Star /></el-icon>
             <span>收藏</span>
           </el-menu-item>
-          <el-menu-item v-if="auth.isManager()" index="/conversations">
-            <el-icon><ChatLineSquare /></el-icon>
-            <span>会话管理</span>
-          </el-menu-item>
-          <el-menu-item index="/knowledge">
+          <el-menu-item v-if="!auth.isManager()" index="/knowledge">
             <el-icon><Collection /></el-icon>
             <span>知识库</span>
           </el-menu-item>
