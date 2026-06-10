@@ -12,6 +12,7 @@ class CharacterCreate(BaseModel):
     system_prompt: str | None = None
     category: str | None = Field(None, max_length=50)
     tags: str | None = Field(None, max_length=255)
+    owner_id: int | None = Field(None, description="角色维护者指定所有者用户 ID")
 
 
 class CharacterUpdate(BaseModel):

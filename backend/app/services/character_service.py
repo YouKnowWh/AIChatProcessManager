@@ -55,8 +55,16 @@ class CharacterService:
         if db.query(AICharacter).filter(AICharacter.name == req.name).first():
             raise HTTPException(status_code=status.HTTP_409_CONFLICT, detail="角色名称已存在")
 
+        # 角色维护者可以指定 owner_id，普通用户只能创建自己的
+        owner_id = creator.id
+        if req.owner_id and creator.role in ("character_manager", "admin"):
+            owner = db.query(User).filter(User.id == req.owner_id).first()
+            if not owner:
+                raise HTTPException(status_code=status.HTTP_400_BAD_REQUEST, detail="指定用户不存在")
+            owner_id = owner.id
+
         character = AICharacter(
-            creator_id=creator.id,
+            creator_id=owner_id,
             name=req.name,
             avatar=req.avatar,
             description=req.description,

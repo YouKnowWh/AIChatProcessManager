@@ -39,18 +39,27 @@ def list_manageable_characters(
     """角色管理页 — 角色维护者和管理员看全部，普通用户只看自己创建的"""
     if current_user.role in ("character_manager", "admin"):
         characters = CharacterService.list_active(db)
+        # 同时返回可用用户列表供创建时选择
+        from app.models.user import User as UserModel
+        available_users = [
+            {"id": u.id, "username": u.username, "nickname": u.nickname or u.username}
+            for u in db.query(UserModel).filter(UserModel.status == "active").all()
+        ]
     else:
         characters = CharacterService.list_active(db, creator_id=current_user.id)
+        available_users = None
 
-    # 附带创建者用户名
     from app.models.user import User as UserModel
     creator_ids = {c.creator_id for c in characters}
     users_map = {u.id: u.username for u in db.query(UserModel).filter(UserModel.id.in_(creator_ids)).all()}
 
-    return APIResponse.ok(data=[{
-        **CharacterBrief.model_validate(c).model_dump(),
-        "creator_username": users_map.get(c.creator_id, "—"),
-    } for c in characters])
+    return APIResponse.ok(data={
+        "characters": [{
+            **CharacterBrief.model_validate(c).model_dump(),
+            "creator_username": users_map.get(c.creator_id, "—"),
+        } for c in characters],
+        "available_users": available_users,
+    })
 
 
 @router.get("/{character_id}", summary="查看 AI 角色详情")

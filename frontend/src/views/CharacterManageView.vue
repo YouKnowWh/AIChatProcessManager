@@ -32,6 +32,11 @@
     <!-- 创建/编辑弹窗 -->
     <el-dialog v-model="editVisible" :title="isCreate ? '创建角色' : '编辑角色'" width="580px" destroy-on-close>
       <el-form :model="form" :rules="rules" ref="formRef" label-width="100px">
+        <el-form-item v-if="isCreate && isManager" label="所属用户">
+          <el-select v-model="form.owner_id" placeholder="选择用户" style="width:100%">
+            <el-option v-for="u in availableUsers" :key="u.id" :label="`${u.nickname} (${u.username})`" :value="u.id" />
+          </el-select>
+        </el-form-item>
         <el-form-item label="名称" prop="name">
           <el-input v-model="form.name" placeholder="角色名称" maxlength="100" />
         </el-form-item>
@@ -83,14 +88,22 @@ import { charactersApi } from '@/api/characters'
 import type { AICharacter } from '@/types'
 
 const characters = ref<AICharacter[]>([])
+const availableUsers = ref<{id:number,username:string,nickname:string}[]>([])
 const loading = ref(false)
+const isManager = ref(false)
 
 // 列表
 async function loadData() {
   loading.value = true
   try {
     const res = await charactersApi.listMine()
-    characters.value = res.data
+    if (res.data.characters) {
+      characters.value = res.data.characters
+      availableUsers.value = res.data.available_users || []
+      isManager.value = res.data.available_users !== null
+    } else {
+      characters.value = res.data
+    }
   } finally { loading.value = false }
 }
 loadData()
@@ -102,12 +115,12 @@ const submitting = ref(false)
 const editingId = ref<number | null>(null)
 const isCreate = computed(() => editingId.value === null)
 
-const form = reactive({ name: '', avatar: '', category: '', tags: '', description: '', system_prompt: '' })
+const form = reactive({ name: '', avatar: '', category: '', tags: '', description: '', system_prompt: '', owner_id: 0 })
 const rules: FormRules = { name: [{ required: true, message: '请输入名称', trigger: 'blur' }] }
 
 function resetForm() {
   form.name = ''; form.avatar = ''; form.category = ''; form.tags = ''
-  form.description = ''; form.system_prompt = ''
+  form.description = ''; form.system_prompt = ''; form.owner_id = 0
   editingId.value = null
 }
 
@@ -126,7 +139,8 @@ async function handleSubmit() {
   submitting.value = true
   try {
     if (isCreate.value) {
-      await charactersApi.create(form)
+      const payload = { ...form, owner_id: form.owner_id || undefined }
+      await charactersApi.create(payload)
       ElMessage.success('创建成功')
     } else {
       await charactersApi.update(editingId.value!, form)
