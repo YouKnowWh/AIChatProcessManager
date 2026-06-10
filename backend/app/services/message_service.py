@@ -177,7 +177,7 @@ class MessageService:
                 "content_block_id": user_content.id,
                 "content_type": user_content.content_type,
                 "sort_order": user_content.sort_order,
-                "content": content[:200],
+                "content": content,
             },
         )
 
@@ -234,7 +234,7 @@ class MessageService:
                 "content_block_id": ai_content.id,
                 "content_type": ai_content.content_type,
                 "sort_order": ai_content.sort_order,
-                "content": ai_result.content[:200],
+                "content": ai_result.content,
             },
         )
 
@@ -254,6 +254,7 @@ class MessageService:
                 "message_id": ai_msg.id,
                 "reasoning_id": reasoning.id,
                 "visibility": reasoning.visibility,
+                "content": ai_result.reasoning,
             },
         )
 
@@ -398,8 +399,8 @@ class MessageService:
                 "ai_message_id": ai_msg.id,
                 "character_id": character.id,
                 "character_name": character.name,
-                "user_content": content[:200],
-                "ai_content_preview": ai_result.content[:200],
+                "user_content": content,
+                "ai_content_preview": ai_result.content,
                 "model": ai_result.model_name,
                 "total_tokens": ai_result.total_tokens,
                 "duration_ms": ai_result.duration_ms,
