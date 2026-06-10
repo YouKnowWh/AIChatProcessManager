@@ -395,6 +395,12 @@ class MessageService:
                 "user_message_id": user_msg.id,
                 "ai_message_id": ai_msg.id,
                 "character_id": character.id,
+                "character_name": character.name,
+                "user_content": content[:200],
+                "ai_content_preview": ai_result.content[:200],
+                "model": ai_result.model_name,
+                "total_tokens": ai_result.total_tokens,
+                "duration_ms": ai_result.duration_ms,
                 "steps": flow_steps,
             }, ensure_ascii=False),
         )

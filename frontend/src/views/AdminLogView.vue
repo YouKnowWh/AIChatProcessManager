@@ -25,8 +25,8 @@
       <el-table-column prop="target_id" label="对象ID" width="70" />
       <el-table-column label="详情" min-width="200">
         <template #default="{ row }">
-          <span class="detail-preview" @click="showDetail(row)">{{ (row.detail || '').substring(0, 80) }}{{ (row.detail || '').length > 80 ? '...' : '' }}</span>
-          <el-button v-if="(row.detail || '').length > 80" text size="small" type="primary" @click="showDetail(row)">展开</el-button>
+          <span class="detail-preview" @click="showDetail(row)">{{ (row.detail || '').substring(0, 200) }}{{ (row.detail || '').length > 200 ? '...' : '' }}</span>
+          <el-button v-if="(row.detail || '').length > 200" text size="small" type="primary" @click="showDetail(row)">展开</el-button>
         </template>
       </el-table-column>
       <el-table-column prop="created_at" label="时间" width="170">
