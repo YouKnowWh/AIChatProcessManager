@@ -8,7 +8,7 @@
 
       <div class="header-center">
         <el-menu :default-active="route.path" mode="horizontal" router :ellipsis="false" class="header-menu">
-          <el-menu-item index="/">
+          <el-menu-item v-if="!auth.isManager()" index="/">
             <el-icon><HomeFilled /></el-icon>
             <span>首页</span>
           </el-menu-item>

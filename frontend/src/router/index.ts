@@ -63,8 +63,12 @@ router.beforeEach((to, _from, next) => {
   const user = userStr ? JSON.parse(userStr) : null
 
   if (to.meta.guest) {
-    // 已登录用户访问登录/注册页 → 管理员跳转后台，普通用户跳首页
-    if (token) return next(user?.role === 'admin' ? '/admin' : '/')
+    // 已登录用户访问登录/注册页 → 管理员跳后台，角色维护者跳角色管理，普通用户跳首页
+    if (token) {
+      if (user?.role === 'admin') return next('/admin')
+      if (user?.role === 'character_manager') return next('/characters/manage')
+      return next('/')
+    }
     return next()
   }
 
