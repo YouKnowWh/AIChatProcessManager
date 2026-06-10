@@ -24,7 +24,7 @@ CREATE TABLE users (
     avatar      VARCHAR(500)    NULL,
     phone       VARCHAR(20)     NULL,
     bio         TEXT            NULL,
-    role        ENUM('user','admin') NOT NULL DEFAULT 'user',
+    role        ENUM('user','character_manager','admin') NOT NULL DEFAULT 'user',
     status      ENUM('active','disabled')                NOT NULL DEFAULT 'active',
     last_login_at DATETIME      NULL,
     created_at  DATETIME        NOT NULL DEFAULT CURRENT_TIMESTAMP,
