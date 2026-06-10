@@ -56,13 +56,7 @@ const overviewCards = computed(() => [
   { label: '隐藏消息', value: stats.value.messages?.hidden ?? 0 },
   { label: '收藏 / 点赞 / 点踩', value: `${stats.value.interactions?.total_favorites ?? 0} / ${stats.value.interactions?.total_likes ?? 0} / ${stats.value.interactions?.total_dislikes ?? 0}` },
   { label: '文字反馈', value: stats.value.interactions?.total_text_feedbacks ?? 0 },
-  { label: '知识库条目', value: knowledgeTotal },
-
-  // 知识库各用户详情
-  { label: '', value: '', key: 'knowledge_detail' },
 ])
-
-const knowledgeTotal = ref(0)
 
 onMounted(async () => {
   loading.value = true
@@ -70,11 +64,7 @@ onMounted(async () => {
     const res = await adminApi.getStats()
     stats.value = res.data
   } finally { loading.value = false }
-  // 知识库统计
-  try {
-    const kr = await request.get('/admin/knowledge-stats')
-    knowledgeTotal.value = kr.data.reduce((s: number, r: any) => s + r.active_entries, 0)
-  } catch { knowledgeTotal.value = 0 }
+})
 })
 </script>
 

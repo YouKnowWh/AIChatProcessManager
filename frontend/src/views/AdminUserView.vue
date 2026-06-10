@@ -22,10 +22,13 @@
           <el-tag :type="row.role === 'admin' ? 'danger' : 'info'" size="small">{{ roleLabel(row.role) }}</el-tag>
         </template>
       </el-table-column>
-      <el-table-column prop="status" label="状态" width="80">
+      <el-table-column prop="status" label="状态" width="80" align="center">
         <template #default="{ row }">
           <el-tag :type="row.status === 'active' ? 'success' : 'danger'" size="small">{{ row.status === 'active' ? '正常' : '禁用' }}</el-tag>
         </template>
+      </el-table-column>
+      <el-table-column label="知识库" width="80" align="center">
+        <template #default="{ row }">{{ knowledgeMap[row.id] ?? '-' }}</template>
       </el-table-column>
       <el-table-column prop="created_at" label="注册时间" width="170">
         <template #default="{ row }">{{ fmt(row.created_at) }}</template>
@@ -66,8 +69,10 @@
 import { ref, onMounted } from 'vue'
 import { ElMessage, ElMessageBox } from 'element-plus'
 import { adminApi } from '@/api/admin'
+import request from '@/api/request'
 
 const users = ref<any[]>([])
+const knowledgeMap = ref<Record<number, number>>({})
 const loading = ref(false)
 const page = ref(1)
 const pageSize = ref(20)
@@ -90,6 +95,13 @@ async function loadUsers() {
     users.value = res.data.items
     total.value = res.data.total
   } finally { loading.value = false }
+  // 加载知识库统计
+  try {
+    const kr = await request.get('/admin/knowledge-stats')
+    const map: Record<number, number> = {}
+    for (const r of kr.data) { map[r.user_id] = r.active_entries }
+    knowledgeMap.value = map
+  } catch { /* ignore */ }
 }
 
 function editUser(row: any) {
