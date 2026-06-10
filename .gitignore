@@ -38,3 +38,12 @@ Thumbs.db
 
 # Database
 *.sqlite3
+
+# Generated/Output
+*.pptx
+~$*
+outputs/
+scripts/
+*.gif
+*.mp4
+*.png
