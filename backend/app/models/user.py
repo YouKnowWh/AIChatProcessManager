@@ -41,3 +41,4 @@ class User(Base):
     feedbacks: Mapped[list["Feedback"]] = relationship("Feedback", back_populates="user")
     system_logs: Mapped[list["SystemLog"]] = relationship("SystemLog", back_populates="user")
     favorites: Mapped[list["MessageFavorite"]] = relationship("MessageFavorite", back_populates="user")
+    knowledge_entries: Mapped[list["KnowledgeEntry"]] = relationship("KnowledgeEntry", back_populates="user")

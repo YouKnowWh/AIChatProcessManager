@@ -22,7 +22,7 @@ class KnowledgeUpdate(BaseModel):
 
 class KnowledgeResponse(BaseModel):
     id: int
-    character_id: int
+    user_id: int
     title: str
     content: str
     content_type: str

@@ -34,4 +34,3 @@ class AICharacter(Base):
     creator: Mapped["User"] = relationship("User", back_populates="characters")
     conversations: Mapped[list["Conversation"]] = relationship("Conversation", back_populates="character")
     feedbacks: Mapped[list["Feedback"]] = relationship("Feedback", back_populates="character")
-    knowledge_entries: Mapped[list["KnowledgeEntry"]] = relationship("KnowledgeEntry", back_populates="character")

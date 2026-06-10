@@ -310,10 +310,10 @@ class MessageService:
                     detail=json.dumps({"message_id": ai_msg.id, "tool_name": tc_data["tool_name"], "tool_type": tc_data["tool_type"], "status": tc_data["status"]}, ensure_ascii=False),
                 )
 
-        # 模拟知识库调用记录（记录角色知识库被查阅）
+        # 模拟知识库调用记录（查阅用户的知识库）
         from app.models.knowledge_entry import KnowledgeEntry
         knowledge_entries = db.query(KnowledgeEntry).filter(
-            KnowledgeEntry.character_id == character.id,
+            KnowledgeEntry.user_id == user.id,
             KnowledgeEntry.status == "active",
         ).limit(3).all()
         if knowledge_entries:
@@ -321,13 +321,13 @@ class MessageService:
                 LogService.write(
                     db, action="knowledge_call", user_id=user.id,
                     target_type="knowledge_entry", target_id=ke.id,
-                    detail=json.dumps({"message_id": ai_msg.id, "entry_title": ke.title, "character_name": character.name}, ensure_ascii=False),
+                    detail=json.dumps({"message_id": ai_msg.id, "entry_title": ke.title}, ensure_ascii=False),
                 )
             record_flow(
                 "knowledge_lookup",
                 "knowledge_entries",
                 "Simulated knowledge base lookup",
-                {"character_id": character.id, "entries_found": len(knowledge_entries)},
+                {"user_id": user.id, "entries_found": len(knowledge_entries)},
             )
 
         # 9. 保存元数据

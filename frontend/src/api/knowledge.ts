@@ -1,11 +1,11 @@
 import request from './request'
 
 export const knowledgeApi = {
-  list(characterId: number) {
-    return request.get(`/characters/${characterId}/knowledge`)
+  list() {
+    return request.get('/knowledge')
   },
-  create(characterId: number, data: any) {
-    return request.post(`/characters/${characterId}/knowledge`, data)
+  create(data: any) {
+    return request.post('/knowledge', data)
   },
   update(entryId: number, data: any) {
     return request.put(`/knowledge/${entryId}`, data)

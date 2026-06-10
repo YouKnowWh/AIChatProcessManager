@@ -27,7 +27,9 @@ const routes: RouteRecordRaw[] = [
       { path: 'search', name: 'MessageSearch', component: () => import('@/views/MessageSearchView.vue') },
       { path: 'favorites', name: 'Favorites', component: () => import('@/views/FavoriteView.vue') },
       { path: 'profile', name: 'Profile', component: () => import('@/views/ProfileView.vue') },
-      // 我的 AI 角色（弹窗模式）
+      // 知识库
+      { path: 'knowledge', name: 'Knowledge', component: () => import('@/views/KnowledgeView.vue') },
+      // 角色管理（弹窗模式）
       { path: 'characters/manage', name: 'CharacterManage', component: () => import('@/views/CharacterManageView.vue') },
     ],
   },

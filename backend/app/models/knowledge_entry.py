@@ -1,4 +1,4 @@
-"""知识库模型"""
+"""知识库模型（用户级别）"""
 
 from datetime import datetime
 
@@ -12,7 +12,7 @@ class KnowledgeEntry(Base):
     __tablename__ = "knowledge_entries"
 
     id: Mapped[int] = mapped_column(Integer, primary_key=True, autoincrement=True)
-    character_id: Mapped[int] = mapped_column(Integer, ForeignKey("ai_characters.id", ondelete="CASCADE"), nullable=False)
+    user_id: Mapped[int] = mapped_column(Integer, ForeignKey("users.id", ondelete="CASCADE"), nullable=False)
     title: Mapped[str] = mapped_column(String(200), nullable=False)
     content: Mapped[str] = mapped_column(Text, nullable=False)
     content_type: Mapped[str] = mapped_column(
@@ -32,4 +32,4 @@ class KnowledgeEntry(Base):
     )
 
     # 关系
-    character: Mapped["AICharacter"] = relationship("AICharacter", back_populates="knowledge_entries")
+    user: Mapped["User"] = relationship("User", back_populates="knowledge_entries")

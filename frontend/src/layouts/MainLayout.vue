@@ -24,6 +24,10 @@
             <el-icon><ChatLineSquare /></el-icon>
             <span>会话管理</span>
           </el-menu-item>
+          <el-menu-item index="/knowledge">
+            <el-icon><Collection /></el-icon>
+            <span>知识库</span>
+          </el-menu-item>
           <el-menu-item index="/characters/manage">
             <el-icon><Setting /></el-icon>
             <span>角色管理</span>

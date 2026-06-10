@@ -23,7 +23,6 @@
         <template #default="{ row }">
           <el-button text type="primary" size="small" @click="openEdit(row)">编辑</el-button>
           <el-button text size="small" @click="openStats(row)">统计</el-button>
-          <el-button text size="small" @click="openKnowledge(row)">知识库</el-button>
           <el-button text type="danger" size="small" @click="handleDelete(row)">删除</el-button>
         </template>
       </el-table-column>
@@ -71,33 +70,6 @@
         </el-col>
       </el-row>
     </el-dialog>
-
-    <!-- 知识库弹窗 -->
-    <el-dialog v-model="knowledgeVisible" :title="knowledgeCharName + ' - 知识库'" width="650px" destroy-on-close @open="loadKnowledge">
-      <div v-loading="knowledgeLoading">
-        <div v-if="!knowledgeItems.length" style="color:#909399;padding:20px;text-align:center">暂无知识条目</div>
-        <el-table :data="knowledgeItems" stripe size="small" v-else>
-          <el-table-column prop="title" label="标题" width="180" />
-          <el-table-column prop="content_type" label="类型" width="80">
-            <template #default="{ row }"><el-tag size="small">{{ row.content_type }}</el-tag></template>
-          </el-table-column>
-          <el-table-column prop="content" label="内容" show-overflow-tooltip />
-          <el-table-column label="操作" width="70">
-            <template #default="{ row }">
-              <el-button text type="danger" size="small" @click="deleteKnowledge(row.id)">删除</el-button>
-            </template>
-          </el-table-column>
-        </el-table>
-        <div style="margin-top:12px;display:flex;gap:8px">
-          <el-input v-model="newKTitle" placeholder="标题" size="small" style="width:150px" />
-          <el-select v-model="newKType" size="small" style="width:90px">
-            <el-option label="text" value="text" /><el-option label="markdown" value="markdown" />
-          </el-select>
-          <el-input v-model="newKContent" placeholder="内容" size="small" style="flex:1" />
-          <el-button type="primary" size="small" :disabled="!newKTitle||!newKContent" @click="addKnowledge">添加</el-button>
-        </div>
-      </div>
-    </el-dialog>
   </div>
 </template>
 
@@ -107,7 +79,6 @@ import { ElMessage, ElMessageBox } from 'element-plus'
 import type { FormInstance, FormRules } from 'element-plus'
 import { Plus } from '@element-plus/icons-vue'
 import { charactersApi } from '@/api/characters'
-import { knowledgeApi } from '@/api/knowledge'
 import type { AICharacter } from '@/types'
 
 const characters = ref<AICharacter[]>([])
@@ -192,40 +163,6 @@ async function openStats(row: AICharacter) {
     const res = await charactersApi.getStats(row.id)
     stats.value = res.data
   } finally { statsLoading.value = false }
-}
-
-// 知识库
-const knowledgeVisible = ref(false)
-const knowledgeLoading = ref(false)
-const knowledgeCharName = ref('')
-const knowledgeCharId = ref(0)
-const knowledgeItems = ref<any[]>([])
-const newKTitle = ref('')
-const newKType = ref('text')
-const newKContent = ref('')
-
-async function openKnowledge(row: AICharacter) {
-  knowledgeCharId.value = row.id
-  knowledgeCharName.value = row.name
-  knowledgeVisible.value = true
-}
-async function loadKnowledge() {
-  knowledgeLoading.value = true
-  try {
-    const res = await knowledgeApi.list(knowledgeCharId.value)
-    knowledgeItems.value = res.data
-  } finally { knowledgeLoading.value = false }
-}
-async function addKnowledge() {
-  await knowledgeApi.create(knowledgeCharId.value, { title: newKTitle.value, content: newKContent.value, content_type: newKType.value })
-  ElMessage.success('已添加')
-  newKTitle.value = ''; newKContent.value = ''
-  loadKnowledge()
-}
-async function deleteKnowledge(id: number) {
-  await knowledgeApi.delete(id)
-  ElMessage.success('已删除')
-  loadKnowledge()
 }
 </script>
 
