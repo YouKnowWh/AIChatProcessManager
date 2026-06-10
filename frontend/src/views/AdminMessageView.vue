@@ -29,7 +29,7 @@
       <el-table-column prop="created_at" label="时间" width="170">
         <template #default="{ row }">{{ fmt(row.created_at) }}</template>
       </el-table-column>
-      <el-table-column label="操作" width="160">
+      <el-table-column label="操作" align="center" width="160">
         <template #default="{ row }">
           <el-button v-if="row.status === 'normal'" text type="warning" size="small" @click="hideMsg(row)">隐藏</el-button>
           <el-button v-if="row.status === 'hidden'" text type="success" size="small" @click="restoreMsg(row)">恢复</el-button>

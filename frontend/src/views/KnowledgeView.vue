@@ -9,7 +9,7 @@
           <template #default="{ row }"><el-tag size="small">{{ row.content_type }}</el-tag></template>
         </el-table-column>
         <el-table-column prop="content" label="内容" show-overflow-tooltip />
-        <el-table-column label="操作" width="70">
+        <el-table-column label="操作" align="center" width="70">
           <template #default="{ row }">
             <el-button text type="danger" size="small" @click="handleDelete(row.id)">删除</el-button>
           </template>

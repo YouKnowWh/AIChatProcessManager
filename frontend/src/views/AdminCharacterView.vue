@@ -20,7 +20,7 @@
         </template>
       </el-table-column>
       <el-table-column prop="usage_count" label="使用" width="60" />
-      <el-table-column label="操作" width="160">
+      <el-table-column label="操作" align="center" width="160">
         <template #default="{ row }">
           <el-button text type="primary" size="small" @click="toggle(row)">{{ row.status === 'active' ? '禁用' : '启用' }}</el-button>
           <el-button text type="danger" size="small" @click="del(row)">删除</el-button>

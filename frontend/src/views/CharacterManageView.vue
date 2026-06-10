@@ -19,7 +19,7 @@
           <el-tag :type="row.status === 'active' ? 'success' : 'info'" size="small">{{ row.status === 'active' ? '启用' : '禁用' }}</el-tag>
         </template>
       </el-table-column>
-      <el-table-column label="操作" width="240">
+      <el-table-column label="操作" align="center" width="240">
         <template #default="{ row }">
           <el-button text type="primary" size="small" @click="openEdit(row)">编辑</el-button>
           <el-button text size="small" @click="openStats(row)">统计</el-button>

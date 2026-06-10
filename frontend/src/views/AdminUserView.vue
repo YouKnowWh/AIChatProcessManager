@@ -33,7 +33,7 @@
       <el-table-column prop="created_at" label="注册时间" width="170">
         <template #default="{ row }">{{ fmt(row.created_at) }}</template>
       </el-table-column>
-      <el-table-column label="操作" width="240" fixed="right">
+      <el-table-column label="操作" align="center" width="240" fixed="right">
         <template #default="{ row }">
           <el-button text size="small" @click="editUser(row)">编辑</el-button>
           <el-button text size="small" @click="resetPwd(row)">重置密码</el-button>
