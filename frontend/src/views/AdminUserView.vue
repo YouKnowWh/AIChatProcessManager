@@ -27,13 +27,13 @@
           <el-tag :type="row.status === 'active' ? 'success' : 'danger'" size="small">{{ row.status === 'active' ? '正常' : '禁用' }}</el-tag>
         </template>
       </el-table-column>
-      <el-table-column label="知识库" width="80" align="center">
+      <el-table-column label="知识库条目" width="100" align="center">
         <template #default="{ row }">{{ knowledgeMap[row.id] ?? '-' }}</template>
       </el-table-column>
-      <el-table-column prop="created_at" label="注册时间" width="170">
+      <el-table-column prop="created_at" label="注册时间" width="160">
         <template #default="{ row }">{{ fmt(row.created_at) }}</template>
       </el-table-column>
-      <el-table-column label="操作" align="center" width="240" fixed="right">
+      <el-table-column label="操作" align="center" width="280" fixed="right">
         <template #default="{ row }">
           <el-button text size="small" @click="editUser(row)">编辑</el-button>
           <el-button text size="small" @click="resetPwd(row)">重置密码</el-button>
