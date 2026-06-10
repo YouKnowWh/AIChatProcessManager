@@ -42,7 +42,6 @@
 <script setup lang="ts">
 import { ref, computed, onMounted } from 'vue'
 import { adminApi } from '@/api/admin'
-import request from '@/api/request'
 
 const stats = ref<Record<string, any>>({})
 const loading = ref(false)
@@ -64,7 +63,6 @@ onMounted(async () => {
     const res = await adminApi.getStats()
     stats.value = res.data
   } finally { loading.value = false }
-})
 })
 </script>
 
