@@ -375,6 +375,24 @@ class MessageService:
             detail=json.dumps({"conversation_id": conversation_id, "ai_message_id": ai_msg.id, "has_tools": len(ai_result.tool_calls) > 0}, ensure_ascii=False),
         )
 
+        # 13. 构建上下文片段并建立引用
+        from app.services.context_service import ContextService
+        segment = ContextService.build_recent_context(
+            db, conversation_id, user.id, ai_msg.id, max_messages=5
+        )
+        if segment:
+            ContextService.link_message_context(db, ai_msg.id, segment.id, ref_type="used")
+            LogService.write(
+                db, action="create_context_segment", user_id=user.id,
+                target_type="context_segment", target_id=segment.id,
+                detail=json.dumps({"message_id": ai_msg.id, "token_count": segment.token_count, "messages": segment.start_message_id}, ensure_ascii=False),
+            )
+            LogService.write(
+                db, action="link_message_context", user_id=user.id,
+                target_type="message_context_refs", target_id=ai_msg.id,
+                detail=json.dumps({"context_segment_id": segment.id, "ref_type": "used"}, ensure_ascii=False),
+            )
+
         db.commit()
         record_flow(
             "write_log",

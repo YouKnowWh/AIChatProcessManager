@@ -85,6 +85,24 @@
         <el-empty v-else description="该消息无工具调用" :image-size="40" />
       </div>
 
+      <!-- 本回复使用的上下文 -->
+      <div class="detail-section">
+        <h4 class="section-title">
+          <el-icon><Reading /></el-icon> 本回复使用的上下文
+        </h4>
+        <div v-if="contexts.length" v-loading="ctxLoading">
+          <div v-for="seg in contexts" :key="seg.id" class="context-segment">
+            <div class="ctx-header">
+              <el-tag size="small">{{ seg.segment_type }}</el-tag>
+              <span class="ctx-tokens">{{ seg.token_count }} tokens</span>
+              <span class="ctx-time">{{ seg.created_at }}</span>
+            </div>
+            <pre class="ctx-summary">{{ seg.summary_text || '(无摘要)' }}</pre>
+          </div>
+        </div>
+        <el-empty v-else-if="!ctxLoading" description="无上下文数据" :image-size="40" />
+      </div>
+
       <!-- 模型元数据 -->
       <div class="detail-section">
         <h4 class="section-title">
@@ -121,7 +139,7 @@
 <script setup lang="ts">
 import { ref, computed, watch } from 'vue'
 import { messagesApi } from '@/api/messages'
-import { InfoFilled, ChatLineSquare, View, Connection, DataAnalysis, Loading } from '@element-plus/icons-vue'
+import { InfoFilled, ChatLineSquare, View, Connection, DataAnalysis, Loading, Reading } from '@element-plus/icons-vue'
 import type { MessageDetail } from '@/types'
 
 const props = defineProps<{
@@ -140,6 +158,8 @@ const visible = computed({
 
 const detail = ref<MessageDetail | null>(null)
 const loading = ref(false)
+const contexts = ref<any[]>([])
+const ctxLoading = ref(false)
 
 const senderLabel = computed(() => {
   const map: Record<string, string> = { user: '用户', ai: 'AI', system: '系统', tool: '工具' }
@@ -166,6 +186,16 @@ async function loadDetail() {
     detail.value = null
   } finally {
     loading.value = false
+  }
+  // 加载上下文
+  ctxLoading.value = true
+  try {
+    const cr = await messagesApi.getContexts(props.messageId)
+    contexts.value = cr.data
+  } catch {
+    contexts.value = []
+  } finally {
+    ctxLoading.value = false
   }
 }
 
@@ -194,4 +224,9 @@ function renderMd(text: string): string {
 .reasoning-box { background: #fdf6ec; border: 1px solid #faecd8; border-radius: 8px; padding: 16px; font-size: 13px; line-height: 1.8; color: #606266; white-space: pre-wrap; }
 .tool-subsection { margin: 8px 0; font-size: 13px; }
 .json-block { background: #f5f7fa; border-radius: 6px; padding: 10px; margin: 6px 0; font-size: 12px; overflow-x: auto; max-height: 200px; overflow-y: auto; }
+.context-segment { background: #f0f9ff; border: 1px solid #d9ecff; border-radius: 8px; padding: 12px; margin-bottom: 10px; }
+.ctx-header { display: flex; align-items: center; gap: 12px; margin-bottom: 8px; }
+.ctx-tokens { font-size: 12px; color: #909399; }
+.ctx-time { font-size: 12px; color: #c0c4cc; }
+.ctx-summary { margin: 0; padding: 10px; background: #fff; border-radius: 6px; font-size: 12px; line-height: 1.6; white-space: pre-wrap; max-height: 200px; overflow-y: auto; }
 </style>

@@ -31,4 +31,7 @@ export const messagesApi = {
   getMetadata(id: number) {
     return request.get(`/messages/${id}/metadata`)
   },
+  getContexts(id: number) {
+    return request.get(`/messages/${id}/contexts`)
+  },
 }

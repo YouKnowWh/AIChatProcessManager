@@ -29,7 +29,7 @@ def health_check():
 
 # 路由注册（后续逐步添加）
 from app.api.routes import auth, users, characters, conversations, messages  # noqa: E402
-from app.api.routes import favorites, feedbacks, admin, logs, stats, knowledge  # noqa: E402
+from app.api.routes import favorites, feedbacks, admin, logs, stats, knowledge, context  # noqa: E402
 
 app.include_router(auth.router, prefix="/api/auth", tags=["认证"])
 app.include_router(users.router, prefix="/api", tags=["用户"])
@@ -42,3 +42,4 @@ app.include_router(admin.router, prefix="/api/admin", tags=["管理员"])
 app.include_router(logs.router, prefix="/api/admin/logs", tags=["系统日志"])
 app.include_router(stats.router, prefix="/api/stats", tags=["统计"])
 app.include_router(knowledge.router, prefix="/api", tags=["知识库"])
+app.include_router(context.router, prefix="/api", tags=["上下文"])

@@ -14,6 +14,8 @@ from app.models.feedback import Feedback
 from app.models.system_log import SystemLog
 from app.models.audit_record import AuditRecord
 from app.models.knowledge_entry import KnowledgeEntry
+from app.models.context_segment import ContextSegment
+from app.models.message_context_ref import MessageContextRef
 
 __all__ = [
     "User",
@@ -30,4 +32,6 @@ __all__ = [
     "SystemLog",
     "AuditRecord",
     "KnowledgeEntry",
+    "ContextSegment",
+    "MessageContextRef",
 ]
