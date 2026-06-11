@@ -28,9 +28,6 @@
           <el-tag :type="row.status === 'active' ? 'success' : 'danger'" size="small">{{ row.status === 'active' ? '正常' : '禁用' }}</el-tag>
         </template>
       </el-table-column>
-      <el-table-column label="知识库条目" width="100" align="center">
-        <template #default="{ row }">{{ knowledgeMap[row.id] ?? '-' }}</template>
-      </el-table-column>
       <el-table-column prop="created_at" label="注册时间" width="160">
         <template #default="{ row }">{{ fmt(row.created_at) }}</template>
       </el-table-column>
@@ -74,7 +71,6 @@ import { adminApi } from '@/api/admin'
 import request from '@/api/request'
 
 const users = ref<any[]>([])
-const knowledgeMap = ref<Record<number, number>>({})
 const loading = ref(false)
 const page = ref(1)
 const pageSize = ref(20)

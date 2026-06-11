@@ -48,13 +48,11 @@ def admin_list_feedbacks(
     page: int = Query(1, ge=1),
     page_size: int = Query(20, ge=1, le=100),
     feedback_type: str | None = Query(None, pattern="^(like|dislike|text)$"),
-    character_id: int | None = Query(None),
     db: Session = Depends(get_db),
     _admin: User = Depends(get_current_admin),
 ):
     items, total = FeedbackService.list_by_admin(
-        db, page=page, page_size=page_size,
-        feedback_type=feedback_type, character_id=character_id,
+        db, page=page, page_size=page_size, feedback_type=feedback_type,
     )
     return APIResponse.paginated(
         items=[FeedbackResponse.model_validate(f).model_dump() for f in items],

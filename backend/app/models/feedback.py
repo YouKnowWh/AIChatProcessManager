@@ -14,7 +14,6 @@ class Feedback(Base):
     id: Mapped[int] = mapped_column(Integer, primary_key=True, autoincrement=True)
     user_id: Mapped[int] = mapped_column(Integer, ForeignKey("users.id", ondelete="CASCADE"), nullable=False)
     message_id: Mapped[int] = mapped_column(Integer, ForeignKey("messages.id", ondelete="CASCADE"), nullable=False)
-    character_id: Mapped[int] = mapped_column(Integer, ForeignKey("ai_characters.id", ondelete="CASCADE"), nullable=False)
     feedback_type: Mapped[str] = mapped_column(
         Enum("like", "dislike", "text", name="feedback_type"),
         nullable=False,
@@ -26,4 +25,3 @@ class Feedback(Base):
     # 关系
     user: Mapped["User"] = relationship("User", back_populates="feedbacks")
     message: Mapped["Message"] = relationship("Message", back_populates="feedbacks")
-    character: Mapped["AICharacter"] = relationship("AICharacter", back_populates="feedbacks")

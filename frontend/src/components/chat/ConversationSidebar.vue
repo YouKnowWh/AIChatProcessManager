@@ -2,22 +2,15 @@
   <div class="conv-sidebar">
     <div class="sidebar-header">
       <h4>会话列表</h4>
-      <el-button :icon="Plus" circle size="small" @click="$router.push('/characters')" title="新建会话" />
+      <el-button :icon="Plus" circle size="small" @click="$emit('refresh'); conversationsApi.create({ title: '新的聊天' }).then(r => $router.push('/chat/' + r.data.id))" title="新建会话" />
     </div>
     <div class="sidebar-list">
-      <div
-        v-for="conv in conversations"
-        :key="conv.id"
-        class="conv-item"
-        :class="{ active: conv.id === activeId }"
-        @click="$emit('select', conv.id)"
-      >
+      <div v-for="conv in conversations" :key="conv.id" class="conv-item" :class="{ active: conv.id === activeId }" @click="$emit('select', conv.id)">
         <div class="conv-info">
-          <el-avatar :size="36" :src="conv.character_avatar" />
+          <el-avatar :size="36" :icon="ChatDotRound" />
           <div class="conv-text">
             <div class="conv-title">{{ conv.title || '未命名会话' }}</div>
             <div class="conv-meta">
-              <span class="conv-char">{{ conv.character_name }}</span>
               <span v-if="conv.message_count === 0 && !conv.last_message_at" class="conv-new">新会话</span>
               <span v-else class="conv-count">{{ conv.message_count }} 条消息</span>
             </div>
@@ -31,18 +24,14 @@
 </template>
 
 <script setup lang="ts">
-import { Plus } from '@element-plus/icons-vue'
+import { Plus, ChatDotRound } from '@element-plus/icons-vue'
+import { conversationsApi } from '@/api/conversations'
+import { useRouter } from 'vue-router'
 import type { Conversation } from '@/types'
 
-defineProps<{
-  conversations: Conversation[]
-  activeId: number | null
-}>()
-
-defineEmits<{
-  select: [id: number]
-  refresh: []
-}>()
+const $router = useRouter()
+defineProps<{ conversations: Conversation[]; activeId: number | null }>()
+defineEmits<{ select: [id: number]; refresh: [] }>()
 </script>
 
 <style scoped>

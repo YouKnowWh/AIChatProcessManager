@@ -1,7 +1,6 @@
 """SQLAlchemy 模型 — 全部导入以确保 Base.metadata 注册"""
 
 from app.models.user import User
-from app.models.ai_character import AICharacter
 from app.models.conversation import Conversation
 from app.models.message import Message
 from app.models.message_content import MessageContent
@@ -13,13 +12,11 @@ from app.models.favorite import MessageFavorite
 from app.models.feedback import Feedback
 from app.models.system_log import SystemLog
 from app.models.audit_record import AuditRecord
-from app.models.knowledge_entry import KnowledgeEntry
 from app.models.context_segment import ContextSegment
 from app.models.message_context_ref import MessageContextRef
 
 __all__ = [
     "User",
-    "AICharacter",
     "Conversation",
     "Message",
     "MessageContent",
@@ -31,7 +28,6 @@ __all__ = [
     "Feedback",
     "SystemLog",
     "AuditRecord",
-    "KnowledgeEntry",
     "ContextSegment",
     "MessageContextRef",
 ]

@@ -40,22 +40,6 @@ export interface UserInfo extends UserBrief {
   created_at: string
 }
 
-// AI 角色
-export interface AICharacter {
-  id: number
-  creator_id: number
-  name: string
-  avatar: string | null
-  description: string | null
-  system_prompt: string | null
-  category: string | null
-  tags: string | null
-  status: 'active' | 'disabled'
-  usage_count: number
-  created_at: string
-  updated_at: string
-}
-
 export interface CharacterBrief {
   id: number
   creator_id: number
@@ -167,7 +151,6 @@ export interface Feedback {
   id: number
   user_id: number
   message_id: number
-  character_id: number
   feedback_type: 'like' | 'dislike' | 'text'
   content: string | null
   tags: string | null

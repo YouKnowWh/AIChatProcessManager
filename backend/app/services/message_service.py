@@ -17,7 +17,6 @@ from app.models.tool_call import ToolCall
 from app.models.tool_result import ToolResult
 from app.models.user import User
 from app.services.conversation_service import ConversationService
-from app.services.character_service import CharacterService
 from app.services.deepseek_service import DeepSeekService
 from app.services.log_service import LogService
 
@@ -185,11 +184,10 @@ class MessageService:
         ConversationService.touch_last_message(db, conversation)
 
         # 4. 调用 AI 服务（DeepSeek 真实 API，失败自动回退 FakeAI）
-        character = conversation.character
         ai_result = DeepSeekService.generate_safe(
             user_content=content,
-            character_name=character.name,
-            character_prompt=character.system_prompt,
+            character_name="AI 助手",
+            character_prompt="你是一个乐于助人的 AI 助手，请用中文简洁回答用户的问题。",
         )
 
         # 5. 保存 AI 回复消息
@@ -313,26 +311,6 @@ class MessageService:
                     detail=json.dumps({"message_id": ai_msg.id, "tool_name": tc_data["tool_name"], "tool_type": tc_data["tool_type"], "status": tc_data["status"]}, ensure_ascii=False),
                 )
 
-        # 模拟知识库调用记录（查阅用户的知识库）
-        from app.models.knowledge_entry import KnowledgeEntry
-        knowledge_entries = db.query(KnowledgeEntry).filter(
-            KnowledgeEntry.user_id == user.id,
-            KnowledgeEntry.status == "active",
-        ).limit(3).all()
-        if knowledge_entries:
-            for ke in knowledge_entries:
-                LogService.write(
-                    db, action="knowledge_call", user_id=user.id,
-                    target_type="knowledge_entry", target_id=ke.id,
-                    detail=json.dumps({"message_id": ai_msg.id, "entry_title": ke.title}, ensure_ascii=False),
-                )
-            record_flow(
-                "knowledge_lookup",
-                "knowledge_entries",
-                "Simulated knowledge base lookup",
-                {"user_id": user.id, "entries_found": len(knowledge_entries)},
-            )
-
         # 9. 保存元数据
         metadata = MessageMetadata(
             message_id=ai_msg.id,
@@ -362,10 +340,7 @@ class MessageService:
             },
         )
 
-        # 10. 更新角色使用次数
-        CharacterService.increment_usage(db, character)
-
-        # 11. 更新最后消息时间
+        # 10. 更新最后消息时间
         ConversationService.touch_last_message(db, conversation)
 
         # 12. 记录系统日志
@@ -415,8 +390,6 @@ class MessageService:
                 "conversation_id": conversation_id,
                 "user_message_id": user_msg.id,
                 "ai_message_id": ai_msg.id,
-                "character_id": character.id,
-                "character_name": character.name,
                 "user_content": content,
                 "ai_content_preview": ai_result.content,
                 "model": ai_result.model_name,

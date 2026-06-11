@@ -16,12 +16,11 @@ router = APIRouter()
 @router.get("", summary="查看我的会话列表")
 def list_conversations(
     status: str | None = Query(None, pattern="^(active|archived)$"),
-    character_id: int | None = Query(None),
     db: Session = Depends(get_db),
     current_user: User = Depends(get_current_user),
 ):
     items = ConversationService.list_by_user(
-        db, current_user, status=status, character_id=character_id
+        db, current_user, status=status,
     )
     return APIResponse.ok(data=items)
 

@@ -8,25 +8,13 @@
 
       <div class="header-center">
         <el-menu :default-active="route.path" mode="horizontal" router :ellipsis="false" class="header-menu">
-          <el-menu-item v-if="!auth.isManager()" index="/">
+          <el-menu-item v-if="!auth.isAdmin()" index="/">
             <el-icon><HomeFilled /></el-icon>
             <span>首页</span>
           </el-menu-item>
-          <el-menu-item v-if="!auth.isManager()" index="/characters">
-            <el-icon><Service /></el-icon>
-            <span>AI 角色</span>
-          </el-menu-item>
-          <el-menu-item v-if="!auth.isManager()" index="/favorites">
+          <el-menu-item v-if="!auth.isAdmin()" index="/favorites">
             <el-icon><Star /></el-icon>
             <span>收藏</span>
-          </el-menu-item>
-          <el-menu-item v-if="!auth.isManager()" index="/knowledge">
-            <el-icon><Collection /></el-icon>
-            <span>知识库</span>
-          </el-menu-item>
-          <el-menu-item v-if="auth.isManager()" index="/characters/manage">
-            <el-icon><Setting /></el-icon>
-            <span>角色管理</span>
           </el-menu-item>
           <el-menu-item v-if="auth.isAdmin()" index="/admin">
             <el-icon><Monitor /></el-icon>
@@ -36,10 +24,6 @@
       </div>
 
       <div class="header-right">
-        <el-badge :value="0" :hidden="true">
-          <el-button circle :icon="Bell" text />
-        </el-badge>
-
         <el-dropdown v-if="auth.user" trigger="click">
           <span class="user-info">
             <el-avatar :size="34" :src="auth.user.avatar" :icon="UserFilled" />
@@ -61,9 +45,6 @@
               <el-divider style="margin: 4px 0" />
               <el-dropdown-item @click="$router.push('/profile')">
                 <el-icon><User /></el-icon>个人信息
-              </el-dropdown-item>
-              <el-dropdown-item v-if="auth.isManager()" @click="$router.push('/characters/manage')">
-                <el-icon><Setting /></el-icon>角色管理
               </el-dropdown-item>
               <el-dropdown-item v-if="auth.isAdmin()" @click="$router.push('/admin')">
                 <el-icon><Monitor /></el-icon>系统管理
@@ -89,38 +70,29 @@ import { onMounted } from 'vue'
 import { useRoute } from 'vue-router'
 import { useAuthStore } from '@/stores/auth'
 import {
-  ChatDotRound, HomeFilled, Service, ChatLineSquare, Star,
-  Bell, UserFilled, ArrowDown, User, Setting, Monitor, SwitchButton,
+  ChatDotRound, HomeFilled, Star, Monitor,
+  UserFilled, ArrowDown, User, SwitchButton,
 } from '@element-plus/icons-vue'
 
 const route = useRoute()
 const auth = useAuthStore()
 
 onMounted(() => {
-  auth.refreshCurrentUser().catch(() => {
-    auth.logout()
-  })
+  auth.refreshCurrentUser().catch(() => { auth.logout() })
 })
 
 function roleLabel(role: string): string {
-  const map: Record<string, string> = { admin: '管理员', character_manager: '角色维护者', user: '普通用户' }
+  const map: Record<string, string> = { admin: '管理员', user: '普通用户' }
   return map[role] || role
 }
-
-function roleTagType(role: string): 'danger' | 'warning' | 'info' {
-  if (role === 'admin') return 'danger'
-  if (role === 'character_manager') return 'warning'
-  return 'info'
+function roleTagType(role: string): 'danger' | 'info' {
+  return role === 'admin' ? 'danger' : 'info'
 }
 </script>
 
 <style scoped>
 .main-layout { height: 100vh; display: flex; flex-direction: column; }
-.main-header {
-  display: flex; align-items: center; justify-content: space-between;
-  border-bottom: 1px solid #e4e7ed; background: #fff; padding: 0 24px;
-  height: 60px; box-shadow: 0 1px 4px rgba(0,0,0,.04);
-}
+.main-header { display: flex; align-items: center; justify-content: space-between; border-bottom: 1px solid #e4e7ed; background: #fff; padding: 0 24px; height: 60px; box-shadow: 0 1px 4px rgba(0,0,0,.04); }
 .header-left { display: flex; align-items: center; gap: 10px; }
 .logo-icon { cursor: pointer; }
 .logo { cursor: pointer; color: #303133; margin: 0; font-size: 18px; white-space: nowrap; }

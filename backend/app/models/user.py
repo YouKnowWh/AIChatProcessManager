@@ -36,9 +36,7 @@ class User(Base):
     )
 
     # 关系
-    characters: Mapped[list["AICharacter"]] = relationship("AICharacter", back_populates="creator")
     conversations: Mapped[list["Conversation"]] = relationship("Conversation", back_populates="user")
     feedbacks: Mapped[list["Feedback"]] = relationship("Feedback", back_populates="user")
     system_logs: Mapped[list["SystemLog"]] = relationship("SystemLog", back_populates="user")
     favorites: Mapped[list["MessageFavorite"]] = relationship("MessageFavorite", back_populates="user")
-    knowledge_entries: Mapped[list["KnowledgeEntry"]] = relationship("KnowledgeEntry", back_populates="user")

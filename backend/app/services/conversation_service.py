@@ -5,7 +5,6 @@ from datetime import datetime
 from fastapi import HTTPException, status
 from sqlalchemy.orm import Session
 
-from app.models.ai_character import AICharacter
 from app.models.conversation import Conversation
 from app.models.message import Message
 from app.models.user import User
@@ -15,36 +14,27 @@ from app.schemas.conversation import ConversationCreate, ConversationUpdate
 class ConversationService:
 
     @staticmethod
-    def list_by_user(db: Session, user: User, status: str | None = None, character_id: int | None = None):
-        """列出当前用户的会话（仅含用户自己拥有的角色）"""
-        query = db.query(Conversation).join(
-            AICharacter, AICharacter.id == Conversation.character_id
-        ).filter(
+    def list_by_user(db: Session, user: User, status: str | None = None):
+        """列出当前用户的会话"""
+        query = db.query(Conversation).filter(
             Conversation.user_id == user.id,
             Conversation.status != "deleted",
-            AICharacter.creator_id == user.id,  # 只看自己角色的会话
         )
         if status:
             query = query.filter(Conversation.status == status)
-        if character_id:
-            query = query.filter(Conversation.character_id == character_id)
 
         items = query.order_by(
-            Conversation.last_message_at.is_(None).desc(),  # NULL 排最前（新会话）
+            Conversation.last_message_at.is_(None).desc(),
             Conversation.last_message_at.desc(),
             Conversation.id.desc(),
         ).all()
 
-        # 附带消息数量
         results = []
         for conv in items:
             msg_count = db.query(Message).filter(Message.conversation_id == conv.id).count()
             results.append({
                 "id": conv.id,
                 "user_id": conv.user_id,
-                "character_id": conv.character_id,
-                "character_name": conv.character.name if conv.character else None,
-                "character_avatar": conv.character.avatar if conv.character else None,
                 "title": conv.title,
                 "status": conv.status,
                 "last_message_at": conv.last_message_at,
@@ -65,27 +55,9 @@ class ConversationService:
 
     @staticmethod
     def create(db: Session, user: User, req: ConversationCreate) -> Conversation:
-        # 验证角色存在且可用
-        character = db.query(AICharacter).filter(
-            AICharacter.id == req.character_id,
-            AICharacter.status == "active",
-        ).first()
-        if not character:
-            raise HTTPException(status_code=status.HTTP_400_BAD_REQUEST, detail="AI 角色不存在或已禁用")
-
-        # 防止重复创建：已有 active 会话则直接返回
-        existing = db.query(Conversation).filter(
-            Conversation.user_id == user.id,
-            Conversation.character_id == req.character_id,
-            Conversation.status == "active",
-        ).first()
-        if existing:
-            return existing
-
         conversation = Conversation(
             user_id=user.id,
-            character_id=req.character_id,
-            title=req.title or f"与 {character.name} 的对话",
+            title=req.title or "新的聊天",
         )
         db.add(conversation)
         db.commit()
@@ -123,6 +95,5 @@ class ConversationService:
 
     @staticmethod
     def touch_last_message(db: Session, conversation: Conversation) -> None:
-        """更新最后消息时间"""
         conversation.last_message_at = datetime.now()
         db.commit()

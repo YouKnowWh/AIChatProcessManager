@@ -16,16 +16,6 @@
       <el-row :gutter="20" style="margin-top: 24px">
         <el-col :span="12">
           <el-card>
-            <template #header><strong>🏆 最受欢迎角色 Top 5</strong></template>
-            <el-table :data="stats.top_characters || []" size="small">
-              <el-table-column type="index" label="#" width="40" />
-              <el-table-column prop="name" label="角色名" />
-              <el-table-column prop="usage_count" label="使用次数" width="90" />
-            </el-table>
-          </el-card>
-        </el-col>
-        <el-col :span="12">
-          <el-card>
             <template #header><strong>💬 最活跃用户 Top 5</strong></template>
             <el-table :data="stats.top_users || []" size="small">
               <el-table-column type="index" label="#" width="40" />
@@ -49,7 +39,6 @@ const loading = ref(false)
 const overviewCards = computed(() => [
   { label: '活跃用户', value: stats.value.users?.total_active ?? 0 },
   { label: '禁用用户', value: stats.value.users?.total_disabled ?? 0 },
-  { label: '角色 (启用/禁用)', value: `${stats.value.characters?.active ?? 0} / ${stats.value.characters?.disabled ?? 0}` },
   { label: '会话 (活跃/归档)', value: `${stats.value.conversations?.total_active ?? 0} / ${stats.value.conversations?.archived ?? 0}` },
   { label: '正常消息', value: stats.value.messages?.total_normal ?? 0 },
   { label: '隐藏消息', value: stats.value.messages?.hidden ?? 0 },

@@ -22,10 +22,6 @@
           <el-icon><User /></el-icon>
           <span>用户管理</span>
         </el-menu-item>
-        <el-menu-item index="/admin/characters">
-          <el-icon><Service /></el-icon>
-          <span>角色管理</span>
-        </el-menu-item>
         <el-menu-item index="/admin/messages">
           <el-icon><ChatDotRound /></el-icon>
           <span>消息管理</span>
@@ -75,7 +71,7 @@ import { ref } from 'vue'
 import { useRoute } from 'vue-router'
 import { useAuthStore } from '@/stores/auth'
 import {
-  Monitor, HomeFilled, User, Service, ChatDotRound, StarFilled,
+  Monitor, HomeFilled, User, ChatDotRound, StarFilled,
   Document, DataAnalysis, Expand, Fold, Connection,
 } from '@element-plus/icons-vue'
 

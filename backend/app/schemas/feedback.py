@@ -15,7 +15,6 @@ class FeedbackResponse(BaseModel):
     id: int
     user_id: int
     message_id: int
-    character_id: int
     feedback_type: str
     content: str | None
     tags: str | None

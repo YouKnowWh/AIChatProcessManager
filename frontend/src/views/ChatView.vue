@@ -1,58 +1,41 @@
 <template>
   <div class="chat-layout">
-    <!-- 左侧会话列表 -->
     <ConversationSidebar
       :conversations="conversations"
       :active-id="activeConvId"
-      @select="selectConversation"
+      @select="setActiveConversation"
       @refresh="loadConversations"
     />
-
-    <!-- 中间聊天区域 -->
     <div class="chat-main" v-if="activeConvId">
-      <!-- 消息流 -->
       <div class="message-list" ref="msgListRef">
         <div v-if="loading" class="chat-loading">
           <el-icon class="is-loading" :size="32"><Loading /></el-icon>
           <p>加载消息中...</p>
         </div>
-        <div v-for="msg in messages" :key="msg.id" :ref="el => setMsgRef(msg.id, el)">
-          <MessageBubble
-            :message="msg"
-            :is-favorited="favIds.has(msg.id)"
-            @favorite="handleFavorite(msg)"
-            @feedback="showFeedback(msg)"
-            @detail="showDetail(msg)"
-          />
-        </div>
+        <MessageBubble
+          v-for="msg in messages" :key="msg.id"
+          :message="msg" :is-favorited="favIds.has(msg.id)"
+          @favorite="handleFavorite(msg)" @feedback="showFeedback(msg)" @detail="showDetail(msg)"
+        />
         <div v-if="sending" class="typing-indicator">
           <span class="dot"></span><span class="dot"></span><span class="dot"></span>
           <span class="typing-text">AI 正在思考...</span>
         </div>
       </div>
-
-      <!-- 底部输入框 -->
       <MessageInput :disabled="sending" @send="handleSend" />
     </div>
-
-    <!-- 未选择会话 -->
     <div class="chat-empty" v-else>
       <el-icon :size="64" color="#c0c4cc"><ChatDotRound /></el-icon>
-      <h3>选择一个会话开始聊天</h3>
-      <p>或前往 <el-button text type="primary" @click="$router.push('/characters')">AI 角色</el-button> 创建新会话</p>
+      <h3>开始新的聊天</h3>
+      <el-button type="primary" @click="createConversation">新建会话</el-button>
     </div>
-
-    <!-- 详情弹窗 -->
-    <MessageDetailDialog
-      v-model:visible="detailVisible"
-      :message-id="detailMsgId"
-    />
+    <MessageDetailDialog v-model:visible="detailVisible" :message-id="detailMsgId" />
   </div>
 </template>
 
 <script setup lang="ts">
 import { ref, onMounted, nextTick, watch } from 'vue'
-import { useRoute } from 'vue-router'
+import { useRoute, useRouter } from 'vue-router'
 import { ElMessage } from 'element-plus'
 import { ChatDotRound, Loading } from '@element-plus/icons-vue'
 import { conversationsApi } from '@/api/conversations'
@@ -65,134 +48,78 @@ import MessageDetailDialog from '@/components/chat/MessageDetailDialog.vue'
 import type { Conversation, Message } from '@/types'
 
 const route = useRoute()
-
+const router = useRouter()
 const conversations = ref<Conversation[]>([])
 const activeConvId = ref<number | null>(null)
-const activeCharId = ref<number | null>(null)
-
 const messages = ref<Message[]>([])
 const loading = ref(false)
 const sending = ref(false)
 const favIds = ref(new Set<number>())
-
 const detailVisible = ref(false)
 const detailMsgId = ref<number | null>(null)
-
 const msgListRef = ref<HTMLElement>()
 
-function setMsgRef(id: number, el: any) {
-  if (el) msgListRef.value = el
-}
-
-// 根据当前会话设置角色过滤
-async function setActiveConversation(convId: number) {
-  activeConvId.value = convId
-  // 找出当前会话的角色，用于过滤侧边栏
-  const conv = conversations.value.find(c => c.id === convId)
-  activeCharId.value = conv?.character_id ?? null
-  await loadConversations()
-  await loadMessages()
-}
-
 async function loadConversations() {
-  const params: any = {}
-  if (activeCharId.value) params.character_id = activeCharId.value
-  const res = await conversationsApi.list(params)
+  const res = await conversationsApi.list()
   conversations.value = res.data
 }
-
-async function selectConversation(convId: number) {
-  setActiveConversation(convId)
+async function createConversation() {
+  const res = await conversationsApi.create({ title: '新的聊天' })
+  router.push(`/chat/${res.data.id}`)
 }
-
+async function setActiveConversation(convId: number) {
+  activeConvId.value = convId
+  await loadMessages()
+}
 async function loadMessages() {
   if (!activeConvId.value) return
   loading.value = true
   try {
     const res = await messagesApi.list(activeConvId.value)
     messages.value = res.data.items
-    favIds.value = new Set(
-      messages.value.filter((msg: Message) => (msg as any).is_favorited).map((msg: Message) => msg.id)
-    )
-    await nextTick()
-    scrollToBottom()
-  } finally {
-    loading.value = false
-  }
+    favIds.value = new Set(messages.value.filter((m: any) => m.is_favorited).map((m: Message) => m.id))
+    await nextTick(); scrollToBottom()
+  } finally { loading.value = false }
 }
-
 async function handleSend(content: string) {
   if (!activeConvId.value || !content.trim()) return
-
   const tempId = -Date.now()
-  const optimisticMsg: Message = {
+  messages.value.push({
     id: tempId, conversation_id: activeConvId.value, parent_message_id: null,
     sender_type: 'user', role: 'user', status: 'normal',
     sequence_number: messages.value.length + 1,
     created_at: new Date().toISOString(),
     contents: [{ id: tempId, content_type: 'text', content, sort_order: 0 }],
-  }
-  messages.value.push(optimisticMsg)
-  await nextTick()
-  scrollToBottom()
-
+  } as Message)
+  await nextTick(); scrollToBottom()
   sending.value = true
   try {
     const res = await messagesApi.send(activeConvId.value, content)
     const idx = messages.value.findIndex(m => m.id === tempId)
     if (idx >= 0) messages.value.splice(idx, 1, res.data.user_message)
     messages.value.push(res.data.ai_message)
-    await nextTick()
-    scrollToBottom()
+    await nextTick(); scrollToBottom()
     await loadConversations()
-  } catch {
-    ElMessage.error('发送失败')
-    messages.value = messages.value.filter(m => m.id !== tempId)
-  } finally {
-    sending.value = false
-  }
+  } catch { ElMessage.error('发送失败'); messages.value = messages.value.filter(m => m.id !== tempId) }
+  finally { sending.value = false }
 }
-
 async function handleFavorite(msg: Message) {
   const res = await favoritesApi.toggle(msg.id)
-  if (res.data.favorited) {
-    favIds.value = new Set([...favIds.value, msg.id])
-    ElMessage.success('已收藏')
-  } else {
-    favIds.value = new Set([...favIds.value].filter((id) => id !== msg.id))
-    ElMessage.success('已取消收藏')
-  }
+  if (res.data.favorited) { favIds.value = new Set([...favIds.value, msg.id]); ElMessage.success('已收藏') }
+  else { favIds.value = new Set([...favIds.value].filter(id => id !== msg.id)); ElMessage.success('已取消收藏') }
 }
-
-function showFeedback(msg: Message) { ElMessage.info('反馈功能') }
+function showFeedback(_msg: Message) { ElMessage.info('反馈功能') }
 function showDetail(msg: Message) { detailMsgId.value = msg.id; detailVisible.value = true }
-
-function scrollToBottom() {
-  nextTick(() => {
-    requestAnimationFrame(() => {
-      if (msgListRef.value) msgListRef.value.scrollTop = msgListRef.value.scrollHeight
-    })
-  })
-}
+function scrollToBottom() { nextTick(() => { requestAnimationFrame(() => { if (msgListRef.value) msgListRef.value.scrollTop = msgListRef.value.scrollHeight }) }) }
 
 onMounted(async () => {
+  await loadConversations()
   const routeId = Number(route.params.id)
-  if (routeId) {
-    activeConvId.value = routeId
-    const convRes = await conversationsApi.getById(routeId)
-    activeCharId.value = convRes.data.character_id
-    await loadConversations()
-    await loadMessages()
-  } else {
-    await loadConversations()
-  }
+  if (routeId) { activeConvId.value = routeId; await loadMessages() }
 })
-
 watch(() => route.params.id, async (newId) => {
   const id = Number(newId)
-  if (id && id !== activeConvId.value) {
-    setActiveConversation(id)
-  }
+  if (id && id !== activeConvId.value) { activeConvId.value = id; await loadMessages() }
 })
 </script>
 
